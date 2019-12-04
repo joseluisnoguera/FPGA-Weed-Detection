@@ -119,6 +119,16 @@
             </spirit:vector>
           </spirit:wire>
         </spirit:port>
+        <spirit:port>
+          <spirit:name>veg_index_selection</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>2</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
       </spirit:ports>
     </spirit:model>
   </spirit:component>
@@ -1203,6 +1213,11 @@
         <spirit:name>AXI_GammaCorrection_0_m_axis_video_tlast</spirit:name>
         <spirit:internalPortReference spirit:componentRef="AXI_GammaCorrection_0" spirit:portRef="m_axis_video_tlast"/>
         <spirit:internalPortReference spirit:componentRef="axi_vdma_0" spirit:portRef="s_axis_s2mm_tlast"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>Selection_0_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="veg_index_selection"/>
+        <spirit:internalPortReference spirit:componentRef="VegetationIndexes_0" spirit:portRef="Selection"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
     <spirit:hierConnections>
