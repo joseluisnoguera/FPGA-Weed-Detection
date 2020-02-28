@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="headers.h" path="D:\GitHub\Weed_Detection\WD_HLS\headers.h"/>
+    <originFiles name="image_config.h" path="D:\GitHub\Weed_Detection\WD_HLS\image_config.h"/>
+    <originFiles name="weed_detection.cpp" path="D:\GitHub\Weed_Detection\WD_HLS\weed_detection.cpp"/>
+    <originFiles name="weed_detection.h" path="D:\GitHub\Weed_Detection\WD_HLS\weed_detection.h"/>
+  </source>
+  <testbench>
+    <originFiles name="weed_detection_tb.cpp" path="D:\GitHub\Weed_Detection\WD_HLS\weed_detection_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

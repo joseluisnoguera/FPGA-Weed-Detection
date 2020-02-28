@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
-  <source>
-    <originFiles name="weed_detection.cpp" path="C:\Users\josen\Documents\GitHub\FPGA_Weed_Detection\Weed_Detection_HLS\weed_detection_algorithm\weed_detection.cpp"/>
-    <originFiles name="utils.cpp" path="C:\Users\josen\Documents\GitHub\FPGA_Weed_Detection\Weed_Detection_HLS\weed_detection_algorithm\utils.cpp"/>
-  </source>
-  <testbench/>
-</autopilotfilemapping:AutoPilotFileMapping>
