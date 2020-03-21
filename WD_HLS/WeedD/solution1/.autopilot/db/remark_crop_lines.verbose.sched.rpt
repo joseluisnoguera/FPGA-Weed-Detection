@@ -1,0 +1,203 @@
+
+
+================================================================
+== Vivado HLS Report for 'remark_crop_lines'
+================================================================
+* Date:           Wed Mar 18 11:34:13 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 10.802 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   144910|   146279| 7.245 ms | 7.314 ms |  144910|  146279|   none  |
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    57960|    57960|       322|          -|          -|   180|    no    |
+        | + Loop 1.1  |      320|      320|         1|          -|          -|   320|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 7
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 7 6 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%eroded_tmp_data_V = alloca [57600 x i8], align 1" [./wd_stage_1.h:133]   --->   Operation 8 'alloca' 'eroded_tmp_data_V' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 57600> <RAM>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%empty = alloca i24, align 4"   --->   Operation 9 'alloca' 'empty' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [2/2] (0.00ns)   --->   "call fastcc void @duplicateMat.1(i8* %eroded_0_data_V, [57600 x i8]* %eroded_tmp_data_V, i8* %eroded_2_data_V)" [./wd_stage_1.h:135]   --->   Operation 10 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 11 [1/2] (0.00ns)   --->   "call fastcc void @duplicateMat.1(i8* %eroded_0_data_V, [57600 x i8]* %eroded_tmp_data_V, i8* %eroded_2_data_V)" [./wd_stage_1.h:135]   --->   Operation 11 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 0.00>
+ST_3 : Operation 12 [2/2] (0.00ns)   --->   "call fastcc void @get_total_vegetation.3(i24* noalias sret %empty, [57600 x i8]* %eroded_tmp_data_V)" [./wd_stage_1.h:137]   --->   Operation 12 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 13 [1/2] (0.00ns)   --->   "call fastcc void @get_total_vegetation.3(i24* noalias sret %empty, [57600 x i8]* %eroded_tmp_data_V)" [./wd_stage_1.h:137]   --->   Operation 13 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 2.43>
+ST_5 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %eroded_1_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %eroded_2_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %eroded_0_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 17 [1/1] (0.00ns)   --->   "%empty_135 = load i24* %empty, align 4" [./wd_stage_1.h:137]   --->   Operation 17 'load' 'empty_135' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 18 [1/1] (0.00ns)   --->   "%tmp = call i18 @_ssdm_op_PartSelect.i18.i24.i32.i32(i24 %empty_135, i32 6, i32 23)" [./wd_stage_1.h:137]   --->   Operation 18 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 19 [1/1] (2.43ns)   --->   "%icmp_ln1496 = icmp eq i18 %tmp, 0" [./wd_stage_1.h:137]   --->   Operation 19 'icmp' 'icmp_ln1496' <Predicate = true> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 20 [1/1] (0.00ns)   --->   "br i1 %icmp_ln1496, label %.preheader.preheader, label %1" [./wd_stage_1.h:137]   --->   Operation 20 'br' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 21 [2/2] (0.00ns)   --->   "call fastcc void @erode([57600 x i8]* %eroded_tmp_data_V, i8* %eroded_1_data_V)" [./wd_stage_1.h:138]   --->   Operation 21 'call' <Predicate = (!icmp_ln1496)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_5 : Operation 22 [1/1] (1.76ns)   --->   "br label %.preheader"   --->   Operation 22 'br' <Predicate = (icmp_ln1496)> <Delay = 1.76>
+
+State 6 <SV = 5> <Delay = 1.91>
+ST_6 : Operation 23 [1/2] (0.00ns)   --->   "call fastcc void @erode([57600 x i8]* %eroded_tmp_data_V, i8* %eroded_1_data_V)" [./wd_stage_1.h:138]   --->   Operation 23 'call' <Predicate = (!icmp_ln1496)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_6 : Operation 24 [1/1] (0.00ns)   --->   "br label %copyTo.exit" [./wd_stage_1.h:139]   --->   Operation 24 'br' <Predicate = (!icmp_ln1496)> <Delay = 0.00>
+ST_6 : Operation 25 [1/1] (0.00ns)   --->   "%r_0_i = phi i8 [ %r, %.preheader.loopexit ], [ 0, %.preheader.preheader ]"   --->   Operation 25 'phi' 'r_0_i' <Predicate = (icmp_ln1496)> <Delay = 0.00>
+ST_6 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 180, i64 180, i64 180)"   --->   Operation 26 'speclooptripcount' <Predicate = (icmp_ln1496)> <Delay = 0.00>
+ST_6 : Operation 27 [1/1] (1.55ns)   --->   "%icmp_ln689 = icmp eq i8 %r_0_i, -76" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:689->./wd_stage_1.h:140]   --->   Operation 27 'icmp' 'icmp_ln689' <Predicate = (icmp_ln1496)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 28 [1/1] (1.91ns)   --->   "%r = add i8 %r_0_i, 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:689->./wd_stage_1.h:140]   --->   Operation 28 'add' 'r' <Predicate = (icmp_ln1496)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %icmp_ln689, label %copyTo.exit.loopexit, label %.preheader32.preheader.i" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:689->./wd_stage_1.h:140]   --->   Operation 29 'br' <Predicate = (icmp_ln1496)> <Delay = 0.00>
+ST_6 : Operation 30 [1/1] (0.00ns)   --->   "%shl_ln = call i16 @_ssdm_op_BitConcatenate.i16.i8.i8(i8 %r_0_i, i8 0)" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140]   --->   Operation 30 'bitconcatenate' 'shl_ln' <Predicate = (icmp_ln1496 & !icmp_ln689)> <Delay = 0.00>
+ST_6 : Operation 31 [1/1] (0.00ns)   --->   "%shl_ln697_1 = call i14 @_ssdm_op_BitConcatenate.i14.i8.i6(i8 %r_0_i, i6 0)" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140]   --->   Operation 31 'bitconcatenate' 'shl_ln697_1' <Predicate = (icmp_ln1496 & !icmp_ln689)> <Delay = 0.00>
+ST_6 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln690 = zext i14 %shl_ln697_1 to i15" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 32 'zext' 'zext_ln690' <Predicate = (icmp_ln1496 & !icmp_ln689)> <Delay = 0.00>
+ST_6 : Operation 33 [1/1] (1.76ns)   --->   "br label %.preheader32.i" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 33 'br' <Predicate = (icmp_ln1496 & !icmp_ln689)> <Delay = 1.76>
+ST_6 : Operation 34 [1/1] (0.00ns)   --->   "br label %copyTo.exit"   --->   Operation 34 'br' <Predicate = (icmp_ln1496 & icmp_ln689)> <Delay = 0.00>
+ST_6 : Operation 35 [1/1] (0.00ns)   --->   "ret void" [./wd_stage_1.h:142]   --->   Operation 35 'ret' <Predicate = (icmp_ln689) | (!icmp_ln1496)> <Delay = 0.00>
+
+State 7 <SV = 6> <Delay = 7.14>
+ST_7 : Operation 36 [1/1] (0.00ns)   --->   "%c_0_i = phi i9 [ %c, %.preheader31.preheader.i ], [ 0, %.preheader32.preheader.i ]"   --->   Operation 36 'phi' 'c_0_i' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln690_cast = zext i9 %c_0_i to i15" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 37 'zext' 'zext_ln690_cast' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 320)"   --->   Operation 38 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 39 [1/1] (1.66ns)   --->   "%icmp_ln690 = icmp eq i9 %c_0_i, -192" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 39 'icmp' 'icmp_ln690' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.66> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 40 [1/1] (1.82ns)   --->   "%c = add i9 %c_0_i, 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 40 'add' 'c' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 41 [1/1] (0.00ns)   --->   "br i1 %icmp_ln690, label %.preheader.loopexit, label %.preheader31.preheader.i" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 41 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 42 [1/1] (1.81ns)   --->   "%add_ln697_1 = add i15 %zext_ln690, %zext_ln690_cast" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140]   --->   Operation 42 'add' 'add_ln697_1' <Predicate = (!icmp_ln690)> <Delay = 1.81> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 43 [1/1] (0.00ns)   --->   "%zext_ln697 = zext i15 %add_ln697_1 to i16" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140]   --->   Operation 43 'zext' 'zext_ln697' <Predicate = (!icmp_ln690)> <Delay = 0.00>
+ST_7 : Operation 44 [1/1] (2.07ns)   --->   "%add_ln697 = add i16 %zext_ln697, %shl_ln" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140]   --->   Operation 44 'add' 'add_ln697' <Predicate = (!icmp_ln690)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.07> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln700 = zext i16 %add_ln697 to i64" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:700->./wd_stage_1.h:140]   --->   Operation 45 'zext' 'zext_ln700' <Predicate = (!icmp_ln690)> <Delay = 0.00>
+ST_7 : Operation 46 [1/1] (3.63ns)   --->   "%eroded_1_data_V_read = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %eroded_1_data_V)" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140]   --->   Operation 46 'read' 'eroded_1_data_V_read' <Predicate = (!icmp_ln690)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_7 : Operation 47 [1/1] (0.00ns)   --->   "%eroded_tmp_data_V_ad = getelementptr [57600 x i8]* %eroded_tmp_data_V, i64 0, i64 %zext_ln700" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:700->./wd_stage_1.h:140]   --->   Operation 47 'getelementptr' 'eroded_tmp_data_V_ad' <Predicate = (!icmp_ln690)> <Delay = 0.00>
+ST_7 : Operation 48 [1/1] (3.25ns)   --->   "store i8 %eroded_1_data_V_read, i8* %eroded_tmp_data_V_ad, align 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:700->./wd_stage_1.h:140]   --->   Operation 48 'store' <Predicate = (!icmp_ln690)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 57600> <RAM>
+ST_7 : Operation 49 [1/1] (0.00ns)   --->   "br label %.preheader32.i" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140]   --->   Operation 49 'br' <Predicate = (!icmp_ln690)> <Delay = 0.00>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "br label %.preheader"   --->   Operation 50 'br' <Predicate = (icmp_ln690)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 0ns
+The critical path consists of the following:
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 0ns
+The critical path consists of the following:
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 2.43ns
+The critical path consists of the following:
+	'load' operation ('empty_135', ./wd_stage_1.h:137) on local variable 'empty' [11]  (0 ns)
+	'icmp' operation ('icmp_ln1496', ./wd_stage_1.h:137) [13]  (2.43 ns)
+
+ <State 6>: 1.92ns
+The critical path consists of the following:
+	'phi' operation ('r') with incoming values : ('r', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:689->./wd_stage_1.h:140) [21]  (0 ns)
+	'add' operation ('r', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:689->./wd_stage_1.h:140) [24]  (1.92 ns)
+
+ <State 7>: 7.14ns
+The critical path consists of the following:
+	'phi' operation ('c') with incoming values : ('c', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:690->./wd_stage_1.h:140) [32]  (0 ns)
+	'add' operation ('add_ln697_1', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140) [39]  (1.81 ns)
+	'add' operation ('add_ln697', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140) [41]  (2.08 ns)
+	'getelementptr' operation ('eroded_tmp_data_V_ad', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:700->./wd_stage_1.h:140) [44]  (0 ns)
+	'store' operation ('store_ln700', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:700->./wd_stage_1.h:140) of variable 'eroded_1_data_V_read', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:697->./wd_stage_1.h:140 on array 'eroded_tmp.data.V', ./wd_stage_1.h:133 [45]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

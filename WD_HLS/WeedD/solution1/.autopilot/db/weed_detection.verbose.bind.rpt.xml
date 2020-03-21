@@ -1,0 +1,61 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'weed_detection'" level="0">
+<item name = "Date">Wed Mar 18 11:35:06 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 43.397 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2419233, 2419233, 0.121 sec, 0.121 sec, 2419202, 2419202, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_get_crop_lines_fu_210">get_crop_lines, 135429, 2388939, 6.771 ms, 0.119 sec, 135429, 2388939, none</column>
+<column name="grp_get_vegetation_image_4_fu_237">get_vegetation_image_4, 2419217, 2419217, 0.121 sec, 0.121 sec, 2419202, 2419202, dataflow</column>
+<column name="grp_segment_image_fu_244">segment_image, 118530, 118530, 5.926 ms, 5.926 ms, 118530, 118530, none</column>
+<column name="grp_resize_2_fu_252">resize_2, 928050, 928050, 46.403 ms, 46.403 ms, 928050, 928050, none</column>
+<column name="grp_sectors_weed_classif_fu_258">sectors_weed_classif, 59703, 497463, 2.985 ms, 24.873 ms, 59703, 497463, none</column>
+<column name="grp_resizeNNBilinear_fu_267">resizeNNBilinear, 931453, 931453, 46.573 ms, 46.573 ms, 931453, 931453, none</column>
+<column name="grp_remark_crop_lines_fu_273">remark_crop_lines, 144910, 146279, 7.245 ms, 7.314 ms, 144910, 146279, none</column>
+<column name="grp_erode437_fu_280">erode437, 59329, 59329, 2.966 ms, 2.966 ms, 59329, 59329, none</column>
+<column name="grp_duplicateMat_2762_fu_286">duplicateMat_2762, 174963, 924003, 8.748 ms, 46.200 ms, 174962, 923762, dataflow</column>
+<column name="grp_merge_fu_297">merge, 57967, 115206, 2.898 ms, 5.760 ms, 57962, 115206, dataflow</column>
+<column name="grp_duplicateMat438_fu_304">duplicateMat438, 58144, 58144, 2.907 ms, 2.907 ms, 58142, 58142, dataflow</column>
+<column name="grp_add_2749_fu_311">add_2749, 923762, 923762, 46.188 ms, 46.188 ms, 923762, 923762, none</column>
+<column name="grp_zero_0_180_320_1_s_fu_319">zero_0_180_320_1_s, 58141, 58141, 2.907 ms, 2.907 ms, 58141, 58141, none</column>
+<column name="grp_get_12th_segment_fu_324">get_12th_segment, 7362, 7362, 0.368 ms, 0.368 ms, 7363, 7363, dataflow</column>
+<column name="call_ln0_weed_detection_Block_fu_330">weed_detection_Block, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln10_weed_detection_entry_fu_337">weed_detection_entry, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

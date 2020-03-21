@@ -1,0 +1,343 @@
+
+
+================================================================
+== Vivado HLS Report for 'xFHistogramKernel'
+================================================================
+* Date:           Wed Mar 18 11:33:53 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 9.060 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    59349|    59349| 2.967 ms | 2.967 ms |  59349|  59349|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                        |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |        Loop Name       |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- memset_tmp_hist       |      255|      255|         1|          -|          -|   256|    no    |
+        |- memset_tmp_hist1      |      255|      255|         1|          -|          -|   256|    no    |
+        |- HIST_INITIALIZE_LOOP  |      256|      256|         1|          1|          1|   256|    yes   |
+        |- HISTOGRAM_ROW_LOOP    |    58320|    58320|       324|          -|          -|   180|    no    |
+        | + HISTOGRAM_COL_LOOP   |      321|      321|         4|          2|          2|   160|    yes   |
+        |- COPY_LOOP             |      256|      256|         2|          1|          1|   256|    yes   |
+        +------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+  * Pipeline-1: initiation interval (II) = 2, depth = 4
+  * Pipeline-2: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 14
+* Pipeline : 3
+  Pipeline-0 : II = 1, D = 1, States = { 4 }
+  Pipeline-1 : II = 2, D = 4, States = { 7 8 9 10 }
+  Pipeline-2 : II = 1, D = 2, States = { 12 13 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 2 3 
+3 --> 3 4 
+4 --> 5 4 
+5 --> 6 
+6 --> 7 12 
+7 --> 11 8 
+8 --> 9 
+9 --> 10 
+10 --> 7 
+11 --> 6 
+12 --> 14 13 
+13 --> 12 
+14 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_mat_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 15 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([256 x i32]* %hist_array, [8 x i8]* @p_str153, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%tmp_hist_0 = alloca [256 x i32], align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 17 'alloca' 'tmp_hist_0' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%tmp_hist1_0 = alloca [256 x i32], align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 18 'alloca' 'tmp_hist1_0' <Predicate = true> <Delay = 0.00> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_1 : Operation 19 [1/1] (1.76ns)   --->   "br label %meminst852.0"   --->   Operation 19 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.25>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%phi_ln47 = phi i8 [ 0, %meminst.0 ], [ %add_ln47, %meminst852.0 ]" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 20 'phi' 'phi_ln47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.91ns)   --->   "%add_ln47 = add i8 %phi_ln47, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 21 'add' 'add_ln47' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%zext_ln47 = zext i8 %phi_ln47 to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 22 'zext' 'zext_ln47' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%tmp_hist_0_addr = getelementptr [256 x i32]* %tmp_hist_0, i64 0, i64 %zext_ln47" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 23 'getelementptr' 'tmp_hist_0_addr' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (3.25ns)   --->   "store i32 0, i32* %tmp_hist_0_addr, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 24 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_2 : Operation 25 [1/1] (1.55ns)   --->   "%icmp_ln47 = icmp eq i8 %phi_ln47, -1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 25 'icmp' 'icmp_ln47' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([16 x i8]* @memset_tmp_hist_str)"   --->   Operation 26 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)"   --->   Operation 27 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "br i1 %icmp_ln47, label %meminst859.0.preheader, label %meminst852.0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47]   --->   Operation 28 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (1.76ns)   --->   "br label %meminst859.0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 29 'br' <Predicate = (icmp_ln47)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%phi_ln48 = phi i8 [ %add_ln48, %meminst859.0 ], [ 0, %meminst859.0.preheader ]" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 30 'phi' 'phi_ln48' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (1.91ns)   --->   "%add_ln48 = add i8 %phi_ln48, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 31 'add' 'add_ln48' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns)   --->   "%zext_ln48 = zext i8 %phi_ln48 to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 32 'zext' 'zext_ln48' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_hist1_0_addr = getelementptr [256 x i32]* %tmp_hist1_0, i64 0, i64 %zext_ln48" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 33 'getelementptr' 'tmp_hist1_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (3.25ns)   --->   "store i32 0, i32* %tmp_hist1_0_addr, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 34 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_3 : Operation 35 [1/1] (1.55ns)   --->   "%icmp_ln48 = icmp eq i8 %phi_ln48, -1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 35 'icmp' 'icmp_ln48' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([17 x i8]* @memset_tmp_hist1_str)"   --->   Operation 36 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)"   --->   Operation 37 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns)   --->   "br i1 %icmp_ln48, label %meminst855858.0.preheader, label %meminst859.0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48]   --->   Operation 38 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 39 [1/1] (1.76ns)   --->   "br label %meminst855858.0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:56]   --->   Operation 39 'br' <Predicate = (icmp_ln48)> <Delay = 1.76>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%t_V = phi i9 [ %i_V, %HIST_INITIALIZE_LOOP_begin ], [ 0, %meminst855858.0.preheader ]"   --->   Operation 40 'phi' 't_V' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (1.66ns)   --->   "%icmp_ln887 = icmp eq i9 %t_V, -256" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:56]   --->   Operation 41 'icmp' 'icmp_ln887' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 42 [1/1] (1.82ns)   --->   "%i_V = add i9 %t_V, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:56]   --->   Operation 42 'add' 'i_V' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887, label %.preheader849.preheader, label %HIST_INITIALIZE_LOOP_begin" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:56]   --->   Operation 43 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([21 x i8]* @p_str163) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:57]   --->   Operation 44 'specloopname' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([21 x i8]* @p_str163)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:57]   --->   Operation 45 'specregionbegin' 'tmp' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:58]   --->   Operation 46 'specpipeline' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (0.00ns)   --->   "%zext_ln544 = zext i9 %t_V to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:62]   --->   Operation 47 'zext' 'zext_ln544' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_s = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str164)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:60]   --->   Operation 48 'specregionbegin' 'tmp_s' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 256, i32 256, i32 256, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:61]   --->   Operation 49 'speclooptripcount' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%tmp_hist_0_addr_1 = getelementptr [256 x i32]* %tmp_hist_0, i64 0, i64 %zext_ln544" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:62]   --->   Operation 50 'getelementptr' 'tmp_hist_0_addr_1' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (3.25ns)   --->   "store i32 0, i32* %tmp_hist_0_addr_1, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:62]   --->   Operation 51 'store' <Predicate = (!icmp_ln887)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_hist1_0_addr_1 = getelementptr [256 x i32]* %tmp_hist1_0, i64 0, i64 %zext_ln544" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:63]   --->   Operation 52 'getelementptr' 'tmp_hist1_0_addr_1' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (3.25ns)   --->   "store i32 0, i32* %tmp_hist1_0_addr_1, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:63]   --->   Operation 53 'store' <Predicate = (!icmp_ln887)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str164, i32 %tmp_s)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:64]   --->   Operation 54 'specregionend' 'empty' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 55 [1/1] (0.00ns)   --->   "%empty_97 = call i32 (...)* @_ssdm_op_SpecRegionEnd([21 x i8]* @p_str163, i32 %tmp)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:65]   --->   Operation 55 'specregionend' 'empty_97' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+ST_4 : Operation 56 [1/1] (0.00ns)   --->   "br label %meminst855858.0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:56]   --->   Operation 56 'br' <Predicate = (!icmp_ln887)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 1.76>
+ST_5 : Operation 57 [1/1] (1.76ns)   --->   "br label %.preheader849" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68]   --->   Operation 57 'br' <Predicate = true> <Delay = 1.76>
+
+State 6 <SV = 5> <Delay = 2.58>
+ST_6 : Operation 58 [1/1] (0.00ns)   --->   "%t_V_6 = phi i8 [ %row_V, %HISTOGRAM_ROW_LOOP_end ], [ 0, %.preheader849.preheader ]"   --->   Operation 58 'phi' 't_V_6' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 59 [1/1] (1.55ns)   --->   "%icmp_ln887_12 = icmp ult i8 %t_V_6, -76" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68]   --->   Operation 59 'icmp' 'icmp_ln887_12' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 60 [1/1] (1.91ns)   --->   "%row_V = add i8 %t_V_6, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68]   --->   Operation 60 'add' 'row_V' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 61 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887_12, label %HISTOGRAM_ROW_LOOP_begin, label %.preheader.preheader" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68]   --->   Operation 61 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str165) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:69]   --->   Operation 62 'specloopname' <Predicate = (icmp_ln887_12)> <Delay = 0.00>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @p_str165)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:69]   --->   Operation 63 'specregionbegin' 'tmp_1' <Predicate = (icmp_ln887_12)> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 180, i32 180, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:70]   --->   Operation 64 'speclooptripcount' <Predicate = (icmp_ln887_12)> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (1.76ns)   --->   "br label %0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72]   --->   Operation 65 'br' <Predicate = (icmp_ln887_12)> <Delay = 1.76>
+ST_6 : Operation 66 [1/1] (1.76ns)   --->   "br label %.preheader" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:106]   --->   Operation 66 'br' <Predicate = (!icmp_ln887_12)> <Delay = 1.76>
+
+State 7 <SV = 6> <Delay = 1.66>
+ST_7 : Operation 67 [1/1] (0.00ns)   --->   "%p_0396_0 = phi i9 [ 0, %HISTOGRAM_ROW_LOOP_begin ], [ %col_V, %HISTOGRAM_COL_LOOP_begin ]"   --->   Operation 67 'phi' 'p_0396_0' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 68 [1/1] (1.66ns)   --->   "%icmp_ln887_13 = icmp ult i9 %p_0396_0, -192" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72]   --->   Operation 68 'icmp' 'icmp_ln887_13' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887_13, label %HISTOGRAM_COL_LOOP_begin, label %HISTOGRAM_ROW_LOOP_end" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 7> <Delay = 6.88>
+ST_8 : Operation 70 [1/1] (3.63ns)   --->   "%in_buf_V = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_mat_data_V)" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:77]   --->   Operation 70 'read' 'in_buf_V' <Predicate = (icmp_ln887_13)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_8 : Operation 71 [1/1] (0.00ns)   --->   "%zext_ln544_5 = zext i8 %in_buf_V to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95]   --->   Operation 71 'zext' 'zext_ln544_5' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_8 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_hist_0_addr_3 = getelementptr [256 x i32]* %tmp_hist_0, i64 0, i64 %zext_ln544_5" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95]   --->   Operation 72 'getelementptr' 'tmp_hist_0_addr_3' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_8 : Operation 73 [2/2] (3.25ns)   --->   "%tmp_hist_0_load_1 = load i32* %tmp_hist_0_addr_3, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95]   --->   Operation 73 'load' 'tmp_hist_0_load_1' <Predicate = (icmp_ln887_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_8 : Operation 74 [1/1] (1.82ns)   --->   "%col_V = add i9 %p_0396_0, 2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72]   --->   Operation 74 'add' 'col_V' <Predicate = (icmp_ln887_13)> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 9.06>
+ST_9 : Operation 75 [1/1] (3.63ns)   --->   "%in_buf1_V = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %p_src_mat_data_V)" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:82]   --->   Operation 75 'read' 'in_buf1_V' <Predicate = (icmp_ln887_13)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_9 : Operation 76 [1/2] (3.25ns)   --->   "%tmp_hist_0_load_1 = load i32* %tmp_hist_0_addr_3, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95]   --->   Operation 76 'load' 'tmp_hist_0_load_1' <Predicate = (icmp_ln887_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_9 : Operation 77 [1/1] (0.00ns)   --->   "%zext_ln544_6 = zext i8 %in_buf1_V to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:96]   --->   Operation 77 'zext' 'zext_ln544_6' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_9 : Operation 78 [1/1] (0.00ns)   --->   "%tmp_hist1_0_addr_3 = getelementptr [256 x i32]* %tmp_hist1_0, i64 0, i64 %zext_ln544_6" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:96]   --->   Operation 78 'getelementptr' 'tmp_hist1_0_addr_3' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_9 : Operation 79 [2/2] (3.25ns)   --->   "%tmp_hist1_0_load_1 = load i32* %tmp_hist1_0_addr_3, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:96]   --->   Operation 79 'load' 'tmp_hist1_0_load_1' <Predicate = (icmp_ln887_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_9 : Operation 80 [1/1] (2.55ns)   --->   "%add_ln97 = add i32 %tmp_hist_0_load_1, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:97]   --->   Operation 80 'add' 'add_ln97' <Predicate = (icmp_ln887_13)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 81 [1/1] (3.25ns)   --->   "store i32 %add_ln97, i32* %tmp_hist_0_addr_3, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:97]   --->   Operation 81 'store' <Predicate = (icmp_ln887_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+
+State 10 <SV = 9> <Delay = 9.06>
+ST_10 : Operation 82 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([19 x i8]* @p_str166) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:73]   --->   Operation 82 'specloopname' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 83 [1/1] (0.00ns)   --->   "%tmp_2 = call i32 (...)* @_ssdm_op_SpecRegionBegin([19 x i8]* @p_str166)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:73]   --->   Operation 83 'specregionbegin' 'tmp_2' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 84 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:74]   --->   Operation 84 'specpipeline' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 85 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 160, i32 160, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:76]   --->   Operation 85 'speclooptripcount' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 86 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([15 x i8]* @p_str167)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:86]   --->   Operation 86 'specregionbegin' 'tmp_4' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 87 [1/2] (3.25ns)   --->   "%tmp_hist1_0_load_1 = load i32* %tmp_hist1_0_addr_3, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:96]   --->   Operation 87 'load' 'tmp_hist1_0_load_1' <Predicate = (icmp_ln887_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_10 : Operation 88 [1/1] (2.55ns)   --->   "%add_ln99 = add i32 %tmp_hist1_0_load_1, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:99]   --->   Operation 88 'add' 'add_ln99' <Predicate = (icmp_ln887_13)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 89 [1/1] (3.25ns)   --->   "store i32 %add_ln99, i32* %tmp_hist1_0_addr_3, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:99]   --->   Operation 89 'store' <Predicate = (icmp_ln887_13)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_10 : Operation 90 [1/1] (0.00ns)   --->   "%empty_98 = call i32 (...)* @_ssdm_op_SpecRegionEnd([15 x i8]* @p_str167, i32 %tmp_4)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:100]   --->   Operation 90 'specregionend' 'empty_98' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 91 [1/1] (0.00ns)   --->   "%empty_99 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @p_str166, i32 %tmp_2)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:101]   --->   Operation 91 'specregionend' 'empty_99' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+ST_10 : Operation 92 [1/1] (0.00ns)   --->   "br label %0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72]   --->   Operation 92 'br' <Predicate = (icmp_ln887_13)> <Delay = 0.00>
+
+State 11 <SV = 7> <Delay = 0.00>
+ST_11 : Operation 93 [1/1] (0.00ns)   --->   "%empty_100 = call i32 (...)* @_ssdm_op_SpecRegionEnd([19 x i8]* @p_str165, i32 %tmp_1)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:102]   --->   Operation 93 'specregionend' 'empty_100' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 94 [1/1] (0.00ns)   --->   "br label %.preheader849" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68]   --->   Operation 94 'br' <Predicate = true> <Delay = 0.00>
+
+State 12 <SV = 6> <Delay = 3.25>
+ST_12 : Operation 95 [1/1] (0.00ns)   --->   "%t_V_7 = phi i9 [ %i_V_1, %COPY_LOOP ], [ 0, %.preheader.preheader ]"   --->   Operation 95 'phi' 't_V_7' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 96 [1/1] (1.66ns)   --->   "%icmp_ln887_14 = icmp eq i9 %t_V_7, -256" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:106]   --->   Operation 96 'icmp' 'icmp_ln887_14' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 97 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 256, i64 256, i64 256)"   --->   Operation 97 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 98 [1/1] (1.82ns)   --->   "%i_V_1 = add i9 %t_V_7, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:106]   --->   Operation 98 'add' 'i_V_1' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 99 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887_14, label %1, label %COPY_LOOP" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:106]   --->   Operation 99 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 100 [1/1] (0.00ns)   --->   "%zext_ln544_4 = zext i9 %t_V_7 to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 100 'zext' 'zext_ln544_4' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_12 : Operation 101 [1/1] (0.00ns)   --->   "%tmp_hist_0_addr_2 = getelementptr [256 x i32]* %tmp_hist_0, i64 0, i64 %zext_ln544_4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 101 'getelementptr' 'tmp_hist_0_addr_2' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_12 : Operation 102 [2/2] (3.25ns)   --->   "%tmp_hist_0_load = load i32* %tmp_hist_0_addr_2, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 102 'load' 'tmp_hist_0_load' <Predicate = (!icmp_ln887_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_12 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_hist1_0_addr_2 = getelementptr [256 x i32]* %tmp_hist1_0, i64 0, i64 %zext_ln544_4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 103 'getelementptr' 'tmp_hist1_0_addr_2' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_12 : Operation 104 [2/2] (3.25ns)   --->   "%tmp_hist1_0_load = load i32* %tmp_hist1_0_addr_2, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 104 'load' 'tmp_hist1_0_load' <Predicate = (!icmp_ln887_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+
+State 13 <SV = 7> <Delay = 9.06>
+ST_13 : Operation 105 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([10 x i8]* @p_str168) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:107]   --->   Operation 105 'specloopname' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_13 : Operation 106 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([10 x i8]* @p_str168)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:107]   --->   Operation 106 'specregionbegin' 'tmp_3' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_13 : Operation 107 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:108]   --->   Operation 107 'specpipeline' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_13 : Operation 108 [1/1] (0.00ns)   --->   "%hist_array_addr = getelementptr [256 x i32]* %hist_array, i64 0, i64 %zext_ln544_4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:124]   --->   Operation 108 'getelementptr' 'hist_array_addr' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_13 : Operation 109 [1/2] (3.25ns)   --->   "%tmp_hist_0_load = load i32* %tmp_hist_0_addr_2, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 109 'load' 'tmp_hist_0_load' <Predicate = (!icmp_ln887_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_13 : Operation 110 [1/2] (3.25ns)   --->   "%tmp_hist1_0_load = load i32* %tmp_hist1_0_addr_2, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114]   --->   Operation 110 'load' 'tmp_hist1_0_load' <Predicate = (!icmp_ln887_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_13 : Operation 111 [1/1] (2.55ns)   --->   "%add_ln115 = add i32 %tmp_hist1_0_load, %tmp_hist_0_load" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:115]   --->   Operation 111 'add' 'add_ln115' <Predicate = (!icmp_ln887_14)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 112 [1/1] (3.25ns)   --->   "store i32 %add_ln115, i32* %hist_array_addr, align 4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:124]   --->   Operation 112 'store' <Predicate = (!icmp_ln887_14)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 256> <RAM>
+ST_13 : Operation 113 [1/1] (0.00ns)   --->   "%empty_101 = call i32 (...)* @_ssdm_op_SpecRegionEnd([10 x i8]* @p_str168, i32 %tmp_3)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:132]   --->   Operation 113 'specregionend' 'empty_101' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+ST_13 : Operation 114 [1/1] (0.00ns)   --->   "br label %.preheader" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:106]   --->   Operation 114 'br' <Predicate = (!icmp_ln887_14)> <Delay = 0.00>
+
+State 14 <SV = 7> <Delay = 0.00>
+ST_14 : Operation 115 [1/1] (0.00ns)   --->   "ret void" [D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:134]   --->   Operation 115 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('phi_ln47', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47) with incoming values : ('add_ln47', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47) [9]  (1.77 ns)
+
+ <State 2>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('phi_ln47', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47) with incoming values : ('add_ln47', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47) [9]  (0 ns)
+	'getelementptr' operation ('tmp_hist_0_addr', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47) [12]  (0 ns)
+	'store' operation ('store_ln47', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47) of constant 0 on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [13]  (3.25 ns)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('phi_ln48', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48) with incoming values : ('add_ln48', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48) [21]  (0 ns)
+	'getelementptr' operation ('tmp_hist1_0_addr', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48) [24]  (0 ns)
+	'store' operation ('store_ln48', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48) of constant 0 on array 'tmp_hist1[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48 [25]  (3.25 ns)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('i.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:56) [33]  (0 ns)
+	'getelementptr' operation ('tmp_hist_0_addr_1', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:62) [44]  (0 ns)
+	'store' operation ('store_ln62', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:62) of constant 0 on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [45]  (3.25 ns)
+
+ <State 5>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('row.V') with incoming values : ('row.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68) [54]  (1.77 ns)
+
+ <State 6>: 2.58ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln887_12', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:68) [55]  (1.55 ns)
+	blocking operation 1.03 ns on control path)
+
+ <State 7>: 1.66ns
+The critical path consists of the following:
+	'phi' operation ('col.V') with incoming values : ('col.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72) [64]  (0 ns)
+	'icmp' operation ('icmp_ln887_13', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:72) [65]  (1.66 ns)
+
+ <State 8>: 6.89ns
+The critical path consists of the following:
+	fifo read on port 'p_src_mat_data_V' (D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:77) [72]  (3.63 ns)
+	'getelementptr' operation ('tmp_hist_0_addr_3', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95) [76]  (0 ns)
+	'load' operation ('tmp_hist_0_load_1', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95) on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [77]  (3.25 ns)
+
+ <State 9>: 9.06ns
+The critical path consists of the following:
+	'load' operation ('tmp_hist_0_load_1', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:95) on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [77]  (3.25 ns)
+	'add' operation ('add_ln97', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:97) [81]  (2.55 ns)
+	'store' operation ('store_ln97', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:97) of variable 'add_ln97', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:97 on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [82]  (3.25 ns)
+
+ <State 10>: 9.06ns
+The critical path consists of the following:
+	'load' operation ('tmp_hist1_0_load_1', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:96) on array 'tmp_hist1[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48 [80]  (3.25 ns)
+	'add' operation ('add_ln99', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:99) [83]  (2.55 ns)
+	'store' operation ('store_ln99', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:99) of variable 'add_ln99', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:99 on array 'tmp_hist1[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:48 [84]  (3.25 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i.V') with incoming values : ('i.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:106) [95]  (0 ns)
+	'getelementptr' operation ('tmp_hist_0_addr_2', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114) [106]  (0 ns)
+	'load' operation ('tmp_hist_0_load', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114) on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [107]  (3.25 ns)
+
+ <State 13>: 9.06ns
+The critical path consists of the following:
+	'load' operation ('tmp_hist_0_load', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:114) on array 'tmp_hist[0]', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:47 [107]  (3.25 ns)
+	'add' operation ('add_ln115', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:115) [110]  (2.55 ns)
+	'store' operation ('store_ln124', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:124) of variable 'add_ln115', D:/Xilinx/xfopencv-master/include\imgproc/xf_histogram.hpp:115 on array 'hist_array' [111]  (3.25 ns)
+
+ <State 14>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

@@ -1,0 +1,5 @@
+   Build using "D:/Xilinx/Vivado/2019.2/tps/win64/msys64/mingw64/bin/g++"
+   Compiling apatb_ip_accel_app.cpp
+   Compiling weed_detection.cpp_pre.cpp.tb.cpp
+   Compiling weed_detection_tb.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe

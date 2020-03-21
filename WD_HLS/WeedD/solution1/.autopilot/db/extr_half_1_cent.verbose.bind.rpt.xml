@@ -1,0 +1,50 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'extr_half_1_cent'" level="0">
+<item name = "Date">Wed Mar 18 11:34:33 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 18.685 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">89, 58415, 4.450 us, 2.921 ms, 89, 58415, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_extract_third_and_fo_1_fu_189">extract_third_and_fo_1, 50, 30050, 2.500 us, 1.502 ms, 50, 30050, none</column>
+<column name="grp_get_centroid_fh_fu_203">get_centroid_fh, 1540, 1574, 77.000 us, 78.700 us, 1538, 1538, dataflow</column>
+<column name="grp_extract_micro_roi_fu_217">extract_micro_roi, 783, 783, 39.150 us, 39.150 us, 783, 783, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- extract_first_centroid_label11">18, 14178, 3 ~ 2363, -, -, 6, no</column>
+<column name="- extract_second_centroid_label12">18, 14184, 3 ~ 2364, -, -, 6, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

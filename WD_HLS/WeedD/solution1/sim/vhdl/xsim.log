@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# xsim v2019.2.1 (64-bit)
+# SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+# IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+# Start of session at: Wed Mar 18 00:09:17 2020
+# Process ID: 7688
+# Current directory: D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl
+# Command line: xsim.exe -mode tcl -source {xsim.dir/ip_accel_app/xsim_script.tcl}
+# Log file: D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xsim.log
+# Journal file: D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/ip_accel_app/xsim_script.tcl
+# xsim {ip_accel_app} -autoloadwcfg -tclbatch {ip_accel_app.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source ip_accel_app.tcl
+## run all
+Note: WARNING: The latency is much larger than expected. Simulation may be stuck.
+Time: 500000375 ns  Iteration: 1  Process: /apatb_ip_accel_app_top/gen_mLatcnterout_proc  File: D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app.autotb.vhd

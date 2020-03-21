@@ -1,7 +1,6 @@
 #ifndef _XF_HEADERS_H_
 #define _XF_HEADERS_H_
 
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -23,8 +22,6 @@
 #include "opencv2/core/internal.hpp"
 #endif
 
-
-
 #if __SDSCC__
 #include "sds_lib.h"
 #define TIME_STAMP_INIT  unsigned int clock_start, clock_end;  clock_start = sds_clock_counter();
@@ -33,6 +30,5 @@
 
 #include "common/xf_sw_utils.h"
 #include "common/xf_axi.h"
-
 
 #endif//_XF_HEADERS_H_

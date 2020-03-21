@@ -1,0 +1,63 @@
+<stg><name>Block__proc642</name>
+
+
+<trans_list>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="2" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="0" op_0_bw="0" op_1_bw="12" op_2_bw="12">
+<![CDATA[
+newFuncRoot:0  call void @_ssdm_op_Write.ap_auto.i12P(i12* %img_in_cols, i12 1280)
+
+]]></Node>
+<StgValue><ssdm name="write_ln464"/></StgValue>
+</operation>
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="0">
+<![CDATA[
+newFuncRoot:1  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln0"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="4" name="img_in_cols" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="img_in_cols"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="6" from="_ssdm_op_Write.ap_auto.i12P" to="write_ln464" fromId="5" toId="2">
+</dataflow>
+<dataflow id="7" from="img_in_cols" to="write_ln464" fromId="4" toId="2">
+</dataflow>
+<dataflow id="9" from="StgValue_8" to="write_ln464" fromId="8" toId="2">
+</dataflow>
+</dataflows>
+
+
+</stg>

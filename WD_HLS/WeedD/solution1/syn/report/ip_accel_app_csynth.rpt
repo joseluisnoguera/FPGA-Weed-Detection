@@ -1,0 +1,143 @@
+
+
+================================================================
+== Vivado HLS Report for 'ip_accel_app'
+================================================================
+* Date:           Wed Mar 18 11:36:47 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 43.397 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline |
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type   |
+    +---------+---------+-----------+-----------+---------+---------+----------+
+    |  2419234|  2419234| 0.121 sec | 0.121 sec |  2419202|  2419202| dataflow |
+    +---------+---------+-----------+-----------+---------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------+----------------+---------+---------+-----------+-----------+---------+---------+----------+
+        |                   |                |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline |
+        |      Instance     |     Module     |   min   |   max   |    min    |    max    |   min   |   max   |   Type   |
+        +-------------------+----------------+---------+---------+-----------+-----------+---------+---------+----------+
+        |weed_detection_U0  |weed_detection  |  2419233|  2419233| 0.121 sec | 0.121 sec |  2419202|  2419202| dataflow |
+        |AXIvideo2xfMat_U0  |AXIvideo2xfMat  |   925203|   925203| 46.260 ms | 46.260 ms |   925203|   925203|   none   |
+        |xfMat2AXIvideo_U0  |xfMat2AXIvideo  |   924481|   924481| 46.224 ms | 46.224 ms |   924481|   924481|   none   |
+        |Block_proc642_U0   |Block_proc642   |        0|        0|    0 ns   |    0 ns   |        0|        0|   none   |
+        +-------------------+----------------+---------+---------+-----------+-----------+---------+---------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        0|      -|      15|     96|    -|
+|Instance         |      117|    148|   23874|  51589|    0|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |      117|    148|   23889|  51685|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       41|     67|      22|     97|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------+----------------+---------+-------+-------+-------+-----+
+    |      Instance     |     Module     | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +-------------------+----------------+---------+-------+-------+-------+-----+
+    |AXIvideo2xfMat_U0  |AXIvideo2xfMat  |        0|      0|    235|    321|    0|
+    |Block_proc642_U0   |Block_proc642   |        0|      0|      2|     11|    0|
+    |weed_detection_U0  |weed_detection  |      117|    148|  23594|  51085|    0|
+    |xfMat2AXIvideo_U0  |xfMat2AXIvideo  |        0|      0|     43|    172|    0|
+    +-------------------+----------------+---------+-------+-------+-------+-----+
+    |Total              |                |      117|    148|  23874|  51589|    0|
+    +-------------------+----------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |img_in_cols_channel7_U  |        0|  5|   0|    -|     2|   12|       24|
+    |img_in_data_V_U         |        0|  5|   0|    -|     1|   24|       24|
+    |img_out_data_V_U        |        0|  5|   0|    -|     1|   24|       24|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                   |        0| 15|   0|    0|     4|   60|       72|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+--------------+---------------------+--------------+
+|     RTL Ports     | Dir | Bits|   Protocol   |    Source Object    |    C Type    |
++-------------------+-----+-----+--------------+---------------------+--------------+
+|stream_in_TDATA    |  in |   32|     axis     |  stream_in_V_data_V |    pointer   |
+|stream_in_TKEEP    |  in |    4|     axis     |  stream_in_V_keep_V |    pointer   |
+|stream_in_TSTRB    |  in |    4|     axis     |  stream_in_V_strb_V |    pointer   |
+|stream_in_TUSER    |  in |    1|     axis     |  stream_in_V_user_V |    pointer   |
+|stream_in_TLAST    |  in |    1|     axis     |  stream_in_V_last_V |    pointer   |
+|stream_in_TID      |  in |    1|     axis     |   stream_in_V_id_V  |    pointer   |
+|stream_in_TDEST    |  in |    1|     axis     |  stream_in_V_dest_V |    pointer   |
+|stream_in_TVALID   |  in |    1|     axis     |  stream_in_V_dest_V |    pointer   |
+|stream_in_TREADY   | out |    1|     axis     |  stream_in_V_dest_V |    pointer   |
+|stream_out_TDATA   | out |   32|     axis     | stream_out_V_data_V |    pointer   |
+|stream_out_TKEEP   | out |    4|     axis     | stream_out_V_keep_V |    pointer   |
+|stream_out_TSTRB   | out |    4|     axis     | stream_out_V_strb_V |    pointer   |
+|stream_out_TUSER   | out |    1|     axis     | stream_out_V_user_V |    pointer   |
+|stream_out_TLAST   | out |    1|     axis     | stream_out_V_last_V |    pointer   |
+|stream_out_TID     | out |    1|     axis     |  stream_out_V_id_V  |    pointer   |
+|stream_out_TDEST   | out |    1|     axis     | stream_out_V_dest_V |    pointer   |
+|stream_out_TVALID  | out |    1|     axis     | stream_out_V_dest_V |    pointer   |
+|stream_out_TREADY  |  in |    1|     axis     | stream_out_V_dest_V |    pointer   |
+|ap_clk             |  in |    1| ap_ctrl_none |     ip_accel_app    | return value |
+|ap_rst_n           |  in |    1| ap_ctrl_none |     ip_accel_app    | return value |
++-------------------+-----+-----+--------------+---------------------+--------------+
+

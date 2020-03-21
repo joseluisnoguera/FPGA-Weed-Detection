@@ -1,0 +1,1059 @@
+
+D:\GitHub\Weed_Detection\WD_HLS\WeedD\solution1\sim\vhdl>set PATH= 
+
+D:\GitHub\Weed_Detection\WD_HLS\WeedD\solution1\sim\vhdl>call D:/Xilinx/Vivado/2019.2/bin/xelab xil_defaultlib.apatb_ip_accel_app_top glbl -prj ip_accel_app.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm --initfile "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini" --lib "ieee_proposed=./ieee_proposed" -s ip_accel_app  
+INFO: [XSIM 43-3496] Using init file passed via -initfile option "D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
+Vivado Simulator 2019.2
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_ip_accel_app_top glbl -prj ip_accel_app.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims -L unisims_ver -L xpm --initfile D:/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s ip_accel_app 
+Multi-threading is on. Using 6 slave threads.
+Determining compilation order of HDL files.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/AESL_sim_pkg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/add_2749.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'add_2749'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/AESL_axi_s_stream_in.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_s_stream_in'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/AESL_axi_s_stream_out.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AESL_axi_s_stream_out'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/AXIvideo2xfMat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AXIvideo2xfMat'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/bitwise_and.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'bitwise_and'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/Block_proc642.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Block_proc642'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/convert_fp_to_8b770.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'convert_fp_to_8b770'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/CoreProcessUpArea_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'CoreProcessUpArea_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat438.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat438'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat438_Bloc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat438_Bloc'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat438_Loop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat438_Loop'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat438_Loop_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat438_Loop_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat635769.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat635769'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_2762.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_2762'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_2_Block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_2_Block'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_2_Loop_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_2_Loop_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_2_Loop_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_2_Loop_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Block_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Block_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Block_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Block_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Loop_2_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Loop_2_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Loop_2_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Loop_2_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Loop_2_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Loop_2_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Loop_Re.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Loop_Re'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Loop_Re_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Loop_Re_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/duplicateMat_Loop_Re_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'duplicateMat_Loop_Re_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/erode.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'erode'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/erode437.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'erode437'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extractChannel432.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extractChannel432'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extractChannel433.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extractChannel433'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extractChannel434.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extractChannel434'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extract_channels.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extract_channels'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extract_micro_roi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extract_micro_roi'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extract_third_andKfY.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_andKfY_rom'
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_andKfY'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extract_third_andLf8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_andLf8_ram'
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_andLf8'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extract_third_andMgi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_andMgi_ram'
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_andMgi'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extract_third_and_fo_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extract_third_and_fo_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extr_half_1_cent.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extr_half_1_cent'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extr_half_1_cent_Rg6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extr_half_1_cent_Rg6_ram'
+INFO: [VRFC 10-3107] analyzing entity 'extr_half_1_cent_Rg6'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extr_half_2_cent.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extr_half_2_cent'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/extr_half_2_cent_VhK.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'extr_half_2_cent_VhK_ram'
+INFO: [VRFC 10-3107] analyzing entity 'extr_half_2_cent_VhK'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d2_A_x0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d2_A_x1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x1_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d2_A_x2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x2_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d2_A_x3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x3_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d2_A_x3'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d4_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d4_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d4_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w10_d4_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d4_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w10_d4_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w11_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w11_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w11_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w11_d4_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w11_d4_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w11_d4_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w12_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w12_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w12_d2_A_x0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d2_A_x0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d2_A_x0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w12_d3_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d3_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d3_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w12_d4_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d4_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w12_d4_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w16_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w16_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w16_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w16_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w16_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w16_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w16_d3_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w16_d3_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w16_d3_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w1_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w1_d1_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w1_d1_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d1_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d1_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d1_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d1_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d1_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d1_A_x0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d1_A_x0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d1_A_x0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d2_A_x0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d2_A_x1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x1_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d2_A_x2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x2_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w24_d2_A_x3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x3_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w24_d2_A_x3'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w28_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w28_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w28_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w28_d3_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w28_d3_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w28_d3_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w29_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w29_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w29_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w2_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w2_d1_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w2_d1_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w32_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d1_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d1_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w32_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w32_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w32_d2_A_x0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_x0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_x0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w32_d2_A_x1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_x1_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w32_d2_A_x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w48_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w48_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w48_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d1_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d1_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d1_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d1_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d1_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d1_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d2_A_x0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d2_A_x1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x1_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d2_A_x2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x2_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d2_A_x2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w8_d3_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d3_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w8_d3_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w9_d2_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w9_d2_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w9_d2_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w9_d2_A_x.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w9_d2_A_x_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w9_d2_A_x'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/fifo_w9_d4_A.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w9_d4_A_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'fifo_w9_d4_A'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_12th_segment.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_12th_segment'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_12th_segment_Loo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_12th_segment_Loo'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_fh.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_fh'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_fh_Bloc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_fh_Bloc'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_fh_Bloc_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_fh_Bloc_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_fh_entr.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_fh_entr'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_fh_Loop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_fh_Loop'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_sh.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_sh'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_sh_Bloc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_sh_Bloc'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_centroid_sh_Loop.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_centroid_sh_Loop'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_crop_lines.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_crop_lines_ce1iI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines_ce1iI_ram'
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines_ce1iI'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_crop_lines_li0iy.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines_li0iy_ram'
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines_li0iy'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_crop_lines_li2iS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines_li2iS_ram'
+INFO: [VRFC 10-3107] analyzing entity 'get_crop_lines_li2iS'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_exg_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_exg_image'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_last_centroids.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_last_centroids'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_last_centroids_L.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_last_centroids_L'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_lines_lsl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_lines_lsl'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_lines_lsl_linWhU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_lines_lsl_linWhU_ram'
+INFO: [VRFC 10-3107] analyzing entity 'get_lines_lsl_linWhU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_line_bases.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_line_bases'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_line_bases_hiFfa.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_line_bases_hiFfa_ram'
+INFO: [VRFC 10-3107] analyzing entity 'get_line_bases_hiFfa'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_line_bases_smGfk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_line_bases_smGfk_ram'
+INFO: [VRFC 10-3107] analyzing entity 'get_line_bases_smGfk'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_max_from_channel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_max_from_channel'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_total_vegetatBew.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetatBew'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_total_vegetatBew_memcore.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetatBew_memcore_rom'
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetatBew_memcore'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_total_vegetation.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetation'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_total_vegetation_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetation_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_total_vegetation_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetation_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_total_vegetation_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_total_vegetation_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_vegetation_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_vegetation_image'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_vegetation_image_113.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_vegetation_image_113'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_vegetation_image_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_vegetation_image_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_vegetation_image_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_vegetation_image_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_vegetation_image_4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_vegetation_image_4'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/get_weed_mask.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'get_weed_mask'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/Inverse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Inverse'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/Inverse_xf_divisiwdI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Inverse_xf_divisiwdI_rom'
+INFO: [VRFC 10-3107] analyzing entity 'Inverse_xf_divisiwdI'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app.autotb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'apatb_ip_accel_app_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mac_jbC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mac_jbC_DSP48_2'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mac_jbC'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mac_kbM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mac_kbM_DSP48_3'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mac_kbM'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mac_PgM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mac_PgM_DSP48_4'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mac_PgM'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mul_7jG.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_7jG_DSP48_8'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_7jG'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mul_hbi.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_hbi_DSP48_0'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_hbi'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mul_ibs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_ibs_DSP48_1'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_ibs'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mul_QgW.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_QgW_DSP48_5'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_QgW'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mul_Yie.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_Yie_DSP48_6'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_Yie'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mul_Zio.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_Zio_DSP48_7'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mul_Zio'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mux_bbk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mux_bbk'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_mux_yd2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_mux_yd2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_sdivNgs.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivNgs_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivNgs_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivNgs'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_sdivpcA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivpcA_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivpcA_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivpcA'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_sdivqcK.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivqcK_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivqcK_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivqcK'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_sdivrcU.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivrcU_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivrcU_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivrcU'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_sdivXh4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivXh4_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivXh4_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_sdivXh4'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_udiv6jw.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udiv6jw_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udiv6jw_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udiv6jw'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_udivbak.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivbak_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivbak_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivbak'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_udivdEe.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivdEe_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivdEe_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivdEe'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_udivHfu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivHfu_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivHfu_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivHfu'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_udivIfE.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivIfE_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivIfE_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivIfE'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app_udivOgC.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivOgC_div_u'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivOgC_div'
+INFO: [VRFC 10-3107] analyzing entity 'ip_accel_app_udivOgC'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/is_crop_or_furrow.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'is_crop_or_furrow'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/merge.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'merge'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/merge_Block_crit_e.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'merge_Block_crit_e'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/merge_Loop_Read_Mat_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'merge_Loop_Read_Mat_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/merge_Loop_Write_Mat.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'merge_Loop_Write_Mat'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/minMaxLoc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'minMaxLoc'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/minMaxLoc435.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'minMaxLoc435'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/minMaxLoc436.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'minMaxLoc436'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/OtsuThreshold.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'OtsuThreshold'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/p_prop_ret_max_b_dc_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'p_prop_ret_max_b_dc_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/p_prop_ret_max_g_dc_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'p_prop_ret_max_g_dc_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/p_prop_ret_max_r_dc_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'p_prop_ret_max_r_dc_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/read765.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'read765'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/read779.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'read779'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/read_r.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'read_r'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/regslice_core.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'regslice_both'
+INFO: [VRFC 10-3107] analyzing entity 'regslice_forward'
+INFO: [VRFC 10-3107] analyzing entity 'regslice_reverse'
+INFO: [VRFC 10-3107] analyzing entity 'regslice_both_w1'
+INFO: [VRFC 10-3107] analyzing entity 'regslice_forward_w1'
+INFO: [VRFC 10-3107] analyzing entity 'regslice_reverse_w1'
+INFO: [VRFC 10-3107] analyzing entity 'ibuf'
+INFO: [VRFC 10-3107] analyzing entity 'obuf'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/remark_crop_lines.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'remark_crop_lines'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/remark_crop_linesCeG.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'remark_crop_linesCeG_ram'
+INFO: [VRFC 10-3107] analyzing entity 'remark_crop_linesCeG'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/resizeNNBilinear.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'resizeNNBilinear'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/resizeNNBilinear_eOg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'resizeNNBilinear_eOg_ram'
+INFO: [VRFC 10-3107] analyzing entity 'resizeNNBilinear_eOg'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/resize_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'resize_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/scaleCompute.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'scaleCompute'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/sectors_weed_clas3i2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_clas3i2_rom'
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_clas3i2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/sectors_weed_clas4jc.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_clas4jc_ram'
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_clas4jc'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/sectors_weed_clas5jm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_clas5jm_ram'
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_clas5jm'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/sectors_weed_classif.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'sectors_weed_classif'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/segment_image.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'segment_image'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_add_274bll.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_add_274bll_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_add_274bll'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_duplicaAem.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicaAem_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicaAem'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_duplicabkb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicabkb_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicabkb'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_duplicaEe0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicaEe0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicaEe0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_duplicalbW.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicalbW_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicalbW'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_duplicaocq.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicaocq_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicaocq'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_duplicasc4.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicasc4_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_duplicasc4'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_erode43bnm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_erode43bnm_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_erode43bnm'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_extracttde.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_extracttde_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_extracttde'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_get_12tbpm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_12tbpm_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_12tbpm'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_get_cenJfO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_cenJfO_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_cenJfO'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_get_crobqm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_crobqm_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_crobqm'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_get_vegbjl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_vegbjl_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_get_vegbjl'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_merge_L9j0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_merge_L9j0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_merge_L9j0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_merge_U0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_merge_U0_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_merge_U0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_remark_bom.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_remark_bom_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_remark_bom'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_resizeNbkl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_resizeNbkl_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_resizeNbkl'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_resize_bsm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_resize_bsm_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_resize_bsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_sectorsbrm.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_sectorsbrm_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_sectorsbrm'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_segmentbml.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_segmentbml_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_segmentbml'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xfChann8jQ.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xfChann8jQ_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xfChann8jQ'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xFDuplicud.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplicud_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplicud'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xFDupliDeQ.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDupliDeQ_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDupliDeQ'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xFDuplimb6.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplimb6_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplimb6'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xFDuplincg.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplincg_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplincg'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xFDuplizec.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplizec_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xFDuplizec'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/start_for_xfMat2Abtn.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xfMat2Abtn_shiftReg'
+INFO: [VRFC 10-3107] analyzing entity 'start_for_xfMat2Abtn'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/Threshold.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Threshold'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/weed_detection.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'weed_detection'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/weed_detection_Block.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'weed_detection_Block'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/weed_detection_entry.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'weed_detection_entry'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/write797.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'write797'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/write_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'write_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/write_r.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'write_r'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFarithm_proc_2811.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFarithm_proc_2811'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfChannelCombine.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfChannelCombine'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfChannelExtractKern.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfChannelExtractKern'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFDuplicate.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFDuplicate'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFDuplicate637.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFDuplicate637'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFDuplicate645.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFDuplicate645'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFDuplicate_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFDuplicate_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFDuplicate_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFDuplicate_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xferode790.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xferode790'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xferode790_buf_0_V.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xferode790_buf_0_V_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xferode790_buf_0_V'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xferode793.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xferode793'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xferode793_buf_0_V.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xferode793_buf_0_V_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xferode793_buf_0_V'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfExtractPixels.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfExtractPixels'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfExtractPixels_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfExtractPixels_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFHistogramKernel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFHistogramKernel'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFHistogramKerneludo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFHistogramKerneludo_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xFHistogramKerneludo'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfMat2AXIvideo.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfMat2AXIvideo'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFMinMaxLocKernel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFMinMaxLocKernel'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfOtsuKernel.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfOtsuKernel'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfOtsuKernel_HistxdS.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfOtsuKernel_HistxdS_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xfOtsuKernel_HistxdS'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFResizeAreaUpScabck.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabck_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabck'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFResizeAreaUpScabfk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabfk_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabfk'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFResizeAreaUpScabgk.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabgk_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabgk'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFResizeAreaUpScabhl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabhl_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabhl'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFResizeAreaUpScabil.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabil_ram'
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScabil'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFResizeAreaUpScale_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFResizeAreaUpScale_s'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xFUDivAreaUp_2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xFUDivAreaUp_2'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xfUDivResize.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'xfUDivResize'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/zero_0_180_320_1_s.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'zero_0_180_320_1_s'
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_textio
+Compiling module work.glbl
+Compiling architecture behav of entity xil_defaultlib.Block_proc642 [block_proc642_default]
+Compiling architecture behav of entity xil_defaultlib.ibuf [\ibuf(w=33)\]
+Compiling architecture behav of entity xil_defaultlib.obuf [\obuf(w=33)\]
+Compiling architecture behav of entity xil_defaultlib.regslice_both [regslice_both_default]
+Compiling architecture behav of entity xil_defaultlib.ibuf [\ibuf(w=5)\]
+Compiling architecture behav of entity xil_defaultlib.obuf [\obuf(w=5)\]
+Compiling architecture behav of entity xil_defaultlib.regslice_both [\regslice_both(datawidth=4)\]
+Compiling architecture behav of entity xil_defaultlib.ibuf [\ibuf(w=2)\]
+Compiling architecture behav of entity xil_defaultlib.obuf [\obuf(w=2)\]
+Compiling architecture behav of entity xil_defaultlib.regslice_both [\regslice_both(datawidth=1)\]
+Compiling architecture behav of entity xil_defaultlib.AXIvideo2xfMat [axivideo2xfmat_default]
+Compiling architecture behav of entity xil_defaultlib.weed_detection_entry [weed_detection_entry_default]
+Compiling architecture behav of entity xil_defaultlib.weed_detection_Block [weed_detection_block_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_2_Block [duplicatemat_2_block_default]
+Compiling architecture behav of entity xil_defaultlib.read765 [read765_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_2_Loop_s [duplicatemat_2_loop_s_default]
+Compiling architecture behav of entity xil_defaultlib.xFDuplicate_2 [xfduplicate_2_default]
+Compiling architecture behav of entity xil_defaultlib.write_r [write_r_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_2_Loop_1 [duplicatemat_2_loop_1_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d2_A_shiftReg [fifo_w12_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d2_A [\fifo_w12_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w11_d4_A_shiftReg [fifo_w11_d4_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w11_d4_A [\fifo_w11_d4_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d4_A_shiftReg [fifo_w12_d4_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d4_A [\fifo_w12_d4_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_shiftReg [fifo_w24_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A [\fifo_w24_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicabkb_shiftReg [start_for_duplicabkb_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicabkb [\start_for_duplicabkb(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplicud_shiftReg [start_for_xfduplicud_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplicud [\start_for_xFDuplicud(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_2762 [duplicatemat_2762_default]
+Compiling architecture rtl of entity xil_defaultlib.resizeNNBilinear_eOg_ram [\resizeNNBilinear_eOg_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.resizeNNBilinear_eOg [resizennbilinear_eog_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivdEe_div_u [\ip_accel_app_udivdEe_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivdEe_div [\ip_accel_app_udivdEe_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_udivdEe [\ip_accel_app_udivdEe(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.xfUDivResize [xfudivresize_default]
+Compiling architecture behav of entity xil_defaultlib.scaleCompute [scalecompute_default]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mul_hbi_DSP48_0 [ip_accel_app_mul_hbi_dsp48_0_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mul_hbi [\ip_accel_app_mul_hbi(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mul_ibs_DSP48_1 [ip_accel_app_mul_ibs_dsp48_1_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mul_ibs [\ip_accel_app_mul_ibs(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mac_jbC_DSP48_2 [ip_accel_app_mac_jbc_dsp48_2_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mac_jbC [\ip_accel_app_mac_jbC(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mac_kbM_DSP48_3 [ip_accel_app_mac_kbm_dsp48_3_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mac_kbM [\ip_accel_app_mac_kbM(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.resizeNNBilinear [resizennbilinear_default]
+Compiling architecture behav of entity xil_defaultlib.get_vegetation_image_113 [get_vegetation_image_113_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Block_s [duplicatemat_block_s_default]
+Compiling architecture behav of entity xil_defaultlib.read779 [read779_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Loop_Re [duplicatemat_loop_re_default]
+Compiling architecture behav of entity xil_defaultlib.xFDuplicate645 [xfduplicate645_default]
+Compiling architecture behav of entity xil_defaultlib.write_1 [write_1_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Loop_2_s [duplicatemat_loop_2_s_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_shiftReg [fifo_w10_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A [\fifo_w10_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w9_d4_A_shiftReg [fifo_w9_d4_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w9_d4_A [\fifo_w9_d4_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d4_A_shiftReg [fifo_w10_d4_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d4_A [\fifo_w10_d4_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x_shiftReg [fifo_w24_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x [\fifo_w24_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicalbW_shiftReg [start_for_duplicalbw_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicalbW [\start_for_duplicalbW(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplimb6_shiftReg [start_for_xfduplimb6_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplimb6 [\start_for_xFDuplimb6(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat635769 [duplicatemat635769_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Block_1 [duplicatemat_block_1_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Loop_Re_1 [duplicatemat_loop_re_1_default]
+Compiling architecture behav of entity xil_defaultlib.xFDuplicate [xfduplicate_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Loop_2_1 [duplicatemat_loop_2_1_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x_shiftReg [fifo_w10_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x [\fifo_w10_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x0_shiftReg [fifo_w24_d2_a_x0_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x0 [\fifo_w24_d2_A_x0(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplincg_shiftReg [start_for_xfduplincg_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplincg [\start_for_xFDuplincg(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicaocq_shiftReg [start_for_duplicaocq_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicaocq [\start_for_duplicaocq(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat [duplicatemat_default]
+Compiling architecture behav of entity xil_defaultlib.xfChannelExtractKern [xfchannelextractkern_default]
+Compiling architecture behav of entity xil_defaultlib.extractChannel432 [extractchannel432_default]
+Compiling architecture behav of entity xil_defaultlib.extractChannel433 [extractchannel433_default]
+Compiling architecture behav of entity xil_defaultlib.extractChannel434 [extractchannel434_default]
+Compiling architecture behav of entity xil_defaultlib.extract_channels [extract_channels_default]
+Compiling architecture behav of entity xil_defaultlib.xFMinMaxLocKernel [xfminmaxlockernel_default]
+Compiling architecture behav of entity xil_defaultlib.minMaxLoc435 [minmaxloc435_default]
+Compiling architecture behav of entity xil_defaultlib.minMaxLoc436 [minmaxloc436_default]
+Compiling architecture behav of entity xil_defaultlib.minMaxLoc [minmaxloc_default]
+Compiling architecture behav of entity xil_defaultlib.p_prop_ret_max_b_dc_s [p_prop_ret_max_b_dc_s_default]
+Compiling architecture behav of entity xil_defaultlib.p_prop_ret_max_g_dc_s [p_prop_ret_max_g_dc_s_default]
+Compiling architecture behav of entity xil_defaultlib.p_prop_ret_max_r_dc_s [p_prop_ret_max_r_dc_s_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_shiftReg [fifo_w32_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A [\fifo_w32_d2_A(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.get_max_from_channel [get_max_from_channel_default]
+Compiling architecture behav of entity xil_defaultlib.get_vegetation_image [get_vegetation_image_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivpcA_div_u [\ip_accel_app_sdivpcA_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivpcA_div [\ip_accel_app_sdivpcA_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_sdivpcA [\ip_accel_app_sdivpcA(id=1,num_s...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivqcK_div_u [\ip_accel_app_sdivqcK_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivqcK_div [\ip_accel_app_sdivqcK_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_sdivqcK [\ip_accel_app_sdivqcK(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.get_exg_image [get_exg_image_default]
+Compiling architecture behav of entity xil_defaultlib.get_vegetation_image_3 [get_vegetation_image_3_default]
+Compiling architecture behav of entity xil_defaultlib.get_vegetation_image_2 [get_vegetation_image_2_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivrcU_div_u [\ip_accel_app_sdivrcU_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivrcU_div [\ip_accel_app_sdivrcU_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_sdivrcU [\ip_accel_app_sdivrcU(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.convert_fp_to_8b770 [convert_fp_to_8b770_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w9_d2_A_shiftReg [fifo_w9_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w9_d2_A [\fifo_w9_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x0_shiftReg [fifo_w10_d2_a_x0_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x0 [\fifo_w10_d2_A_x0(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d1_A_shiftReg [fifo_w24_d1_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d1_A [\fifo_w24_d1_A(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d1_A_shiftReg [fifo_w8_d1_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d1_A [\fifo_w8_d1_A(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_x_shiftReg [fifo_w32_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_x [\fifo_w32_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d1_A_shiftReg [fifo_w32_d1_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d1_A [\fifo_w32_d1_A(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w28_d3_A_shiftReg [fifo_w28_d3_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w28_d3_A [\fifo_w28_d3_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w29_d2_A_shiftReg [fifo_w29_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w29_d2_A [\fifo_w29_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x1_shiftReg [fifo_w24_d2_a_x1_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x1 [\fifo_w24_d2_A_x1(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w28_d2_A_shiftReg [fifo_w28_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w28_d2_A [\fifo_w28_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicasc4_shiftReg [start_for_duplicasc4_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicasc4 [\start_for_duplicasc4(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_extracttde_shiftReg [start_for_extracttde_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_extracttde [\start_for_extracttde(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.get_vegetation_image_4 [get_vegetation_image_4_default]
+Compiling architecture rtl of entity xil_defaultlib.xFHistogramKerneludo_ram [\xFHistogramKerneludo_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xFHistogramKerneludo [xfhistogramkerneludo_default]
+Compiling architecture rtl of entity xil_defaultlib.xfOtsuKernel_HistxdS_ram [\xfOtsuKernel_HistxdS_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xfOtsuKernel_HistxdS [xfotsukernel_histxds_default]
+Compiling architecture rtl of entity xil_defaultlib.Inverse_xf_divisiwdI_rom [inverse_xf_divisiwdi_rom_default]
+Compiling architecture arch of entity xil_defaultlib.Inverse_xf_divisiwdI [inverse_xf_divisiwdi_default]
+Compiling architecture behav of entity xil_defaultlib.Inverse [inverse_default]
+Compiling architecture behav of entity xil_defaultlib.xfOtsuKernel [xfotsukernel_default]
+Compiling architecture behav of entity xil_defaultlib.xFHistogramKernel [xfhistogramkernel_default]
+Compiling architecture behav of entity xil_defaultlib.OtsuThreshold [otsuthreshold_default]
+Compiling architecture behav of entity xil_defaultlib.Threshold [threshold_default]
+Compiling architecture behav of entity xil_defaultlib.segment_image [segment_image_default]
+Compiling architecture rtl of entity xil_defaultlib.xferode790_buf_0_V_ram [\xferode790_buf_0_V_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xferode790_buf_0_V [xferode790_buf_0_v_default]
+Compiling architecture behav of entity xil_defaultlib.xfExtractPixels_1 [xfextractpixels_1_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_mux_yd2 [\ip_accel_app_mux_yd2(id=1,din0_...]
+Compiling architecture behav of entity xil_defaultlib.xferode790 [xferode790_default]
+Compiling architecture behav of entity xil_defaultlib.erode437 [erode437_default]
+Compiling architecture rtl of entity xil_defaultlib.remark_crop_linesCeG_ram [\remark_crop_linesCeG_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.remark_crop_linesCeG [remark_crop_linesceg_default]
+Compiling architecture rtl of entity xil_defaultlib.xferode793_buf_0_V_ram [\xferode793_buf_0_V_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xferode793_buf_0_V [xferode793_buf_0_v_default]
+Compiling architecture behav of entity xil_defaultlib.xferode793 [xferode793_default]
+Compiling architecture behav of entity xil_defaultlib.erode [erode_default]
+Compiling architecture behav of entity xil_defaultlib.get_total_vegetation [get_total_vegetation_default]
+Compiling architecture behav of entity xil_defaultlib.get_total_vegetation_1 [get_total_vegetation_1_default]
+Compiling architecture behav of entity xil_defaultlib.get_total_vegetation_2 [get_total_vegetation_2_default]
+Compiling architecture rtl of entity xil_defaultlib.get_total_vegetatBew_memcore_rom [get_total_vegetatbew_memcore_rom...]
+Compiling architecture arch of entity xil_defaultlib.get_total_vegetatBew_memcore [get_total_vegetatbew_memcore_def...]
+Compiling architecture rtl of entity xil_defaultlib.get_total_vegetatBew [\get_total_vegetatBew(addressran...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x2_shiftReg [fifo_w24_d2_a_x2_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x2 [\fifo_w24_d2_A_x2(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.get_total_vegetation_3 [get_total_vegetation_3_default]
+Compiling architecture behav of entity xil_defaultlib.read_r [read_r_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Loop_Re_2 [duplicatemat_loop_re_2_default]
+Compiling architecture behav of entity xil_defaultlib.xFDuplicate637 [xfduplicate637_default]
+Compiling architecture behav of entity xil_defaultlib.write797 [write797_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_Loop_2_2 [duplicatemat_loop_2_2_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_shiftReg [fifo_w8_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A [\fifo_w8_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w9_d2_A_x_shiftReg [fifo_w9_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w9_d2_A_x [\fifo_w9_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x1_shiftReg [fifo_w10_d2_a_x1_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x1 [\fifo_w10_d2_A_x1(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplizec_shiftReg [start_for_xfduplizec_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDuplizec [\start_for_xFDuplizec(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicaAem_shiftReg [start_for_duplicaaem_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicaAem [\start_for_duplicaAem(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat_1 [duplicatemat_1_default]
+Compiling architecture behav of entity xil_defaultlib.remark_crop_lines [remark_crop_lines_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat438_Bloc [duplicatemat438_bloc_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat438_Loop [duplicatemat438_loop_default]
+Compiling architecture behav of entity xil_defaultlib.xFDuplicate_1 [xfduplicate_1_default]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat438_Loop_1 [duplicatemat438_loop_1_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x2_shiftReg [fifo_w10_d2_a_x2_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x2 [\fifo_w10_d2_A_x2(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x_shiftReg [fifo_w8_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x [\fifo_w8_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDupliDeQ_shiftReg [start_for_xfduplideq_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xFDupliDeQ [\start_for_xFDupliDeQ(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicaEe0_shiftReg [start_for_duplicaee0_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_duplicaEe0 [\start_for_duplicaEe0(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.duplicateMat438 [duplicatemat438_default]
+Compiling architecture behav of entity xil_defaultlib.get_12th_segment_Loo [get_12th_segment_loo_default]
+Compiling architecture behav of entity xil_defaultlib.get_12th_segment [get_12th_segment_default]
+Compiling architecture rtl of entity xil_defaultlib.get_crop_lines_li0iy_ram [\get_crop_lines_li0iy_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.get_crop_lines_li0iy [get_crop_lines_li0iy_default]
+Compiling architecture rtl of entity xil_defaultlib.get_crop_lines_ce1iI_ram [\get_crop_lines_ce1iI_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.get_crop_lines_ce1iI [get_crop_lines_ce1ii_default]
+Compiling architecture rtl of entity xil_defaultlib.get_crop_lines_li2iS_ram [\get_crop_lines_li2iS_ram(1,11)\]
+Compiling architecture arch of entity xil_defaultlib.get_crop_lines_li2iS [get_crop_lines_li2is_default]
+Compiling architecture rtl of entity xil_defaultlib.extr_half_1_cent_Rg6_ram [\extr_half_1_cent_Rg6_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.extr_half_1_cent_Rg6 [extr_half_1_cent_rg6_default]
+Compiling architecture rtl of entity xil_defaultlib.extract_third_andKfY_rom [extract_third_andkfy_rom_default]
+Compiling architecture arch of entity xil_defaultlib.extract_third_andKfY [extract_third_andkfy_default]
+Compiling architecture rtl of entity xil_defaultlib.extract_third_andLf8_ram [\extract_third_andLf8_ram(1,11)\]
+Compiling architecture arch of entity xil_defaultlib.extract_third_andLf8 [extract_third_andlf8_default]
+Compiling architecture rtl of entity xil_defaultlib.extract_third_andMgi_ram [\extract_third_andMgi_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.extract_third_andMgi [extract_third_andmgi_default]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_fh_entr [get_centroid_fh_entr_default]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_fh_Bloc_1 [get_centroid_fh_bloc_1_default]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_fh_Loop [get_centroid_fh_loop_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivHfu_div_u [\ip_accel_app_udivHfu_div_u(out_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivHfu_div [\ip_accel_app_udivHfu_div(out_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_udivHfu [\ip_accel_app_udivHfu(id=1,num_s...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivIfE_div_u [ip_accel_app_udivife_div_u_defau...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivIfE_div [ip_accel_app_udivife_div_default]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_udivIfE [\ip_accel_app_udivIfE(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_fh_Bloc [get_centroid_fh_bloc_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w16_d3_A_shiftReg [fifo_w16_d3_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w16_d3_A [\fifo_w16_d3_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d3_A_shiftReg [fifo_w8_d3_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d3_A [\fifo_w8_d3_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x0_shiftReg [fifo_w8_d2_a_x0_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x0 [\fifo_w8_d2_A_x0(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w16_d2_A_shiftReg [fifo_w16_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w16_d2_A [\fifo_w16_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_x0_shiftReg [fifo_w32_d2_a_x0_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_x0 [\fifo_w32_d2_A_x0(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_cenJfO_shiftReg [start_for_get_cenjfo_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_cenJfO [\start_for_get_cenJfO(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_fh [get_centroid_fh_default]
+Compiling architecture behav of entity xil_defaultlib.extract_micro_roi [extract_micro_roi_default]
+Compiling architecture behav of entity xil_defaultlib.get_last_centroids_L [get_last_centroids_l_default]
+Compiling architecture behav of entity xil_defaultlib.get_last_centroids [get_last_centroids_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivNgs_div_u [\ip_accel_app_sdivNgs_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivNgs_div [\ip_accel_app_sdivNgs_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_sdivNgs [\ip_accel_app_sdivNgs(id=1,num_s...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivOgC_div_u [\ip_accel_app_udivOgC_div_u(in1_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivOgC_div [\ip_accel_app_udivOgC_div(in1_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_udivOgC [\ip_accel_app_udivOgC(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mac_PgM_DSP48_4 [ip_accel_app_mac_pgm_dsp48_4_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mac_PgM [\ip_accel_app_mac_PgM(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mul_QgW_DSP48_5 [ip_accel_app_mul_qgw_dsp48_5_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mul_QgW [\ip_accel_app_mul_QgW(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.extract_third_and_fo_1 [extract_third_and_fo_1_default]
+Compiling architecture behav of entity xil_defaultlib.extr_half_1_cent [extr_half_1_cent_default]
+Compiling architecture rtl of entity xil_defaultlib.extr_half_2_cent_VhK_ram [\extr_half_2_cent_VhK_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.extr_half_2_cent_VhK [extr_half_2_cent_vhk_default]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_sh_Loop [get_centroid_sh_loop_default]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_sh_Bloc [get_centroid_sh_bloc_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w16_d2_A_x_shiftReg [fifo_w16_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w16_d2_A_x [\fifo_w16_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x1_shiftReg [fifo_w8_d2_a_x1_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x1 [\fifo_w8_d2_A_x1(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_x1_shiftReg [fifo_w32_d2_a_x1_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w32_d2_A_x1 [\fifo_w32_d2_A_x1(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w48_d2_A_shiftReg [fifo_w48_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w48_d2_A [\fifo_w48_d2_A(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.get_centroid_sh [get_centroid_sh_default]
+Compiling architecture behav of entity xil_defaultlib.extr_half_2_cent [extr_half_2_cent_default]
+Compiling architecture rtl of entity xil_defaultlib.get_lines_lsl_linWhU_ram [\get_lines_lsl_linWhU_ram(1,11)\]
+Compiling architecture arch of entity xil_defaultlib.get_lines_lsl_linWhU [get_lines_lsl_linwhu_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivXh4_div_u [\ip_accel_app_sdivXh4_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_sdivXh4_div [\ip_accel_app_sdivXh4_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_sdivXh4 [\ip_accel_app_sdivXh4(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mul_Yie_DSP48_6 [ip_accel_app_mul_yie_dsp48_6_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mul_Yie [\ip_accel_app_mul_Yie(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.get_lines_lsl [get_lines_lsl_default]
+Compiling architecture rtl of entity xil_defaultlib.get_line_bases_hiFfa_ram [\get_line_bases_hiFfa_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.get_line_bases_hiFfa [get_line_bases_hiffa_default]
+Compiling architecture rtl of entity xil_defaultlib.get_line_bases_smGfk_ram [\get_line_bases_smGfk_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.get_line_bases_smGfk [get_line_bases_smgfk_default]
+Compiling architecture behav of entity xil_defaultlib.get_line_bases [get_line_bases_default]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mul_Zio_DSP48_7 [ip_accel_app_mul_zio_dsp48_7_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mul_Zio [\ip_accel_app_mul_Zio(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.is_crop_or_furrow [is_crop_or_furrow_default]
+Compiling architecture behav of entity xil_defaultlib.get_weed_mask [get_weed_mask_default]
+Compiling architecture behav of entity xil_defaultlib.get_crop_lines [get_crop_lines_default]
+Compiling architecture rtl of entity xil_defaultlib.sectors_weed_clas3i2_rom [sectors_weed_clas3i2_rom_default]
+Compiling architecture arch of entity xil_defaultlib.sectors_weed_clas3i2 [sectors_weed_clas3i2_default]
+Compiling architecture rtl of entity xil_defaultlib.sectors_weed_clas4jc_ram [\sectors_weed_clas4jc_ram(1,11)\]
+Compiling architecture arch of entity xil_defaultlib.sectors_weed_clas4jc [sectors_weed_clas4jc_default]
+Compiling architecture rtl of entity xil_defaultlib.sectors_weed_clas5jm_ram [\sectors_weed_clas5jm_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.sectors_weed_clas5jm [sectors_weed_clas5jm_default]
+Compiling architecture behav of entity xil_defaultlib.bitwise_and [bitwise_and_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udiv6jw_div_u [\ip_accel_app_udiv6jw_div_u(in1_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udiv6jw_div [\ip_accel_app_udiv6jw_div(in1_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_udiv6jw [\ip_accel_app_udiv6jw(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.sectors_weed_classif [sectors_weed_classif_default]
+Compiling architecture behav of entity xil_defaultlib.zero_0_180_320_1_s [zero_0_180_320_1_s_default]
+Compiling architecture behav of entity xil_defaultlib.merge_Block_crit_e [merge_block_crit_e_default]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app_mul_7jG_DSP48_8 [ip_accel_app_mul_7jg_dsp48_8_def...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_mul_7jG [\ip_accel_app_mul_7jG(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.merge_Loop_Read_Mat_s [merge_loop_read_mat_s_default]
+Compiling architecture behav of entity xil_defaultlib.xfChannelCombine [xfchannelcombine_default]
+Compiling architecture behav of entity xil_defaultlib.merge_Loop_Write_Mat [merge_loop_write_mat_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x3_shiftReg [fifo_w10_d2_a_x3_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d2_A_x3 [\fifo_w10_d2_A_x3(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x2_shiftReg [fifo_w8_d2_a_x2_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d2_A_x2 [\fifo_w8_d2_A_x2(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x3_shiftReg [fifo_w24_d2_a_x3_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d2_A_x3 [\fifo_w24_d2_A_x3(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xfChann8jQ_shiftReg [start_for_xfchann8jq_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xfChann8jQ [\start_for_xfChann8jQ(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_merge_L9j0_shiftReg [start_for_merge_l9j0_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_merge_L9j0 [\start_for_merge_L9j0(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.merge [merge_default]
+Compiling architecture rtl of entity xil_defaultlib.xFResizeAreaUpScabck_ram [\xFResizeAreaUpScabck_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xFResizeAreaUpScabck [xfresizeareaupscabck_default]
+Compiling architecture rtl of entity xil_defaultlib.xFResizeAreaUpScabfk_ram [\xFResizeAreaUpScabfk_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xFResizeAreaUpScabfk [xfresizeareaupscabfk_default]
+Compiling architecture rtl of entity xil_defaultlib.xFResizeAreaUpScabgk_ram [\xFResizeAreaUpScabgk_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xFResizeAreaUpScabgk [xfresizeareaupscabgk_default]
+Compiling architecture rtl of entity xil_defaultlib.xFResizeAreaUpScabhl_ram [\xFResizeAreaUpScabhl_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xFResizeAreaUpScabhl [xfresizeareaupscabhl_default]
+Compiling architecture rtl of entity xil_defaultlib.xFResizeAreaUpScabil_ram [\xFResizeAreaUpScabil_ram(1,5)\]
+Compiling architecture arch of entity xil_defaultlib.xFResizeAreaUpScabil [xfresizeareaupscabil_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivbak_div_u [\ip_accel_app_udivbak_div_u(in0_...]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_udivbak_div [\ip_accel_app_udivbak_div(in0_wi...]
+Compiling architecture arch of entity xil_defaultlib.ip_accel_app_udivbak [\ip_accel_app_udivbak(id=1,num_s...]
+Compiling architecture behav of entity xil_defaultlib.xFUDivAreaUp_2 [xfudivareaup_2_default]
+Compiling architecture behav of entity xil_defaultlib.CoreProcessUpArea_2 [coreprocessuparea_2_default]
+Compiling architecture rtl of entity xil_defaultlib.ip_accel_app_mux_bbk [\ip_accel_app_mux_bbk(id=1,din0_...]
+Compiling architecture behav of entity xil_defaultlib.xfExtractPixels [xfextractpixels_default]
+Compiling architecture behav of entity xil_defaultlib.xFResizeAreaUpScale_s [xfresizeareaupscale_s_default]
+Compiling architecture behav of entity xil_defaultlib.resize_2 [resize_2_default]
+Compiling architecture behav of entity xil_defaultlib.xFarithm_proc_2811 [xfarithm_proc_2811_default]
+Compiling architecture behav of entity xil_defaultlib.add_2749 [add_2749_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d3_A_shiftReg [fifo_w12_d3_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d3_A [\fifo_w12_d3_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w11_d2_A_shiftReg [fifo_w11_d2_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w11_d2_A [\fifo_w11_d2_A(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d2_A_x_shiftReg [fifo_w12_d2_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d2_A_x [\fifo_w12_d2_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d4_A_x_shiftReg [fifo_w10_d4_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w10_d4_A_x [\fifo_w10_d4_A_x(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d1_A_x_shiftReg [fifo_w24_d1_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d1_A_x [\fifo_w24_d1_A_x(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d1_A_x_shiftReg [fifo_w8_d1_a_x_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w8_d1_A_x [\fifo_w8_d1_A_x(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w1_d1_A_shiftReg [fifo_w1_d1_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w1_d1_A [\fifo_w1_d1_A(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w2_d1_A_shiftReg [fifo_w2_d1_a_shiftreg_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w2_d1_A [\fifo_w2_d1_A(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_vegbjl_shiftReg [start_for_get_vegbjl_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_vegbjl [\start_for_get_vegbjl(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_resizeNbkl_shiftReg [start_for_resizenbkl_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_resizeNbkl [\start_for_resizeNbkl(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_add_274bll_shiftReg [start_for_add_274bll_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_add_274bll [\start_for_add_274bll(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_segmentbml_shiftReg [start_for_segmentbml_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_segmentbml [\start_for_segmentbml(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_erode43bnm_shiftReg [start_for_erode43bnm_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_erode43bnm [\start_for_erode43bnm(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_remark_bom_shiftReg [start_for_remark_bom_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_remark_bom [\start_for_remark_bom(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_12tbpm_shiftReg [start_for_get_12tbpm_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_12tbpm [\start_for_get_12tbpm(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_crobqm_shiftReg [start_for_get_crobqm_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_get_crobqm [\start_for_get_crobqm(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_sectorsbrm_shiftReg [start_for_sectorsbrm_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_sectorsbrm [\start_for_sectorsbrm(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_merge_U0_shiftReg [start_for_merge_u0_shiftreg_defa...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_merge_U0 [\start_for_merge_U0(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_resize_bsm_shiftReg [start_for_resize_bsm_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_resize_bsm [\start_for_resize_bsm(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.weed_detection [weed_detection_default]
+Compiling architecture behav of entity xil_defaultlib.xfMat2AXIvideo [xfmat2axivideo_default]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d2_A_x0_shiftReg [fifo_w12_d2_a_x0_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w12_d2_A_x0 [\fifo_w12_d2_A_x0(1,8)\]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d1_A_x0_shiftReg [fifo_w24_d1_a_x0_shiftreg_defaul...]
+Compiling architecture rtl of entity xil_defaultlib.fifo_w24_d1_A_x0 [\fifo_w24_d1_A_x0(1,4)\]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xfMat2Abtn_shiftReg [start_for_xfmat2abtn_shiftreg_de...]
+Compiling architecture rtl of entity xil_defaultlib.start_for_xfMat2Abtn [\start_for_xfMat2Abtn(1,8)\]
+Compiling architecture behav of entity xil_defaultlib.ip_accel_app [ip_accel_app_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_s_stream_in [aesl_axi_s_stream_in_default]
+Compiling architecture behav of entity xil_defaultlib.AESL_axi_s_stream_out [aesl_axi_s_stream_out_default]
+Compiling architecture behav of entity xil_defaultlib.apatb_ip_accel_app_top
+Built simulation snapshot ip_accel_app
+
+****** Webtalk v2019.2.1 (64-bit)
+  **** SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+  **** IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/xsim.dir/ip_accel_app/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Wed Mar 18 00:09:16 2020...
+
+****** xsim v2019.2.1 (64-bit)
+  **** SW Build 2729669 on Thu Dec  5 04:49:17 MST 2019
+  **** IP Build 2729494 on Thu Dec  5 07:38:25 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/ip_accel_app/xsim_script.tcl
+# xsim {ip_accel_app} -autoloadwcfg -tclbatch {ip_accel_app.tcl}
+Vivado Simulator 2019.2
+Time resolution is 1 ps
+source ip_accel_app.tcl
+## run all
+Note: WARNING: The latency is much larger than expected. Simulation may be stuck.
+Time: 500000375 ns  Iteration: 1  Process: /apatb_ip_accel_app_top/gen_mLatcnterout_proc  File: D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/sim/vhdl/ip_accel_app.autotb.vhd

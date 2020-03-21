@@ -1,0 +1,249 @@
+
+
+================================================================
+== Vivado HLS Report for 'weed_detection'
+================================================================
+* Date:           Wed Mar 18 11:36:43 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 43.397 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline |
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type   |
+    +---------+---------+-----------+-----------+---------+---------+----------+
+    |  2419233|  2419233| 0.121 sec | 0.121 sec |  2419202|  2419202| dataflow |
+    +---------+---------+-----------+-----------+---------+---------+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+------------------------+---------+---------+-----------+-----------+---------+---------+----------+
+        |                           |                        |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline |
+        |          Instance         |         Module         |   min   |   max   |    min    |    max    |   min   |   max   |   Type   |
+        +---------------------------+------------------------+---------+---------+-----------+-----------+---------+---------+----------+
+        |get_crop_lines_U0          |get_crop_lines          |   135429|  2388939|  6.771 ms | 0.119 sec |   135429|  2388939|   none   |
+        |get_vegetation_image_4_U0  |get_vegetation_image_4  |  2419217|  2419217| 0.121 sec | 0.121 sec |  2419202|  2419202| dataflow |
+        |segment_image_U0           |segment_image           |   118530|   118530|  5.926 ms |  5.926 ms |   118530|   118530|   none   |
+        |resize_2_U0                |resize_2                |   928050|   928050| 46.403 ms | 46.403 ms |   928050|   928050|   none   |
+        |sectors_weed_classif_U0    |sectors_weed_classif    |    59703|   497463|  2.985 ms | 24.873 ms |    59703|   497463|   none   |
+        |resizeNNBilinear_U0        |resizeNNBilinear        |   931453|   931453| 46.573 ms | 46.573 ms |   931453|   931453|   none   |
+        |remark_crop_lines_U0       |remark_crop_lines       |   144910|   146279|  7.245 ms |  7.314 ms |   144910|   146279|   none   |
+        |erode437_U0                |erode437                |    59329|    59329|  2.966 ms |  2.966 ms |    59329|    59329|   none   |
+        |duplicateMat_2762_U0       |duplicateMat_2762       |   174963|   924003|  8.748 ms | 46.200 ms |   174962|   923762| dataflow |
+        |merge_U0                   |merge                   |    57967|   115206|  2.898 ms |  5.760 ms |    57962|   115206| dataflow |
+        |duplicateMat438_U0         |duplicateMat438         |    58144|    58144|  2.907 ms |  2.907 ms |    58142|    58142| dataflow |
+        |add_2749_U0                |add_2749                |   923762|   923762| 46.188 ms | 46.188 ms |   923762|   923762|   none   |
+        |zero_0_180_320_1_U0        |zero_0_180_320_1_s      |    58141|    58141|  2.907 ms |  2.907 ms |    58141|    58141|   none   |
+        |get_12th_segment_U0        |get_12th_segment        |     7362|     7362|  0.368 ms |  0.368 ms |     7363|     7363| dataflow |
+        |weed_detection_Block_U0    |weed_detection_Block    |        0|        0|    0 ns   |    0 ns   |        0|        0|   none   |
+        |weed_detection_entry_U0    |weed_detection_entry    |        0|        0|    0 ns   |    0 ns   |        0|        0|   none   |
+        +---------------------------+------------------------+---------+---------+-----------+-----------+---------+---------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     92|    -|
+|FIFO             |        0|      -|     100|    485|    -|
+|Instance         |      117|    148|   23476|  50391|    0|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    117|    -|
+|Register         |        -|      -|      18|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |      117|    148|   23594|  51085|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       41|     67|      22|     96|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+------------------------+---------+-------+------+-------+-----+
+    |          Instance         |         Module         | BRAM_18K| DSP48E|  FF  |  LUT  | URAM|
+    +---------------------------+------------------------+---------+-------+------+-------+-----+
+    |add_2749_U0                |add_2749                |        0|      0|    42|    315|    0|
+    |duplicateMat438_U0         |duplicateMat438         |        0|      0|   170|    802|    0|
+    |duplicateMat_2762_U0       |duplicateMat_2762       |        0|      0|   286|   1006|    0|
+    |erode437_U0                |erode437                |        3|      0|   297|    764|    0|
+    |get_12th_segment_U0        |get_12th_segment        |        0|      0|    20|    112|    0|
+    |get_crop_lines_U0          |get_crop_lines          |        9|     45|  9963|  16711|    0|
+    |get_vegetation_image_4_U0  |get_vegetation_image_4  |        0|      3|  4269|  10269|    0|
+    |merge_U0                   |merge                   |        0|      1|   203|    837|    0|
+    |remark_crop_lines_U0       |remark_crop_lines       |       67|      4|   730|   2336|    0|
+    |resizeNNBilinear_U0        |resizeNNBilinear        |        9|     14|  1952|   3338|    0|
+    |resize_2_U0                |resize_2                |       15|     34|  1640|   4991|    0|
+    |sectors_weed_classif_U0    |sectors_weed_classif    |        2|      0|  2709|   2789|    0|
+    |segment_image_U0           |segment_image           |       12|     47|  1156|   5921|    0|
+    |weed_detection_Block_U0    |weed_detection_Block    |        0|      0|     3|     29|    0|
+    |weed_detection_entry_U0    |weed_detection_entry    |        0|      0|     2|     20|    0|
+    |zero_0_180_320_1_U0        |zero_0_180_320_1_s      |        0|      0|    34|    151|    0|
+    +---------------------------+------------------------+---------+-------+------+-------+-----+
+    |Total                      |                        |      117|    148| 23476|  50391|    0|
+    +---------------------------+------------------------+---------+-------+------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |bottom_data_V_U         |        0|  5|   0|    -|     1|    8|        8|
+    |eroded_0a_data_V_U      |        0|  5|   0|    -|     1|    8|        8|
+    |eroded_0b_data_V_U      |        0|  5|   0|    -|     1|    8|        8|
+    |eroded_1_data_V_U       |        0|  5|   0|    -|     1|    8|        8|
+    |eroded_1a_data_V_U      |        0|  5|   0|    -|     1|    8|        8|
+    |eroded_1b_data_V_U      |        0|  5|   0|    -|     1|    8|        8|
+    |img_in_0_cols_channe_U  |        0|  5|   0|    -|     2|   12|       24|
+    |img_in_0_data_V_U       |        0|  5|   0|    -|     1|   24|       24|
+    |img_in_0_rows_channe_U  |        0|  5|   0|    -|     2|   11|       22|
+    |img_in_1_data_V_U       |        0|  5|   0|    -|     1|   24|       24|
+    |img_in_cols_c_U         |        0|  5|   0|    -|     3|   12|       36|
+    |mask_img_out_data_V_U   |        0|  5|   0|    -|     1|   24|       24|
+    |resized_cols_channel_U  |        0|  5|   0|    -|     4|   10|       40|
+    |resized_data_V_U        |        0|  5|   0|    -|     1|   24|       24|
+    |rs_mask_img_out_data_U  |        0|  5|   0|    -|     1|   24|       24|
+    |segmented_data_V_U      |        0|  5|   0|    -|     1|    1|        1|
+    |veg_img_data_V_U        |        0|  5|   0|    -|     1|    8|        8|
+    |weed_mask_out_data_V_U  |        0|  5|   0|    -|     1|    8|        8|
+    |weed_mask_tmp_data_V_U  |        0|  5|   0|    -|     1|    2|        2|
+    |zero_data_V_U           |        0|  5|   0|    -|     1|    8|        8|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                   |        0|100|   0|    0|    27|  240|      317|
+    +------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |duplicateMat438_U0_ap_ready_count           |     +    |      0|  0|  10|           2|           1|
+    |duplicateMat_2762_U0_ap_ready_count         |     +    |      0|  0|  10|           2|           1|
+    |weed_detection_Block_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |weed_detection_entry_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |zero_0_180_320_1_U0_ap_ready_count          |     +    |      0|  0|  10|           2|           1|
+    |ap_channel_done_img_in_0_cols_channe        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_img_in_0_rows_channe        |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                                     |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_continue                            |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_done                                |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                               |    and   |      0|  0|   2|           1|           1|
+    |duplicateMat438_U0_ap_start                 |    and   |      0|  0|   2|           1|           1|
+    |duplicateMat438_U0_start_full_n             |    and   |      0|  0|   2|           1|           1|
+    |duplicateMat_2762_U0_ap_start               |    and   |      0|  0|   2|           1|           1|
+    |duplicateMat_2762_U0_start_full_n           |    and   |      0|  0|   2|           1|           1|
+    |weed_detection_Block_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |weed_detection_Block_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |weed_detection_entry_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |zero_0_180_320_1_U0_ap_start                |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_img_in_0_cols_channe  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_img_in_0_rows_channe  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_duplicateMat438_U0_ap_ready         |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_duplicateMat_2762_U0_ap_ready       |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_weed_detection_Block_U0_ap_ready    |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_weed_detection_entry_U0_ap_ready    |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_zero_0_180_320_1_U0_ap_ready        |    or    |      0|  0|   2|           1|           1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                       |          |      0|  0|  92|          31|          26|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                      | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_channel_write_img_in_0_cols_channe  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_img_in_0_rows_channe  |   9|          2|    1|          2|
+    |ap_sync_reg_duplicateMat438_U0_ap_ready         |   9|          2|    1|          2|
+    |ap_sync_reg_duplicateMat_2762_U0_ap_ready       |   9|          2|    1|          2|
+    |ap_sync_reg_weed_detection_Block_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_weed_detection_entry_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_zero_0_180_320_1_U0_ap_ready        |   9|          2|    1|          2|
+    |duplicateMat438_U0_ap_ready_count               |   9|          2|    2|          4|
+    |duplicateMat_2762_U0_ap_ready_count             |   9|          2|    2|          4|
+    |real_start                                      |   9|          2|    1|          2|
+    |weed_detection_Block_U0_ap_ready_count          |   9|          2|    2|          4|
+    |weed_detection_entry_U0_ap_ready_count          |   9|          2|    2|          4|
+    |zero_0_180_320_1_U0_ap_ready_count              |   9|          2|    2|          4|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                           | 117|         26|   18|         36|
+    +------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_channel_write_img_in_0_cols_channe  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_img_in_0_rows_channe  |  1|   0|    1|          0|
+    |ap_sync_reg_duplicateMat438_U0_ap_ready         |  1|   0|    1|          0|
+    |ap_sync_reg_duplicateMat_2762_U0_ap_ready       |  1|   0|    1|          0|
+    |ap_sync_reg_weed_detection_Block_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_weed_detection_entry_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_zero_0_180_320_1_U0_ap_ready        |  1|   0|    1|          0|
+    |duplicateMat438_U0_ap_ready_count               |  2|   0|    2|          0|
+    |duplicateMat_2762_U0_ap_ready_count             |  2|   0|    2|          0|
+    |start_once_reg                                  |  1|   0|    1|          0|
+    |weed_detection_Block_U0_ap_ready_count          |  2|   0|    2|          0|
+    |weed_detection_entry_U0_ap_ready_count          |  2|   0|    2|          0|
+    |zero_0_180_320_1_U0_ap_ready_count              |  2|   0|    2|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           | 18|   0|   18|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+----------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
++-----------------------+-----+-----+------------+----------------+--------------+
+|ap_start               |  in |    1| ap_ctrl_hs | weed_detection | return value |
+|start_full_n           |  in |    1| ap_ctrl_hs | weed_detection | return value |
+|start_out              | out |    1| ap_ctrl_hs | weed_detection | return value |
+|start_write            | out |    1| ap_ctrl_hs | weed_detection | return value |
+|ap_clk                 |  in |    1| ap_ctrl_hs | weed_detection | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | weed_detection | return value |
+|ap_done                | out |    1| ap_ctrl_hs | weed_detection | return value |
+|ap_ready               | out |    1| ap_ctrl_hs | weed_detection | return value |
+|ap_idle                | out |    1| ap_ctrl_hs | weed_detection | return value |
+|ap_continue            |  in |    1| ap_ctrl_hs | weed_detection | return value |
+|img_in_cols            |  in |   12|   ap_none  |   img_in_cols  |    pointer   |
+|img_in_cols_ap_vld     |  in |    1|   ap_none  |   img_in_cols  |    pointer   |
+|img_in_data_V_dout     |  in |   24|   ap_fifo  |  img_in_data_V |    pointer   |
+|img_in_data_V_empty_n  |  in |    1|   ap_fifo  |  img_in_data_V |    pointer   |
+|img_in_data_V_read     | out |    1|   ap_fifo  |  img_in_data_V |    pointer   |
+|img_out_data_V_din     | out |   24|   ap_fifo  | img_out_data_V |    pointer   |
+|img_out_data_V_full_n  |  in |    1|   ap_fifo  | img_out_data_V |    pointer   |
+|img_out_data_V_write   | out |    1|   ap_fifo  | img_out_data_V |    pointer   |
++-----------------------+-----+-----+------------+----------------+--------------+
+

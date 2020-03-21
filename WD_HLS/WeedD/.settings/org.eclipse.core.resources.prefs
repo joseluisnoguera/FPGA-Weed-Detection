@@ -1,4 +1,7 @@
 eclipse.preferences.version=1
-encoding//source/image_config.h=UTF-8
+encoding//source/wd_stage_1.h=UTF-8
+encoding//source/wd_stage_2.h=UTF-8
+encoding//source/wd_stage_3.h=UTF-8
 encoding//source/weed_detection.cpp=UTF-8
-encoding//source/weed_detection.h=UTF-8
+encoding//testbench/image_config_tb.h=UTF-8
+encoding//testbench/weed_detection_tb.cpp=UTF-8

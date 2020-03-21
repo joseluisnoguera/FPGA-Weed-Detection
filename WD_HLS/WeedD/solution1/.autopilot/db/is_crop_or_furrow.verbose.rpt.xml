@@ -1,0 +1,158 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'is_crop_or_furrow'" level="0">
+<item name = "Date">Wed Mar 18 11:36:24 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 15.536 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">4, 36, 0.200 us, 1.800 us, 4, 36, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- is_crop_or_furrow_label5">3, 34, 3 ~ 5, -, -, 1 ~ 6, no</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, 1, -, -, -</column>
+<column name="Expression">-, -, 0, 413, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">-, -, -, -, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 107, -</column>
+<column name="Register">-, -, 145, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, ~0, ~0, ~0, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+<column name="ip_accel_app_mul_Zio_U478">ip_accel_app_mul_Zio, i0 * i1</column>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="i_fu_174_p2">+, 0, 0, 12, 3, 1</column>
+<column name="most_right_fu_309_p2">+, 0, 0, 39, 32, 32</column>
+<column name="ret_V_12_fu_285_p2">+, 0, 0, 40, 1, 33</column>
+<column name="ret_V_13_fu_251_p2">+, 0, 0, 48, 41, 41</column>
+<column name="most_left_fu_304_p2">-, 0, 0, 39, 32, 32</column>
+<column name="and_ln402_fu_195_p2">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_134">and, 0, 0, 2, 1, 1</column>
+<column name="ap_condition_268">and, 0, 0, 2, 1, 1</column>
+<column name="icmp_ln385_fu_168_p2">icmp, 0, 0, 9, 3, 3</column>
+<column name="icmp_ln390_1_fu_319_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln390_fu_314_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln397_fu_338_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln398_fu_352_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln402_1_fu_190_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln402_fu_185_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln851_fu_279_p2">icmp, 0, 0, 11, 8, 1</column>
+<column name="or_ln390_fu_324_p2">or, 0, 0, 2, 1, 1</column>
+<column name="most_right_3_fu_358_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln397_fu_344_p3">select, 0, 0, 32, 1, 32</column>
+<column name="select_ln405_fu_201_p3">select, 0, 0, 2, 1, 2</column>
+<column name="select_ln851_fu_291_p3">select, 0, 0, 33, 1, 33</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="UnifiedRetVal_reg_131">9, 2, 2, 4</column>
+<column name="ap_NS_fsm">38, 7, 1, 7</column>
+<column name="ap_phi_mux_UnifiedRetVal_phi_fu_134_p4">9, 2, 2, 4</column>
+<column name="ap_phi_mux_p_033_0_i_phi_fu_125_p4">15, 3, 33, 99</column>
+<column name="ap_return">9, 2, 2, 4</column>
+<column name="i_0_reg_111">9, 2, 3, 6</column>
+<column name="most_right_2_fu_68">9, 2, 32, 64</column>
+<column name="tmp_most_left_fu_72">9, 2, 32, 64</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="UnifiedRetVal_reg_131">2, 0, 2, 0</column>
+<column name="ap_CS_fsm">6, 0, 6, 0</column>
+<column name="ap_return_preg">2, 0, 2, 0</column>
+<column name="flag_first_0_fu_76">1, 0, 1, 0</column>
+<column name="i_0_reg_111">3, 0, 3, 0</column>
+<column name="i_reg_437">3, 0, 3, 0</column>
+<column name="icmp_ln385_reg_433">1, 0, 1, 0</column>
+<column name="most_right_2_fu_68">32, 0, 32, 0</column>
+<column name="tmp_most_left_fu_72">32, 0, 32, 0</column>
+<column name="tmp_reg_461">32, 0, 32, 0</column>
+<column name="trunc_ln386_reg_452">1, 0, 1, 0</column>
+<column name="zext_ln1118_reg_414">16, 0, 40, 24</column>
+<column name="zext_ln388_reg_419">5, 0, 32, 27</column>
+<column name="zext_ln390_reg_425">9, 0, 32, 23</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="ap_return">out, 2, ap_ctrl_hs, is_crop_or_furrow, return value</column>
+<column name="lines_address0">out, 3, ap_memory, lines, array</column>
+<column name="lines_ce0">out, 1, ap_memory, lines, array</column>
+<column name="lines_q0">in, 57, ap_memory, lines, array</column>
+<column name="px_read">in, 9, ap_none, px_read, scalar</column>
+<column name="py_read">in, 9, ap_none, py_read, scalar</column>
+<column name="crop_width_read">in, 5, ap_none, crop_width_read, scalar</column>
+</table>
+</item>
+</section>
+</profile>

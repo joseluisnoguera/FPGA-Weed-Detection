@@ -37,16 +37,6 @@
 			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/.apc/.tb</location>
 		</link>
 		<link>
-			<name>.reference/xf_common.h</name>
-			<type>1</type>
-			<location>D:/Xilinx/xfopencv-master/include/common/xf_common.h</location>
-		</link>
-		<link>
-			<name>.reference/xf_erosion.hpp</name>
-			<type>1</type>
-			<location>D:/Xilinx/xfopencv-master/include/imgproc/xf_erosion.hpp</location>
-		</link>
-		<link>
 			<name>solution1/constraints</name>
 			<type>2</type>
 			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/solution1/.tcls</location>
@@ -62,6 +52,21 @@
 			<location>D:/GitHub/Weed_Detection/WD_HLS/image_config.h</location>
 		</link>
 		<link>
+			<name>source/wd_stage_1.h</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/wd_stage_1.h</location>
+		</link>
+		<link>
+			<name>source/wd_stage_2.h</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/wd_stage_2.h</location>
+		</link>
+		<link>
+			<name>source/wd_stage_3.h</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/wd_stage_3.h</location>
+		</link>
+		<link>
 			<name>source/weed_detection.cpp</name>
 			<type>1</type>
 			<location>D:/GitHub/Weed_Detection/WD_HLS/weed_detection.cpp</location>
@@ -70,6 +75,106 @@
 			<name>source/weed_detection.h</name>
 			<type>1</type>
 			<location>D:/GitHub/Weed_Detection/WD_HLS/weed_detection.h</location>
+		</link>
+		<link>
+			<name>source/xf_add_2.hpp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/xf_add_2.hpp</location>
+		</link>
+		<link>
+			<name>source/xf_duplicate_2.hpp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/xf_duplicate_2.hpp</location>
+		</link>
+		<link>
+			<name>source/xf_resize_2.hpp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/xf_resize_2.hpp</location>
+		</link>
+		<link>
+			<name>testbench/image_config_tb.h</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/image_config_tb.h</location>
+		</link>
+		<link>
+			<name>testbench/test1.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test1.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test11.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test11.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test17.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test17.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test18.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test18.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test19.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test19.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test20.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test20.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test22.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test22.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test23.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test23.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test24.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test24.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test25.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test25.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test3.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test3.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test4.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test4.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test5.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test5.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test6.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test6.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test7.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test7.bmp</location>
+		</link>
+		<link>
+			<name>testbench/test9.bmp</name>
+			<type>1</type>
+			<location>D:/GitHub/Weed_Detection/WD_HLS/WeedD/test9.bmp</location>
 		</link>
 		<link>
 			<name>testbench/weed_detection_tb.cpp</name>

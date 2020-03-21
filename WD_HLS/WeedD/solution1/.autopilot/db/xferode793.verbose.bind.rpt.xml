@@ -1,0 +1,53 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'xferode793'" level="0">
+<item name = "Date">Wed Mar 18 11:34:12 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 9.232 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">59328, 59328, 2.966 ms, 2.966 ms, 59328, 59328, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="src_buf_temp_copy_ex_xfExtractPixels_1_fu_378">xfExtractPixels_1, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="src_buf_temp_copy_ex_1_xfExtractPixels_1_fu_383">xfExtractPixels_1, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="src_buf_temp_copy_ex_2_xfExtractPixels_1_fu_388">xfExtractPixels_1, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Loop 1">3, 3, 1, -, -, 3, no</column>
+<column name="- Loop 2">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- Loop 3">320, 320, 1, -, -, 320, no</column>
+<column name="- Row_Loop">58680, 58680, 326, -, -, 180, no</column>
+<column name=" + Col_Loop">323, 323, 4, 1, 1, 321, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

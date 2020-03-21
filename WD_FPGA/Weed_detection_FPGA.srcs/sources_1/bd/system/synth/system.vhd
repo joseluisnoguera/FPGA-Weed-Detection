@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
---Date        : Sat Dec  7 11:16:51 2019
+--Date        : Wed Mar 18 00:08:57 2020
 --Host        : LAPTOP-OEOHUQ1P running 64-bit major release  (build 9200)
 --Command     : generate_target system.bd
 --Design      : system
@@ -752,11 +752,10 @@ entity system is
     hdmi_tx_clk_n : out STD_LOGIC;
     hdmi_tx_clk_p : out STD_LOGIC;
     hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    veg_index_selection : in STD_LOGIC_VECTOR ( 2 downto 0 )
+    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=23,numReposBlks=19,numNonXlnxBlks=5,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=2,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=22,numReposBlks=18,numNonXlnxBlks=4,numHierBlks=4,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -778,43 +777,6 @@ architecture STRUCTURE of system is
     m_axis_video_tlast : out STD_LOGIC
   );
   end component system_AXI_BayerToRGB_1_0;
-  component system_AXI_GammaCorrection_0_0 is
-  port (
-    StreamClk : in STD_LOGIC;
-    sStreamReset_n : in STD_LOGIC;
-    s_axis_video_tready : out STD_LOGIC;
-    s_axis_video_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_video_tvalid : in STD_LOGIC;
-    s_axis_video_tuser : in STD_LOGIC;
-    s_axis_video_tlast : in STD_LOGIC;
-    m_axis_video_tready : in STD_LOGIC;
-    m_axis_video_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    m_axis_video_tvalid : out STD_LOGIC;
-    m_axis_video_tuser : out STD_LOGIC;
-    m_axis_video_tlast : out STD_LOGIC;
-    AxiLiteClk : in STD_LOGIC;
-    aAxiLiteReset_n : in STD_LOGIC;
-    S_AXI_AWADDR : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_AWPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_AWVALID : in STD_LOGIC;
-    S_AXI_AWREADY : out STD_LOGIC;
-    S_AXI_WDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_WSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    S_AXI_WVALID : in STD_LOGIC;
-    S_AXI_WREADY : out STD_LOGIC;
-    S_AXI_BRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_BVALID : out STD_LOGIC;
-    S_AXI_BREADY : in STD_LOGIC;
-    S_AXI_ARADDR : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_ARPROT : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    S_AXI_ARVALID : in STD_LOGIC;
-    S_AXI_ARREADY : out STD_LOGIC;
-    S_AXI_RDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_RRESP : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_RVALID : out STD_LOGIC;
-    S_AXI_RREADY : in STD_LOGIC
-  );
-  end component system_AXI_GammaCorrection_0_0;
   component system_DVIClocking_0_0 is
   port (
     PixelClk5X : in STD_LOGIC;
@@ -1291,7 +1253,7 @@ architecture STRUCTURE of system is
     S00_AXI_rlast : out STD_LOGIC;
     S00_AXI_rvalid : out STD_LOGIC;
     S00_AXI_rready : in STD_LOGIC;
-    M00_AXI_awaddr : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M00_AXI_awaddr : out STD_LOGIC_VECTOR ( 10 downto 0 );
     M00_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M00_AXI_awvalid : out STD_LOGIC;
     M00_AXI_awready : in STD_LOGIC;
@@ -1302,7 +1264,7 @@ architecture STRUCTURE of system is
     M00_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M00_AXI_bvalid : in STD_LOGIC;
     M00_AXI_bready : out STD_LOGIC;
-    M00_AXI_araddr : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M00_AXI_araddr : out STD_LOGIC_VECTOR ( 10 downto 0 );
     M00_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
     M00_AXI_arvalid : out STD_LOGIC;
     M00_AXI_arready : in STD_LOGIC;
@@ -1385,26 +1347,7 @@ architecture STRUCTURE of system is
     M04_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     M04_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M04_AXI_rvalid : in STD_LOGIC;
-    M04_AXI_rready : out STD_LOGIC;
-    M05_AXI_awaddr : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    M05_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M05_AXI_awvalid : out STD_LOGIC;
-    M05_AXI_awready : in STD_LOGIC;
-    M05_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    M05_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    M05_AXI_wvalid : out STD_LOGIC;
-    M05_AXI_wready : in STD_LOGIC;
-    M05_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M05_AXI_bvalid : in STD_LOGIC;
-    M05_AXI_bready : out STD_LOGIC;
-    M05_AXI_araddr : out STD_LOGIC_VECTOR ( 10 downto 0 );
-    M05_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    M05_AXI_arvalid : out STD_LOGIC;
-    M05_AXI_arready : in STD_LOGIC;
-    M05_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    M05_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    M05_AXI_rvalid : in STD_LOGIC;
-    M05_AXI_rready : out STD_LOGIC
+    M04_AXI_rready : out STD_LOGIC
   );
   end component system_smartconnect_0_0;
   component system_v_axi4s_vid_out_0_0 is
@@ -1511,23 +1454,35 @@ architecture STRUCTURE of system is
     dout : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component system_xlconcat_0_0;
-  component system_VegetationIndexes_0_0 is
+  component system_ip_accel_app_0_0 is
   port (
-    Pxl : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    Clk : in STD_LOGIC;
-    Selection : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    VegIndex : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    stream_in_TVALID : in STD_LOGIC;
+    stream_in_TREADY : out STD_LOGIC;
+    stream_in_TDATA : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    stream_in_TKEEP : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    stream_in_TSTRB : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    stream_in_TUSER : in STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_in_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_in_TID : in STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_in_TDEST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_out_TVALID : out STD_LOGIC;
+    stream_out_TREADY : in STD_LOGIC;
+    stream_out_TDATA : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    stream_out_TKEEP : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    stream_out_TSTRB : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    stream_out_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_out_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_out_TID : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_out_TDEST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC
   );
-  end component system_VegetationIndexes_0_0;
+  end component system_ip_accel_app_0_0;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TLAST : STD_LOGIC;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TREADY : STD_LOGIC;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TUSER : STD_LOGIC;
   signal AXI_BayerToRGB_1_AXI_Stream_Master_TVALID : STD_LOGIC;
-  signal AXI_GammaCorrection_0_m_axis_video_tdata : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal AXI_GammaCorrection_0_m_axis_video_tlast : STD_LOGIC;
-  signal AXI_GammaCorrection_0_m_axis_video_tuser : STD_LOGIC;
-  signal AXI_GammaCorrection_0_m_axis_video_tvalid : STD_LOGIC;
   signal DVIClocking_0_SerialClk : STD_LOGIC;
   signal DVIClocking_0_aLockedOut : STD_LOGIC;
   signal MIPI_CSI_2_RX_0_m_axis_video_TDATA : STD_LOGIC_VECTOR ( 39 downto 0 );
@@ -1549,10 +1504,7 @@ architecture STRUCTURE of system is
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXSYNCHS : STD_LOGIC;
   signal MIPI_D_PHY_RX_0_D_PHY_PPI_DL1_RXVALIDHS : STD_LOGIC;
   signal MIPI_D_PHY_RX_0_RxByteClkHS : STD_LOGIC;
-  signal Net : STD_LOGIC;
   signal PixelClk_Generator_clk_out1 : STD_LOGIC;
-  signal Selection_0_1 : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal VegetationIndexes_0_VegIndex : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_1_M00_AXI_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1633,6 +1585,12 @@ architecture STRUCTURE of system is
   signal dphy_data_lp_p_1 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal dphy_hs_clock_1_CLK_N : STD_LOGIC;
   signal dphy_hs_clock_1_CLK_P : STD_LOGIC;
+  signal ip_accel_app_0_stream_out_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal ip_accel_app_0_stream_out_TKEEP : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal ip_accel_app_0_stream_out_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal ip_accel_app_0_stream_out_TREADY : STD_LOGIC;
+  signal ip_accel_app_0_stream_out_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal ip_accel_app_0_stream_out_TVALID : STD_LOGIC;
   signal mm_clk_150 : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1715,12 +1673,10 @@ architecture STRUCTURE of system is
   signal rst_vid_clk_dyn_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_vid_clk_dyn_peripheral_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal s_axil_clk_50 : STD_LOGIC;
-  signal smartconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal smartconnect_0_M00_AXI_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal smartconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal smartconnect_0_M00_AXI_ARREADY : STD_LOGIC;
   signal smartconnect_0_M00_AXI_ARVALID : STD_LOGIC;
-  signal smartconnect_0_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal smartconnect_0_M00_AXI_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal smartconnect_0_M00_AXI_AWADDR : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal smartconnect_0_M00_AXI_AWREADY : STD_LOGIC;
   signal smartconnect_0_M00_AXI_AWVALID : STD_LOGIC;
   signal smartconnect_0_M00_AXI_BREADY : STD_LOGIC;
@@ -1805,23 +1761,6 @@ architecture STRUCTURE of system is
   signal smartconnect_0_M04_AXI_WREADY : STD_LOGIC;
   signal smartconnect_0_M04_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal smartconnect_0_M04_AXI_WVALID : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_ARADDR : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal smartconnect_0_M05_AXI_ARREADY : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_ARVALID : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_AWADDR : STD_LOGIC_VECTOR ( 10 downto 0 );
-  signal smartconnect_0_M05_AXI_AWREADY : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_AWVALID : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_BREADY : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal smartconnect_0_M05_AXI_BVALID : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal smartconnect_0_M05_AXI_RREADY : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal smartconnect_0_M05_AXI_RVALID : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal smartconnect_0_M05_AXI_WREADY : STD_LOGIC;
-  signal smartconnect_0_M05_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal smartconnect_0_M05_AXI_WVALID : STD_LOGIC;
   signal v_axi4s_vid_out_0_locked : STD_LOGIC;
   signal v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO : STD_LOGIC;
   signal v_axi4s_vid_out_0_vid_io_out_DATA : STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -1869,7 +1808,9 @@ architecture STRUCTURE of system is
   signal NLW_axi_vdma_0_m_axis_mm2s_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_axi_vdma_0_mm2s_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal NLW_axi_vdma_0_s2mm_frame_ptr_out_UNCONNECTED : STD_LOGIC_VECTOR ( 5 downto 0 );
-  signal NLW_axi_vdma_0_s_axis_s2mm_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 8 );
+  signal NLW_ip_accel_app_0_stream_out_TDEST_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_ip_accel_app_0_stream_out_TID_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_ip_accel_app_0_stream_out_TSTRB_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_processing_system7_0_S_AXI_HP0_AWREADY_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_BVALID_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_S_AXI_HP0_WREADY_UNCONNECTED : STD_LOGIC;
@@ -1896,13 +1837,13 @@ architecture STRUCTURE of system is
   signal NLW_rst_vid_clk_dyn_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_vid_clk_dyn_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_vid_clk_dyn_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_smartconnect_0_M00_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_smartconnect_0_M00_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_smartconnect_0_M02_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_smartconnect_0_M02_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_smartconnect_0_M02_AXI_wstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_smartconnect_0_M03_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_smartconnect_0_M03_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_smartconnect_0_M05_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal NLW_smartconnect_0_M05_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_v_axi4s_vid_out_0_overflow_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_underflow_UNCONNECTED : STD_LOGIC;
   signal NLW_v_axi4s_vid_out_0_vid_field_id_UNCONNECTED : STD_LOGIC;
@@ -1952,7 +1893,6 @@ architecture STRUCTURE of system is
   attribute X_INTERFACE_INFO of hdmi_tx_data_n : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_N";
   attribute X_INTERFACE_INFO of hdmi_tx_data_p : signal is "digilentinc.com:interface:tmds:1.0 hdmi_tx DATA_P";
 begin
-  Selection_0_1(2 downto 0) <= veg_index_selection(2 downto 0);
   cam_gpio_tri_o(0) <= processing_system7_0_GPIO_0_TRI_O(0);
   cam_gpio_tri_t(0) <= processing_system7_0_GPIO_0_TRI_T(0);
   cam_iic_scl_o <= processing_system7_0_IIC_0_SCL_O;
@@ -1988,42 +1928,6 @@ AXI_BayerToRGB_1: component system_AXI_BayerToRGB_1_0
       s_axis_video_tready => MIPI_CSI_2_RX_0_m_axis_video_TREADY,
       s_axis_video_tuser => MIPI_CSI_2_RX_0_m_axis_video_TUSER(0),
       s_axis_video_tvalid => MIPI_CSI_2_RX_0_m_axis_video_TVALID
-    );
-AXI_GammaCorrection_0: component system_AXI_GammaCorrection_0_0
-     port map (
-      AxiLiteClk => s_axil_clk_50,
-      S_AXI_ARADDR(2 downto 0) => smartconnect_0_M00_AXI_ARADDR(2 downto 0),
-      S_AXI_ARPROT(2 downto 0) => smartconnect_0_M00_AXI_ARPROT(2 downto 0),
-      S_AXI_ARREADY => smartconnect_0_M00_AXI_ARREADY,
-      S_AXI_ARVALID => smartconnect_0_M00_AXI_ARVALID,
-      S_AXI_AWADDR(2 downto 0) => smartconnect_0_M00_AXI_AWADDR(2 downto 0),
-      S_AXI_AWPROT(2 downto 0) => smartconnect_0_M00_AXI_AWPROT(2 downto 0),
-      S_AXI_AWREADY => smartconnect_0_M00_AXI_AWREADY,
-      S_AXI_AWVALID => smartconnect_0_M00_AXI_AWVALID,
-      S_AXI_BREADY => smartconnect_0_M00_AXI_BREADY,
-      S_AXI_BRESP(1 downto 0) => smartconnect_0_M00_AXI_BRESP(1 downto 0),
-      S_AXI_BVALID => smartconnect_0_M00_AXI_BVALID,
-      S_AXI_RDATA(31 downto 0) => smartconnect_0_M00_AXI_RDATA(31 downto 0),
-      S_AXI_RREADY => smartconnect_0_M00_AXI_RREADY,
-      S_AXI_RRESP(1 downto 0) => smartconnect_0_M00_AXI_RRESP(1 downto 0),
-      S_AXI_RVALID => smartconnect_0_M00_AXI_RVALID,
-      S_AXI_WDATA(31 downto 0) => smartconnect_0_M00_AXI_WDATA(31 downto 0),
-      S_AXI_WREADY => smartconnect_0_M00_AXI_WREADY,
-      S_AXI_WSTRB(3 downto 0) => smartconnect_0_M00_AXI_WSTRB(3 downto 0),
-      S_AXI_WVALID => smartconnect_0_M00_AXI_WVALID,
-      StreamClk => mm_clk_150,
-      aAxiLiteReset_n => rst_clk_wiz_0_50M_peripheral_aresetn(0),
-      m_axis_video_tdata(23 downto 0) => AXI_GammaCorrection_0_m_axis_video_tdata(23 downto 0),
-      m_axis_video_tlast => AXI_GammaCorrection_0_m_axis_video_tlast,
-      m_axis_video_tready => Net,
-      m_axis_video_tuser => AXI_GammaCorrection_0_m_axis_video_tuser,
-      m_axis_video_tvalid => AXI_GammaCorrection_0_m_axis_video_tvalid,
-      sStreamReset_n => rst_clk_wiz_0_50M_peripheral_aresetn(0),
-      s_axis_video_tdata(31 downto 0) => AXI_BayerToRGB_1_AXI_Stream_Master_TDATA(31 downto 0),
-      s_axis_video_tlast => AXI_BayerToRGB_1_AXI_Stream_Master_TLAST,
-      s_axis_video_tready => AXI_BayerToRGB_1_AXI_Stream_Master_TREADY,
-      s_axis_video_tuser => AXI_BayerToRGB_1_AXI_Stream_Master_TUSER,
-      s_axis_video_tvalid => AXI_BayerToRGB_1_AXI_Stream_Master_TVALID
     );
 DVIClocking_0: component system_DVIClocking_0_0
      port map (
@@ -2166,13 +2070,6 @@ MIPI_D_PHY_RX_0: component system_MIPI_D_PHY_RX_0_0
       s_axi_lite_wready => smartconnect_0_M01_AXI_WREADY,
       s_axi_lite_wstrb(3 downto 0) => smartconnect_0_M01_AXI_WSTRB(3 downto 0),
       s_axi_lite_wvalid => smartconnect_0_M01_AXI_WVALID
-    );
-VegetationIndexes_0: component system_VegetationIndexes_0_0
-     port map (
-      Clk => Net,
-      Pxl(23 downto 0) => AXI_GammaCorrection_0_m_axis_video_tdata(23 downto 0),
-      Selection(2 downto 0) => Selection_0_1(2 downto 0),
-      VegIndex(7 downto 0) => VegetationIndexes_0_VegIndex(7 downto 0)
     );
 axi_mem_intercon: entity work.system_axi_mem_intercon_0
      port map (
@@ -2317,13 +2214,12 @@ axi_vdma_0: component system_axi_vdma_0_0
       s_axi_lite_wready => smartconnect_0_M02_AXI_WREADY,
       s_axi_lite_wvalid => smartconnect_0_M02_AXI_WVALID,
       s_axis_s2mm_aclk => mm_clk_150,
-      s_axis_s2mm_tdata(31 downto 8) => NLW_axi_vdma_0_s_axis_s2mm_tdata_UNCONNECTED(31 downto 8),
-      s_axis_s2mm_tdata(7 downto 0) => VegetationIndexes_0_VegIndex(7 downto 0),
-      s_axis_s2mm_tkeep(3 downto 0) => B"1111",
-      s_axis_s2mm_tlast => AXI_GammaCorrection_0_m_axis_video_tlast,
-      s_axis_s2mm_tready => Net,
-      s_axis_s2mm_tuser(0) => AXI_GammaCorrection_0_m_axis_video_tuser,
-      s_axis_s2mm_tvalid => AXI_GammaCorrection_0_m_axis_video_tvalid
+      s_axis_s2mm_tdata(31 downto 0) => ip_accel_app_0_stream_out_TDATA(31 downto 0),
+      s_axis_s2mm_tkeep(3 downto 0) => ip_accel_app_0_stream_out_TKEEP(3 downto 0),
+      s_axis_s2mm_tlast => ip_accel_app_0_stream_out_TLAST(0),
+      s_axis_s2mm_tready => ip_accel_app_0_stream_out_TREADY,
+      s_axis_s2mm_tuser(0) => ip_accel_app_0_stream_out_TUSER(0),
+      s_axis_s2mm_tvalid => ip_accel_app_0_stream_out_TVALID
     );
 clk_wiz_0: component system_clk_wiz_0_0
      port map (
@@ -2332,6 +2228,29 @@ clk_wiz_0: component system_clk_wiz_0_0
       clk_out2 => mm_clk_150,
       clk_out3 => ref_clk_200,
       locked => clk_wiz_0_locked
+    );
+ip_accel_app_0: component system_ip_accel_app_0_0
+     port map (
+      ap_clk => mm_clk_150,
+      ap_rst_n => rst_clk_wiz_0_50M_peripheral_aresetn(0),
+      stream_in_TDATA(31 downto 0) => AXI_BayerToRGB_1_AXI_Stream_Master_TDATA(31 downto 0),
+      stream_in_TDEST(0) => '0',
+      stream_in_TID(0) => '0',
+      stream_in_TKEEP(3 downto 0) => B"1111",
+      stream_in_TLAST(0) => AXI_BayerToRGB_1_AXI_Stream_Master_TLAST,
+      stream_in_TREADY => AXI_BayerToRGB_1_AXI_Stream_Master_TREADY,
+      stream_in_TSTRB(3 downto 0) => B"1111",
+      stream_in_TUSER(0) => AXI_BayerToRGB_1_AXI_Stream_Master_TUSER,
+      stream_in_TVALID => AXI_BayerToRGB_1_AXI_Stream_Master_TVALID,
+      stream_out_TDATA(31 downto 0) => ip_accel_app_0_stream_out_TDATA(31 downto 0),
+      stream_out_TDEST(0) => NLW_ip_accel_app_0_stream_out_TDEST_UNCONNECTED(0),
+      stream_out_TID(0) => NLW_ip_accel_app_0_stream_out_TID_UNCONNECTED(0),
+      stream_out_TKEEP(3 downto 0) => ip_accel_app_0_stream_out_TKEEP(3 downto 0),
+      stream_out_TLAST(0) => ip_accel_app_0_stream_out_TLAST(0),
+      stream_out_TREADY => ip_accel_app_0_stream_out_TREADY,
+      stream_out_TSTRB(3 downto 0) => NLW_ip_accel_app_0_stream_out_TSTRB_UNCONNECTED(3 downto 0),
+      stream_out_TUSER(0) => ip_accel_app_0_stream_out_TUSER(0),
+      stream_out_TVALID => ip_accel_app_0_stream_out_TVALID
     );
 processing_system7_0: component system_processing_system7_0_0
      port map (
@@ -2540,12 +2459,12 @@ rst_vid_clk_dyn: component system_rst_vid_clk_dyn_0
     );
 smartconnect_0: component system_smartconnect_0_0
      port map (
-      M00_AXI_araddr(2 downto 0) => smartconnect_0_M00_AXI_ARADDR(2 downto 0),
-      M00_AXI_arprot(2 downto 0) => smartconnect_0_M00_AXI_ARPROT(2 downto 0),
+      M00_AXI_araddr(10 downto 0) => smartconnect_0_M00_AXI_ARADDR(10 downto 0),
+      M00_AXI_arprot(2 downto 0) => NLW_smartconnect_0_M00_AXI_arprot_UNCONNECTED(2 downto 0),
       M00_AXI_arready => smartconnect_0_M00_AXI_ARREADY,
       M00_AXI_arvalid => smartconnect_0_M00_AXI_ARVALID,
-      M00_AXI_awaddr(2 downto 0) => smartconnect_0_M00_AXI_AWADDR(2 downto 0),
-      M00_AXI_awprot(2 downto 0) => smartconnect_0_M00_AXI_AWPROT(2 downto 0),
+      M00_AXI_awaddr(10 downto 0) => smartconnect_0_M00_AXI_AWADDR(10 downto 0),
+      M00_AXI_awprot(2 downto 0) => NLW_smartconnect_0_M00_AXI_awprot_UNCONNECTED(2 downto 0),
       M00_AXI_awready => smartconnect_0_M00_AXI_AWREADY,
       M00_AXI_awvalid => smartconnect_0_M00_AXI_AWVALID,
       M00_AXI_bready => smartconnect_0_M00_AXI_BREADY,
@@ -2635,25 +2554,6 @@ smartconnect_0: component system_smartconnect_0_0
       M04_AXI_wready => smartconnect_0_M04_AXI_WREADY,
       M04_AXI_wstrb(3 downto 0) => smartconnect_0_M04_AXI_WSTRB(3 downto 0),
       M04_AXI_wvalid => smartconnect_0_M04_AXI_WVALID,
-      M05_AXI_araddr(10 downto 0) => smartconnect_0_M05_AXI_ARADDR(10 downto 0),
-      M05_AXI_arprot(2 downto 0) => NLW_smartconnect_0_M05_AXI_arprot_UNCONNECTED(2 downto 0),
-      M05_AXI_arready => smartconnect_0_M05_AXI_ARREADY,
-      M05_AXI_arvalid => smartconnect_0_M05_AXI_ARVALID,
-      M05_AXI_awaddr(10 downto 0) => smartconnect_0_M05_AXI_AWADDR(10 downto 0),
-      M05_AXI_awprot(2 downto 0) => NLW_smartconnect_0_M05_AXI_awprot_UNCONNECTED(2 downto 0),
-      M05_AXI_awready => smartconnect_0_M05_AXI_AWREADY,
-      M05_AXI_awvalid => smartconnect_0_M05_AXI_AWVALID,
-      M05_AXI_bready => smartconnect_0_M05_AXI_BREADY,
-      M05_AXI_bresp(1 downto 0) => smartconnect_0_M05_AXI_BRESP(1 downto 0),
-      M05_AXI_bvalid => smartconnect_0_M05_AXI_BVALID,
-      M05_AXI_rdata(31 downto 0) => smartconnect_0_M05_AXI_RDATA(31 downto 0),
-      M05_AXI_rready => smartconnect_0_M05_AXI_RREADY,
-      M05_AXI_rresp(1 downto 0) => smartconnect_0_M05_AXI_RRESP(1 downto 0),
-      M05_AXI_rvalid => smartconnect_0_M05_AXI_RVALID,
-      M05_AXI_wdata(31 downto 0) => smartconnect_0_M05_AXI_WDATA(31 downto 0),
-      M05_AXI_wready => smartconnect_0_M05_AXI_WREADY,
-      M05_AXI_wstrb(3 downto 0) => smartconnect_0_M05_AXI_WSTRB(3 downto 0),
-      M05_AXI_wvalid => smartconnect_0_M05_AXI_WVALID,
       S00_AXI_araddr(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
       S00_AXI_arburst(1 downto 0) => processing_system7_0_M_AXI_GP0_ARBURST(1 downto 0),
       S00_AXI_arcache(3 downto 0) => processing_system7_0_M_AXI_GP0_ARCACHE(3 downto 0),
@@ -2734,24 +2634,24 @@ video_dynclk: component system_video_dynclk_0
       locked => clk_wiz_1_locked,
       pxl_clk_5x => clk_wiz_1_pxl_clk_5x,
       s_axi_aclk => s_axil_clk_50,
-      s_axi_araddr(10 downto 0) => smartconnect_0_M05_AXI_ARADDR(10 downto 0),
+      s_axi_araddr(10 downto 0) => smartconnect_0_M00_AXI_ARADDR(10 downto 0),
       s_axi_aresetn => rst_clk_wiz_0_50M_peripheral_aresetn(0),
-      s_axi_arready => smartconnect_0_M05_AXI_ARREADY,
-      s_axi_arvalid => smartconnect_0_M05_AXI_ARVALID,
-      s_axi_awaddr(10 downto 0) => smartconnect_0_M05_AXI_AWADDR(10 downto 0),
-      s_axi_awready => smartconnect_0_M05_AXI_AWREADY,
-      s_axi_awvalid => smartconnect_0_M05_AXI_AWVALID,
-      s_axi_bready => smartconnect_0_M05_AXI_BREADY,
-      s_axi_bresp(1 downto 0) => smartconnect_0_M05_AXI_BRESP(1 downto 0),
-      s_axi_bvalid => smartconnect_0_M05_AXI_BVALID,
-      s_axi_rdata(31 downto 0) => smartconnect_0_M05_AXI_RDATA(31 downto 0),
-      s_axi_rready => smartconnect_0_M05_AXI_RREADY,
-      s_axi_rresp(1 downto 0) => smartconnect_0_M05_AXI_RRESP(1 downto 0),
-      s_axi_rvalid => smartconnect_0_M05_AXI_RVALID,
-      s_axi_wdata(31 downto 0) => smartconnect_0_M05_AXI_WDATA(31 downto 0),
-      s_axi_wready => smartconnect_0_M05_AXI_WREADY,
-      s_axi_wstrb(3 downto 0) => smartconnect_0_M05_AXI_WSTRB(3 downto 0),
-      s_axi_wvalid => smartconnect_0_M05_AXI_WVALID
+      s_axi_arready => smartconnect_0_M00_AXI_ARREADY,
+      s_axi_arvalid => smartconnect_0_M00_AXI_ARVALID,
+      s_axi_awaddr(10 downto 0) => smartconnect_0_M00_AXI_AWADDR(10 downto 0),
+      s_axi_awready => smartconnect_0_M00_AXI_AWREADY,
+      s_axi_awvalid => smartconnect_0_M00_AXI_AWVALID,
+      s_axi_bready => smartconnect_0_M00_AXI_BREADY,
+      s_axi_bresp(1 downto 0) => smartconnect_0_M00_AXI_BRESP(1 downto 0),
+      s_axi_bvalid => smartconnect_0_M00_AXI_BVALID,
+      s_axi_rdata(31 downto 0) => smartconnect_0_M00_AXI_RDATA(31 downto 0),
+      s_axi_rready => smartconnect_0_M00_AXI_RREADY,
+      s_axi_rresp(1 downto 0) => smartconnect_0_M00_AXI_RRESP(1 downto 0),
+      s_axi_rvalid => smartconnect_0_M00_AXI_RVALID,
+      s_axi_wdata(31 downto 0) => smartconnect_0_M00_AXI_WDATA(31 downto 0),
+      s_axi_wready => smartconnect_0_M00_AXI_WREADY,
+      s_axi_wstrb(3 downto 0) => smartconnect_0_M00_AXI_WSTRB(3 downto 0),
+      s_axi_wvalid => smartconnect_0_M00_AXI_WVALID
     );
 vtg: component system_vtg_0
      port map (

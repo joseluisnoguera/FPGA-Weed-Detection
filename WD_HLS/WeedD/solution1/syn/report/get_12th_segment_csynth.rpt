@@ -1,0 +1,122 @@
+
+
+================================================================
+== Vivado HLS Report for 'get_12th_segment'
+================================================================
+* Date:           Wed Mar 18 11:36:07 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 7.268 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+------+------+----------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline |
+    |   min   |   max   |    min   |    max   |  min |  max |   Type   |
+    +---------+---------+----------+----------+------+------+----------+
+    |     7362|     7362| 0.368 ms | 0.368 ms |  7363|  7363| dataflow |
+    +---------+---------+----------+----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+---------+---------+----------+----------+------+------+---------+
+        |                         |                      |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+        |         Instance        |        Module        |   min   |   max   |    min   |    max   |  min |  max |   Type  |
+        +-------------------------+----------------------+---------+---------+----------+----------+------+------+---------+
+        |get_12th_segment_Loo_U0  |get_12th_segment_Loo  |     7362|     7362| 0.368 ms | 0.368 ms |  7362|  7362|   none  |
+        +-------------------------+----------------------+---------+---------+----------+----------+------+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|      20|    112|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      20|    112|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+    |get_12th_segment_Loo_U0  |get_12th_segment_Loo  |        0|      0|  20|  112|    0|
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+    |Total                    |                      |        0|      0|  20|  112|    0|
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-----------------------+-----+-----+------------+------------------+--------------+
+|       RTL Ports       | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++-----------------------+-----+-----+------------+------------------+--------------+
+|eroded_data_V_dout     |  in |    8|   ap_fifo  |   eroded_data_V  |    pointer   |
+|eroded_data_V_empty_n  |  in |    1|   ap_fifo  |   eroded_data_V  |    pointer   |
+|eroded_data_V_read     | out |    1|   ap_fifo  |   eroded_data_V  |    pointer   |
+|bottom_data_V_din      | out |    8|   ap_fifo  |   bottom_data_V  |    pointer   |
+|bottom_data_V_full_n   |  in |    1|   ap_fifo  |   bottom_data_V  |    pointer   |
+|bottom_data_V_write    | out |    1|   ap_fifo  |   bottom_data_V  |    pointer   |
+|ap_clk                 |  in |    1| ap_ctrl_hs | get_12th_segment | return value |
+|ap_rst                 |  in |    1| ap_ctrl_hs | get_12th_segment | return value |
+|ap_start               |  in |    1| ap_ctrl_hs | get_12th_segment | return value |
+|ap_done                | out |    1| ap_ctrl_hs | get_12th_segment | return value |
+|ap_ready               | out |    1| ap_ctrl_hs | get_12th_segment | return value |
+|ap_idle                | out |    1| ap_ctrl_hs | get_12th_segment | return value |
+|ap_continue            |  in |    1| ap_ctrl_hs | get_12th_segment | return value |
++-----------------------+-----+-----+------------+------------------+--------------+
+

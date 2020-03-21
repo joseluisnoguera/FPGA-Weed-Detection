@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Mar 17 23:29:14 UTC 2020
+VLNV: xilinx.com:hls:ip_accel_app:1.0
+SynthRuntime: 296

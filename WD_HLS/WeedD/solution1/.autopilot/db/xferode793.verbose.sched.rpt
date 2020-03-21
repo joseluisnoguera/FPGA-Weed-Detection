@@ -1,0 +1,381 @@
+
+
+================================================================
+== Vivado HLS Report for 'xferode793'
+================================================================
+* Date:           Wed Mar 18 11:34:11 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 9.232 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
+    +---------+---------+----------+----------+-------+-------+---------+
+    |    59328|    59328| 2.966 ms | 2.966 ms |  59328|  59328|   none  |
+    +---------+---------+----------+----------+-------+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |        3|        3|         1|          -|          -|     3|    no    |
+        |- Loop 2     |      320|      320|         2|          1|          1|   320|    yes   |
+        |- Loop 3     |      320|      320|         1|          -|          -|   320|    no    |
+        |- Row_Loop   |    58680|    58680|       326|          -|          -|   180|    no    |
+        | + Col_Loop  |      323|      323|         4|          1|          1|   321|    yes   |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+  * Pipeline-1: initiation interval (II) = 1, depth = 4
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 12
+* Pipeline : 2
+  Pipeline-0 : II = 1, D = 2, States = { 3 4 }
+  Pipeline-1 : II = 1, D = 4, States = { 8 9 10 11 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 2 3 
+3 --> 5 4 
+4 --> 3 
+5 --> 6 
+6 --> 6 7 
+7 --> 8 
+8 --> 12 9 
+9 --> 10 
+10 --> 11 
+11 --> 8 
+12 --> 7 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%row_ind_2_V = alloca i13"   --->   Operation 13 'alloca' 'row_ind_2_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%row_ind_2_V_1 = alloca i13"   --->   Operation 14 'alloca' 'row_ind_2_V_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%row_ind_2_V_2 = alloca i13"   --->   Operation 15 'alloca' 'row_ind_2_V_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_dst_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%buf_0_V = alloca [320 x i8], align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252]   --->   Operation 17 'alloca' 'buf_0_V' <Predicate = true> <Delay = 0.00> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%buf_1_V = alloca [320 x i8], align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252]   --->   Operation 18 'alloca' 'buf_1_V' <Predicate = true> <Delay = 0.00> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%buf_2_V = alloca [320 x i8], align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252]   --->   Operation 19 'alloca' 'buf_2_V' <Predicate = true> <Delay = 0.00> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecMemCore([320 x i8]* %buf_0_V, [320 x i8]* %buf_1_V, [320 x i8]* %buf_2_V, [1 x i8]* @p_str, [13 x i8]* @p_str126, [1 x i8]* @p_str, i32 -1, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:253]   --->   Operation 20 'specmemcore' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.76ns)   --->   "br label %branch0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:259]   --->   Operation 21 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 1.93>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%val_assign = phi i2 [ 0, %0 ], [ %init_row_ind, %branch0.backedge ]"   --->   Operation 22 'phi' 'val_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%row_ind_2_V_load = load i13* %row_ind_2_V"   --->   Operation 23 'load' 'row_ind_2_V_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%row_ind_2_V_1_load = load i13* %row_ind_2_V_1"   --->   Operation 24 'load' 'row_ind_2_V_1_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%row_ind_2_V_2_load = load i13* %row_ind_2_V_2"   --->   Operation 25 'load' 'row_ind_2_V_2_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.95ns)   --->   "%icmp_ln259 = icmp eq i2 %val_assign, -1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:259]   --->   Operation 26 'icmp' 'icmp_ln259' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 27 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (1.56ns)   --->   "%init_row_ind = add i2 %val_assign, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:259]   --->   Operation 28 'add' 'init_row_ind' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "br i1 %icmp_ln259, label %.preheader1.preheader, label %1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:259]   --->   Operation 29 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%row_ind_0_V_2 = zext i2 %val_assign to i13" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 30 'zext' 'row_ind_0_V_2' <Predicate = (!icmp_ln259)> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (1.13ns)   --->   "switch i2 %val_assign, label %branch2 [
+    i2 0, label %.branch0.backedge_crit_edge
+    i2 1, label %branch1
+  ]" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 31 'switch' <Predicate = (!icmp_ln259)> <Delay = 1.13>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "store i13 %row_ind_0_V_2, i13* %row_ind_2_V_1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 32 'store' <Predicate = (!icmp_ln259 & val_assign == 1)> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "br label %branch0.backedge" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 33 'br' <Predicate = (!icmp_ln259 & val_assign == 1)> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "store i13 %row_ind_0_V_2, i13* %row_ind_2_V" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 34 'store' <Predicate = (!icmp_ln259 & val_assign == 0)> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "br label %branch0.backedge" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 35 'br' <Predicate = (!icmp_ln259 & val_assign == 0)> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "store i13 %row_ind_0_V_2, i13* %row_ind_2_V_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 36 'store' <Predicate = (!icmp_ln259 & val_assign != 0 & val_assign != 1)> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "br label %branch0.backedge" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:262]   --->   Operation 37 'br' <Predicate = (!icmp_ln259 & val_assign != 0 & val_assign != 1)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "br label %branch0"   --->   Operation 38 'br' <Predicate = (!icmp_ln259)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (1.76ns)   --->   "br label %.preheader1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:272]   --->   Operation 39 'br' <Predicate = (icmp_ln259)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 3.25>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%index_assign = phi i9 [ %add_ln278, %hls_label_32 ], [ 0, %.preheader1.preheader ]" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:278]   --->   Operation 40 'phi' 'index_assign' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (1.66ns)   --->   "%icmp_ln272 = icmp eq i9 %index_assign, -192" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:272]   --->   Operation 41 'icmp' 'icmp_ln272' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 0)"   --->   Operation 42 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (1.82ns)   --->   "%add_ln278 = add i9 %index_assign, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:278]   --->   Operation 43 'add' 'add_ln278' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "br i1 %icmp_ln272, label %init_boarder_begin, label %hls_label_32" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:272]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (0.00ns)   --->   "%zext_ln544 = zext i9 %index_assign to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277]   --->   Operation 45 'zext' 'zext_ln544' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%p_src_data_V_addr = getelementptr [57600 x i8]* %p_src_data_V, i64 0, i64 %zext_ln544" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277]   --->   Operation 46 'getelementptr' 'p_src_data_V_addr' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+ST_3 : Operation 47 [2/2] (3.25ns)   --->   "%p_src_data_V_load = load i8* %p_src_data_V_addr, align 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277]   --->   Operation 47 'load' 'p_src_data_V_load' <Predicate = (!icmp_ln272)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 57600> <RAM>
+
+State 4 <SV = 3> <Delay = 6.50>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%tmp_1 = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str129)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:273]   --->   Operation 48 'specregionbegin' 'tmp_1' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:275]   --->   Operation 49 'specpipeline' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+ST_4 : Operation 50 [1/2] (3.25ns)   --->   "%p_src_data_V_load = load i8* %p_src_data_V_addr, align 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277]   --->   Operation 50 'load' 'p_src_data_V_load' <Predicate = (!icmp_ln272)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 57600> <RAM>
+ST_4 : Operation 51 [1/1] (0.00ns)   --->   "%buf_1_V_addr = getelementptr [320 x i8]* %buf_1_V, i64 0, i64 %zext_ln544" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277]   --->   Operation 51 'getelementptr' 'buf_1_V_addr' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+ST_4 : Operation 52 [1/1] (3.25ns)   --->   "store i8 %p_src_data_V_load, i8* %buf_1_V_addr, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277]   --->   Operation 52 'store' <Predicate = (!icmp_ln272)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str129, i32 %tmp_1)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:279]   --->   Operation 53 'specregionend' 'empty' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+ST_4 : Operation 54 [1/1] (0.00ns)   --->   "br label %.preheader1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:272]   --->   Operation 54 'br' <Predicate = (!icmp_ln272)> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 1.76>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([13 x i8]* @p_str130) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:285]   --->   Operation 55 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 56 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([13 x i8]* @p_str130)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:285]   --->   Operation 56 'specregionbegin' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 1, i32 3, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:286]   --->   Operation 57 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 58 [1/1] (1.76ns)   --->   "br label %2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287]   --->   Operation 58 'br' <Predicate = true> <Delay = 1.76>
+
+State 6 <SV = 4> <Delay = 3.25>
+ST_6 : Operation 59 [1/1] (0.00ns)   --->   "%t_V = phi i9 [ 0, %init_boarder_begin ], [ %i_col_V, %3 ]"   --->   Operation 59 'phi' 't_V' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 320, i64 320, i64 0)"   --->   Operation 60 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 61 [1/1] (1.66ns)   --->   "%icmp_ln287 = icmp eq i9 %t_V, -192" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287]   --->   Operation 61 'icmp' 'icmp_ln287' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 62 [1/1] (1.82ns)   --->   "%i_col_V = add i9 %t_V, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287]   --->   Operation 62 'add' 'i_col_V' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 63 [1/1] (0.00ns)   --->   "br i1 %icmp_ln287, label %init_boarder_end, label %3" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287]   --->   Operation 63 'br' <Predicate = true> <Delay = 0.00>
+ST_6 : Operation 64 [1/1] (0.00ns)   --->   "%zext_ln544_1 = zext i9 %t_V to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:291]   --->   Operation 64 'zext' 'zext_ln544_1' <Predicate = (!icmp_ln287)> <Delay = 0.00>
+ST_6 : Operation 65 [1/1] (0.00ns)   --->   "%buf_0_V_addr = getelementptr [320 x i8]* %buf_0_V, i64 0, i64 %zext_ln544_1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:291]   --->   Operation 65 'getelementptr' 'buf_0_V_addr' <Predicate = (!icmp_ln287)> <Delay = 0.00>
+ST_6 : Operation 66 [1/1] (3.25ns)   --->   "store i8 -1, i8* %buf_0_V_addr, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:291]   --->   Operation 66 'store' <Predicate = (!icmp_ln287)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_6 : Operation 67 [1/1] (0.00ns)   --->   "br label %2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287]   --->   Operation 67 'br' <Predicate = (!icmp_ln287)> <Delay = 0.00>
+ST_6 : Operation 68 [1/1] (0.00ns)   --->   "%rd_ind_2 = alloca i32"   --->   Operation 68 'alloca' 'rd_ind_2' <Predicate = (icmp_ln287)> <Delay = 0.00>
+ST_6 : Operation 69 [1/1] (0.00ns)   --->   "%empty_78 = call i32 (...)* @_ssdm_op_SpecRegionEnd([13 x i8]* @p_str130, i32 %tmp)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:293]   --->   Operation 69 'specregionend' 'empty_78' <Predicate = (icmp_ln287)> <Delay = 0.00>
+ST_6 : Operation 70 [1/1] (1.76ns)   --->   "store i32 320, i32* %rd_ind_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298]   --->   Operation 70 'store' <Predicate = (icmp_ln287)> <Delay = 1.76>
+ST_6 : Operation 71 [1/1] (1.76ns)   --->   "br label %4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298]   --->   Operation 71 'br' <Predicate = (icmp_ln287)> <Delay = 1.76>
+
+State 7 <SV = 5> <Delay = 2.52>
+ST_7 : Operation 72 [1/1] (0.00ns)   --->   "%row_ind_1_V_1 = phi i13 [ %row_ind_2_V_2_load, %init_boarder_end ], [ %zero_ind_V, %Row_Loop_end ]"   --->   Operation 72 'phi' 'row_ind_1_V_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 73 [1/1] (0.00ns)   --->   "%row_ind_0_V = phi i13 [ %row_ind_2_V_1_load, %init_boarder_end ], [ %row_ind_1_V_1, %Row_Loop_end ]"   --->   Operation 73 'phi' 'row_ind_0_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 74 [1/1] (0.00ns)   --->   "%zero_ind_V = phi i13 [ %row_ind_2_V_load, %init_boarder_end ], [ %row_ind_0_V, %Row_Loop_end ]"   --->   Operation 74 'phi' 'zero_ind_V' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 75 [1/1] (0.00ns)   --->   "%t_V_1 = phi i8 [ 1, %init_boarder_end ], [ %row_V, %Row_Loop_end ]"   --->   Operation 75 'phi' 't_V_1' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 76 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 180, i64 180, i64 0)"   --->   Operation 76 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 77 [1/1] (1.55ns)   --->   "%icmp_ln298 = icmp eq i8 %t_V_1, -75" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298]   --->   Operation 77 'icmp' 'icmp_ln298' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 78 [1/1] (0.00ns)   --->   "br i1 %icmp_ln298, label %11, label %Row_Loop_begin" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298]   --->   Operation 78 'br' <Predicate = true> <Delay = 0.00>
+ST_7 : Operation 79 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str116) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:299]   --->   Operation 79 'specloopname' <Predicate = (!icmp_ln298)> <Delay = 0.00>
+ST_7 : Operation 80 [1/1] (0.00ns)   --->   "%tmp_3 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str116)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:299]   --->   Operation 80 'specregionbegin' 'tmp_3' <Predicate = (!icmp_ln298)> <Delay = 0.00>
+ST_7 : Operation 81 [1/1] (1.55ns)   --->   "%icmp_ln887 = icmp ult i8 %t_V_1, -76" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:118->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 81 'icmp' 'icmp_ln887' <Predicate = (!icmp_ln298)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 82 [1/1] (0.00ns)   --->   "%trunc_ln321 = trunc i13 %row_ind_1_V_1 to i2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 82 'trunc' 'trunc_ln321' <Predicate = (!icmp_ln298)> <Delay = 0.00>
+ST_7 : Operation 83 [1/1] (0.00ns)   --->   "%trunc_ln321_1 = trunc i13 %zero_ind_V to i2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 83 'trunc' 'trunc_ln321_1' <Predicate = (!icmp_ln298)> <Delay = 0.00>
+ST_7 : Operation 84 [1/1] (0.00ns)   --->   "%trunc_ln321_2 = trunc i13 %row_ind_0_V to i2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 84 'trunc' 'trunc_ln321_2' <Predicate = (!icmp_ln298)> <Delay = 0.00>
+ST_7 : Operation 85 [1/1] (1.76ns)   --->   "br label %.preheader311.i" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:110->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 85 'br' <Predicate = (!icmp_ln298)> <Delay = 1.76>
+ST_7 : Operation 86 [1/1] (0.00ns)   --->   "ret void" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:315]   --->   Operation 86 'ret' <Predicate = (icmp_ln298)> <Delay = 0.00>
+
+State 8 <SV = 6> <Delay = 3.61>
+ST_8 : Operation 87 [1/1] (0.00ns)   --->   "%src_buf_1_1_0 = phi i8 [ -1, %Row_Loop_begin ], [ %src_buf_temp_copy_ex_1, %Col_Loop_end ]"   --->   Operation 87 'phi' 'src_buf_1_1_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 88 [1/1] (0.00ns)   --->   "%src_buf_0_1_0 = phi i8 [ -1, %Row_Loop_begin ], [ %src_buf_temp_copy_ex, %Col_Loop_end ]"   --->   Operation 88 'phi' 'src_buf_0_1_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 89 [1/1] (0.00ns)   --->   "%src_buf_2_1_0 = phi i8 [ -1, %Row_Loop_begin ], [ %src_buf_temp_copy_ex_2, %Col_Loop_end ]"   --->   Operation 89 'phi' 'src_buf_2_1_0' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 90 [1/1] (0.00ns)   --->   "%t_V_2 = phi i9 [ 0, %Row_Loop_begin ], [ %col_V, %Col_Loop_end ]"   --->   Operation 90 'phi' 't_V_2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 91 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 321, i64 321, i64 0)"   --->   Operation 91 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 92 [1/1] (1.66ns)   --->   "%icmp_ln110 = icmp eq i9 %t_V_2, -191" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:110->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 92 'icmp' 'icmp_ln110' <Predicate = true> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 93 [1/1] (1.82ns)   --->   "%col_V = add i9 %t_V_2, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:110->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 93 'add' 'col_V' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 94 [1/1] (0.00ns)   --->   "br i1 %icmp_ln110, label %Row_Loop_end, label %Col_Loop_begin" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:110->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 94 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 95 [1/1] (1.66ns)   --->   "%icmp_ln887_1 = icmp ult i9 %t_V_2, -192" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:116->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 95 'icmp' 'icmp_ln887_1' <Predicate = (!icmp_ln110)> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 96 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887, label %6, label %8" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:118->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 96 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 0.00>
+ST_8 : Operation 97 [1/1] (0.00ns)   --->   "br label %._crit_edge.i_ifconv"   --->   Operation 97 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 98 [1/1] (0.00ns)   --->   "%rd_ind_2_load_1 = load i32* %rd_ind_2" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 98 'load' 'rd_ind_2_load_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 99 [1/1] (0.00ns)   --->   "%sext_ln622 = sext i32 %rd_ind_2_load_1 to i64" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 99 'sext' 'sext_ln622' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 100 [1/1] (0.00ns)   --->   "%p_src_data_V_addr_1 = getelementptr [57600 x i8]* %p_src_data_V, i64 0, i64 %sext_ln622" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 100 'getelementptr' 'p_src_data_V_addr_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_8 : Operation 101 [2/2] (3.25ns)   --->   "%p_src_data_V_load_1 = load i8* %p_src_data_V_addr_1, align 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 101 'load' 'p_src_data_V_load_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 57600> <RAM>
+
+State 9 <SV = 7> <Delay = 6.50>
+ST_9 : Operation 102 [1/1] (0.00ns)   --->   "%zext_ln544_2 = zext i9 %t_V_2 to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 102 'zext' 'zext_ln544_2' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 0.00>
+ST_9 : Operation 103 [1/1] (0.00ns)   --->   "%buf_0_V_addr_2 = getelementptr [320 x i8]* %buf_0_V, i64 0, i64 %zext_ln544_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:125->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 103 'getelementptr' 'buf_0_V_addr_2' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 104 [1/1] (0.00ns)   --->   "%buf_1_V_addr_2 = getelementptr [320 x i8]* %buf_1_V, i64 0, i64 %zext_ln544_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:125->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 104 'getelementptr' 'buf_1_V_addr_2' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 105 [1/1] (0.00ns)   --->   "%buf_2_V_addr_1 = getelementptr [320 x i8]* %buf_2_V, i64 0, i64 %zext_ln544_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:125->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 105 'getelementptr' 'buf_2_V_addr_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 106 [1/1] (1.13ns)   --->   "switch i2 %trunc_ln321, label %branch5 [
+    i2 0, label %branch3
+    i2 1, label %branch4
+  ]" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 106 'switch' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887)> <Delay = 1.13>
+ST_9 : Operation 107 [1/1] (3.25ns)   --->   "store i8 -1, i8* %buf_1_V_addr_2, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 107 'store' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887 & trunc_ln321 == 1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_9 : Operation 108 [1/1] (0.00ns)   --->   "br label %9" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 108 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887 & trunc_ln321 == 1)> <Delay = 0.00>
+ST_9 : Operation 109 [1/1] (3.25ns)   --->   "store i8 -1, i8* %buf_0_V_addr_2, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 109 'store' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887 & trunc_ln321 == 0)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "br label %9" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 110 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887 & trunc_ln321 == 0)> <Delay = 0.00>
+ST_9 : Operation 111 [1/1] (3.25ns)   --->   "store i8 -1, i8* %buf_2_V_addr_1, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 111 'store' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887 & trunc_ln321 != 0 & trunc_ln321 != 1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_9 : Operation 112 [1/1] (0.00ns)   --->   "br label %9" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:126->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 112 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & !icmp_ln887 & trunc_ln321 != 0 & trunc_ln321 != 1)> <Delay = 0.00>
+ST_9 : Operation 113 [1/2] (3.25ns)   --->   "%p_src_data_V_load_1 = load i8* %p_src_data_V_addr_1, align 1" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 113 'load' 'p_src_data_V_load_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 57600> <RAM>
+ST_9 : Operation 114 [1/1] (0.00ns)   --->   "%buf_0_V_addr_1 = getelementptr [320 x i8]* %buf_0_V, i64 0, i64 %zext_ln544_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 114 'getelementptr' 'buf_0_V_addr_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%buf_1_V_addr_1 = getelementptr [320 x i8]* %buf_1_V, i64 0, i64 %zext_ln544_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 115 'getelementptr' 'buf_1_V_addr_1' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 116 [1/1] (0.00ns)   --->   "%buf_2_V_addr = getelementptr [320 x i8]* %buf_2_V, i64 0, i64 %zext_ln544_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 116 'getelementptr' 'buf_2_V_addr' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 117 [1/1] (1.13ns)   --->   "switch i2 %trunc_ln321, label %branch8 [
+    i2 0, label %branch6
+    i2 1, label %branch7
+  ]" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 117 'switch' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887)> <Delay = 1.13>
+ST_9 : Operation 118 [1/1] (3.25ns)   --->   "store i8 %p_src_data_V_load_1, i8* %buf_1_V_addr_1, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 118 'store' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887 & trunc_ln321 == 1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_9 : Operation 119 [1/1] (0.00ns)   --->   "br label %7" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 119 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887 & trunc_ln321 == 1)> <Delay = 0.00>
+ST_9 : Operation 120 [1/1] (3.25ns)   --->   "store i8 %p_src_data_V_load_1, i8* %buf_0_V_addr_1, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 120 'store' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887 & trunc_ln321 == 0)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_9 : Operation 121 [1/1] (0.00ns)   --->   "br label %7" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 121 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887 & trunc_ln321 == 0)> <Delay = 0.00>
+ST_9 : Operation 122 [1/1] (3.25ns)   --->   "store i8 %p_src_data_V_load_1, i8* %buf_2_V_addr, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 122 'store' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887 & trunc_ln321 != 0 & trunc_ln321 != 1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_9 : Operation 123 [1/1] (0.00ns)   --->   "br label %7" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 123 'br' <Predicate = (!icmp_ln110 & icmp_ln887_1 & icmp_ln887 & trunc_ln321 != 0 & trunc_ln321 != 1)> <Delay = 0.00>
+ST_9 : Operation 124 [1/1] (0.00ns)   --->   "%rd_ind_2_load = load i32* %rd_ind_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:121->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 124 'load' 'rd_ind_2_load' <Predicate = (icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+ST_9 : Operation 125 [1/1] (2.55ns)   --->   "%rd_ind = add nsw i32 %rd_ind_2_load, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:121->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 125 'add' 'rd_ind' <Predicate = (icmp_ln887_1 & icmp_ln887)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 126 [1/1] (1.76ns)   --->   "store i32 %rd_ind, i32* %rd_ind_2" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:122->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 126 'store' <Predicate = (icmp_ln887_1 & icmp_ln887)> <Delay = 1.76>
+ST_9 : Operation 127 [1/1] (0.00ns)   --->   "br label %._crit_edge.i_ifconv" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:122->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 127 'br' <Predicate = (icmp_ln887_1 & icmp_ln887)> <Delay = 0.00>
+
+State 10 <SV = 8> <Delay = 3.25>
+ST_10 : Operation 128 [1/1] (0.00ns)   --->   "%zext_ln544_3 = zext i9 %t_V_2 to i64" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 128 'zext' 'zext_ln544_3' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%buf_0_V_addr_3 = getelementptr [320 x i8]* %buf_0_V, i64 0, i64 %zext_ln544_3" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 129 'getelementptr' 'buf_0_V_addr_3' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_10 : Operation 130 [2/2] (3.25ns)   --->   "%buf_0_V_load = load i8* %buf_0_V_addr_3, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 130 'load' 'buf_0_V_load' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_10 : Operation 131 [1/1] (0.00ns)   --->   "%buf_1_V_addr_3 = getelementptr [320 x i8]* %buf_1_V, i64 0, i64 %zext_ln544_3" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 131 'getelementptr' 'buf_1_V_addr_3' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_10 : Operation 132 [2/2] (3.25ns)   --->   "%buf_1_V_load = load i8* %buf_1_V_addr_3, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 132 'load' 'buf_1_V_load' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_10 : Operation 133 [1/1] (0.00ns)   --->   "%buf_2_V_addr_2 = getelementptr [320 x i8]* %buf_2_V, i64 0, i64 %zext_ln544_3" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 133 'getelementptr' 'buf_2_V_addr_2' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_10 : Operation 134 [2/2] (3.25ns)   --->   "%buf_2_V_load = load i8* %buf_2_V_addr_2, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 134 'load' 'buf_2_V_load' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_10 : Operation 135 [1/1] (1.66ns)   --->   "%icmp_ln891 = icmp eq i9 %t_V_2, 0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:206->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 135 'icmp' 'icmp_ln891' <Predicate = (!icmp_ln110)> <Delay = 1.66> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 136 [1/1] (0.00ns)   --->   "br i1 %icmp_ln891, label %Col_Loop_end, label %10" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:206->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 136 'br' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+
+State 11 <SV = 9> <Delay = 9.23>
+ST_11 : Operation 137 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([9 x i8]* @p_str117) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:111->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 137 'specloopname' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%tmp_4 = call i32 (...)* @_ssdm_op_SpecRegionBegin([9 x i8]* @p_str117)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:111->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 138 'specregionbegin' 'tmp_4' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:113->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 139 'specpipeline' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "br i1 %icmp_ln887_1, label %5, label %._crit_edge.i_ifconv" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:116->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 140 'br' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_11 : Operation 141 [1/2] (3.25ns)   --->   "%buf_0_V_load = load i8* %buf_0_V_addr_3, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 141 'load' 'buf_0_V_load' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_11 : Operation 142 [1/2] (3.25ns)   --->   "%buf_1_V_load = load i8* %buf_1_V_addr_3, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 142 'load' 'buf_1_V_load' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_11 : Operation 143 [1/2] (3.25ns)   --->   "%buf_2_V_load = load i8* %buf_2_V_addr_2, align 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 143 'load' 'buf_2_V_load' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 3.25> <Core = "RAM_S2P_BRAM">   --->   Core 48 'RAM_S2P_BRAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 320> <RAM>
+ST_11 : Operation 144 [1/1] (1.77ns)   --->   "%buf_cop_0_V = call i8 @_ssdm_op_Mux.ap_auto.3i8.i2(i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %trunc_ln321_1)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 144 'mux' 'buf_cop_0_V' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 1.77> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 145 [1/1] (1.77ns)   --->   "%tmp_5 = call i8 @_ssdm_op_Mux.ap_auto.3i8.i2(i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %trunc_ln321_2)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 145 'mux' 'tmp_5' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 1.77> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 146 [1/1] (1.24ns)   --->   "%select_ln887 = select i1 %icmp_ln887_1, i8 %buf_cop_0_V, i8 -1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:116->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 146 'select' 'select_ln887' <Predicate = (!icmp_ln110)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 147 [1/1] (1.24ns)   --->   "%buf_cop_1_V = select i1 %icmp_ln887_1, i8 %tmp_5, i8 -1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:116->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 147 'select' 'buf_cop_1_V' <Predicate = (!icmp_ln110)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 148 [1/1] (1.77ns)   --->   "%tmp_6 = call i8 @_ssdm_op_Mux.ap_auto.3i8.i2(i8 %buf_0_V_load, i8 %buf_1_V_load, i8 %buf_2_V_load, i2 %trunc_ln321)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 148 'mux' 'tmp_6' <Predicate = (!icmp_ln110 & icmp_ln887_1)> <Delay = 1.77> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 1.77> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 149 [1/1] (1.24ns)   --->   "%buf_cop_2_V = select i1 %icmp_ln887_1, i8 %tmp_6, i8 -1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:116->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 149 'select' 'buf_cop_2_V' <Predicate = (!icmp_ln110)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 150 [1/1] (0.00ns)   --->   "%src_buf_temp_copy_ex = call fastcc i8 @xfExtractPixels.1(i8 %select_ln887)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:155->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 150 'call' 'src_buf_temp_copy_ex' <Predicate = (!icmp_ln110)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 151 [1/1] (0.00ns)   --->   "%src_buf_temp_copy_ex_1 = call fastcc i8 @xfExtractPixels.1(i8 %buf_cop_1_V)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:155->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 151 'call' 'src_buf_temp_copy_ex_1' <Predicate = (!icmp_ln110)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 152 [1/1] (0.00ns)   --->   "%src_buf_temp_copy_ex_2 = call fastcc i8 @xfExtractPixels.1(i8 %buf_cop_2_V)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:155->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 152 'call' 'src_buf_temp_copy_ex_2' <Predicate = (!icmp_ln110)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_11 : Operation 153 [1/1] (1.55ns)   --->   "%icmp_ln887_2 = icmp ult i8 %src_buf_1_1_0, %src_buf_0_1_0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:64->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 153 'icmp' 'icmp_ln887_2' <Predicate = (!icmp_ln110)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 154 [1/1] (1.24ns)   --->   "%select_ln62 = select i1 %icmp_ln887_2, i8 %src_buf_1_1_0, i8 %src_buf_0_1_0" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:62->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 154 'select' 'select_ln62' <Predicate = (!icmp_ln110)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 155 [1/1] (1.55ns)   --->   "%icmp_ln887_3 = icmp ult i8 %src_buf_2_1_0, %select_ln62" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:64->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 155 'icmp' 'icmp_ln887_3' <Predicate = (!icmp_ln110)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.55> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 156 [1/1] (1.24ns)   --->   "%select_ln62_1 = select i1 %icmp_ln887_3, i8 %src_buf_2_1_0, i8 %select_ln62" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:62->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 156 'select' 'select_ln62_1' <Predicate = (!icmp_ln110)> <Delay = 1.24> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.24> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 157 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.volatile.i8P(i8* %p_dst_data_V, i8 %select_ln62_1)" [D:/Xilinx/xfopencv-master/include\common/xf_structs.h:651->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:207->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 157 'write' <Predicate = (!icmp_ln891)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_11 : Operation 158 [1/1] (0.00ns)   --->   "br label %Col_Loop_end" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:209->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 158 'br' <Predicate = (!icmp_ln891)> <Delay = 0.00>
+ST_11 : Operation 159 [1/1] (0.00ns)   --->   "%empty_79 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str117, i32 %tmp_4)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:230->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 159 'specregionend' 'empty_79' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_11 : Operation 160 [1/1] (0.00ns)   --->   "br label %.preheader311.i" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:110->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303]   --->   Operation 160 'br' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+
+State 12 <SV = 7> <Delay = 1.91>
+ST_12 : Operation 161 [1/1] (0.00ns)   --->   "%empty_80 = call i32 (...)* @_ssdm_op_SpecRegionEnd([9 x i8]* @p_str116, i32 %tmp_3)" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:314]   --->   Operation 161 'specregionend' 'empty_80' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 162 [1/1] (1.91ns)   --->   "%row_V = add i8 %t_V_1, 1" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298]   --->   Operation 162 'add' 'row_V' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.91> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 163 [1/1] (0.00ns)   --->   "br label %4" [D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298]   --->   Operation 163 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('init_row_ind') with incoming values : ('init_row_ind', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:259) [13]  (1.77 ns)
+
+ <State 2>: 1.94ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln259', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:259) [17]  (0.959 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 3>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('index', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:278) with incoming values : ('add_ln278', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:278) [38]  (0 ns)
+	'getelementptr' operation ('p_src_data_V_addr', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277) [47]  (0 ns)
+	'load' operation ('p_src_data_V_load', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277) on array 'p_src_data_V' [48]  (3.25 ns)
+
+ <State 4>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('p_src_data_V_load', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277) on array 'p_src_data_V' [48]  (3.25 ns)
+	'store' operation ('store_ln277', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277) of variable 'p_src_data_V_load', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:277 on array 'buf[1].V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252 [50]  (3.25 ns)
+
+ <State 5>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i_col.V') with incoming values : ('i_col.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287) [59]  (1.77 ns)
+
+ <State 6>: 3.25ns
+The critical path consists of the following:
+	'phi' operation ('i_col.V') with incoming values : ('i_col.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:287) [59]  (0 ns)
+	'getelementptr' operation ('buf_0_V_addr', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:291) [66]  (0 ns)
+	'store' operation ('store_ln291', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:291) of constant 255 on array 'buf[0].V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252 [67]  (3.25 ns)
+
+ <State 7>: 2.53ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln298', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298) [80]  (1.55 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 8>: 3.62ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln110', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:110->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [96]  (1.66 ns)
+	blocking operation 1.96 ns on control path)
+
+ <State 9>: 6.51ns
+The critical path consists of the following:
+	'load' operation ('p_src_data_V_load_1', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) on array 'p_src_data_V' [128]  (3.25 ns)
+	'store' operation ('store_ln120', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) of variable 'p_src_data_V_load_1', D:/Xilinx/xfopencv-master/include\common/xf_structs.h:622->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:120->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303 on array 'buf[0].V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252 [137]  (3.25 ns)
+
+ <State 10>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('buf_0_V_addr_3', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [149]  (0 ns)
+	'load' operation ('buf_0_V_load', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:135->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) on array 'buf[0].V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:252 [150]  (3.25 ns)
+
+ <State 11>: 9.23ns
+The critical path consists of the following:
+	'icmp' operation ('icmp_ln887_2', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:64->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [164]  (1.55 ns)
+	'select' operation ('select_ln62', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:62->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [165]  (1.25 ns)
+	'icmp' operation ('icmp_ln887_3', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:64->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [166]  (1.55 ns)
+	'select' operation ('op2.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:62->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:178->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [167]  (1.25 ns)
+	fifo write on port 'p_dst_data_V' (D:/Xilinx/xfopencv-master/include\common/xf_structs.h:651->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:207->D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:303) [171]  (3.63 ns)
+
+ <State 12>: 1.92ns
+The critical path consists of the following:
+	'add' operation ('row.V', D:/Xilinx/xfopencv-master/include\imgproc/xf_erosion.hpp:298) [178]  (1.92 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

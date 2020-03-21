@@ -1,0 +1,4 @@
+NumberHits:0
+Timestamp: Tue Mar 17 21:00:36 UTC 2020
+VLNV: xilinx.com:ip:v_axi4s_vid_out:4.0
+SynthRuntime: 97

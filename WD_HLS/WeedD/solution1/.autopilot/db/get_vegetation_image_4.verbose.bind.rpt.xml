@@ -1,0 +1,55 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'get_vegetation_image_4'" level="0">
+<item name = "Date">Wed Mar 18 11:33:53 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 43.397 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">2419217, 2419217, 0.121 sec, 0.121 sec, 2419202, 2419202, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_get_exg_image_fu_170">get_exg_image, 2419201, 2419201, 0.121 sec, 0.121 sec, 2419201, 2419201, none</column>
+<column name="grp_extract_channels_fu_183">extract_channels, 58142, 58142, 2.907 ms, 2.907 ms, 58143, 58143, dataflow</column>
+<column name="grp_convert_fp_to_8b770_fu_193">convert_fp_to_8b770, 57623, 57623, 2.881 ms, 2.881 ms, 57623, 57623, none</column>
+<column name="grp_get_max_from_channel_fu_202">get_max_from_channel, 58142, 58142, 2.907 ms, 2.907 ms, 58143, 58143, dataflow</column>
+<column name="grp_duplicateMat635769_fu_212">duplicateMat635769, 43743, 58383, 2.187 ms, 2.919 ms, 43742, 58142, dataflow</column>
+<column name="grp_duplicateMat_fu_223">duplicateMat, 58144, 58144, 2.907 ms, 2.907 ms, 58142, 58142, dataflow</column>
+<column name="call_ln0_get_vegetation_image_fu_230">get_vegetation_image, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="sub_ln703_cast_loc_c_get_vegetation_image_2_fu_240">get_vegetation_image_2, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln65_get_vegetation_image_113_fu_247">get_vegetation_image_113, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="extLd_cast_loc_chann_get_vegetation_image_3_fu_256">get_vegetation_image_3, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

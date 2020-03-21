@@ -1,0 +1,177 @@
+
+
+================================================================
+== Vivado HLS Report for 'duplicateMat438'
+================================================================
+* Date:           Wed Mar 18 11:36:05 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 7.268 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-------+-------+----------+
+    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+    |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+    +---------+---------+----------+----------+-------+-------+----------+
+    |    58144|    58144| 2.907 ms | 2.907 ms |  58142|  58142| dataflow |
+    +---------+---------+----------+----------+-------+-------+----------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+------------------------+---------+---------+-----------+----------+-------+-------+---------+
+        |                           |                        |  Latency (cycles) |  Latency (absolute)  |    Interval   | Pipeline|
+        |          Instance         |         Module         |   min   |   max   |    min    |    max   |  min  |  max  |   Type  |
+        +---------------------------+------------------------+---------+---------+-----------+----------+-------+-------+---------+
+        |xFDuplicate_1_U0           |xFDuplicate_1           |    43741|    43741|  2.187 ms | 2.187 ms |  43741|  43741|   none  |
+        |duplicateMat438_Loop_U0    |duplicateMat438_Loop    |      721|    58141| 36.050 us | 2.907 ms |    721|  58141|   none  |
+        |duplicateMat438_Loop_1_U0  |duplicateMat438_Loop_1  |    58141|    58141|  2.907 ms | 2.907 ms |  58141|  58141|   none  |
+        |duplicateMat438_Bloc_U0    |duplicateMat438_Bloc    |        0|        0|    0 ns   |   0 ns   |      0|      0|   none  |
+        +---------------------------+------------------------+---------+---------+-----------+----------+-------+-------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     32|    -|
+|FIFO             |        0|      -|      25|    104|    -|
+|Instance         |        -|      -|     138|    621|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     45|    -|
+|Register         |        -|      -|       7|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     170|    802|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |      1|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+------------------------+---------+-------+----+-----+-----+
+    |          Instance         |         Module         | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +---------------------------+------------------------+---------+-------+----+-----+-----+
+    |duplicateMat438_Bloc_U0    |duplicateMat438_Bloc    |        0|      0|   2|   20|    0|
+    |duplicateMat438_Loop_U0    |duplicateMat438_Loop    |        0|      0|  46|  202|    0|
+    |duplicateMat438_Loop_1_U0  |duplicateMat438_Loop_1  |        0|      0|  37|  217|    0|
+    |xFDuplicate_1_U0           |xFDuplicate_1           |        0|      0|  53|  182|    0|
+    +---------------------------+------------------------+---------+-------+----+-----+-----+
+    |Total                      |                        |        0|      0| 138|  621|    0|
+    +---------------------------+------------------------+---------+-------+----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------------------+---------+---+----+-----+------+-----+---------+
+    |           Name           | BRAM_18K| FF| LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------------------+---------+---+----+-----+------+-----+---------+
+    |dst1_V_V_U                |        0|  5|   0|    -|     2|    8|       16|
+    |dst_V_V_U                 |        0|  5|   0|    -|     2|    8|       16|
+    |p_src_cols_load7_loc_1_U  |        0|  5|   0|    -|     2|   10|       20|
+    |p_src_cols_load7_loc_s_U  |        0|  5|   0|    -|     2|   10|       20|
+    |src_V_V_U                 |        0|  5|   0|    -|     2|    8|       16|
+    +--------------------------+---------+---+----+-----+------+-----+---------+
+    |Total                     |        0| 25|   0|    0|    10|   44|       88|
+    +--------------------------+---------+---+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |duplicateMat438_Bloc_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |duplicateMat438_Loop_U0_ap_ready_count    |     +    |      0|  0|  10|           2|           1|
+    |ap_idle                                   |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                             |    and   |      0|  0|   2|           1|           1|
+    |duplicateMat438_Bloc_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |duplicateMat438_Loop_U0_ap_start          |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_duplicateMat438_Bloc_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_duplicateMat438_Loop_U0_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                     |          |      0|  0|  32|          10|           8|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |ap_sync_reg_duplicateMat438_Bloc_U0_ap_ready  |   9|          2|    1|          2|
+    |ap_sync_reg_duplicateMat438_Loop_U0_ap_ready  |   9|          2|    1|          2|
+    |duplicateMat438_Bloc_U0_ap_ready_count        |   9|          2|    2|          4|
+    |duplicateMat438_Loop_U0_ap_ready_count        |   9|          2|    2|          4|
+    |real_start                                    |   9|          2|    1|          2|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  45|         10|    7|         14|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |ap_sync_reg_duplicateMat438_Bloc_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_duplicateMat438_Loop_U0_ap_ready  |  1|   0|    1|          0|
+    |duplicateMat438_Bloc_U0_ap_ready_count        |  2|   0|    2|          0|
+    |duplicateMat438_Loop_U0_ap_ready_count        |  2|   0|    2|          0|
+    |start_once_reg                                |  1|   0|    1|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  7|   0|    7|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+-----------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++----------------------+-----+-----+------------+-----------------+--------------+
+|ap_start              |  in |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|start_full_n          |  in |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|start_out             | out |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|start_write           | out |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|ap_clk                |  in |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|ap_done               | out |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|ap_ready              | out |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|ap_idle               | out |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs | duplicateMat438 | return value |
+|p_src_data_V_dout     |  in |    8|   ap_fifo  |   p_src_data_V  |    pointer   |
+|p_src_data_V_empty_n  |  in |    1|   ap_fifo  |   p_src_data_V  |    pointer   |
+|p_src_data_V_read     | out |    1|   ap_fifo  |   p_src_data_V  |    pointer   |
+|p_dst1_data_V_din     | out |    8|   ap_fifo  |  p_dst1_data_V  |    pointer   |
+|p_dst1_data_V_full_n  |  in |    1|   ap_fifo  |  p_dst1_data_V  |    pointer   |
+|p_dst1_data_V_write   | out |    1|   ap_fifo  |  p_dst1_data_V  |    pointer   |
+|p_dst2_data_V_din     | out |    8|   ap_fifo  |  p_dst2_data_V  |    pointer   |
+|p_dst2_data_V_full_n  |  in |    1|   ap_fifo  |  p_dst2_data_V  |    pointer   |
+|p_dst2_data_V_write   | out |    1|   ap_fifo  |  p_dst2_data_V  |    pointer   |
++----------------------+-----+-----+------------+-----------------+--------------+
+

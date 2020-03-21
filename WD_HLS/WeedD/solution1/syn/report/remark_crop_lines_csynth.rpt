@@ -1,0 +1,201 @@
+
+
+================================================================
+== Vivado HLS Report for 'remark_crop_lines'
+================================================================
+* Date:           Wed Mar 18 11:36:02 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 10.802 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   144910|   146279| 7.245 ms | 7.314 ms |  144910|  146279|   none  |
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------+------------------------+---------+---------+----------+----------+-------+-------+----------+
+        |                                   |                        |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline |
+        |              Instance             |         Module         |   min   |   max   |    min   |    max   |  min  |  max  |   Type   |
+        +-----------------------------------+------------------------+---------+---------+----------+----------+-------+-------+----------+
+        |grp_erode_fu_111                   |erode                   |    59329|    59329| 2.966 ms | 2.966 ms |  59329|  59329|   none   |
+        |grp_get_total_vegetation_3_fu_118  |get_total_vegetation_3  |    28802|    28802| 1.440 ms | 1.440 ms |  28803|  28803| dataflow |
+        |grp_duplicateMat_1_fu_124          |duplicateMat_1          |    58143|    58143| 2.907 ms | 2.907 ms |  58142|  58142| dataflow |
+        +-----------------------------------+------------------------+---------+---------+----------+----------+-------+-------+----------+
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |    57960|    57960|       322|          -|          -|   180|    no    |
+        | + Loop 1.1  |      320|      320|         1|          -|          -|   320|    no    |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    130|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |       35|      4|     649|   2018|    0|
+|Memory           |       32|      -|       0|      0|    0|
+|Multiplexer      |        -|      -|       -|    188|    -|
+|Register         |        -|      -|      81|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |       67|      4|     730|   2336|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |       23|      1|   ~0   |      4|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------+------------------------+---------+-------+-----+-----+-----+
+    |              Instance             |         Module         | BRAM_18K| DSP48E|  FF | LUT | URAM|
+    +-----------------------------------+------------------------+---------+-------+-----+-----+-----+
+    |grp_duplicateMat_1_fu_124          |duplicateMat_1          |        0|      0|  205|  739|    0|
+    |grp_erode_fu_111                   |erode                   |        3|      0|  327|  760|    0|
+    |grp_get_total_vegetation_3_fu_118  |get_total_vegetation_3  |       32|      4|  117|  519|    0|
+    +-----------------------------------+------------------------+---------+-------+-----+-----+-----+
+    |Total                              |                        |       35|      4|  649| 2018|    0|
+    +-----------------------------------+------------------------+---------+-------+-----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    +---------------------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |        Memory       |        Module        | BRAM_18K| FF| LUT| URAM| Words | Bits| Banks| W*Bits*Banks|
+    +---------------------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |eroded_tmp_data_V_U  |remark_crop_linesCeG  |       32|  0|   0|    0|  57600|    8|     1|       460800|
+    +---------------------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+    |Total                |                      |       32|  0|   0|    0|  57600|    8|     1|       460800|
+    +---------------------+----------------------+---------+---+----+-----+-------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------------------------+----------+-------+---+----+------------+------------+
+    |                    Variable Name                   | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------------------------+----------+-------+---+----+------------+------------+
+    |add_ln697_1_fu_201_p2                               |     +    |      0|  0|  21|          15|          15|
+    |add_ln697_fu_210_p2                                 |     +    |      0|  0|  23|          16|          16|
+    |c_fu_195_p2                                         |     +    |      0|  0|  15|           9|           1|
+    |r_fu_159_p2                                         |     +    |      0|  0|  15|           8|           1|
+    |ap_block_state6_on_subcall_done                     |    and   |      0|  0|   2|           1|           1|
+    |ap_block_state7                                     |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln1496_fu_147_p2                               |   icmp   |      0|  0|  18|          18|           1|
+    |icmp_ln689_fu_153_p2                                |   icmp   |      0|  0|  11|           8|           8|
+    |icmp_ln690_fu_189_p2                                |   icmp   |      0|  0|  13|           9|           9|
+    |ap_block_state1                                     |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_duplicateMat_1_fu_124_ap_done           |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_duplicateMat_1_fu_124_ap_ready          |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_get_total_vegetation_3_fu_118_ap_done   |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_grp_get_total_vegetation_3_fu_118_ap_ready  |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                               |          |      0|  0| 130|          90|          58|
+    +----------------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------+----+-----------+-----+-----------+
+    |            Name            | LUT| Input Size| Bits| Total Bits|
+    +----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                   |  41|          8|    1|          8|
+    |ap_done                     |   9|          2|    1|          2|
+    |c_0_i_reg_100               |   9|          2|    9|         18|
+    |eroded_0_data_V_read        |   9|          2|    1|          2|
+    |eroded_1_data_V_i_blk_n     |   9|          2|    1|          2|
+    |eroded_1_data_V_write       |   9|          2|    1|          2|
+    |eroded_2_data_V_write       |   9|          2|    1|          2|
+    |eroded_tmp_data_V_address0  |  27|          5|   16|         80|
+    |eroded_tmp_data_V_ce0       |  27|          5|    1|          5|
+    |eroded_tmp_data_V_d0        |  15|          3|    8|         24|
+    |eroded_tmp_data_V_we0       |  15|          3|    1|          3|
+    |r_0_i_reg_89                |   9|          2|    8|         16|
+    +----------------------------+----+-----------+-----+-----------+
+    |Total                       | 188|         38|   49|        164|
+    +----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |                          Name                          | FF | LUT| Bits| Const Bits|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                               |   7|   0|    7|          0|
+    |ap_done_reg                                             |   1|   0|    1|          0|
+    |ap_sync_reg_grp_duplicateMat_1_fu_124_ap_done           |   1|   0|    1|          0|
+    |ap_sync_reg_grp_duplicateMat_1_fu_124_ap_ready          |   1|   0|    1|          0|
+    |ap_sync_reg_grp_get_total_vegetation_3_fu_118_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_get_total_vegetation_3_fu_118_ap_ready  |   1|   0|    1|          0|
+    |c_0_i_reg_100                                           |   9|   0|    9|          0|
+    |empty_fu_66                                             |  24|   0|   24|          0|
+    |grp_duplicateMat_1_fu_124_ap_start_reg                  |   1|   0|    1|          0|
+    |grp_erode_fu_111_ap_start_reg                           |   1|   0|    1|          0|
+    |grp_get_total_vegetation_3_fu_118_ap_start_reg          |   1|   0|    1|          0|
+    |icmp_ln1496_reg_226                                     |   1|   0|    1|          0|
+    |r_0_i_reg_89                                            |   8|   0|    8|          0|
+    |r_reg_233                                               |   8|   0|    8|          0|
+    |shl_ln_reg_238                                          |   8|   0|   16|          8|
+    |zext_ln690_reg_243                                      |   8|   0|   15|          7|
+    +--------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                   |  81|   0|   96|         15|
+    +--------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+-----+------------+-------------------+--------------+
+|        RTL Ports        | Dir | Bits|  Protocol  |   Source Object   |    C Type    |
++-------------------------+-----+-----+------------+-------------------+--------------+
+|ap_clk                   |  in |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|ap_rst                   |  in |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|ap_start                 |  in |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|ap_done                  | out |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|ap_continue              |  in |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|ap_idle                  | out |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|ap_ready                 | out |    1| ap_ctrl_hs | remark_crop_lines | return value |
+|eroded_0_data_V_dout     |  in |    8|   ap_fifo  |  eroded_0_data_V  |    pointer   |
+|eroded_0_data_V_empty_n  |  in |    1|   ap_fifo  |  eroded_0_data_V  |    pointer   |
+|eroded_0_data_V_read     | out |    1|   ap_fifo  |  eroded_0_data_V  |    pointer   |
+|eroded_1_data_V_dout     |  in |    8|   ap_fifo  |  eroded_1_data_V  |    pointer   |
+|eroded_1_data_V_empty_n  |  in |    1|   ap_fifo  |  eroded_1_data_V  |    pointer   |
+|eroded_1_data_V_read     | out |    1|   ap_fifo  |  eroded_1_data_V  |    pointer   |
+|eroded_1_data_V_din      | out |    8|   ap_fifo  |  eroded_1_data_V  |    pointer   |
+|eroded_1_data_V_full_n   |  in |    1|   ap_fifo  |  eroded_1_data_V  |    pointer   |
+|eroded_1_data_V_write    | out |    1|   ap_fifo  |  eroded_1_data_V  |    pointer   |
+|eroded_2_data_V_din      | out |    8|   ap_fifo  |  eroded_2_data_V  |    pointer   |
+|eroded_2_data_V_full_n   |  in |    1|   ap_fifo  |  eroded_2_data_V  |    pointer   |
+|eroded_2_data_V_write    | out |    1|   ap_fifo  |  eroded_2_data_V  |    pointer   |
++-------------------------+-----+-----+------------+-------------------+--------------+
+

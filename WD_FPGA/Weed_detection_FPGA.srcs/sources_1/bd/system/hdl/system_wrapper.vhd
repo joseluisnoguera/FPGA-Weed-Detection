@@ -1,7 +1,7 @@
 --Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2018.2.2 (win64) Build 2348494 Mon Oct  1 18:25:44 MDT 2018
---Date        : Sat Dec  7 11:16:52 2019
+--Date        : Wed Mar 18 00:08:58 2020
 --Host        : LAPTOP-OEOHUQ1P running 64-bit major release  (build 9200)
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
@@ -48,8 +48,7 @@ entity system_wrapper is
     hdmi_tx_clk_n : out STD_LOGIC;
     hdmi_tx_clk_p : out STD_LOGIC;
     hdmi_tx_data_n : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    veg_index_selection : in STD_LOGIC_VECTOR ( 2 downto 0 )
+    hdmi_tx_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
 end system_wrapper;
 
@@ -97,8 +96,7 @@ architecture STRUCTURE of system_wrapper is
     dphy_data_hs_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_hs_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
     dphy_data_lp_n : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    veg_index_selection : in STD_LOGIC_VECTOR ( 2 downto 0 )
+    dphy_data_lp_p : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component system;
   component IOBUF is
@@ -184,7 +182,6 @@ system_i: component system
       hdmi_tx_clk_n => hdmi_tx_clk_n,
       hdmi_tx_clk_p => hdmi_tx_clk_p,
       hdmi_tx_data_n(2 downto 0) => hdmi_tx_data_n(2 downto 0),
-      hdmi_tx_data_p(2 downto 0) => hdmi_tx_data_p(2 downto 0),
-      veg_index_selection(2 downto 0) => veg_index_selection(2 downto 0)
+      hdmi_tx_data_p(2 downto 0) => hdmi_tx_data_p(2 downto 0)
     );
 end STRUCTURE;

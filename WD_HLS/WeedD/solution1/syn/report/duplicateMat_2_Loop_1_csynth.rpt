@@ -1,0 +1,195 @@
+
+
+================================================================
+== Vivado HLS Report for 'duplicateMat_2_Loop_1'
+================================================================
+* Date:           Wed Mar 18 11:35:18 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 7.268 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+-----------+-----+--------+---------+
+    |  Latency (cycles) |  Latency (absolute)  |   Interval   | Pipeline|
+    |   min   |   max   |    min   |    max    | min |   max  |   Type  |
+    +---------+---------+----------+-----------+-----+--------+---------+
+    |        5|   923761| 0.250 us | 46.188 ms |    5|  923761|   none  |
+    +---------+---------+----------+-----------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------+---------+---------+---------+----------+----------+-----+-----+----------+
+        |                           |         |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+        |          Instance         |  Module |   min   |   max   |    min   |    max   | min | max |   Type   |
+        +---------------------------+---------+---------+---------+----------+----------+-----+-----+----------+
+        |call_ln113_write_r_fu_100  |write_r  |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+        |call_ln114_write_r_fu_108  |write_r  |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+        +---------------------------+---------+---------+---------+----------+----------+-----+-----+----------+
+
+        * Loop: 
+        +-------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  |   Trip   |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  |   Count  | Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+----------+----------+
+        |- Loop 1     |        4|   923760| 4 ~ 1283 |          -|          -|  1 ~ 720 |    no    |
+        | + Loop 1.1  |        1|     1280|         2|          1|          1| 1 ~ 1280 |    yes   |
+        +-------------+---------+---------+----------+-----------+-----------+----------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    132|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|       2|     22|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|    141|    -|
+|Register         |        -|      -|     129|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|     131|    295|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------+---------+---------+-------+---+----+-----+
+    |          Instance         |  Module | BRAM_18K| DSP48E| FF| LUT| URAM|
+    +---------------------------+---------+---------+-------+---+----+-----+
+    |call_ln113_write_r_fu_100  |write_r  |        0|      0|  1|  11|    0|
+    |call_ln114_write_r_fu_108  |write_r  |        0|      0|  1|  11|    0|
+    +---------------------------+---------+---------+-------+---+----+-----+
+    |Total                      |         |        0|      0|  2|  22|    0|
+    +---------------------------+---------+---------+-------+---+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------------------+----------+-------+---+----+------------+------------+
+    |                 Variable Name                 | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------------------+----------+-------+---+----+------------+------------+
+    |i_fu_125_p2                                    |     +    |      0|  0|  39|          32|           1|
+    |j_fu_140_p2                                    |     +    |      0|  0|  39|          32|           1|
+    |ap_block_pp0_stage0_11001                      |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001_ignoreCallOp37       |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001_ignoreCallOp39       |    and   |      0|  0|   2|           1|           1|
+    |icmp_ln105_fu_119_p2                           |   icmp   |      0|  0|  18|          32|          32|
+    |icmp_ln108_fu_134_p2                           |   icmp   |      0|  0|  18|          32|          32|
+    |ap_block_state1                                |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter1               |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter1_ignore_call4  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state4_pp0_stage0_iter1_ignore_call6  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                                  |    xor   |      0|  0|   2|           1|           2|
+    |ap_enable_reg_pp0_iter1                        |    xor   |      0|  0|   2|           2|           1|
+    +-----------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                          |          |      0|  0| 132|         138|          76|
+    +-----------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                |  27|          5|    1|          5|
+    |ap_done                  |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |  15|          3|    1|          3|
+    |dst1_V_V_blk_n           |   9|          2|    1|          2|
+    |dst_V_V_blk_n            |   9|          2|    1|          2|
+    |i1_0_i_reg_78            |   9|          2|   32|         64|
+    |j2_0_i_reg_89            |   9|          2|   32|         64|
+    |p_dst1_cols_blk_n        |   9|          2|    1|          2|
+    |p_dst1_data_V_blk_n      |   9|          2|    1|          2|
+    |p_dst1_data_V_write      |   9|          2|    1|          2|
+    |p_dst1_rows_blk_n        |   9|          2|    1|          2|
+    |p_dst2_data_V_blk_n      |   9|          2|    1|          2|
+    |p_dst2_data_V_write      |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    | 141|         30|   75|        154|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   4|   0|    4|          0|
+    |ap_done_reg                             |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter0                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                 |   1|   0|    1|          0|
+    |call_ln113_write_r_fu_100_ap_start_reg  |   1|   0|    1|          0|
+    |call_ln114_write_r_fu_108_ap_start_reg  |   1|   0|    1|          0|
+    |i1_0_i_reg_78                           |  32|   0|   32|          0|
+    |i_reg_160                               |  32|   0|   32|          0|
+    |icmp_ln108_reg_165                      |   1|   0|    1|          0|
+    |j2_0_i_reg_89                           |  32|   0|   32|          0|
+    |p_dst1_cols_read_reg_151                |  12|   0|   12|          0|
+    |p_dst1_rows_read_reg_146                |  11|   0|   11|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   | 129|   0|  129|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+-----+------------+------------------------+--------------+
+|       RTL Ports      | Dir | Bits|  Protocol  |      Source Object     |    C Type    |
++----------------------+-----+-----+------------+------------------------+--------------+
+|ap_clk                |  in |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|ap_rst                |  in |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|ap_start              |  in |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|ap_done               | out |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|ap_continue           |  in |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|ap_idle               | out |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|ap_ready              | out |    1| ap_ctrl_hs | duplicateMat_2_Loop_.1 | return value |
+|p_dst1_rows_dout      |  in |   11|   ap_fifo  |       p_dst1_rows      |    pointer   |
+|p_dst1_rows_empty_n   |  in |    1|   ap_fifo  |       p_dst1_rows      |    pointer   |
+|p_dst1_rows_read      | out |    1|   ap_fifo  |       p_dst1_rows      |    pointer   |
+|p_dst1_cols_dout      |  in |   12|   ap_fifo  |       p_dst1_cols      |    pointer   |
+|p_dst1_cols_empty_n   |  in |    1|   ap_fifo  |       p_dst1_cols      |    pointer   |
+|p_dst1_cols_read      | out |    1|   ap_fifo  |       p_dst1_cols      |    pointer   |
+|dst_V_V_dout          |  in |   24|   ap_fifo  |         dst_V_V        |    pointer   |
+|dst_V_V_empty_n       |  in |    1|   ap_fifo  |         dst_V_V        |    pointer   |
+|dst_V_V_read          | out |    1|   ap_fifo  |         dst_V_V        |    pointer   |
+|p_dst1_data_V_din     | out |   24|   ap_fifo  |      p_dst1_data_V     |    pointer   |
+|p_dst1_data_V_full_n  |  in |    1|   ap_fifo  |      p_dst1_data_V     |    pointer   |
+|p_dst1_data_V_write   | out |    1|   ap_fifo  |      p_dst1_data_V     |    pointer   |
+|dst1_V_V_dout         |  in |   24|   ap_fifo  |        dst1_V_V        |    pointer   |
+|dst1_V_V_empty_n      |  in |    1|   ap_fifo  |        dst1_V_V        |    pointer   |
+|dst1_V_V_read         | out |    1|   ap_fifo  |        dst1_V_V        |    pointer   |
+|p_dst2_data_V_din     | out |   24|   ap_fifo  |      p_dst2_data_V     |    pointer   |
+|p_dst2_data_V_full_n  |  in |    1|   ap_fifo  |      p_dst2_data_V     |    pointer   |
+|p_dst2_data_V_write   | out |    1|   ap_fifo  |      p_dst2_data_V     |    pointer   |
++----------------------+-----+-----+------------+------------------------+--------------+
+

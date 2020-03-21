@@ -1,0 +1,170 @@
+
+
+================================================================
+== Vivado HLS Report for 'extract_micro_roi'
+================================================================
+* Date:           Wed Mar 18 11:34:24 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 6.888 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      783|      783| 39.150 us | 39.150 us |  783|  783|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |          Loop Name          |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1                     |      782|      782|        34|          -|          -|    23|    no    |
+        | + extract_micro_roi_label6  |       32|       32|         1|          -|          -|    32|    no    |
+        +-----------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 3
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 3 2 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %img_in_mr_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%y_right_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %y_right)" [./wd_stage_2.h:107]   --->   Operation 5 'read' 'y_right_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%y_left_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %y_left)" [./wd_stage_2.h:107]   --->   Operation 6 'read' 'y_left_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%x_bottom_read = call i10 @_ssdm_op_Read.ap_auto.i10(i10 %x_bottom)" [./wd_stage_2.h:107]   --->   Operation 7 'read' 'x_bottom_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%x_top_read = call i10 @_ssdm_op_Read.ap_auto.i10(i10 %x_top)" [./wd_stage_2.h:107]   --->   Operation 8 'read' 'x_top_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%trunc_ln112 = trunc i10 %x_top_read to i8" [./wd_stage_2.h:112]   --->   Operation 9 'trunc' 'trunc_ln112' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%trunc_ln110 = trunc i10 %x_bottom_read to i8" [./wd_stage_2.h:110]   --->   Operation 10 'trunc' 'trunc_ln110' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (1.76ns)   --->   "br label %.loopexit" [./wd_stage_2.h:110]   --->   Operation 11 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.46>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%v_0 = phi i5 [ 0, %0 ], [ %v, %.loopexit.loopexit ]"   --->   Operation 12 'phi' 'v_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%zext_ln110 = zext i5 %v_0 to i8" [./wd_stage_2.h:110]   --->   Operation 13 'zext' 'zext_ln110' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (1.36ns)   --->   "%icmp_ln110 = icmp eq i5 %v_0, -9" [./wd_stage_2.h:110]   --->   Operation 14 'icmp' 'icmp_ln110' <Predicate = true> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 23, i64 23, i64 23)"   --->   Operation 15 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 16 [1/1] (1.78ns)   --->   "%v = add i5 %v_0, 1" [./wd_stage_2.h:110]   --->   Operation 16 'add' 'v' <Predicate = true> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %icmp_ln110, label %2, label %.preheader.preheader" [./wd_stage_2.h:110]   --->   Operation 17 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (1.91ns)   --->   "%p_v = add i8 %zext_ln110, %trunc_ln112" [./wd_stage_2.h:112]   --->   Operation 18 'add' 'p_v' <Predicate = (!icmp_ln110)> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 19 [1/1] (1.55ns)   --->   "%icmp_ln114 = icmp ult i8 %p_v, %trunc_ln110" [./wd_stage_2.h:114]   --->   Operation 19 'icmp' 'icmp_ln114' <Predicate = (!icmp_ln110)> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%shl_ln = call i10 @_ssdm_op_BitConcatenate.i10.i5.i5(i5 %v_0, i5 0)" [./wd_stage_2.h:115]   --->   Operation 20 'bitconcatenate' 'shl_ln' <Predicate = (!icmp_ln110)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.76ns)   --->   "br label %.preheader" [./wd_stage_2.h:111]   --->   Operation 21 'br' <Predicate = (!icmp_ln110)> <Delay = 1.76>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "ret void" [./wd_stage_2.h:117]   --->   Operation 22 'ret' <Predicate = (icmp_ln110)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 6.88>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%h_0 = phi i6 [ %h, %hls_label_9_end ], [ 0, %.preheader.preheader ]"   --->   Operation 23 'phi' 'h_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (1.42ns)   --->   "%icmp_ln111 = icmp eq i6 %h_0, -32" [./wd_stage_2.h:111]   --->   Operation 24 'icmp' 'icmp_ln111' <Predicate = true> <Delay = 1.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 32, i64 32, i64 32)"   --->   Operation 25 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 26 [1/1] (1.82ns)   --->   "%h = add i6 %h_0, 1" [./wd_stage_2.h:111]   --->   Operation 26 'add' 'h' <Predicate = true> <Delay = 1.82> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "br i1 %icmp_ln111, label %.loopexit.loopexit, label %hls_label_9_begin" [./wd_stage_2.h:111]   --->   Operation 27 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns)   --->   "%tmp = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str15)" [./wd_stage_2.h:111]   --->   Operation 28 'specregionbegin' 'tmp' <Predicate = (!icmp_ln111)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([25 x i8]* @p_str16) nounwind" [./wd_stage_2.h:111]   --->   Operation 29 'specloopname' <Predicate = (!icmp_ln111)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%zext_ln113 = zext i6 %h_0 to i16" [./wd_stage_2.h:113]   --->   Operation 30 'zext' 'zext_ln113' <Predicate = (!icmp_ln111)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (2.07ns)   --->   "%p_h = add i16 %zext_ln113, %y_left_read" [./wd_stage_2.h:113]   --->   Operation 31 'add' 'p_h' <Predicate = (!icmp_ln111)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (2.42ns)   --->   "%icmp_ln114_1 = icmp ult i16 %p_h, %y_right_read" [./wd_stage_2.h:114]   --->   Operation 32 'icmp' 'icmp_ln114_1' <Predicate = (!icmp_ln111)> <Delay = 2.42> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.42> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 33 [1/1] (0.97ns)   --->   "%and_ln114 = and i1 %icmp_ln114, %icmp_ln114_1" [./wd_stage_2.h:114]   --->   Operation 33 'and' 'and_ln114' <Predicate = (!icmp_ln111)> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %and_ln114, label %1, label %hls_label_9_end" [./wd_stage_2.h:114]   --->   Operation 34 'br' <Predicate = (!icmp_ln111)> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%zext_ln115 = zext i6 %h_0 to i10" [./wd_stage_2.h:115]   --->   Operation 35 'zext' 'zext_ln115' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (1.73ns)   --->   "%add_ln115 = add i10 %shl_ln, %zext_ln115" [./wd_stage_2.h:115]   --->   Operation 36 'add' 'add_ln115' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%zext_ln115_1 = zext i10 %add_ln115 to i64" [./wd_stage_2.h:115]   --->   Operation 37 'zext' 'zext_ln115_1' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (3.63ns)   --->   "%img_in_mr_data_V_rea = call i8 @_ssdm_op_Read.ap_fifo.volatile.i8P(i8* %img_in_mr_data_V)" [./wd_stage_2.h:115]   --->   Operation 38 'read' 'img_in_mr_data_V_rea' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 8> <Depth = 1> <FIFO>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%micro_roi_data_V_add = getelementptr [736 x i8]* %micro_roi_data_V, i64 0, i64 %zext_ln115_1" [./wd_stage_2.h:115]   --->   Operation 39 'getelementptr' 'micro_roi_data_V_add' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (3.25ns)   --->   "store i8 %img_in_mr_data_V_rea, i8* %micro_roi_data_V_add, align 1" [./wd_stage_2.h:115]   --->   Operation 40 'store' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 736> <RAM>
+ST_3 : Operation 41 [1/1] (0.00ns)   --->   "br label %hls_label_9_end" [./wd_stage_2.h:115]   --->   Operation 41 'br' <Predicate = (!icmp_ln111 & and_ln114)> <Delay = 0.00>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str15, i32 %tmp)" [./wd_stage_2.h:116]   --->   Operation 42 'specregionend' 'empty' <Predicate = (!icmp_ln111)> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "br label %.preheader" [./wd_stage_2.h:111]   --->   Operation 43 'br' <Predicate = (!icmp_ln111)> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 44 'br' <Predicate = (icmp_ln111)> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('v') with incoming values : ('v', ./wd_stage_2.h:110) [16]  (1.77 ns)
+
+ <State 2>: 3.47ns
+The critical path consists of the following:
+	'phi' operation ('v') with incoming values : ('v', ./wd_stage_2.h:110) [16]  (0 ns)
+	'add' operation ('_v', ./wd_stage_2.h:112) [23]  (1.92 ns)
+	'icmp' operation ('icmp_ln114', ./wd_stage_2.h:114) [24]  (1.55 ns)
+
+ <State 3>: 6.89ns
+The critical path consists of the following:
+	fifo read on port 'img_in_mr_data_V' (./wd_stage_2.h:115) [45]  (3.63 ns)
+	'store' operation ('store_ln115', ./wd_stage_2.h:115) of variable 'img_in_mr_data_V_rea', ./wd_stage_2.h:115 on array 'micro_roi_data_V' [47]  (3.25 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

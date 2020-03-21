@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vivado HLS Report for 'CoreProcessUpArea_2'
+================================================================
+* Date:           Wed Mar 18 11:34:55 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 21.625 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        0|        0|   0 ns   |   0 ns   |    1|    1| function |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 0
+IsPipeline: 1
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 1
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 1, States = { 1 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 21.6>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%Wy_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %Wy) nounwind" [./xf_resize_2.hpp:545]   --->   Operation 2 'read' 'Wy_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%Wx_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %Wx) nounwind" [./xf_resize_2.hpp:545]   --->   Operation 3 'read' 'Wx_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%B1_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %B1) nounwind" [./xf_resize_2.hpp:545]   --->   Operation 4 'read' 'B1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%A1_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %A1) nounwind" [./xf_resize_2.hpp:545]   --->   Operation 5 'read' 'A1_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%B0_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %B0) nounwind" [./xf_resize_2.hpp:545]   --->   Operation 6 'read' 'B0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%A0_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %A0) nounwind" [./xf_resize_2.hpp:545]   --->   Operation 7 'read' 'A0_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [./xf_resize_2.hpp:547]   --->   Operation 8 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%zext_ln552 = zext i32 %Wx_read to i64" [./xf_resize_2.hpp:552]   --->   Operation 9 'zext' 'zext_ln552' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%zext_ln552_2 = zext i32 %Wx_read to i40" [./xf_resize_2.hpp:552]   --->   Operation 10 'zext' 'zext_ln552_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln552_1 = zext i32 %Wy_read to i64" [./xf_resize_2.hpp:552]   --->   Operation 11 'zext' 'zext_ln552_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%zext_ln552_3 = zext i32 %Wy_read to i40" [./xf_resize_2.hpp:552]   --->   Operation 12 'zext' 'zext_ln552_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (8.51ns)   --->   "%mul_ln552 = mul i64 %zext_ln552, %zext_ln552_1" [./xf_resize_2.hpp:552]   --->   Operation 13 'mul' 'mul_ln552' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%Wxy = call i32 @_ssdm_op_PartSelect.i32.i64.i32.i32(i64 %mul_ln552, i32 32, i32 63)" [./xf_resize_2.hpp:552]   --->   Operation 14 'partselect' 'Wxy' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%zext_ln553 = zext i8 %A0_read to i9" [./xf_resize_2.hpp:553]   --->   Operation 15 'zext' 'zext_ln553' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%zext_ln553_1 = zext i8 %B1_read to i10" [./xf_resize_2.hpp:553]   --->   Operation 16 'zext' 'zext_ln553_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%zext_ln553_2 = zext i8 %B0_read to i9" [./xf_resize_2.hpp:553]   --->   Operation 17 'zext' 'zext_ln553_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%zext_ln553_3 = zext i8 %A1_read to i10" [./xf_resize_2.hpp:553]   --->   Operation 18 'zext' 'zext_ln553_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%zext_ln553_4 = zext i8 %A1_read to i9" [./xf_resize_2.hpp:553]   --->   Operation 19 'zext' 'zext_ln553_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (1.91ns)   --->   "%sub_ln553 = sub i9 %zext_ln553, %zext_ln553_2" [./xf_resize_2.hpp:553]   --->   Operation 20 'sub' 'sub_ln553' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%sext_ln553 = sext i9 %sub_ln553 to i10" [./xf_resize_2.hpp:553]   --->   Operation 21 'sext' 'sext_ln553' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%sub_ln553_1 = sub i10 %sext_ln553, %zext_ln553_3" [./xf_resize_2.hpp:553]   --->   Operation 22 'sub' 'sub_ln553_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 23 [1/1] (3.72ns) (root node of TernaryAdder)   --->   "%val0 = add i10 %zext_ln553_1, %sub_ln553_1" [./xf_resize_2.hpp:553]   --->   Operation 23 'add' 'val0' <Predicate = true> <Delay = 3.72> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 24 [1/1] (1.91ns)   --->   "%val1 = sub i9 %zext_ln553_2, %zext_ln553" [./xf_resize_2.hpp:554]   --->   Operation 24 'sub' 'val1' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 25 [1/1] (1.91ns)   --->   "%val2 = sub i9 %zext_ln553_4, %zext_ln553" [./xf_resize_2.hpp:555]   --->   Operation 25 'sub' 'val2' <Predicate = true> <Delay = 1.91> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%sext_ln557 = sext i10 %val0 to i40" [./xf_resize_2.hpp:557]   --->   Operation 26 'sext' 'sext_ln557' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln557 = zext i32 %Wxy to i40" [./xf_resize_2.hpp:557]   --->   Operation 27 'zext' 'zext_ln557' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (8.51ns)   --->   "%P1 = mul i40 %sext_ln557, %zext_ln557" [./xf_resize_2.hpp:557]   --->   Operation 28 'mul' 'P1' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%sext_ln558 = sext i9 %val1 to i40" [./xf_resize_2.hpp:558]   --->   Operation 29 'sext' 'sext_ln558' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (8.51ns)   --->   "%P2 = mul i40 %sext_ln558, %zext_ln552_2" [./xf_resize_2.hpp:558]   --->   Operation 30 'mul' 'P2' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%sext_ln559 = sext i9 %val2 to i40" [./xf_resize_2.hpp:559]   --->   Operation 31 'sext' 'sext_ln559' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (8.51ns)   --->   "%P3 = mul i40 %sext_ln559, %zext_ln552_3" [./xf_resize_2.hpp:559]   --->   Operation 32 'mul' 'P3' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%P4 = call i40 @_ssdm_op_BitConcatenate.i40.i8.i32(i8 %A0_read, i32 0)" [./xf_resize_2.hpp:560]   --->   Operation 33 'bitconcatenate' 'P4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (2.87ns)   --->   "%add_ln562 = add i40 %P4, %P2" [./xf_resize_2.hpp:562]   --->   Operation 34 'add' 'add_ln562' <Predicate = true> <Delay = 2.87> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.87> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln562_1 = add i40 %P1, %P3" [./xf_resize_2.hpp:562]   --->   Operation 35 'add' 'add_ln562_1' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 36 [1/1] (4.60ns) (root node of TernaryAdder)   --->   "%add_ln562_2 = add i40 %add_ln562, %add_ln562_1" [./xf_resize_2.hpp:562]   --->   Operation 36 'add' 'add_ln562_2' <Predicate = true> <Delay = 4.60> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.30> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%pixel_write_assign = call i8 @_ssdm_op_PartSelect.i8.i40.i32.i32(i40 %add_ln562_2, i32 32, i32 39)" [./xf_resize_2.hpp:562]   --->   Operation 37 'partselect' 'pixel_write_assign' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "ret i8 %pixel_write_assign" [./xf_resize_2.hpp:563]   --->   Operation 38 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 21.6ns
+The critical path consists of the following:
+	wire read on port 'Wy' (./xf_resize_2.hpp:545) [7]  (0 ns)
+	'mul' operation ('mul_ln552', ./xf_resize_2.hpp:552) [18]  (8.51 ns)
+	'mul' operation ('P1', ./xf_resize_2.hpp:557) [33]  (8.51 ns)
+	'add' operation ('add_ln562_1', ./xf_resize_2.hpp:562) [40]  (0 ns)
+	'add' operation ('add_ln562_2', ./xf_resize_2.hpp:562) [41]  (4.61 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

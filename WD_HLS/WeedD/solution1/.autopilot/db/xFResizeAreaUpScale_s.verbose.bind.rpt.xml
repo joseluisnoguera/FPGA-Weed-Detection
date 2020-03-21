@@ -1,0 +1,59 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'xFResizeAreaUpScale_s'" level="0">
+<item name = "Date">Wed Mar 18 11:34:58 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 36.846 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">928049, 928049, 46.402 ms, 46.402 ms, 928049, 928049, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_xFUDivAreaUp_2_fu_984">xFUDivAreaUp_2, 49, 49, 2.450 us, 2.450 us, 49, 49, none</column>
+<column name="Pixels_CoreProcessUpArea_2_fu_1024">CoreProcessUpArea_2, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="Pixels_0_1_CoreProcessUpArea_2_fu_1035">CoreProcessUpArea_2, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="Pixels_0_2_CoreProcessUpArea_2_fu_1046">CoreProcessUpArea_2, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="call_ret1_xfExtractPixels_fu_1057">xfExtractPixels, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="call_ret_xfExtractPixels_fu_1069">xfExtractPixels, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="call_ret2_xfExtractPixels_fu_1081">xfExtractPixels, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+<column name="call_ret3_xfExtractPixels_fu_1093">xfExtractPixels, 0, 0, 0 ns, 0 ns, 1, 1, function</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- Hoffset_loop">1280, 1280, 1, 1, 1, 1280, yes</column>
+<column name="- Voffset_loop">720, 720, 1, 1, 1, 720, yes</column>
+<column name="- Loop 3">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- Loop 4">320, 320, 2, 1, 1, 320, yes</column>
+<column name="- outerloop">925200, 925200, 1285, -, -, 720, no</column>
+<column name=" + innerloop">1281, 1281, 3, 1, 1, 1280, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

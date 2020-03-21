@@ -1,0 +1,160 @@
+
+
+================================================================
+== Vivado HLS Report for 'get_centroid_sh'
+================================================================
+* Date:           Wed Mar 18 11:34:36 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 8.456 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+----------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  | Pipeline |
+    |   min   |   max   |    min    |    max    |  min |  max |   Type   |
+    +---------+---------+-----------+-----------+------+------+----------+
+    |     1539|     1573| 76.950 us | 78.650 us |  1538|  1538| dataflow |
+    +---------+---------+-----------+-----------+------+------+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 0
+* Dataflow Pipeline: 1
+  DF-Pipeline-0: Size = 4, States = { 1 2 3 4 }
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.63>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%c_read_3 = call i48 @_ssdm_op_Read.ap_auto.i48(i48 %c_read)" [./wd_stage_2.h:120]   --->   Operation 5 'read' 'c_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%possible_c_y_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %possible_c_y)" [./wd_stage_2.h:120]   --->   Operation 6 'read' 'possible_c_y_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%possible_c_x_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %possible_c_x)" [./wd_stage_2.h:120]   --->   Operation 7 'read' 'possible_c_x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%h_limit_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_limit)" [./wd_stage_2.h:120]   --->   Operation 8 'read' 'h_limit_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%v_limit_read = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %v_limit)" [./wd_stage_2.h:120]   --->   Operation 9 'read' 'v_limit_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%v_offset_read_3 = call i8 @_ssdm_op_Read.ap_auto.i8(i8 %v_offset_read)" [./wd_stage_2.h:120]   --->   Operation 10 'read' 'v_offset_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%h_offset_read = call i16 @_ssdm_op_Read.ap_auto.i16(i16 %h_offset)" [./wd_stage_2.h:120]   --->   Operation 11 'read' 'h_offset_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%c_read_c = alloca i48, align 8" [./wd_stage_2.h:120]   --->   Operation 12 'alloca' 'c_read_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%possible_c_y_c = alloca i32, align 4"   --->   Operation 13 'alloca' 'possible_c_y_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%possible_c_x_c = alloca i8, align 1"   --->   Operation 14 'alloca' 'possible_c_x_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%v_offset_read_c = alloca i8, align 1" [./wd_stage_2.h:120]   --->   Operation 15 'alloca' 'v_offset_read_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%h_offset_c = alloca i16, align 2" [./wd_stage_2.h:120]   --->   Operation 16 'alloca' 'h_offset_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 17 [2/2] (3.63ns)   --->   "%call_ret = call fastcc { i32, i32, i32 } @get_centroid_sh_Loop([736 x i8]* %micro_roi_data_V, i8 %v_limit_read, i16 %h_limit_read, i16 %h_offset_read, i8 %v_offset_read_3, i8 %possible_c_x_read, i32 %possible_c_y_read, i48 %c_read_3, i16* %h_offset_c, i8* %v_offset_read_c, i8* %possible_c_x_c, i32* %possible_c_y_c, i48* %c_read_c)" [./wd_stage_2.h:120]   --->   Operation 17 'call' 'call_ret' <Predicate = true> <Delay = 3.63> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 18 [1/2] (0.00ns)   --->   "%call_ret = call fastcc { i32, i32, i32 } @get_centroid_sh_Loop([736 x i8]* %micro_roi_data_V, i8 %v_limit_read, i16 %h_limit_read, i16 %h_offset_read, i8 %v_offset_read_3, i8 %possible_c_x_read, i32 %possible_c_y_read, i48 %c_read_3, i16* %h_offset_c, i8* %v_offset_read_c, i8* %possible_c_x_c, i32* %possible_c_y_c, i48* %c_read_c)" [./wd_stage_2.h:120]   --->   Operation 18 'call' 'call_ret' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%v_sum_0_loc_0_i_loc_s = extractvalue { i32, i32, i32 } %call_ret, 0" [./wd_stage_2.h:120]   --->   Operation 19 'extractvalue' 'v_sum_0_loc_0_i_loc_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%h_sum_0_loc_0_i_loc_s = extractvalue { i32, i32, i32 } %call_ret, 1" [./wd_stage_2.h:120]   --->   Operation 20 'extractvalue' 'h_sum_0_loc_0_i_loc_s' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%p_sum_0_loc_0_i_loc_c = extractvalue { i32, i32, i32 } %call_ret, 2" [./wd_stage_2.h:120]   --->   Operation 21 'extractvalue' 'p_sum_0_loc_0_i_loc_c' <Predicate = true> <Delay = 0.00> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+
+State 3 <SV = 2> <Delay = 4.13>
+ST_3 : Operation 22 [2/2] (4.13ns)   --->   "call fastcc void @get_centroid_sh_Bloc(i32 %p_sum_0_loc_0_i_loc_c, i8* %possible_c_x_c, i48* %c_read_c, i32 %v_sum_0_loc_0_i_loc_s, i8* %v_offset_read_c, i32 %h_sum_0_loc_0_i_loc_s, i16* %h_offset_c, i32* %possible_c_y_c, i48* %c)" [./wd_stage_2.h:120]   --->   Operation 22 'call' <Predicate = true> <Delay = 4.13> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 8.45>
+ST_4 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str) nounwind" [./wd_stage_2.h:122]   --->   Operation 23 'specdataflowpipeline' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 24 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecChannel([11 x i8]* @h_offset_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i16* %h_offset_c, i16* %h_offset_c)" [./wd_stage_2.h:120]   --->   Operation 24 'specchannel' 'empty' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %h_offset_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./wd_stage_2.h:120]   --->   Operation 25 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 26 [1/1] (0.00ns)   --->   "%empty_165 = call i32 (...)* @_ssdm_op_SpecChannel([16 x i8]* @v_offset_OC_read_c_s, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i8* %v_offset_read_c, i8* %v_offset_read_c)" [./wd_stage_2.h:120]   --->   Operation 26 'specchannel' 'empty_165' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %v_offset_read_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./wd_stage_2.h:120]   --->   Operation 27 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 28 [1/1] (0.00ns)   --->   "%empty_166 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @possible_c_OC_x_c_st, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i8* %possible_c_x_c, i8* %possible_c_x_c)"   --->   Operation 28 'specchannel' 'empty_166' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %possible_c_x_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 29 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 30 [1/1] (0.00ns)   --->   "%empty_167 = call i32 (...)* @_ssdm_op_SpecChannel([15 x i8]* @possible_c_OC_y_c_st, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i32* %possible_c_y_c, i32* %possible_c_y_c)"   --->   Operation 30 'specchannel' 'empty_167' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %possible_c_y_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 31 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 32 [1/1] (0.00ns)   --->   "%empty_168 = call i32 (...)* @_ssdm_op_SpecChannel([9 x i8]* @c_OC_read_c_str, i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 0, i48* %c_read_c, i48* %c_read_c)" [./wd_stage_2.h:120]   --->   Operation 32 'specchannel' 'empty_168' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 33 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i48* %c_read_c, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)" [./wd_stage_2.h:120]   --->   Operation 33 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 34 [1/2] (8.45ns)   --->   "call fastcc void @get_centroid_sh_Bloc(i32 %p_sum_0_loc_0_i_loc_c, i8* %possible_c_x_c, i48* %c_read_c, i32 %v_sum_0_loc_0_i_loc_s, i8* %v_offset_read_c, i32 %h_sum_0_loc_0_i_loc_s, i16* %h_offset_c, i32* %possible_c_y_c, i48* %c)" [./wd_stage_2.h:120]   --->   Operation 34 'call' <Predicate = true> <Delay = 8.45> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "ret void" [./wd_stage_2.h:140]   --->   Operation 35 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 3.63ns
+The critical path consists of the following:
+	wire read on port 'c_read' (./wd_stage_2.h:120) [10]  (0 ns)
+	'call' operation ('call_ret', ./wd_stage_2.h:120) to 'get_centroid_sh_Loop' [33]  (3.63 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+ <State 3>: 4.13ns
+The critical path consists of the following:
+	'call' operation ('call_ln120', ./wd_stage_2.h:120) to 'get_centroid_sh_Bloc' [37]  (4.13 ns)
+
+ <State 4>: 8.46ns
+The critical path consists of the following:
+	'call' operation ('call_ln120', ./wd_stage_2.h:120) to 'get_centroid_sh_Bloc' [37]  (8.46 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

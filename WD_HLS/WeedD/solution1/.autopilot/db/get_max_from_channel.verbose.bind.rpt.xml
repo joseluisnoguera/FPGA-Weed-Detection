@@ -1,0 +1,51 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'get_max_from_channel'" level="0">
+<item name = "Date">Wed Mar 18 11:33:46 2020
+</item>
+<item name = "Version">2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)</item>
+<item name = "Project">WeedD</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">50.00 ns, 8.609 ns, 6.25 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">58142, 58142, 2.907 ms, 2.907 ms, 58143, 58143, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_minMaxLoc435_fu_40">minMaxLoc435, 58142, 58142, 2.907 ms, 2.907 ms, 58142, 58142, none</column>
+<column name="grp_minMaxLoc436_fu_46">minMaxLoc436, 58142, 58142, 2.907 ms, 2.907 ms, 58142, 58142, none</column>
+<column name="grp_minMaxLoc_fu_52">minMaxLoc, 58142, 58142, 2.907 ms, 2.907 ms, 58142, 58142, none</column>
+<column name="call_ln67_p_prop_ret_max_b_dc_s_fu_58">p_prop_ret_max_b_dc_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln67_p_prop_ret_max_g_dc_s_fu_66">p_prop_ret_max_g_dc_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+<column name="call_ln67_p_prop_ret_max_r_dc_s_fu_74">p_prop_ret_max_r_dc_s, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

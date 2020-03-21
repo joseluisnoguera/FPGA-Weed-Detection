@@ -1,0 +1,315 @@
+
+
+================================================================
+== Vivado HLS Report for 'extr_half_1_cent'
+================================================================
+* Date:           Wed Mar 18 11:34:33 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 18.685 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-------+---------+
+    |  Latency (cycles) |  Latency (absolute) |   Interval  | Pipeline|
+    |   min   |   max   |    min   |    max   | min |  max  |   Type  |
+    +---------+---------+----------+----------+-----+-------+---------+
+    |       89|    58415| 4.450 us | 2.921 ms |   89|  58415|   none  |
+    +---------+---------+----------+----------+-----+-------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |             Loop Name             |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- extract_first_centroid_label11   |       18|    14178| 3 ~ 2363 |          -|          -|     6|    no    |
+        |- extract_second_centroid_label12  |       18|    14184| 3 ~ 2364 |          -|          -|     6|    no    |
+        +-----------------------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 15
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 8 
+3 --> 4 7 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 2 
+8 --> 9 15 
+9 --> 10 14 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 8 
+15 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %eroded_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 16 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%c_1 = alloca i48, align 8" [./wd_stage_2.h:236->./wd_stage_2.h:287]   --->   Operation 17 'alloca' 'c_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%micro_roi_1_data_V = alloca [736 x i8], align 1" [./wd_stage_2.h:225->./wd_stage_2.h:287]   --->   Operation 18 'alloca' 'micro_roi_1_data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%c = alloca i48, align 8" [./wd_stage_2.h:213->./wd_stage_2.h:285]   --->   Operation 19 'alloca' 'c' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%micro_roi_0_data_V = alloca [736 x i8], align 1" [./wd_stage_2.h:203->./wd_stage_2.h:285]   --->   Operation 20 'alloca' 'micro_roi_0_data_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (1.76ns)   --->   "br label %0" [./wd_stage_2.h:207->./wd_stage_2.h:285]   --->   Operation 21 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 2.32>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%line_index_0_i = phi i3 [ 0, %_ZN13ap_fixed_baseILi17ELi9ELb1EL9ap_q_mode5EL9ap_o_mode3ELi0EEC1ILi16ELi8ELb0ELS0_5ELS1_3ELi0EEERKS_IXT_EXT0_EXT1_EXT2_EXT3_EXT4_EE.exit9.i.i ], [ %line_index, %._crit_edge.i ]"   --->   Operation 22 'phi' 'line_index_0_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (1.13ns)   --->   "%icmp_ln207 = icmp eq i3 %line_index_0_i, -2" [./wd_stage_2.h:207->./wd_stage_2.h:285]   --->   Operation 23 'icmp' 'icmp_ln207' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)"   --->   Operation 24 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (1.65ns)   --->   "%line_index = add i3 %line_index_0_i, 1" [./wd_stage_2.h:207->./wd_stage_2.h:285]   --->   Operation 25 'add' 'line_index' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "br i1 %icmp_ln207, label %extract_first_centroid.exit.preheader, label %1" [./wd_stage_2.h:207->./wd_stage_2.h:285]   --->   Operation 26 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%zext_ln208 = zext i3 %line_index_0_i to i64" [./wd_stage_2.h:208->./wd_stage_2.h:285]   --->   Operation 27 'zext' 'zext_ln208' <Predicate = (!icmp_ln207)> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%line_bases_addr = getelementptr [6 x i17]* %line_bases, i64 0, i64 %zext_ln208" [./wd_stage_2.h:208->./wd_stage_2.h:285]   --->   Operation 28 'getelementptr' 'line_bases_addr' <Predicate = (!icmp_ln207)> <Delay = 0.00>
+ST_2 : Operation 29 [2/2] (2.32ns)   --->   "%line_bases_load = load i17* %line_bases_addr, align 4" [./wd_stage_2.h:208->./wd_stage_2.h:285]   --->   Operation 29 'load' 'line_bases_load' <Predicate = (!icmp_ln207)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_2 : Operation 30 [1/1] (1.76ns)   --->   "br label %extract_first_centroid.exit" [./wd_stage_2.h:229->./wd_stage_2.h:287]   --->   Operation 30 'br' <Predicate = (icmp_ln207)> <Delay = 1.76>
+
+State 3 <SV = 2> <Delay = 9.40>
+ST_3 : Operation 31 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([31 x i8]* @p_str23) nounwind" [./wd_stage_2.h:207->./wd_stage_2.h:285]   --->   Operation 31 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 32 [1/2] (2.32ns)   --->   "%line_bases_load = load i17* %line_bases_addr, align 4" [./wd_stage_2.h:208->./wd_stage_2.h:285]   --->   Operation 32 'load' 'line_bases_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_3 : Operation 33 [1/1] (0.00ns)   --->   "%tmp_58 = call i1 @_ssdm_op_BitSelect.i1.i17.i32(i17 %line_bases_load, i32 16)" [./wd_stage_2.h:208->./wd_stage_2.h:285]   --->   Operation 33 'bitselect' 'tmp_58' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (0.00ns)   --->   "br i1 %tmp_58, label %2, label %._crit_edge.i" [./wd_stage_2.h:208->./wd_stage_2.h:285]   --->   Operation 34 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%trunc_ln209 = trunc i17 %line_bases_load to i16" [./wd_stage_2.h:209->./wd_stage_2.h:285]   --->   Operation 35 'trunc' 'trunc_ln209' <Predicate = (tmp_58)> <Delay = 0.00>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln209 = zext i16 %trunc_ln209 to i17" [./wd_stage_2.h:209->./wd_stage_2.h:285]   --->   Operation 36 'zext' 'zext_ln209' <Predicate = (tmp_58)> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (2.07ns)   --->   "%y_left = add i17 -16, %zext_ln209" [./wd_stage_2.h:209->./wd_stage_2.h:285]   --->   Operation 37 'add' 'y_left' <Predicate = (tmp_58)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 38 [1/1] (2.07ns)   --->   "%y_right = add i17 16, %zext_ln209" [./wd_stage_2.h:209->./wd_stage_2.h:285]   --->   Operation 38 'add' 'y_right' <Predicate = (tmp_58)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%tmp_59 = call i1 @_ssdm_op_BitSelect.i1.i17.i32(i17 %y_left, i32 16)" [./wd_stage_2.h:210->./wd_stage_2.h:285]   --->   Operation 39 'bitselect' 'tmp_59' <Predicate = (tmp_58)> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (2.43ns)   --->   "%icmp_ln211 = icmp ugt i17 %y_right, 319" [./wd_stage_2.h:211->./wd_stage_2.h:285]   --->   Operation 40 'icmp' 'icmp_ln211' <Predicate = (tmp_58)> <Delay = 2.43> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 41 [1/1] (2.07ns)   --->   "%add_ln212_1 = add i16 -16, %trunc_ln209" [./wd_stage_2.h:212->./wd_stage_2.h:285]   --->   Operation 41 'add' 'add_ln212_1' <Predicate = (tmp_58)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 42 [1/1] (0.80ns)   --->   "%select_ln212 = select i1 %tmp_59, i16 0, i16 %add_ln212_1" [./wd_stage_2.h:212->./wd_stage_2.h:285]   --->   Operation 42 'select' 'select_ln212' <Predicate = (tmp_58)> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 43 [1/1] (2.07ns)   --->   "%add_ln212 = add i16 16, %trunc_ln209" [./wd_stage_2.h:212->./wd_stage_2.h:285]   --->   Operation 43 'add' 'add_ln212' <Predicate = (tmp_58)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 44 [1/1] (0.80ns)   --->   "%select_ln212_1 = select i1 %icmp_ln211, i16 319, i16 %add_ln212" [./wd_stage_2.h:212->./wd_stage_2.h:285]   --->   Operation 44 'select' 'select_ln212_1' <Predicate = (tmp_58)> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 45 [2/2] (1.76ns)   --->   "call fastcc void @extract_micro_roi(i8* %eroded_data_V, i10 161, i10 180, i16 %select_ln212, i16 %select_ln212_1, [736 x i8]* %micro_roi_0_data_V)" [./wd_stage_2.h:212->./wd_stage_2.h:285]   --->   Operation 45 'call' <Predicate = (tmp_58)> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 46 [1/2] (0.00ns)   --->   "call fastcc void @extract_micro_roi(i8* %eroded_data_V, i10 161, i10 180, i16 %select_ln212, i16 %select_ln212_1, [736 x i8]* %micro_roi_0_data_V)" [./wd_stage_2.h:212->./wd_stage_2.h:285]   --->   Operation 46 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 3.84>
+ST_5 : Operation 47 [1/1] (2.07ns)   --->   "%sub_ln215 = sub i16 %select_ln212_1, %select_ln212" [./wd_stage_2.h:215->./wd_stage_2.h:285]   --->   Operation 47 'sub' 'sub_ln215' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 48 [2/2] (1.76ns)   --->   "call fastcc void @get_centroid_fh([736 x i8]* %micro_roi_0_data_V, i16 zeroext %select_ln212, i8 zeroext -95, i8 zeroext 19, i16 zeroext %sub_ln215, i48* %c)" [./wd_stage_2.h:215->./wd_stage_2.h:285]   --->   Operation 48 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 0.00>
+ST_6 : Operation 49 [1/2] (0.00ns)   --->   "call fastcc void @get_centroid_fh([736 x i8]* %micro_roi_0_data_V, i16 zeroext %select_ln212, i8 zeroext -95, i8 zeroext 19, i16 zeroext %sub_ln215, i48* %c)" [./wd_stage_2.h:215->./wd_stage_2.h:285]   --->   Operation 49 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 3.25>
+ST_7 : Operation 50 [1/1] (0.00ns)   --->   "%c_load = load i48* %c, align 8" [./wd_stage_2.h:216->./wd_stage_2.h:285]   --->   Operation 50 'load' 'c_load' <Predicate = (tmp_58)> <Delay = 0.00>
+ST_7 : Operation 51 [1/1] (0.00ns)   --->   "%centroids_addr = getelementptr [72 x i48]* %centroids, i64 0, i64 %zext_ln208" [./wd_stage_2.h:216->./wd_stage_2.h:285]   --->   Operation 51 'getelementptr' 'centroids_addr' <Predicate = (tmp_58)> <Delay = 0.00>
+ST_7 : Operation 52 [1/1] (3.25ns)   --->   "store i48 %c_load, i48* %centroids_addr, align 8" [./wd_stage_2.h:216->./wd_stage_2.h:285]   --->   Operation 52 'store' <Predicate = (tmp_58)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_7 : Operation 53 [1/1] (0.00ns)   --->   "br label %._crit_edge.i" [./wd_stage_2.h:217->./wd_stage_2.h:285]   --->   Operation 53 'br' <Predicate = (tmp_58)> <Delay = 0.00>
+ST_7 : Operation 54 [1/1] (0.00ns)   --->   "br label %0" [./wd_stage_2.h:207->./wd_stage_2.h:285]   --->   Operation 54 'br' <Predicate = true> <Delay = 0.00>
+
+State 8 <SV = 2> <Delay = 2.32>
+ST_8 : Operation 55 [1/1] (0.00ns)   --->   "%line_index_0_i2 = phi i3 [ %line_index_1, %._crit_edge.i8 ], [ 0, %extract_first_centroid.exit.preheader ]"   --->   Operation 55 'phi' 'line_index_0_i2' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 56 [1/1] (1.13ns)   --->   "%icmp_ln229 = icmp eq i3 %line_index_0_i2, -2" [./wd_stage_2.h:229->./wd_stage_2.h:287]   --->   Operation 56 'icmp' 'icmp_ln229' <Predicate = true> <Delay = 1.13> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6)"   --->   Operation 57 'speclooptripcount' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 58 [1/1] (1.65ns)   --->   "%line_index_1 = add i3 %line_index_0_i2, 1" [./wd_stage_2.h:229->./wd_stage_2.h:287]   --->   Operation 58 'add' 'line_index_1' <Predicate = true> <Delay = 1.65> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 59 [1/1] (0.00ns)   --->   "br i1 %icmp_ln229, label %extract_second_centroid.exit, label %3" [./wd_stage_2.h:229->./wd_stage_2.h:287]   --->   Operation 59 'br' <Predicate = true> <Delay = 0.00>
+ST_8 : Operation 60 [1/1] (0.00ns)   --->   "%zext_ln230 = zext i3 %line_index_0_i2 to i64" [./wd_stage_2.h:230->./wd_stage_2.h:287]   --->   Operation 60 'zext' 'zext_ln230' <Predicate = (!icmp_ln229)> <Delay = 0.00>
+ST_8 : Operation 61 [1/1] (0.00ns)   --->   "%line_bases_addr_6 = getelementptr [6 x i17]* %line_bases, i64 0, i64 %zext_ln230" [./wd_stage_2.h:230->./wd_stage_2.h:287]   --->   Operation 61 'getelementptr' 'line_bases_addr_6' <Predicate = (!icmp_ln229)> <Delay = 0.00>
+ST_8 : Operation 62 [2/2] (2.32ns)   --->   "%line_bases_load_2 = load i17* %line_bases_addr_6, align 4" [./wd_stage_2.h:230->./wd_stage_2.h:287]   --->   Operation 62 'load' 'line_bases_load_2' <Predicate = (!icmp_ln229)> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_8 : Operation 63 [2/2] (0.00ns)   --->   "call fastcc void @extract_third_and_fo.1([6 x i17]* %line_bases, i8* %eroded_data_V, [72 x i48]* %centroids)" [./wd_stage_2.h:289]   --->   Operation 63 'call' <Predicate = (icmp_ln229)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 3> <Delay = 3.25>
+ST_9 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([32 x i8]* @p_str25) nounwind" [./wd_stage_2.h:229->./wd_stage_2.h:287]   --->   Operation 64 'specloopname' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 65 [1/2] (2.32ns)   --->   "%line_bases_load_2 = load i17* %line_bases_addr_6, align 4" [./wd_stage_2.h:230->./wd_stage_2.h:287]   --->   Operation 65 'load' 'line_bases_load_2' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_9 : Operation 66 [1/1] (0.00ns)   --->   "%tmp_60 = call i1 @_ssdm_op_BitSelect.i1.i17.i32(i17 %line_bases_load_2, i32 16)" [./wd_stage_2.h:230->./wd_stage_2.h:287]   --->   Operation 66 'bitselect' 'tmp_60' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 67 [1/1] (0.00ns)   --->   "br i1 %tmp_60, label %4, label %._crit_edge.i8" [./wd_stage_2.h:230->./wd_stage_2.h:287]   --->   Operation 67 'br' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 68 [1/1] (0.00ns)   --->   "%centroids_addr_1 = getelementptr [72 x i48]* %centroids, i64 0, i64 %zext_ln230" [./wd_stage_2.h:231->./wd_stage_2.h:287]   --->   Operation 68 'getelementptr' 'centroids_addr_1' <Predicate = (tmp_60)> <Delay = 0.00>
+ST_9 : Operation 69 [2/2] (3.25ns)   --->   "%centroids_load = load i48* %centroids_addr_1, align 8" [./wd_stage_2.h:231->./wd_stage_2.h:287]   --->   Operation 69 'load' 'centroids_load' <Predicate = (tmp_60)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+
+State 10 <SV = 4> <Delay = 10.8>
+ST_10 : Operation 70 [1/2] (3.25ns)   --->   "%centroids_load = load i48* %centroids_addr_1, align 8" [./wd_stage_2.h:231->./wd_stage_2.h:287]   --->   Operation 70 'load' 'centroids_load' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_10 : Operation 71 [1/1] (0.00ns)   --->   "%centroids_y_11_load_s = call i32 @_ssdm_op_PartSelect.i32.i48.i32.i32(i48 %centroids_load, i32 16, i32 47)" [./wd_stage_2.h:231->./wd_stage_2.h:287]   --->   Operation 71 'partselect' 'centroids_y_11_load_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 72 [1/1] (0.00ns)   --->   "%tmp = call i16 @_ssdm_op_PartSelect.i16.i48.i32.i32(i48 %centroids_load, i32 16, i32 31)" [./wd_stage_2.h:231->./wd_stage_2.h:287]   --->   Operation 72 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 73 [1/1] (2.55ns)   --->   "%y_left_1 = add nsw i32 %centroids_y_11_load_s, -15" [./wd_stage_2.h:231->./wd_stage_2.h:287]   --->   Operation 73 'add' 'y_left_1' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 74 [1/1] (2.55ns)   --->   "%y_right_1 = add nsw i32 %centroids_y_11_load_s, 15" [./wd_stage_2.h:232->./wd_stage_2.h:287]   --->   Operation 74 'add' 'y_right_1' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 75 [1/1] (0.00ns)   --->   "%tmp_61 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %y_left_1, i32 31)" [./wd_stage_2.h:233->./wd_stage_2.h:287]   --->   Operation 75 'bitselect' 'tmp_61' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 76 [1/1] (2.47ns)   --->   "%icmp_ln234 = icmp sgt i32 %y_right_1, 319" [./wd_stage_2.h:234->./wd_stage_2.h:287]   --->   Operation 76 'icmp' 'icmp_ln234' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 77 [1/1] (2.07ns)   --->   "%add_ln235_1 = add i16 %tmp, -15" [./wd_stage_2.h:235->./wd_stage_2.h:287]   --->   Operation 77 'add' 'add_ln235_1' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 78 [1/1] (0.80ns)   --->   "%select_ln235 = select i1 %tmp_61, i16 0, i16 %add_ln235_1" [./wd_stage_2.h:235->./wd_stage_2.h:287]   --->   Operation 78 'select' 'select_ln235' <Predicate = true> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 79 [1/1] (2.07ns)   --->   "%add_ln235 = add i16 %tmp, 15" [./wd_stage_2.h:235->./wd_stage_2.h:287]   --->   Operation 79 'add' 'add_ln235' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 80 [1/1] (0.80ns)   --->   "%select_ln235_1 = select i1 %icmp_ln234, i16 319, i16 %add_ln235" [./wd_stage_2.h:235->./wd_stage_2.h:287]   --->   Operation 80 'select' 'select_ln235_1' <Predicate = true> <Delay = 0.80> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.80> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_10 : Operation 81 [2/2] (1.76ns)   --->   "call fastcc void @extract_micro_roi(i8* %eroded_data_V, i10 134, i10 161, i16 %select_ln235, i16 %select_ln235_1, [736 x i8]* %micro_roi_1_data_V)" [./wd_stage_2.h:235->./wd_stage_2.h:287]   --->   Operation 81 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 11 <SV = 5> <Delay = 0.00>
+ST_11 : Operation 82 [1/2] (0.00ns)   --->   "call fastcc void @extract_micro_roi(i8* %eroded_data_V, i10 134, i10 161, i16 %select_ln235, i16 %select_ln235_1, [736 x i8]* %micro_roi_1_data_V)" [./wd_stage_2.h:235->./wd_stage_2.h:287]   --->   Operation 82 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 12 <SV = 6> <Delay = 3.84>
+ST_12 : Operation 83 [1/1] (2.07ns)   --->   "%sub_ln238 = sub i16 %select_ln235_1, %select_ln235" [./wd_stage_2.h:238->./wd_stage_2.h:287]   --->   Operation 83 'sub' 'sub_ln238' <Predicate = true> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 84 [2/2] (1.76ns)   --->   "call fastcc void @get_centroid_fh([736 x i8]* %micro_roi_1_data_V, i16 zeroext %select_ln235, i8 zeroext -122, i8 zeroext 27, i16 zeroext %sub_ln238, i48* %c_1)" [./wd_stage_2.h:238->./wd_stage_2.h:287]   --->   Operation 84 'call' <Predicate = true> <Delay = 1.76> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 13 <SV = 7> <Delay = 0.00>
+ST_13 : Operation 85 [1/2] (0.00ns)   --->   "call fastcc void @get_centroid_fh([736 x i8]* %micro_roi_1_data_V, i16 zeroext %select_ln235, i8 zeroext -122, i8 zeroext 27, i16 zeroext %sub_ln238, i48* %c_1)" [./wd_stage_2.h:238->./wd_stage_2.h:287]   --->   Operation 85 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 8> <Delay = 4.98>
+ST_14 : Operation 86 [1/1] (0.00ns)   --->   "%zext_ln239 = zext i3 %line_index_0_i2 to i4" [./wd_stage_2.h:239->./wd_stage_2.h:287]   --->   Operation 86 'zext' 'zext_ln239' <Predicate = (tmp_60)> <Delay = 0.00>
+ST_14 : Operation 87 [1/1] (1.73ns)   --->   "%add_ln239 = add i4 %zext_ln239, 6" [./wd_stage_2.h:239->./wd_stage_2.h:287]   --->   Operation 87 'add' 'add_ln239' <Predicate = (tmp_60)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.73> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 88 [1/1] (0.00ns)   --->   "%zext_ln239_1 = zext i4 %add_ln239 to i64" [./wd_stage_2.h:239->./wd_stage_2.h:287]   --->   Operation 88 'zext' 'zext_ln239_1' <Predicate = (tmp_60)> <Delay = 0.00>
+ST_14 : Operation 89 [1/1] (0.00ns)   --->   "%c_1_load = load i48* %c_1, align 8" [./wd_stage_2.h:239->./wd_stage_2.h:287]   --->   Operation 89 'load' 'c_1_load' <Predicate = (tmp_60)> <Delay = 0.00>
+ST_14 : Operation 90 [1/1] (0.00ns)   --->   "%centroids_addr_2 = getelementptr [72 x i48]* %centroids, i64 0, i64 %zext_ln239_1" [./wd_stage_2.h:239->./wd_stage_2.h:287]   --->   Operation 90 'getelementptr' 'centroids_addr_2' <Predicate = (tmp_60)> <Delay = 0.00>
+ST_14 : Operation 91 [1/1] (3.25ns)   --->   "store i48 %c_1_load, i48* %centroids_addr_2, align 8" [./wd_stage_2.h:239->./wd_stage_2.h:287]   --->   Operation 91 'store' <Predicate = (tmp_60)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 48> <Depth = 72> <RAM>
+ST_14 : Operation 92 [1/1] (0.00ns)   --->   "br label %._crit_edge.i8" [./wd_stage_2.h:240->./wd_stage_2.h:287]   --->   Operation 92 'br' <Predicate = (tmp_60)> <Delay = 0.00>
+ST_14 : Operation 93 [1/1] (0.00ns)   --->   "br label %extract_first_centroid.exit" [./wd_stage_2.h:229->./wd_stage_2.h:287]   --->   Operation 93 'br' <Predicate = true> <Delay = 0.00>
+
+State 15 <SV = 3> <Delay = 0.00>
+ST_15 : Operation 94 [1/2] (0.00ns)   --->   "call fastcc void @extract_third_and_fo.1([6 x i17]* %line_bases, i8* %eroded_data_V, [72 x i48]* %centroids)" [./wd_stage_2.h:289]   --->   Operation 94 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_15 : Operation 95 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 95 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('line_index') with incoming values : ('line_index', ./wd_stage_2.h:207->./wd_stage_2.h:285) [15]  (1.77 ns)
+
+ <State 2>: 2.32ns
+The critical path consists of the following:
+	'phi' operation ('line_index') with incoming values : ('line_index', ./wd_stage_2.h:207->./wd_stage_2.h:285) [15]  (0 ns)
+	'getelementptr' operation ('line_bases_addr', ./wd_stage_2.h:208->./wd_stage_2.h:285) [23]  (0 ns)
+	'load' operation ('line_bases_load', ./wd_stage_2.h:208->./wd_stage_2.h:285) on array 'line_bases' [24]  (2.32 ns)
+
+ <State 3>: 9.4ns
+The critical path consists of the following:
+	'load' operation ('line_bases_load', ./wd_stage_2.h:208->./wd_stage_2.h:285) on array 'line_bases' [24]  (2.32 ns)
+	'add' operation ('y_right', ./wd_stage_2.h:209->./wd_stage_2.h:285) [31]  (2.08 ns)
+	'icmp' operation ('icmp_ln211', ./wd_stage_2.h:211->./wd_stage_2.h:285) [33]  (2.43 ns)
+	'select' operation ('select_ln212_1', ./wd_stage_2.h:212->./wd_stage_2.h:285) [37]  (0.805 ns)
+	'call' operation ('call_ln212', ./wd_stage_2.h:212->./wd_stage_2.h:285) to 'extract_micro_roi' [38]  (1.77 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 3.85ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln215', ./wd_stage_2.h:215->./wd_stage_2.h:285) [39]  (2.08 ns)
+	'call' operation ('call_ln215', ./wd_stage_2.h:215->./wd_stage_2.h:285) to 'get_centroid_fh' [40]  (1.77 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+ <State 7>: 3.25ns
+The critical path consists of the following:
+	'load' operation ('c_load', ./wd_stage_2.h:216->./wd_stage_2.h:285) on local variable 'c', ./wd_stage_2.h:213->./wd_stage_2.h:285 [41]  (0 ns)
+	'store' operation ('store_ln216', ./wd_stage_2.h:216->./wd_stage_2.h:285) of variable 'c_load', ./wd_stage_2.h:216->./wd_stage_2.h:285 on array 'centroids' [43]  (3.25 ns)
+
+ <State 8>: 2.32ns
+The critical path consists of the following:
+	'phi' operation ('line_index') with incoming values : ('line_index', ./wd_stage_2.h:229->./wd_stage_2.h:287) [50]  (0 ns)
+	'getelementptr' operation ('line_bases_addr_6', ./wd_stage_2.h:230->./wd_stage_2.h:287) [58]  (0 ns)
+	'load' operation ('line_bases_load_2', ./wd_stage_2.h:230->./wd_stage_2.h:287) on array 'line_bases' [59]  (2.32 ns)
+
+ <State 9>: 3.25ns
+The critical path consists of the following:
+	'getelementptr' operation ('centroids_addr_1', ./wd_stage_2.h:231->./wd_stage_2.h:287) [63]  (0 ns)
+	'load' operation ('centroids_load', ./wd_stage_2.h:231->./wd_stage_2.h:287) on array 'centroids' [64]  (3.25 ns)
+
+ <State 10>: 10.9ns
+The critical path consists of the following:
+	'load' operation ('centroids_load', ./wd_stage_2.h:231->./wd_stage_2.h:287) on array 'centroids' [64]  (3.25 ns)
+	'add' operation ('y_right', ./wd_stage_2.h:232->./wd_stage_2.h:287) [68]  (2.55 ns)
+	'icmp' operation ('icmp_ln234', ./wd_stage_2.h:234->./wd_stage_2.h:287) [70]  (2.47 ns)
+	'select' operation ('select_ln235_1', ./wd_stage_2.h:235->./wd_stage_2.h:287) [74]  (0.805 ns)
+	'call' operation ('call_ln235', ./wd_stage_2.h:235->./wd_stage_2.h:287) to 'extract_micro_roi' [75]  (1.77 ns)
+
+ <State 11>: 0ns
+The critical path consists of the following:
+
+ <State 12>: 3.85ns
+The critical path consists of the following:
+	'sub' operation ('sub_ln238', ./wd_stage_2.h:238->./wd_stage_2.h:287) [76]  (2.08 ns)
+	'call' operation ('call_ln238', ./wd_stage_2.h:238->./wd_stage_2.h:287) to 'get_centroid_fh' [77]  (1.77 ns)
+
+ <State 13>: 0ns
+The critical path consists of the following:
+
+ <State 14>: 4.99ns
+The critical path consists of the following:
+	'add' operation ('add_ln239', ./wd_stage_2.h:239->./wd_stage_2.h:287) [79]  (1.74 ns)
+	'getelementptr' operation ('centroids_addr_2', ./wd_stage_2.h:239->./wd_stage_2.h:287) [82]  (0 ns)
+	'store' operation ('store_ln239', ./wd_stage_2.h:239->./wd_stage_2.h:287) of variable 'c_1_load', ./wd_stage_2.h:239->./wd_stage_2.h:287 on array 'centroids' [83]  (3.25 ns)
+
+ <State 15>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

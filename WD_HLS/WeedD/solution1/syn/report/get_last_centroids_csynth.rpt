@@ -1,0 +1,142 @@
+
+
+================================================================
+== Vivado HLS Report for 'get_last_centroids'
+================================================================
+* Date:           Wed Mar 18 11:36:15 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 8.727 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+----------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline |
+    |   min   |   max   |    min   |    max   | min | max |   Type   |
+    +---------+---------+----------+----------+-----+-----+----------+
+    |        8|        8| 0.400 us | 0.400 us |    9|    9| dataflow |
+    +---------+---------+----------+----------+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+---------+---------+----------+----------+-----+-----+---------+
+        |                         |                      |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+        |         Instance        |        Module        |   min   |   max   |    min   |    max   | min | max |   Type  |
+        +-------------------------+----------------------+---------+---------+----------+----------+-----+-----+---------+
+        |get_last_centroids_L_U0  |get_last_centroids_L  |        8|        8| 0.400 us | 0.400 us |    8|    8|   none  |
+        +-------------------------+----------------------+---------+---------+----------+----------+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       -|      -|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |        -|      -|      26|    160|    -|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|      -|    -|
+|Register         |        -|      -|       -|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |        0|      0|      26|    160|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF | LUT | URAM|
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+    |get_last_centroids_L_U0  |get_last_centroids_L  |        0|      0|  26|  160|    0|
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+    |Total                    |                      |        0|      0|  26|  160|    0|
+    +-------------------------+----------------------+---------+-------+----+-----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    N/A
+
+    * Register: 
+    N/A
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  |    Source Object   |    C Type    |
++------------------------+-----+-----+------------+--------------------+--------------+
+|centroids_address0      | out |    7|  ap_memory |      centroids     |     array    |
+|centroids_ce0           | out |    1|  ap_memory |      centroids     |     array    |
+|centroids_d0            | out |   48|  ap_memory |      centroids     |     array    |
+|centroids_q0            |  in |   48|  ap_memory |      centroids     |     array    |
+|centroids_we0           | out |    1|  ap_memory |      centroids     |     array    |
+|centroids_address1      | out |    7|  ap_memory |      centroids     |     array    |
+|centroids_ce1           | out |    1|  ap_memory |      centroids     |     array    |
+|centroids_d1            | out |   48|  ap_memory |      centroids     |     array    |
+|centroids_q1            |  in |   48|  ap_memory |      centroids     |     array    |
+|centroids_we1           | out |    1|  ap_memory |      centroids     |     array    |
+|selected_line           |  in |    3|   ap_none  |    selected_line   |    scalar    |
+|selected_line_ap_vld    |  in |    1|   ap_none  |    selected_line   |    scalar    |
+|last_c_2_address0       | out |    2|  ap_memory |      last_c_2      |     array    |
+|last_c_2_ce0            | out |    1|  ap_memory |      last_c_2      |     array    |
+|last_c_2_d0             | out |   48|  ap_memory |      last_c_2      |     array    |
+|last_c_2_q0             |  in |   48|  ap_memory |      last_c_2      |     array    |
+|last_c_2_we0            | out |    1|  ap_memory |      last_c_2      |     array    |
+|last_c_2_address1       | out |    2|  ap_memory |      last_c_2      |     array    |
+|last_c_2_ce1            | out |    1|  ap_memory |      last_c_2      |     array    |
+|last_c_2_d1             | out |   48|  ap_memory |      last_c_2      |     array    |
+|last_c_2_q1             |  in |   48|  ap_memory |      last_c_2      |     array    |
+|last_c_2_we1            | out |    1|  ap_memory |      last_c_2      |     array    |
+|seg_index_start         |  in |    4|   ap_none  |   seg_index_start  |    scalar    |
+|seg_index_start_ap_vld  |  in |    1|   ap_none  |   seg_index_start  |    scalar    |
+|size                    |  in |    4|   ap_none  |        size        |    scalar    |
+|size_ap_vld             |  in |    1|   ap_none  |        size        |    scalar    |
+|ap_clk                  |  in |    1| ap_ctrl_hs | get_last_centroids | return value |
+|ap_rst                  |  in |    1| ap_ctrl_hs | get_last_centroids | return value |
+|ap_start                |  in |    1| ap_ctrl_hs | get_last_centroids | return value |
+|ap_done                 | out |    1| ap_ctrl_hs | get_last_centroids | return value |
+|ap_ready                | out |    1| ap_ctrl_hs | get_last_centroids | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs | get_last_centroids | return value |
+|ap_continue             |  in |    1| ap_ctrl_hs | get_last_centroids | return value |
++------------------------+-----+-----+------------+--------------------+--------------+
+

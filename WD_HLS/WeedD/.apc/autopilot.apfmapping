@@ -3,10 +3,33 @@
   <source>
     <originFiles name="headers.h" path="D:\GitHub\Weed_Detection\WD_HLS\headers.h"/>
     <originFiles name="image_config.h" path="D:\GitHub\Weed_Detection\WD_HLS\image_config.h"/>
+    <originFiles name="wd_stage_1.h" path="D:\GitHub\Weed_Detection\WD_HLS\wd_stage_1.h"/>
+    <originFiles name="wd_stage_2.h" path="D:\GitHub\Weed_Detection\WD_HLS\wd_stage_2.h"/>
+    <originFiles name="wd_stage_3.h" path="D:\GitHub\Weed_Detection\WD_HLS\wd_stage_3.h"/>
     <originFiles name="weed_detection.cpp" path="D:\GitHub\Weed_Detection\WD_HLS\weed_detection.cpp"/>
     <originFiles name="weed_detection.h" path="D:\GitHub\Weed_Detection\WD_HLS\weed_detection.h"/>
+    <originFiles name="xf_add_2.hpp" path="D:\GitHub\Weed_Detection\WD_HLS\xf_add_2.hpp"/>
+    <originFiles name="xf_duplicate_2.hpp" path="D:\GitHub\Weed_Detection\WD_HLS\xf_duplicate_2.hpp"/>
+    <originFiles name="xf_resize_2.hpp" path="D:\GitHub\Weed_Detection\WD_HLS\xf_resize_2.hpp"/>
   </source>
   <testbench>
+    <originFiles name="image_config_tb.h" path="D:\GitHub\Weed_Detection\WD_HLS\image_config_tb.h"/>
+    <originFiles name="test1.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test1.bmp"/>
+    <originFiles name="test11.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test11.bmp"/>
+    <originFiles name="test17.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test17.bmp"/>
+    <originFiles name="test18.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test18.bmp"/>
+    <originFiles name="test19.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test19.bmp"/>
+    <originFiles name="test20.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test20.bmp"/>
+    <originFiles name="test22.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test22.bmp"/>
+    <originFiles name="test23.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test23.bmp"/>
+    <originFiles name="test24.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test24.bmp"/>
+    <originFiles name="test25.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test25.bmp"/>
+    <originFiles name="test3.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test3.bmp"/>
+    <originFiles name="test4.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test4.bmp"/>
+    <originFiles name="test5.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test5.bmp"/>
+    <originFiles name="test6.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test6.bmp"/>
+    <originFiles name="test7.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test7.bmp"/>
+    <originFiles name="test9.bmp" path="D:\GitHub\Weed_Detection\WD_HLS\WeedD\test9.bmp"/>
     <originFiles name="weed_detection_tb.cpp" path="D:\GitHub\Weed_Detection\WD_HLS\weed_detection_tb.cpp"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

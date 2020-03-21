@@ -1,0 +1,490 @@
+
+
+================================================================
+== Vivado HLS Report for 'get_centroid_sh_Bloc'
+================================================================
+* Date:           Wed Mar 18 11:34:35 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 50.00 ns | 8.456 ns |   6.25 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max   | min | max |   Type  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+    |        1|       35| 50.000 ns | 1.750 us |    1|   35|   none  |
+    +---------+---------+-----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 36
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 36 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 27 
+27 --> 28 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 4.13>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %possible_c_y, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 37 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i16* %h_offset, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 38 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %v_offset_read, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 39 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i48* %c_read, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 40 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %possible_c_x, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 41 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%p_read_4 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read2)" [./wd_stage_2.h:120]   --->   Operation 42 'read' 'p_read_4' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_read14 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read1)" [./wd_stage_2.h:120]   --->   Operation 43 'read' 'p_read14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_read_5 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)" [./wd_stage_2.h:120]   --->   Operation 44 'read' 'p_read_5' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 45 [1/1] (3.63ns)   --->   "%possible_c_x_read = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %possible_c_x)" [./wd_stage_2.h:120]   --->   Operation 45 'read' 'possible_c_x_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 46 [1/1] (3.63ns)   --->   "%c_read_2 = call i48 @_ssdm_op_Read.ap_fifo.i48P(i48* %c_read)" [./wd_stage_2.h:137]   --->   Operation 46 'read' 'c_read_2' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 47 [1/1] (3.63ns)   --->   "%v_offset_read_2 = call i8 @_ssdm_op_Read.ap_fifo.i8P(i8* %v_offset_read)" [./wd_stage_2.h:134]   --->   Operation 47 'read' 'v_offset_read_2' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 48 [1/1] (3.63ns)   --->   "%h_offset_read = call i16 @_ssdm_op_Read.ap_fifo.i16P(i16* %h_offset)" [./wd_stage_2.h:135]   --->   Operation 48 'read' 'h_offset_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 49 [1/1] (3.63ns)   --->   "%possible_c_y_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %possible_c_y)"   --->   Operation 49 'read' 'possible_c_y_read' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 1> <FIFO>
+ST_1 : Operation 50 [1/1] (2.47ns)   --->   "%icmp_ln133 = icmp eq i32 %p_read_5, 0" [./wd_stage_2.h:133->./wd_stage_2.h:120]   --->   Operation 50 'icmp' 'icmp_ln133' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %icmp_ln133, label %0, label %1" [./wd_stage_2.h:133->./wd_stage_2.h:120]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [36/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 52 'udiv' 'udiv_ln134' <Predicate = (!icmp_ln133)> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 53 [36/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 53 'udiv' 'udiv_ln135' <Predicate = (!icmp_ln133)> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%zext_ln120 = zext i8 %possible_c_x_read to i16" [./wd_stage_2.h:120->./wd_stage_2.h:120]   --->   Operation 54 'zext' 'zext_ln120' <Predicate = (icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%c1_part_set_i_i = call i48 @llvm.part.set.i48.i16(i48 %c_read_2, i16 %zext_ln120, i32 0, i32 15)" [./wd_stage_2.h:137->./wd_stage_2.h:120]   --->   Operation 55 'partset' 'c1_part_set_i_i' <Predicate = (icmp_ln133)> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (1.76ns)   --->   "br label %.exit"   --->   Operation 56 'br' <Predicate = (icmp_ln133)> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 4.13>
+ST_2 : Operation 57 [35/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 57 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [35/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 58 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 4.13>
+ST_3 : Operation 59 [34/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 59 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 60 [34/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 60 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 4.13>
+ST_4 : Operation 61 [33/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 61 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 62 [33/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 62 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 4.13>
+ST_5 : Operation 63 [32/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 63 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 64 [32/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 64 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 4.13>
+ST_6 : Operation 65 [31/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 65 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 66 [31/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 66 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 4.13>
+ST_7 : Operation 67 [30/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 67 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 68 [30/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 68 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 4.13>
+ST_8 : Operation 69 [29/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 69 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 70 [29/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 70 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 4.13>
+ST_9 : Operation 71 [28/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 71 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 72 [28/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 72 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 4.13>
+ST_10 : Operation 73 [27/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 73 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 74 [27/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 74 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 4.13>
+ST_11 : Operation 75 [26/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 75 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 76 [26/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 76 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 4.13>
+ST_12 : Operation 77 [25/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 77 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 78 [25/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 78 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 4.13>
+ST_13 : Operation 79 [24/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 79 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 80 [24/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 80 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 4.13>
+ST_14 : Operation 81 [23/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 81 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 82 [23/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 82 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 4.13>
+ST_15 : Operation 83 [22/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 83 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 84 [22/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 84 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 4.13>
+ST_16 : Operation 85 [21/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 85 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 86 [21/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 86 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 4.13>
+ST_17 : Operation 87 [20/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 87 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 88 [20/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 88 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 4.13>
+ST_18 : Operation 89 [19/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 89 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 90 [19/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 90 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 4.13>
+ST_19 : Operation 91 [18/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 91 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 92 [18/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 92 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 4.13>
+ST_20 : Operation 93 [17/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 93 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 94 [17/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 94 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 4.13>
+ST_21 : Operation 95 [16/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 95 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 96 [16/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 96 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 4.13>
+ST_22 : Operation 97 [15/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 97 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 98 [15/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 98 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 4.13>
+ST_23 : Operation 99 [14/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 99 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 100 [14/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 100 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 24 <SV = 23> <Delay = 4.13>
+ST_24 : Operation 101 [13/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 101 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 102 [13/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 102 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 25 <SV = 24> <Delay = 4.13>
+ST_25 : Operation 103 [12/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 103 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 104 [12/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 104 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 4.13>
+ST_26 : Operation 105 [11/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 105 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_26 : Operation 106 [11/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 106 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 27 <SV = 26> <Delay = 4.13>
+ST_27 : Operation 107 [10/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 107 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 108 [10/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 108 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 28 <SV = 27> <Delay = 4.13>
+ST_28 : Operation 109 [9/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 109 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_28 : Operation 110 [9/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 110 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 29 <SV = 28> <Delay = 4.13>
+ST_29 : Operation 111 [8/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 111 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 112 [8/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 112 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 29> <Delay = 4.13>
+ST_30 : Operation 113 [7/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 113 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 114 [7/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 114 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 30> <Delay = 4.13>
+ST_31 : Operation 115 [6/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 115 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 116 [6/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 116 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 31> <Delay = 4.13>
+ST_32 : Operation 117 [5/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 117 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 118 [5/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 118 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 32> <Delay = 4.13>
+ST_33 : Operation 119 [4/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 119 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 120 [4/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 120 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 33> <Delay = 4.13>
+ST_34 : Operation 121 [3/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 121 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 122 [3/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 122 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 34> <Delay = 4.13>
+ST_35 : Operation 123 [2/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 123 'udiv' 'udiv_ln134' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 124 [2/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 124 'udiv' 'udiv_ln135' <Predicate = true> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 35> <Delay = 8.45>
+ST_36 : Operation 125 [1/36] (4.13ns)   --->   "%udiv_ln134 = udiv i32 %p_read14, %p_read_5" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 125 'udiv' 'udiv_ln134' <Predicate = (!icmp_ln133)> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 126 [1/1] (0.00ns)   --->   "%trunc_ln134 = trunc i32 %udiv_ln134 to i16" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 126 'trunc' 'trunc_ln134' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_36 : Operation 127 [1/1] (0.00ns)   --->   "%zext_ln134 = zext i8 %v_offset_read_2 to i16" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 127 'zext' 'zext_ln134' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_36 : Operation 128 [1/1] (2.07ns)   --->   "%add_ln134 = add i16 %trunc_ln134, %zext_ln134" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 128 'add' 'add_ln134' <Predicate = (!icmp_ln133)> <Delay = 2.07> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 129 [1/1] (0.00ns)   --->   "%c2_part_set_i_i = call i48 @llvm.part.set.i48.i16(i48 %c_read_2, i16 %add_ln134, i32 0, i32 15)" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 129 'partset' 'c2_part_set_i_i' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_36 : Operation 130 [1/36] (4.13ns)   --->   "%udiv_ln135 = udiv i32 %p_read_4, %p_read_5" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 130 'udiv' 'udiv_ln135' <Predicate = (!icmp_ln133)> <Delay = 4.13> <Core = "DivnS_SEQ">   --->   Core 24 'DivnS_SEQ' <Latency = 35> <II = 32> <Delay = 4.13> <FuncUnit> <Opcode : 'sdiv' 'srem' 'udiv' 'urem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 131 [1/1] (0.00ns)   --->   "%zext_ln135 = zext i16 %h_offset_read to i32" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 131 'zext' 'zext_ln135' <Predicate = (!icmp_ln133)> <Delay = 0.00>
+ST_36 : Operation 132 [1/1] (2.55ns)   --->   "%add_ln135 = add i32 %udiv_ln135, %zext_ln135" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 132 'add' 'add_ln135' <Predicate = (!icmp_ln133)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 133 [1/1] (1.76ns)   --->   "br label %.exit" [./wd_stage_2.h:136->./wd_stage_2.h:120]   --->   Operation 133 'br' <Predicate = (!icmp_ln133)> <Delay = 1.76>
+ST_36 : Operation 134 [1/1] (0.00ns)   --->   "%c3_i_i = phi i48 [ %c2_part_set_i_i, %1 ], [ %c1_part_set_i_i, %0 ]" [./wd_stage_2.h:134->./wd_stage_2.h:120]   --->   Operation 134 'phi' 'c3_i_i' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 135 [1/1] (0.00ns)   --->   "%storemerge_i_i = phi i32 [ %add_ln135, %1 ], [ %possible_c_y_read, %0 ]" [./wd_stage_2.h:135->./wd_stage_2.h:120]   --->   Operation 135 'phi' 'storemerge_i_i' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 136 [1/1] (0.00ns)   --->   "%c3_part_set_i_i = call i48 @llvm.part.set.i48.i32(i48 %c3_i_i, i32 %storemerge_i_i, i32 16, i32 47)" [./wd_stage_2.h:138->./wd_stage_2.h:120]   --->   Operation 136 'partset' 'c3_part_set_i_i' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 137 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i48P(i48* %c, i48 %c3_part_set_i_i)" [./wd_stage_2.h:138->./wd_stage_2.h:120]   --->   Operation 137 'write' <Predicate = true> <Delay = 0.00>
+ST_36 : Operation 138 [1/1] (0.00ns)   --->   "ret void" [./wd_stage_2.h:120]   --->   Operation 138 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 4.13ns
+The critical path consists of the following:
+	wire read on port 'p_read2' (./wd_stage_2.h:120) [15]  (0 ns)
+	'udiv' operation ('udiv_ln135', ./wd_stage_2.h:135->./wd_stage_2.h:120) [31]  (4.13 ns)
+
+ <State 2>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 3>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 4>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 5>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 6>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 7>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 8>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 9>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 10>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 11>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 12>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 13>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 14>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 15>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 16>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 17>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 18>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 19>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 20>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 21>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 22>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 23>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 24>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 25>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 26>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 27>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 28>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 29>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 30>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 31>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 32>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 33>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 34>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 35>: 4.13ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln134', ./wd_stage_2.h:134->./wd_stage_2.h:120) [26]  (4.13 ns)
+
+ <State 36>: 8.46ns
+The critical path consists of the following:
+	'udiv' operation ('udiv_ln135', ./wd_stage_2.h:135->./wd_stage_2.h:120) [31]  (4.13 ns)
+	'add' operation ('add_ln135', ./wd_stage_2.h:135->./wd_stage_2.h:120) [33]  (2.55 ns)
+	multiplexor before 'phi' operation ('storemerge_i_i', ./wd_stage_2.h:135->./wd_stage_2.h:120) with incoming values : ('possible_c_y_read') ('add_ln135', ./wd_stage_2.h:135->./wd_stage_2.h:120) [41]  (1.77 ns)
+	'phi' operation ('storemerge_i_i', ./wd_stage_2.h:135->./wd_stage_2.h:120) with incoming values : ('possible_c_y_read') ('add_ln135', ./wd_stage_2.h:135->./wd_stage_2.h:120) [41]  (0 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

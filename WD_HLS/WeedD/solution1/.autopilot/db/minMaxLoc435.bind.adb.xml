@@ -1,0 +1,140 @@
+<stg><name>minMaxLoc435</name>
+
+
+<trans_list>
+
+<trans id="7" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32" op_1_bw="8">
+<![CDATA[
+._crit_edge1:1  %p_max_val = call fastcc i32 @xFMinMaxLocKernel(i8* %p_src_data_V)
+
+]]></Node>
+<StgValue><ssdm name="p_max_val"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="4" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="2" bw="0" op_0_bw="0" op_1_bw="8" op_2_bw="0" op_3_bw="32" op_4_bw="32" op_5_bw="0" op_6_bw="32" op_7_bw="32" op_8_bw="0" op_9_bw="0" op_10_bw="0" op_11_bw="32" op_12_bw="32" op_13_bw="32" op_14_bw="32" op_15_bw="0" op_16_bw="0">
+<![CDATA[
+._crit_edge1:0  call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)
+
+]]></Node>
+<StgValue><ssdm name="specinterface_ln0"/></StgValue>
+</operation>
+
+<operation id="5" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="3" bw="32" op_0_bw="32" op_1_bw="8">
+<![CDATA[
+._crit_edge1:1  %p_max_val = call fastcc i32 @xFMinMaxLocKernel(i8* %p_src_data_V)
+
+]]></Node>
+<StgValue><ssdm name="p_max_val"/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="4" bw="0" op_0_bw="32">
+<![CDATA[
+._crit_edge1:2  ret i32 %p_max_val
+
+]]></Node>
+<StgValue><ssdm name="ret_ln257"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="8" name="p_src_data_V" dir="0" iftype="3">
+<core>FIFO</core><StgValue><ssdm name="p_src_data_V"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="10" from="xFMinMaxLocKernel" to="p_max_val" fromId="9" toId="3">
+</dataflow>
+<dataflow id="11" from="p_src_data_V" to="p_max_val" fromId="8" toId="3">
+</dataflow>
+<dataflow id="13" from="_ssdm_op_SpecInterface" to="specinterface_ln0" fromId="12" toId="4">
+</dataflow>
+<dataflow id="14" from="p_src_data_V" to="specinterface_ln0" fromId="8" toId="4">
+</dataflow>
+<dataflow id="16" from="ap_fifo_str" to="specinterface_ln0" fromId="15" toId="4">
+</dataflow>
+<dataflow id="18" from="StgValue_17" to="specinterface_ln0" fromId="17" toId="4">
+</dataflow>
+<dataflow id="19" from="StgValue_17" to="specinterface_ln0" fromId="17" toId="4">
+</dataflow>
+<dataflow id="21" from="p_str" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="22" from="StgValue_17" to="specinterface_ln0" fromId="17" toId="4">
+</dataflow>
+<dataflow id="23" from="StgValue_17" to="specinterface_ln0" fromId="17" toId="4">
+</dataflow>
+<dataflow id="24" from="p_str" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="25" from="p_str" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="26" from="p_str" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="28" from="StgValue_27" to="specinterface_ln0" fromId="27" toId="4">
+</dataflow>
+<dataflow id="29" from="StgValue_27" to="specinterface_ln0" fromId="27" toId="4">
+</dataflow>
+<dataflow id="31" from="StgValue_30" to="specinterface_ln0" fromId="30" toId="4">
+</dataflow>
+<dataflow id="32" from="StgValue_30" to="specinterface_ln0" fromId="30" toId="4">
+</dataflow>
+<dataflow id="33" from="p_str" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="34" from="p_str" to="specinterface_ln0" fromId="20" toId="4">
+</dataflow>
+<dataflow id="35" from="xFMinMaxLocKernel" to="p_max_val" fromId="9" toId="5">
+</dataflow>
+<dataflow id="36" from="p_src_data_V" to="p_max_val" fromId="8" toId="5">
+</dataflow>
+<dataflow id="37" from="p_max_val" to="ret_ln257" fromId="5" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

@@ -1,0 +1,118 @@
+
+
+================================================================
+== Vivado HLS Report for 'get_total_vegetation_2'
+================================================================
+* Date:           Wed Mar 18 11:34:10 2020
+
+* Version:        2019.2.1 (Build 2724168 on Thu Dec 05 05:19:09 MST 2019)
+* Project:        WeedD
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+-----------+------------+
+    |  Clock |  Target  | Estimated | Uncertainty|
+    +--------+----------+-----------+------------+
+    |ap_clk  | 50.00 ns | 10.802 ns |   6.25 ns  |
+    +--------+----------+-----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 10.8>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "%p_read_2 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %p_read1)" [./wd_stage_1.h:128]   --->   Operation 2 'read' 'p_read_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%p_read_3 = call i24 @_ssdm_op_Read.ap_auto.i24(i24 %p_read)" [./wd_stage_1.h:128]   --->   Operation 3 'read' 'p_read_3' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%zext_ln703 = zext i24 %p_read_3 to i25" [./wd_stage_1.h:128]   --->   Operation 4 'zext' 'zext_ln703' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%zext_ln703_1 = zext i24 %p_read_2 to i25" [./wd_stage_1.h:128]   --->   Operation 5 'zext' 'zext_ln703_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (2.31ns)   --->   "%ret_V = add i25 %zext_ln703_1, %zext_ln703" [./wd_stage_1.h:128]   --->   Operation 6 'add' 'ret_V' <Predicate = true> <Delay = 2.31> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.31> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%t_V = call i33 @_ssdm_op_BitConcatenate.i33.i25.i8(i25 %ret_V, i8 0)" [./wd_stage_1.h:128]   --->   Operation 7 'bitconcatenate' 't_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%zext_ln1148 = zext i33 %t_V to i67" [./wd_stage_1.h:128]   --->   Operation 8 'zext' 'zext_ln1148' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (8.48ns)   --->   "%mul_ln1148 = mul i67 %zext_ln1148, 9773436692" [./wd_stage_1.h:128]   --->   Operation 9 'mul' 'mul_ln1148' <Predicate = true> <Delay = 8.48> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.48> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%tmp = call i10 @_ssdm_op_PartSelect.i10.i67.i32.i32(i67 %mul_ln1148, i32 57, i32 66)" [./wd_stage_1.h:128]   --->   Operation 10 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%zext_ln703_2 = zext i10 %tmp to i24" [./wd_stage_1.h:128]   --->   Operation 11 'zext' 'zext_ln703_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.i24P(i24* %agg_result_V, i24 %zext_ln703_2)" [./wd_stage_1.h:128]   --->   Operation 12 'write' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 13 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 50ns, clock uncertainty: 6.25ns.
+
+ <State 1>: 10.8ns
+The critical path consists of the following:
+	wire read on port 'p_read1' (./wd_stage_1.h:128) [4]  (0 ns)
+	'add' operation ('ret.V', ./wd_stage_1.h:128) [8]  (2.31 ns)
+	'mul' operation ('mul_ln1148', ./wd_stage_1.h:128) [11]  (8.49 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

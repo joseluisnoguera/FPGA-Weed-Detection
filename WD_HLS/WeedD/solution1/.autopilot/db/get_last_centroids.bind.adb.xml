@@ -1,0 +1,199 @@
+<stg><name>get_last_centroids</name>
+
+
+<trans_list>
+
+<trans id="10" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="7" bw="4" op_0_bw="4" op_1_bw="4">
+<![CDATA[
+codeRepl:1  %size_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %size)
+
+]]></Node>
+<StgValue><ssdm name="size_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="4" op_0_bw="4" op_1_bw="4">
+<![CDATA[
+codeRepl:2  %seg_index_start_read = call i4 @_ssdm_op_Read.ap_auto.i4(i4 %seg_index_start)
+
+]]></Node>
+<StgValue><ssdm name="seg_index_start_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="3" op_0_bw="3" op_1_bw="3">
+<![CDATA[
+codeRepl:3  %selected_line_read = call i3 @_ssdm_op_Read.ap_auto.i3(i3 %selected_line)
+
+]]></Node>
+<StgValue><ssdm name="selected_line_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="4" op_3_bw="3" op_4_bw="48" op_5_bw="48">
+<![CDATA[
+codeRepl:4  call void @get_last_centroids_L(i4 %size_read, i4 %seg_index_start_read, i3 %selected_line_read, [72 x i48]* %centroids, [4 x i48]* %last_c_2)
+
+]]></Node>
+<StgValue><ssdm name="call_ln165"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="7" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="6" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="0">
+<![CDATA[
+codeRepl:0  call void (...)* @_ssdm_op_SpecDataflowPipeline(i32 -1, i32 0, [1 x i8]* @p_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="specdataflowpipeline_ln167"/></StgValue>
+</operation>
+
+<operation id="8" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="0" op_1_bw="4" op_2_bw="4" op_3_bw="3" op_4_bw="48" op_5_bw="48">
+<![CDATA[
+codeRepl:4  call void @get_last_centroids_L(i4 %size_read, i4 %seg_index_start_read, i3 %selected_line_read, [72 x i48]* %centroids, [4 x i48]* %last_c_2)
+
+]]></Node>
+<StgValue><ssdm name="call_ln165"/></StgValue>
+</operation>
+
+<operation id="9" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="11" bw="0">
+<![CDATA[
+codeRepl:5  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln175"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="12" name="centroids" dir="0" iftype="1">
+<core>RAM</core><StgValue><ssdm name="centroids"/><MemPortTyVec>1 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="13" name="selected_line" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="selected_line"/></StgValue>
+</port>
+<port id="14" name="last_c_2" dir="1" iftype="1">
+<core>RAM</core><StgValue><ssdm name="last_c_2"/><MemPortTyVec>0 3 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="15" name="seg_index_start" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="seg_index_start"/></StgValue>
+</port>
+<port id="16" name="size" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="size"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="18" from="_ssdm_op_Read.ap_auto.i4" to="size_read" fromId="17" toId="3">
+</dataflow>
+<dataflow id="19" from="size" to="size_read" fromId="16" toId="3">
+</dataflow>
+<dataflow id="20" from="_ssdm_op_Read.ap_auto.i4" to="seg_index_start_read" fromId="17" toId="4">
+</dataflow>
+<dataflow id="21" from="seg_index_start" to="seg_index_start_read" fromId="15" toId="4">
+</dataflow>
+<dataflow id="23" from="_ssdm_op_Read.ap_auto.i3" to="selected_line_read" fromId="22" toId="5">
+</dataflow>
+<dataflow id="24" from="selected_line" to="selected_line_read" fromId="13" toId="5">
+</dataflow>
+<dataflow id="26" from="get_last_centroids_L" to="call_ln165" fromId="25" toId="6">
+</dataflow>
+<dataflow id="27" from="size_read" to="call_ln165" fromId="3" toId="6">
+</dataflow>
+<dataflow id="28" from="seg_index_start_read" to="call_ln165" fromId="4" toId="6">
+</dataflow>
+<dataflow id="29" from="selected_line_read" to="call_ln165" fromId="5" toId="6">
+</dataflow>
+<dataflow id="30" from="centroids" to="call_ln165" fromId="12" toId="6">
+</dataflow>
+<dataflow id="31" from="last_c_2" to="call_ln165" fromId="14" toId="6">
+</dataflow>
+<dataflow id="33" from="_ssdm_op_SpecDataflowPipeline" to="specdataflowpipeline_ln167" fromId="32" toId="7">
+</dataflow>
+<dataflow id="35" from="StgValue_34" to="specdataflowpipeline_ln167" fromId="34" toId="7">
+</dataflow>
+<dataflow id="37" from="StgValue_36" to="specdataflowpipeline_ln167" fromId="36" toId="7">
+</dataflow>
+<dataflow id="39" from="p_str" to="specdataflowpipeline_ln167" fromId="38" toId="7">
+</dataflow>
+<dataflow id="40" from="get_last_centroids_L" to="call_ln165" fromId="25" toId="8">
+</dataflow>
+<dataflow id="41" from="size_read" to="call_ln165" fromId="3" toId="8">
+</dataflow>
+<dataflow id="42" from="seg_index_start_read" to="call_ln165" fromId="4" toId="8">
+</dataflow>
+<dataflow id="43" from="selected_line_read" to="call_ln165" fromId="5" toId="8">
+</dataflow>
+<dataflow id="44" from="centroids" to="call_ln165" fromId="12" toId="8">
+</dataflow>
+<dataflow id="45" from="last_c_2" to="call_ln165" fromId="14" toId="8">
+</dataflow>
+</dataflows>
+
+
+</stg>
