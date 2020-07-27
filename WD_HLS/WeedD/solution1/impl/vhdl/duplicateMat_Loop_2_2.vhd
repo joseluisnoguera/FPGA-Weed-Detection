@@ -70,7 +70,7 @@ architecture behav of duplicateMat_Loop_2_2 is
     signal ap_block_pp0_stage0 : BOOLEAN;
     signal icmp_ln109_reg_205 : STD_LOGIC_VECTOR (0 downto 0);
     signal dst1_V_V_blk_n : STD_LOGIC;
-    signal call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n : STD_LOGIC;
+    signal call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n : STD_LOGIC;
     signal p_dst2_data_V_blk_n : STD_LOGIC;
     signal j2_0_i_reg_101 : STD_LOGIC_VECTOR (8 downto 0);
     signal icmp_ln106_fu_120_p2 : STD_LOGIC_VECTOR (0 downto 0);
@@ -92,13 +92,13 @@ architecture behav of duplicateMat_Loop_2_2 is
     signal add_ln114_1_reg_214 : STD_LOGIC_VECTOR (15 downto 0);
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
     signal ap_condition_pp0_exit_iter0_state3 : STD_LOGIC;
-    signal call_ln115_write797_fu_112_ap_start : STD_LOGIC;
-    signal call_ln115_write797_fu_112_ap_done : STD_LOGIC;
-    signal call_ln115_write797_fu_112_ap_idle : STD_LOGIC;
-    signal call_ln115_write797_fu_112_ap_ready : STD_LOGIC;
-    signal call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_write : STD_LOGIC;
-    signal call_ln115_write797_fu_112_ap_ce : STD_LOGIC;
+    signal call_ln115_write798_fu_112_ap_start : STD_LOGIC;
+    signal call_ln115_write798_fu_112_ap_done : STD_LOGIC;
+    signal call_ln115_write798_fu_112_ap_idle : STD_LOGIC;
+    signal call_ln115_write798_fu_112_ap_ready : STD_LOGIC;
+    signal call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_write : STD_LOGIC;
+    signal call_ln115_write798_fu_112_ap_ce : STD_LOGIC;
     signal ap_block_state3_pp0_stage0_iter0_ignore_call10 : BOOLEAN;
     signal ap_block_state4_pp0_stage0_iter1_ignore_call10 : BOOLEAN;
     signal ap_block_pp0_stage0_11001_ignoreCallOp37 : BOOLEAN;
@@ -106,7 +106,7 @@ architecture behav of duplicateMat_Loop_2_2 is
     signal ap_block_state1 : BOOLEAN;
     signal ap_CS_fsm_state5 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
-    signal call_ln115_write797_fu_112_ap_start_reg : STD_LOGIC := '0';
+    signal call_ln115_write798_fu_112_ap_start_reg : STD_LOGIC := '0';
     signal zext_ln651_fu_182_p1 : STD_LOGIC_VECTOR (63 downto 0);
     signal shl_ln114_1_fu_140_p3 : STD_LOGIC_VECTOR (13 downto 0);
     signal zext_ln109_cast_fu_152_p1 : STD_LOGIC_VECTOR (14 downto 0);
@@ -116,7 +116,7 @@ architecture behav of duplicateMat_Loop_2_2 is
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
 
-    component write797 IS
+    component write798 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -135,20 +135,20 @@ architecture behav of duplicateMat_Loop_2_2 is
 
 
 begin
-    call_ln115_write797_fu_112 : component write797
+    call_ln115_write798_fu_112 : component write798
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => call_ln115_write797_fu_112_ap_start,
-        ap_done => call_ln115_write797_fu_112_ap_done,
-        ap_idle => call_ln115_write797_fu_112_ap_idle,
-        ap_ready => call_ln115_write797_fu_112_ap_ready,
+        ap_start => call_ln115_write798_fu_112_ap_start,
+        ap_done => call_ln115_write798_fu_112_ap_done,
+        ap_idle => call_ln115_write798_fu_112_ap_idle,
+        ap_ready => call_ln115_write798_fu_112_ap_ready,
         val_V => dst1_V_V_dout,
-        Mat_0_180_320_1_data_V_addr_din => call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_din,
+        Mat_0_180_320_1_data_V_addr_din => call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_din,
         Mat_0_180_320_1_data_V_addr_full_n => p_dst2_data_V_full_n,
-        Mat_0_180_320_1_data_V_addr_write => call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_write,
-        Mat_0_180_320_1_data_V_addr_blk_n => call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n,
-        ap_ce => call_ln115_write797_fu_112_ap_ce);
+        Mat_0_180_320_1_data_V_addr_write => call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_write,
+        Mat_0_180_320_1_data_V_addr_blk_n => call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n,
+        ap_ce => call_ln115_write798_fu_112_ap_ce);
 
 
 
@@ -216,16 +216,16 @@ begin
     end process;
 
 
-    call_ln115_write797_fu_112_ap_start_reg_assign_proc : process(ap_clk)
+    call_ln115_write798_fu_112_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                call_ln115_write797_fu_112_ap_start_reg <= ap_const_logic_0;
+                call_ln115_write798_fu_112_ap_start_reg <= ap_const_logic_0;
             else
                 if (((ap_const_boolean_0 = ap_block_pp0_stage0_11001) and (icmp_ln109_fu_156_p2 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1))) then 
-                    call_ln115_write797_fu_112_ap_start_reg <= ap_const_logic_1;
-                elsif ((call_ln115_write797_fu_112_ap_ready = ap_const_logic_1)) then 
-                    call_ln115_write797_fu_112_ap_start_reg <= ap_const_logic_0;
+                    call_ln115_write798_fu_112_ap_start_reg <= ap_const_logic_1;
+                elsif ((call_ln115_write798_fu_112_ap_ready = ap_const_logic_1)) then 
+                    call_ln115_write798_fu_112_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -327,9 +327,9 @@ begin
     ap_CS_fsm_state5 <= ap_CS_fsm(3);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_11001_assign_proc : process(dst_V_V_empty_n, dst1_V_V_empty_n, ap_enable_reg_pp0_iter1, icmp_ln109_reg_205, call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
+    ap_block_pp0_stage0_11001_assign_proc : process(dst_V_V_empty_n, dst1_V_V_empty_n, ap_enable_reg_pp0_iter1, icmp_ln109_reg_205, call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
     begin
-                ap_block_pp0_stage0_11001 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln109_reg_205 = ap_const_lv1_0) and (call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst1_V_V_empty_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst_V_V_empty_n = ap_const_logic_0))));
+                ap_block_pp0_stage0_11001 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln109_reg_205 = ap_const_lv1_0) and (call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst1_V_V_empty_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst_V_V_empty_n = ap_const_logic_0))));
     end process;
 
 
@@ -339,9 +339,9 @@ begin
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(dst_V_V_empty_n, dst1_V_V_empty_n, ap_enable_reg_pp0_iter1, icmp_ln109_reg_205, call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
+    ap_block_pp0_stage0_subdone_assign_proc : process(dst_V_V_empty_n, dst1_V_V_empty_n, ap_enable_reg_pp0_iter1, icmp_ln109_reg_205, call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
     begin
-                ap_block_pp0_stage0_subdone <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln109_reg_205 = ap_const_lv1_0) and (call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst1_V_V_empty_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst_V_V_empty_n = ap_const_logic_0))));
+                ap_block_pp0_stage0_subdone <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln109_reg_205 = ap_const_lv1_0) and (call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst1_V_V_empty_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst_V_V_empty_n = ap_const_logic_0))));
     end process;
 
 
@@ -353,9 +353,9 @@ begin
         ap_block_state3_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state3_pp0_stage0_iter0_ignore_call10 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state4_pp0_stage0_iter1_assign_proc : process(dst_V_V_empty_n, dst1_V_V_empty_n, icmp_ln109_reg_205, call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
+    ap_block_state4_pp0_stage0_iter1_assign_proc : process(dst_V_V_empty_n, dst1_V_V_empty_n, icmp_ln109_reg_205, call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
     begin
-                ap_block_state4_pp0_stage0_iter1 <= (((icmp_ln109_reg_205 = ap_const_lv1_0) and (call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst1_V_V_empty_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst_V_V_empty_n = ap_const_logic_0)));
+                ap_block_state4_pp0_stage0_iter1 <= (((icmp_ln109_reg_205 = ap_const_lv1_0) and (call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst1_V_V_empty_n = ap_const_logic_0)) or ((icmp_ln109_reg_205 = ap_const_lv1_0) and (dst_V_V_empty_n = ap_const_logic_0)));
     end process;
 
 
@@ -416,16 +416,16 @@ begin
     end process;
 
 
-    call_ln115_write797_fu_112_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001_ignoreCallOp37)
+    call_ln115_write798_fu_112_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001_ignoreCallOp37)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001_ignoreCallOp37))) then 
-            call_ln115_write797_fu_112_ap_ce <= ap_const_logic_1;
+            call_ln115_write798_fu_112_ap_ce <= ap_const_logic_1;
         else 
-            call_ln115_write797_fu_112_ap_ce <= ap_const_logic_0;
+            call_ln115_write798_fu_112_ap_ce <= ap_const_logic_0;
         end if; 
     end process;
 
-    call_ln115_write797_fu_112_ap_start <= call_ln115_write797_fu_112_ap_start_reg;
+    call_ln115_write798_fu_112_ap_start <= call_ln115_write798_fu_112_ap_start_reg;
 
     dst1_V_V_blk_n_assign_proc : process(dst1_V_V_empty_n, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln109_reg_205)
     begin
@@ -493,21 +493,21 @@ begin
     end process;
 
 
-    p_dst2_data_V_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln109_reg_205, call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
+    p_dst2_data_V_blk_n_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln109_reg_205, call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n)
     begin
         if (((icmp_ln109_reg_205 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            p_dst2_data_V_blk_n <= call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_blk_n;
+            p_dst2_data_V_blk_n <= call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_blk_n;
         else 
             p_dst2_data_V_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
-    p_dst2_data_V_din <= call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_din;
+    p_dst2_data_V_din <= call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_din;
 
-    p_dst2_data_V_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln109_reg_205, call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_write)
+    p_dst2_data_V_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln109_reg_205, call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_write)
     begin
         if (((icmp_ln109_reg_205 = ap_const_lv1_0) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            p_dst2_data_V_write <= call_ln115_write797_fu_112_Mat_0_180_320_1_data_V_addr_write;
+            p_dst2_data_V_write <= call_ln115_write798_fu_112_Mat_0_180_320_1_data_V_addr_write;
         else 
             p_dst2_data_V_write <= ap_const_logic_0;
         end if; 

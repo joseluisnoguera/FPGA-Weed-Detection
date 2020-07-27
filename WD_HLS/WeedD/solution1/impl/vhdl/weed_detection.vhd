@@ -73,20 +73,20 @@ architecture behav of weed_detection is
     signal img_in_0_rows_channe_full_n : STD_LOGIC;
     signal ap_sync_reg_channel_write_img_in_0_rows_channe : STD_LOGIC := '0';
     signal ap_sync_channel_write_img_in_0_rows_channe : STD_LOGIC;
-    signal duplicateMat_2762_U0_ap_start : STD_LOGIC;
-    signal duplicateMat_2762_U0_start_full_n : STD_LOGIC;
-    signal duplicateMat_2762_U0_start_out : STD_LOGIC;
-    signal duplicateMat_2762_U0_start_write : STD_LOGIC;
-    signal duplicateMat_2762_U0_p_src_cols_read : STD_LOGIC;
-    signal duplicateMat_2762_U0_p_src_data_V_read : STD_LOGIC;
-    signal duplicateMat_2762_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
-    signal duplicateMat_2762_U0_p_dst1_data_V_write : STD_LOGIC;
-    signal duplicateMat_2762_U0_p_dst2_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
-    signal duplicateMat_2762_U0_p_dst2_data_V_write : STD_LOGIC;
-    signal duplicateMat_2762_U0_ap_done : STD_LOGIC;
-    signal duplicateMat_2762_U0_ap_ready : STD_LOGIC;
-    signal duplicateMat_2762_U0_ap_idle : STD_LOGIC;
-    signal duplicateMat_2762_U0_ap_continue : STD_LOGIC;
+    signal duplicateMat_2763_U0_ap_start : STD_LOGIC;
+    signal duplicateMat_2763_U0_start_full_n : STD_LOGIC;
+    signal duplicateMat_2763_U0_start_out : STD_LOGIC;
+    signal duplicateMat_2763_U0_start_write : STD_LOGIC;
+    signal duplicateMat_2763_U0_p_src_cols_read : STD_LOGIC;
+    signal duplicateMat_2763_U0_p_src_data_V_read : STD_LOGIC;
+    signal duplicateMat_2763_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
+    signal duplicateMat_2763_U0_p_dst1_data_V_write : STD_LOGIC;
+    signal duplicateMat_2763_U0_p_dst2_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
+    signal duplicateMat_2763_U0_p_dst2_data_V_write : STD_LOGIC;
+    signal duplicateMat_2763_U0_ap_done : STD_LOGIC;
+    signal duplicateMat_2763_U0_ap_ready : STD_LOGIC;
+    signal duplicateMat_2763_U0_ap_idle : STD_LOGIC;
+    signal duplicateMat_2763_U0_ap_continue : STD_LOGIC;
     signal resizeNNBilinear_U0_ap_start : STD_LOGIC;
     signal resizeNNBilinear_U0_ap_done : STD_LOGIC;
     signal resizeNNBilinear_U0_ap_continue : STD_LOGIC;
@@ -116,16 +116,16 @@ architecture behav of weed_detection is
     signal segment_image_U0_img_in_data_V_read : STD_LOGIC;
     signal segment_image_U0_img_out_data_V_din : STD_LOGIC_VECTOR (0 downto 0);
     signal segment_image_U0_img_out_data_V_write : STD_LOGIC;
-    signal erode437_U0_ap_start : STD_LOGIC;
-    signal erode437_U0_ap_done : STD_LOGIC;
-    signal erode437_U0_ap_continue : STD_LOGIC;
-    signal erode437_U0_ap_idle : STD_LOGIC;
-    signal erode437_U0_ap_ready : STD_LOGIC;
-    signal erode437_U0_start_out : STD_LOGIC;
-    signal erode437_U0_start_write : STD_LOGIC;
-    signal erode437_U0_p_src_data_V_read : STD_LOGIC;
-    signal erode437_U0_p_dst_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal erode437_U0_p_dst_data_V_write : STD_LOGIC;
+    signal erode438_U0_ap_start : STD_LOGIC;
+    signal erode438_U0_ap_done : STD_LOGIC;
+    signal erode438_U0_ap_continue : STD_LOGIC;
+    signal erode438_U0_ap_idle : STD_LOGIC;
+    signal erode438_U0_ap_ready : STD_LOGIC;
+    signal erode438_U0_start_out : STD_LOGIC;
+    signal erode438_U0_start_write : STD_LOGIC;
+    signal erode438_U0_p_src_data_V_read : STD_LOGIC;
+    signal erode438_U0_p_dst_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal erode438_U0_p_dst_data_V_write : STD_LOGIC;
     signal remark_crop_lines_U0_ap_start : STD_LOGIC;
     signal remark_crop_lines_U0_ap_done : STD_LOGIC;
     signal remark_crop_lines_U0_ap_continue : STD_LOGIC;
@@ -137,19 +137,19 @@ architecture behav of weed_detection is
     signal remark_crop_lines_U0_eroded_1_data_V_write : STD_LOGIC;
     signal remark_crop_lines_U0_eroded_2_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal remark_crop_lines_U0_eroded_2_data_V_write : STD_LOGIC;
-    signal duplicateMat438_U0_ap_start : STD_LOGIC;
-    signal duplicateMat438_U0_start_full_n : STD_LOGIC;
-    signal duplicateMat438_U0_start_out : STD_LOGIC;
-    signal duplicateMat438_U0_start_write : STD_LOGIC;
-    signal duplicateMat438_U0_p_src_data_V_read : STD_LOGIC;
-    signal duplicateMat438_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal duplicateMat438_U0_p_dst1_data_V_write : STD_LOGIC;
-    signal duplicateMat438_U0_p_dst2_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal duplicateMat438_U0_p_dst2_data_V_write : STD_LOGIC;
-    signal duplicateMat438_U0_ap_done : STD_LOGIC;
-    signal duplicateMat438_U0_ap_ready : STD_LOGIC;
-    signal duplicateMat438_U0_ap_idle : STD_LOGIC;
-    signal duplicateMat438_U0_ap_continue : STD_LOGIC;
+    signal duplicateMat439_U0_ap_start : STD_LOGIC;
+    signal duplicateMat439_U0_start_full_n : STD_LOGIC;
+    signal duplicateMat439_U0_start_out : STD_LOGIC;
+    signal duplicateMat439_U0_start_write : STD_LOGIC;
+    signal duplicateMat439_U0_p_src_data_V_read : STD_LOGIC;
+    signal duplicateMat439_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal duplicateMat439_U0_p_dst1_data_V_write : STD_LOGIC;
+    signal duplicateMat439_U0_p_dst2_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal duplicateMat439_U0_p_dst2_data_V_write : STD_LOGIC;
+    signal duplicateMat439_U0_ap_done : STD_LOGIC;
+    signal duplicateMat439_U0_ap_ready : STD_LOGIC;
+    signal duplicateMat439_U0_ap_idle : STD_LOGIC;
+    signal duplicateMat439_U0_ap_continue : STD_LOGIC;
     signal get_12th_segment_U0_eroded_data_V_read : STD_LOGIC;
     signal get_12th_segment_U0_bottom_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal get_12th_segment_U0_bottom_data_V_write : STD_LOGIC;
@@ -208,15 +208,15 @@ architecture behav of weed_detection is
     signal resize_2_U0_p_src_data_V_read : STD_LOGIC;
     signal resize_2_U0_p_dst_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
     signal resize_2_U0_p_dst_data_V_write : STD_LOGIC;
-    signal add_2749_U0_ap_start : STD_LOGIC;
-    signal add_2749_U0_ap_done : STD_LOGIC;
-    signal add_2749_U0_ap_continue : STD_LOGIC;
-    signal add_2749_U0_ap_idle : STD_LOGIC;
-    signal add_2749_U0_ap_ready : STD_LOGIC;
-    signal add_2749_U0_p_src1_data_V_read : STD_LOGIC;
-    signal add_2749_U0_p_src2_data_V_read : STD_LOGIC;
-    signal add_2749_U0_p_dst_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
-    signal add_2749_U0_p_dst_data_V_write : STD_LOGIC;
+    signal add_2750_U0_ap_start : STD_LOGIC;
+    signal add_2750_U0_ap_done : STD_LOGIC;
+    signal add_2750_U0_ap_continue : STD_LOGIC;
+    signal add_2750_U0_ap_idle : STD_LOGIC;
+    signal add_2750_U0_ap_ready : STD_LOGIC;
+    signal add_2750_U0_p_src1_data_V_read : STD_LOGIC;
+    signal add_2750_U0_p_src2_data_V_read : STD_LOGIC;
+    signal add_2750_U0_p_dst_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
+    signal add_2750_U0_p_dst_data_V_write : STD_LOGIC;
     signal img_in_cols_c_full_n : STD_LOGIC;
     signal img_in_cols_c_dout : STD_LOGIC_VECTOR (11 downto 0);
     signal img_in_cols_c_empty_n : STD_LOGIC;
@@ -248,9 +248,9 @@ architecture behav of weed_detection is
     signal eroded_1_data_V_full_n : STD_LOGIC;
     signal eroded_1_data_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal eroded_1_data_V_empty_n : STD_LOGIC;
-    signal duplicateMat438_U0_p_src_data_V_full_n : STD_LOGIC;
-    signal duplicateMat438_U0_p_src_data_V_write : STD_LOGIC;
-    signal duplicateMat438_U0_p_src_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal duplicateMat439_U0_p_src_data_V_full_n : STD_LOGIC;
+    signal duplicateMat439_U0_p_src_data_V_write : STD_LOGIC;
+    signal duplicateMat439_U0_p_src_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal eroded_0b_data_V_full_n : STD_LOGIC;
     signal eroded_0b_data_V_dout : STD_LOGIC_VECTOR (7 downto 0);
     signal eroded_0b_data_V_empty_n : STD_LOGIC;
@@ -289,12 +289,12 @@ architecture behav of weed_detection is
     signal ap_sync_reg_weed_detection_Block_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_weed_detection_Block_U0_ap_ready : STD_LOGIC;
     signal weed_detection_Block_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    signal ap_sync_reg_duplicateMat_2762_U0_ap_ready : STD_LOGIC := '0';
-    signal ap_sync_duplicateMat_2762_U0_ap_ready : STD_LOGIC;
-    signal duplicateMat_2762_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    signal ap_sync_reg_duplicateMat438_U0_ap_ready : STD_LOGIC := '0';
-    signal ap_sync_duplicateMat438_U0_ap_ready : STD_LOGIC;
-    signal duplicateMat438_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    signal ap_sync_reg_duplicateMat_2763_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_duplicateMat_2763_U0_ap_ready : STD_LOGIC;
+    signal duplicateMat_2763_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    signal ap_sync_reg_duplicateMat439_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_duplicateMat439_U0_ap_ready : STD_LOGIC;
+    signal duplicateMat439_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal ap_sync_reg_zero_0_180_320_1_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_zero_0_180_320_1_U0_ap_ready : STD_LOGIC;
     signal zero_0_180_320_1_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
@@ -308,20 +308,20 @@ architecture behav of weed_detection is
     signal start_for_resizeNNBilinear_U0_full_n : STD_LOGIC;
     signal start_for_resizeNNBilinear_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_resizeNNBilinear_U0_empty_n : STD_LOGIC;
-    signal start_for_add_2749_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_add_2749_U0_full_n : STD_LOGIC;
-    signal start_for_add_2749_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_add_2749_U0_empty_n : STD_LOGIC;
+    signal start_for_add_2750_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_add_2750_U0_full_n : STD_LOGIC;
+    signal start_for_add_2750_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_add_2750_U0_empty_n : STD_LOGIC;
     signal resizeNNBilinear_U0_start_full_n : STD_LOGIC;
     signal resizeNNBilinear_U0_start_write : STD_LOGIC;
     signal start_for_segment_image_U0_din : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_segment_image_U0_full_n : STD_LOGIC;
     signal start_for_segment_image_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_segment_image_U0_empty_n : STD_LOGIC;
-    signal start_for_erode437_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_erode437_U0_full_n : STD_LOGIC;
-    signal start_for_erode437_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_erode437_U0_empty_n : STD_LOGIC;
+    signal start_for_erode438_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_erode438_U0_full_n : STD_LOGIC;
+    signal start_for_erode438_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_erode438_U0_empty_n : STD_LOGIC;
     signal start_for_remark_crop_lines_U0_din : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_remark_crop_lines_U0_full_n : STD_LOGIC;
     signal start_for_remark_crop_lines_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
@@ -354,8 +354,8 @@ architecture behav of weed_detection is
     signal start_for_resize_2_U0_empty_n : STD_LOGIC;
     signal resize_2_U0_start_full_n : STD_LOGIC;
     signal resize_2_U0_start_write : STD_LOGIC;
-    signal add_2749_U0_start_full_n : STD_LOGIC;
-    signal add_2749_U0_start_write : STD_LOGIC;
+    signal add_2750_U0_start_full_n : STD_LOGIC;
+    signal add_2750_U0_start_write : STD_LOGIC;
 
     component weed_detection_entry IS
     port (
@@ -395,7 +395,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component duplicateMat_2762 IS
+    component duplicateMat_2763 IS
     port (
         ap_start : IN STD_LOGIC;
         start_full_n : IN STD_LOGIC;
@@ -489,7 +489,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component erode437 IS
+    component erode438 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -534,7 +534,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component duplicateMat438 IS
+    component duplicateMat439 IS
     port (
         ap_start : IN STD_LOGIC;
         start_full_n : IN STD_LOGIC;
@@ -684,7 +684,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component add_2749 IS
+    component add_2750 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -825,7 +825,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_get_vegbjl IS
+    component start_for_get_vegbll IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -840,7 +840,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_resizeNbkl IS
+    component start_for_resizeNbml IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -855,7 +855,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_add_274bll IS
+    component start_for_add_275bnm IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -870,7 +870,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_segmentbml IS
+    component start_for_segmentbom IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -885,7 +885,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_erode43bnm IS
+    component start_for_erode43bpm IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -900,7 +900,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_remark_bom IS
+    component start_for_remark_bqm IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -915,7 +915,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_get_12tbpm IS
+    component start_for_get_12tbrm IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -930,7 +930,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_get_crobqm IS
+    component start_for_get_crobsm IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -945,7 +945,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_sectorsbrm IS
+    component start_for_sectorsbtn IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -975,7 +975,7 @@ architecture behav of weed_detection is
     end component;
 
 
-    component start_for_resize_bsm IS
+    component start_for_resize_bun IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -1026,34 +1026,34 @@ begin
         resized_cols_out_full_n => resized_cols_channel_full_n,
         resized_cols_out_write => weed_detection_Block_U0_resized_cols_out_write);
 
-    duplicateMat_2762_U0 : component duplicateMat_2762
+    duplicateMat_2763_U0 : component duplicateMat_2763
     port map (
-        ap_start => duplicateMat_2762_U0_ap_start,
-        start_full_n => duplicateMat_2762_U0_start_full_n,
-        start_out => duplicateMat_2762_U0_start_out,
-        start_write => duplicateMat_2762_U0_start_write,
+        ap_start => duplicateMat_2763_U0_ap_start,
+        start_full_n => duplicateMat_2763_U0_start_full_n,
+        start_out => duplicateMat_2763_U0_start_out,
+        start_write => duplicateMat_2763_U0_start_write,
         p_src_cols_dout => img_in_cols_c_dout,
         p_src_cols_empty_n => img_in_cols_c_empty_n,
-        p_src_cols_read => duplicateMat_2762_U0_p_src_cols_read,
+        p_src_cols_read => duplicateMat_2763_U0_p_src_cols_read,
         p_src_data_V_dout => img_in_data_V_dout,
         p_src_data_V_empty_n => img_in_data_V_empty_n,
-        p_src_data_V_read => duplicateMat_2762_U0_p_src_data_V_read,
+        p_src_data_V_read => duplicateMat_2763_U0_p_src_data_V_read,
         p_dst1_rows => img_in_0_rows_channe_dout,
         p_dst1_cols => img_in_0_cols_channe_dout,
-        p_dst1_data_V_din => duplicateMat_2762_U0_p_dst1_data_V_din,
+        p_dst1_data_V_din => duplicateMat_2763_U0_p_dst1_data_V_din,
         p_dst1_data_V_full_n => img_in_0_data_V_full_n,
-        p_dst1_data_V_write => duplicateMat_2762_U0_p_dst1_data_V_write,
-        p_dst2_data_V_din => duplicateMat_2762_U0_p_dst2_data_V_din,
+        p_dst1_data_V_write => duplicateMat_2763_U0_p_dst1_data_V_write,
+        p_dst2_data_V_din => duplicateMat_2763_U0_p_dst2_data_V_din,
         p_dst2_data_V_full_n => img_in_1_data_V_full_n,
-        p_dst2_data_V_write => duplicateMat_2762_U0_p_dst2_data_V_write,
+        p_dst2_data_V_write => duplicateMat_2763_U0_p_dst2_data_V_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst,
         p_dst1_rows_ap_vld => ap_const_logic_0,
         p_dst1_cols_ap_vld => ap_const_logic_0,
-        ap_done => duplicateMat_2762_U0_ap_done,
-        ap_ready => duplicateMat_2762_U0_ap_ready,
-        ap_idle => duplicateMat_2762_U0_ap_idle,
-        ap_continue => duplicateMat_2762_U0_ap_continue);
+        ap_done => duplicateMat_2763_U0_ap_done,
+        ap_ready => duplicateMat_2763_U0_ap_ready,
+        ap_idle => duplicateMat_2763_U0_ap_idle,
+        ap_continue => duplicateMat_2763_U0_ap_continue);
 
     resizeNNBilinear_U0 : component resizeNNBilinear
     port map (
@@ -1098,7 +1098,7 @@ begin
         ap_clk => ap_clk,
         ap_rst => ap_rst,
         ap_start => segment_image_U0_ap_start,
-        start_full_n => start_for_erode437_U0_full_n,
+        start_full_n => start_for_erode438_U0_full_n,
         ap_done => segment_image_U0_ap_done,
         ap_continue => segment_image_U0_ap_continue,
         ap_idle => segment_image_U0_ap_idle,
@@ -1112,24 +1112,24 @@ begin
         img_out_data_V_full_n => segmented_data_V_full_n,
         img_out_data_V_write => segment_image_U0_img_out_data_V_write);
 
-    erode437_U0 : component erode437
+    erode438_U0 : component erode438
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => erode437_U0_ap_start,
+        ap_start => erode438_U0_ap_start,
         start_full_n => start_for_remark_crop_lines_U0_full_n,
-        ap_done => erode437_U0_ap_done,
-        ap_continue => erode437_U0_ap_continue,
-        ap_idle => erode437_U0_ap_idle,
-        ap_ready => erode437_U0_ap_ready,
-        start_out => erode437_U0_start_out,
-        start_write => erode437_U0_start_write,
+        ap_done => erode438_U0_ap_done,
+        ap_continue => erode438_U0_ap_continue,
+        ap_idle => erode438_U0_ap_idle,
+        ap_ready => erode438_U0_ap_ready,
+        start_out => erode438_U0_start_out,
+        start_write => erode438_U0_start_write,
         p_src_data_V_dout => segmented_data_V_dout,
         p_src_data_V_empty_n => segmented_data_V_empty_n,
-        p_src_data_V_read => erode437_U0_p_src_data_V_read,
-        p_dst_data_V_din => erode437_U0_p_dst_data_V_din,
+        p_src_data_V_read => erode438_U0_p_src_data_V_read,
+        p_dst_data_V_din => erode438_U0_p_dst_data_V_din,
         p_dst_data_V_full_n => eroded_0a_data_V_full_n,
-        p_dst_data_V_write => erode437_U0_p_dst_data_V_write);
+        p_dst_data_V_write => erode438_U0_p_dst_data_V_write);
 
     remark_crop_lines_U0 : component remark_crop_lines
     port map (
@@ -1153,27 +1153,27 @@ begin
         eroded_2_data_V_full_n => eroded_0b_data_V_full_n,
         eroded_2_data_V_write => remark_crop_lines_U0_eroded_2_data_V_write);
 
-    duplicateMat438_U0 : component duplicateMat438
+    duplicateMat439_U0 : component duplicateMat439
     port map (
-        ap_start => duplicateMat438_U0_ap_start,
-        start_full_n => duplicateMat438_U0_start_full_n,
-        start_out => duplicateMat438_U0_start_out,
-        start_write => duplicateMat438_U0_start_write,
+        ap_start => duplicateMat439_U0_ap_start,
+        start_full_n => duplicateMat439_U0_start_full_n,
+        start_out => duplicateMat439_U0_start_out,
+        start_write => duplicateMat439_U0_start_write,
         p_src_data_V_dout => ap_const_lv8_0,
         p_src_data_V_empty_n => ap_const_logic_1,
-        p_src_data_V_read => duplicateMat438_U0_p_src_data_V_read,
-        p_dst1_data_V_din => duplicateMat438_U0_p_dst1_data_V_din,
+        p_src_data_V_read => duplicateMat439_U0_p_src_data_V_read,
+        p_dst1_data_V_din => duplicateMat439_U0_p_dst1_data_V_din,
         p_dst1_data_V_full_n => eroded_1a_data_V_full_n,
-        p_dst1_data_V_write => duplicateMat438_U0_p_dst1_data_V_write,
-        p_dst2_data_V_din => duplicateMat438_U0_p_dst2_data_V_din,
+        p_dst1_data_V_write => duplicateMat439_U0_p_dst1_data_V_write,
+        p_dst2_data_V_din => duplicateMat439_U0_p_dst2_data_V_din,
         p_dst2_data_V_full_n => eroded_1b_data_V_full_n,
-        p_dst2_data_V_write => duplicateMat438_U0_p_dst2_data_V_write,
+        p_dst2_data_V_write => duplicateMat439_U0_p_dst2_data_V_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_done => duplicateMat438_U0_ap_done,
-        ap_ready => duplicateMat438_U0_ap_ready,
-        ap_idle => duplicateMat438_U0_ap_idle,
-        ap_continue => duplicateMat438_U0_ap_continue);
+        ap_done => duplicateMat439_U0_ap_done,
+        ap_ready => duplicateMat439_U0_ap_ready,
+        ap_idle => duplicateMat439_U0_ap_idle,
+        ap_continue => duplicateMat439_U0_ap_continue);
 
     get_12th_segment_U0 : component get_12th_segment
     port map (
@@ -1289,24 +1289,24 @@ begin
         p_dst_data_V_full_n => rs_mask_img_out_data_full_n,
         p_dst_data_V_write => resize_2_U0_p_dst_data_V_write);
 
-    add_2749_U0 : component add_2749
+    add_2750_U0 : component add_2750
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => add_2749_U0_ap_start,
-        ap_done => add_2749_U0_ap_done,
-        ap_continue => add_2749_U0_ap_continue,
-        ap_idle => add_2749_U0_ap_idle,
-        ap_ready => add_2749_U0_ap_ready,
+        ap_start => add_2750_U0_ap_start,
+        ap_done => add_2750_U0_ap_done,
+        ap_continue => add_2750_U0_ap_continue,
+        ap_idle => add_2750_U0_ap_idle,
+        ap_ready => add_2750_U0_ap_ready,
         p_src1_data_V_dout => img_in_1_data_V_dout,
         p_src1_data_V_empty_n => img_in_1_data_V_empty_n,
-        p_src1_data_V_read => add_2749_U0_p_src1_data_V_read,
+        p_src1_data_V_read => add_2750_U0_p_src1_data_V_read,
         p_src2_data_V_dout => rs_mask_img_out_data_dout,
         p_src2_data_V_empty_n => rs_mask_img_out_data_empty_n,
-        p_src2_data_V_read => add_2749_U0_p_src2_data_V_read,
-        p_dst_data_V_din => add_2749_U0_p_dst_data_V_din,
+        p_src2_data_V_read => add_2750_U0_p_src2_data_V_read,
+        p_dst_data_V_din => add_2750_U0_p_dst_data_V_din,
         p_dst_data_V_full_n => img_out_data_V_full_n,
-        p_dst_data_V_write => add_2749_U0_p_dst_data_V_write);
+        p_dst_data_V_write => add_2750_U0_p_dst_data_V_write);
 
     img_in_cols_c_U : component fifo_w12_d3_A
     port map (
@@ -1319,7 +1319,7 @@ begin
         if_write => weed_detection_entry_U0_img_in_cols_out_write,
         if_dout => img_in_cols_c_dout,
         if_empty_n => img_in_cols_c_empty_n,
-        if_read => duplicateMat_2762_U0_p_src_cols_read);
+        if_read => duplicateMat_2763_U0_p_src_cols_read);
 
     img_in_0_rows_channe_U : component fifo_w11_d2_A
     port map (
@@ -1332,7 +1332,7 @@ begin
         if_write => ap_channel_done_img_in_0_rows_channe,
         if_dout => img_in_0_rows_channe_dout,
         if_empty_n => img_in_0_rows_channe_empty_n,
-        if_read => duplicateMat_2762_U0_ap_ready);
+        if_read => duplicateMat_2763_U0_ap_ready);
 
     img_in_0_cols_channe_U : component fifo_w12_d2_A_x
     port map (
@@ -1345,7 +1345,7 @@ begin
         if_write => ap_channel_done_img_in_0_cols_channe,
         if_dout => img_in_0_cols_channe_dout,
         if_empty_n => img_in_0_cols_channe_empty_n,
-        if_read => duplicateMat_2762_U0_ap_ready);
+        if_read => duplicateMat_2763_U0_ap_ready);
 
     resized_cols_channel_U : component fifo_w10_d4_A_x
     port map (
@@ -1366,9 +1366,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat_2762_U0_p_dst1_data_V_din,
+        if_din => duplicateMat_2763_U0_p_dst1_data_V_din,
         if_full_n => img_in_0_data_V_full_n,
-        if_write => duplicateMat_2762_U0_p_dst1_data_V_write,
+        if_write => duplicateMat_2763_U0_p_dst1_data_V_write,
         if_dout => img_in_0_data_V_dout,
         if_empty_n => img_in_0_data_V_empty_n,
         if_read => resizeNNBilinear_U0_imgInput_data_V_read);
@@ -1379,12 +1379,12 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat_2762_U0_p_dst2_data_V_din,
+        if_din => duplicateMat_2763_U0_p_dst2_data_V_din,
         if_full_n => img_in_1_data_V_full_n,
-        if_write => duplicateMat_2762_U0_p_dst2_data_V_write,
+        if_write => duplicateMat_2763_U0_p_dst2_data_V_write,
         if_dout => img_in_1_data_V_dout,
         if_empty_n => img_in_1_data_V_empty_n,
-        if_read => add_2749_U0_p_src1_data_V_read);
+        if_read => add_2750_U0_p_src1_data_V_read);
 
     resized_data_V_U : component fifo_w24_d1_A_x
     port map (
@@ -1423,7 +1423,7 @@ begin
         if_write => segment_image_U0_img_out_data_V_write,
         if_dout => segmented_data_V_dout,
         if_empty_n => segmented_data_V_empty_n,
-        if_read => erode437_U0_p_src_data_V_read);
+        if_read => erode438_U0_p_src_data_V_read);
 
     eroded_0a_data_V_U : component fifo_w8_d1_A_x
     port map (
@@ -1431,9 +1431,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => erode437_U0_p_dst_data_V_din,
+        if_din => erode438_U0_p_dst_data_V_din,
         if_full_n => eroded_0a_data_V_full_n,
-        if_write => erode437_U0_p_dst_data_V_write,
+        if_write => erode438_U0_p_dst_data_V_write,
         if_dout => eroded_0a_data_V_dout,
         if_empty_n => eroded_0a_data_V_empty_n,
         if_read => remark_crop_lines_U0_eroded_0_data_V_read);
@@ -1444,9 +1444,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat438_U0_p_src_data_V_din,
+        if_din => duplicateMat439_U0_p_src_data_V_din,
         if_full_n => eroded_1_data_V_full_n,
-        if_write => duplicateMat438_U0_p_src_data_V_write,
+        if_write => duplicateMat439_U0_p_src_data_V_write,
         if_dout => eroded_1_data_V_dout,
         if_empty_n => eroded_1_data_V_empty_n,
         if_read => remark_crop_lines_U0_eroded_1_data_V_read);
@@ -1470,9 +1470,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat438_U0_p_dst1_data_V_din,
+        if_din => duplicateMat439_U0_p_dst1_data_V_din,
         if_full_n => eroded_1a_data_V_full_n,
-        if_write => duplicateMat438_U0_p_dst1_data_V_write,
+        if_write => duplicateMat439_U0_p_dst1_data_V_write,
         if_dout => eroded_1a_data_V_dout,
         if_empty_n => eroded_1a_data_V_empty_n,
         if_read => get_12th_segment_U0_eroded_data_V_read);
@@ -1483,9 +1483,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat438_U0_p_dst2_data_V_din,
+        if_din => duplicateMat439_U0_p_dst2_data_V_din,
         if_full_n => eroded_1b_data_V_full_n,
-        if_write => duplicateMat438_U0_p_dst2_data_V_write,
+        if_write => duplicateMat439_U0_p_dst2_data_V_write,
         if_dout => eroded_1b_data_V_dout,
         if_empty_n => eroded_1b_data_V_empty_n,
         if_read => get_crop_lines_U0_eroded_data_V_read);
@@ -1566,9 +1566,9 @@ begin
         if_write => resize_2_U0_p_dst_data_V_write,
         if_dout => rs_mask_img_out_data_dout,
         if_empty_n => rs_mask_img_out_data_empty_n,
-        if_read => add_2749_U0_p_src2_data_V_read);
+        if_read => add_2750_U0_p_src2_data_V_read);
 
-    start_for_get_vegbjl_U : component start_for_get_vegbjl
+    start_for_get_vegbll_U : component start_for_get_vegbll
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1581,7 +1581,7 @@ begin
         if_empty_n => start_for_get_vegetation_image_4_U0_empty_n,
         if_read => get_vegetation_image_4_U0_ap_ready);
 
-    start_for_resizeNbkl_U : component start_for_resizeNbkl
+    start_for_resizeNbml_U : component start_for_resizeNbml
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1589,25 +1589,25 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_resizeNNBilinear_U0_din,
         if_full_n => start_for_resizeNNBilinear_U0_full_n,
-        if_write => duplicateMat_2762_U0_start_write,
+        if_write => duplicateMat_2763_U0_start_write,
         if_dout => start_for_resizeNNBilinear_U0_dout,
         if_empty_n => start_for_resizeNNBilinear_U0_empty_n,
         if_read => resizeNNBilinear_U0_ap_ready);
 
-    start_for_add_274bll_U : component start_for_add_274bll
+    start_for_add_275bnm_U : component start_for_add_275bnm
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => start_for_add_2749_U0_din,
-        if_full_n => start_for_add_2749_U0_full_n,
-        if_write => duplicateMat_2762_U0_start_write,
-        if_dout => start_for_add_2749_U0_dout,
-        if_empty_n => start_for_add_2749_U0_empty_n,
-        if_read => add_2749_U0_ap_ready);
+        if_din => start_for_add_2750_U0_din,
+        if_full_n => start_for_add_2750_U0_full_n,
+        if_write => duplicateMat_2763_U0_start_write,
+        if_dout => start_for_add_2750_U0_dout,
+        if_empty_n => start_for_add_2750_U0_empty_n,
+        if_read => add_2750_U0_ap_ready);
 
-    start_for_segmentbml_U : component start_for_segmentbml
+    start_for_segmentbom_U : component start_for_segmentbom
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1620,20 +1620,20 @@ begin
         if_empty_n => start_for_segment_image_U0_empty_n,
         if_read => segment_image_U0_ap_ready);
 
-    start_for_erode43bnm_U : component start_for_erode43bnm
+    start_for_erode43bpm_U : component start_for_erode43bpm
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => start_for_erode437_U0_din,
-        if_full_n => start_for_erode437_U0_full_n,
+        if_din => start_for_erode438_U0_din,
+        if_full_n => start_for_erode438_U0_full_n,
         if_write => segment_image_U0_start_write,
-        if_dout => start_for_erode437_U0_dout,
-        if_empty_n => start_for_erode437_U0_empty_n,
-        if_read => erode437_U0_ap_ready);
+        if_dout => start_for_erode438_U0_dout,
+        if_empty_n => start_for_erode438_U0_empty_n,
+        if_read => erode438_U0_ap_ready);
 
-    start_for_remark_bom_U : component start_for_remark_bom
+    start_for_remark_bqm_U : component start_for_remark_bqm
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1641,12 +1641,12 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_remark_crop_lines_U0_din,
         if_full_n => start_for_remark_crop_lines_U0_full_n,
-        if_write => erode437_U0_start_write,
+        if_write => erode438_U0_start_write,
         if_dout => start_for_remark_crop_lines_U0_dout,
         if_empty_n => start_for_remark_crop_lines_U0_empty_n,
         if_read => remark_crop_lines_U0_ap_ready);
 
-    start_for_get_12tbpm_U : component start_for_get_12tbpm
+    start_for_get_12tbrm_U : component start_for_get_12tbrm
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1654,12 +1654,12 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_get_12th_segment_U0_din,
         if_full_n => start_for_get_12th_segment_U0_full_n,
-        if_write => duplicateMat438_U0_start_write,
+        if_write => duplicateMat439_U0_start_write,
         if_dout => start_for_get_12th_segment_U0_dout,
         if_empty_n => start_for_get_12th_segment_U0_empty_n,
         if_read => get_12th_segment_U0_ap_ready);
 
-    start_for_get_crobqm_U : component start_for_get_crobqm
+    start_for_get_crobsm_U : component start_for_get_crobsm
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1667,12 +1667,12 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_get_crop_lines_U0_din,
         if_full_n => start_for_get_crop_lines_U0_full_n,
-        if_write => duplicateMat438_U0_start_write,
+        if_write => duplicateMat439_U0_start_write,
         if_dout => start_for_get_crop_lines_U0_dout,
         if_empty_n => start_for_get_crop_lines_U0_empty_n,
         if_read => get_crop_lines_U0_ap_ready);
 
-    start_for_sectorsbrm_U : component start_for_sectorsbrm
+    start_for_sectorsbtn_U : component start_for_sectorsbtn
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1698,7 +1698,7 @@ begin
         if_empty_n => start_for_merge_U0_empty_n,
         if_read => merge_U0_ap_ready);
 
-    start_for_resize_bsm_U : component start_for_resize_bsm
+    start_for_resize_bun_U : component start_for_resize_bun
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -1747,32 +1747,32 @@ begin
     end process;
 
 
-    ap_sync_reg_duplicateMat438_U0_ap_ready_assign_proc : process(ap_clk)
+    ap_sync_reg_duplicateMat439_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                ap_sync_reg_duplicateMat438_U0_ap_ready <= ap_const_logic_0;
+                ap_sync_reg_duplicateMat439_U0_ap_ready <= ap_const_logic_0;
             else
                 if (((real_start and ap_sync_ready) = ap_const_logic_1)) then 
-                    ap_sync_reg_duplicateMat438_U0_ap_ready <= ap_const_logic_0;
+                    ap_sync_reg_duplicateMat439_U0_ap_ready <= ap_const_logic_0;
                 else 
-                    ap_sync_reg_duplicateMat438_U0_ap_ready <= ap_sync_duplicateMat438_U0_ap_ready;
+                    ap_sync_reg_duplicateMat439_U0_ap_ready <= ap_sync_duplicateMat439_U0_ap_ready;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_sync_reg_duplicateMat_2762_U0_ap_ready_assign_proc : process(ap_clk)
+    ap_sync_reg_duplicateMat_2763_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                ap_sync_reg_duplicateMat_2762_U0_ap_ready <= ap_const_logic_0;
+                ap_sync_reg_duplicateMat_2763_U0_ap_ready <= ap_const_logic_0;
             else
                 if (((real_start and ap_sync_ready) = ap_const_logic_1)) then 
-                    ap_sync_reg_duplicateMat_2762_U0_ap_ready <= ap_const_logic_0;
+                    ap_sync_reg_duplicateMat_2763_U0_ap_ready <= ap_const_logic_0;
                 else 
-                    ap_sync_reg_duplicateMat_2762_U0_ap_ready <= ap_sync_duplicateMat_2762_U0_ap_ready;
+                    ap_sync_reg_duplicateMat_2763_U0_ap_ready <= ap_sync_duplicateMat_2763_U0_ap_ready;
                 end if; 
             end if;
         end if;
@@ -1843,24 +1843,24 @@ begin
     end process;
 
 
-    duplicateMat438_U0_ap_ready_count_assign_proc : process (ap_clk)
+    duplicateMat439_U0_ap_ready_count_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((duplicateMat438_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
-                duplicateMat438_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat438_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
-            elsif (((ap_sync_ready = ap_const_logic_0) and (duplicateMat438_U0_ap_ready = ap_const_logic_1))) then 
-                duplicateMat438_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat438_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
+            if (((duplicateMat439_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
+                duplicateMat439_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat439_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
+            elsif (((ap_sync_ready = ap_const_logic_0) and (duplicateMat439_U0_ap_ready = ap_const_logic_1))) then 
+                duplicateMat439_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat439_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
             end if; 
         end if;
     end process;
 
-    duplicateMat_2762_U0_ap_ready_count_assign_proc : process (ap_clk)
+    duplicateMat_2763_U0_ap_ready_count_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((duplicateMat_2762_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
-                duplicateMat_2762_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat_2762_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
-            elsif (((ap_sync_ready = ap_const_logic_0) and (duplicateMat_2762_U0_ap_ready = ap_const_logic_1))) then 
-                duplicateMat_2762_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat_2762_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
+            if (((duplicateMat_2763_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
+                duplicateMat_2763_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat_2763_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
+            elsif (((ap_sync_ready = ap_const_logic_0) and (duplicateMat_2763_U0_ap_ready = ap_const_logic_1))) then 
+                duplicateMat_2763_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat_2763_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
             end if; 
         end if;
     end process;
@@ -1897,36 +1897,36 @@ begin
             end if; 
         end if;
     end process;
-    add_2749_U0_ap_continue <= ap_sync_continue;
-    add_2749_U0_ap_start <= start_for_add_2749_U0_empty_n;
-    add_2749_U0_start_full_n <= ap_const_logic_1;
-    add_2749_U0_start_write <= ap_const_logic_0;
+    add_2750_U0_ap_continue <= ap_sync_continue;
+    add_2750_U0_ap_start <= start_for_add_2750_U0_empty_n;
+    add_2750_U0_start_full_n <= ap_const_logic_1;
+    add_2750_U0_start_write <= ap_const_logic_0;
     ap_channel_done_img_in_0_cols_channe <= (weed_detection_Block_U0_ap_done and (ap_sync_reg_channel_write_img_in_0_cols_channe xor ap_const_logic_1));
     ap_channel_done_img_in_0_rows_channe <= (weed_detection_Block_U0_ap_done and (ap_sync_reg_channel_write_img_in_0_rows_channe xor ap_const_logic_1));
     ap_done <= ap_sync_done;
-    ap_idle <= (zero_0_180_320_1_U0_ap_idle and weed_detection_entry_U0_ap_idle and weed_detection_Block_U0_ap_idle and segment_image_U0_ap_idle and sectors_weed_classif_U0_ap_idle and resize_2_U0_ap_idle and resizeNNBilinear_U0_ap_idle and remark_crop_lines_U0_ap_idle and merge_U0_ap_idle and get_vegetation_image_4_U0_ap_idle and get_crop_lines_U0_ap_idle and get_12th_segment_U0_ap_idle and (img_in_0_cols_channe_empty_n xor ap_const_logic_1) and (img_in_0_rows_channe_empty_n xor ap_const_logic_1) and erode437_U0_ap_idle and duplicateMat_2762_U0_ap_idle and duplicateMat438_U0_ap_idle and add_2749_U0_ap_idle);
+    ap_idle <= (zero_0_180_320_1_U0_ap_idle and weed_detection_entry_U0_ap_idle and weed_detection_Block_U0_ap_idle and segment_image_U0_ap_idle and sectors_weed_classif_U0_ap_idle and resize_2_U0_ap_idle and resizeNNBilinear_U0_ap_idle and remark_crop_lines_U0_ap_idle and merge_U0_ap_idle and get_vegetation_image_4_U0_ap_idle and get_crop_lines_U0_ap_idle and get_12th_segment_U0_ap_idle and (img_in_0_cols_channe_empty_n xor ap_const_logic_1) and (img_in_0_rows_channe_empty_n xor ap_const_logic_1) and erode438_U0_ap_idle and duplicateMat_2763_U0_ap_idle and duplicateMat439_U0_ap_idle and add_2750_U0_ap_idle);
     ap_ready <= internal_ap_ready;
     ap_sync_channel_write_img_in_0_cols_channe <= ((img_in_0_cols_channe_full_n and ap_channel_done_img_in_0_cols_channe) or ap_sync_reg_channel_write_img_in_0_cols_channe);
     ap_sync_channel_write_img_in_0_rows_channe <= ((img_in_0_rows_channe_full_n and ap_channel_done_img_in_0_rows_channe) or ap_sync_reg_channel_write_img_in_0_rows_channe);
     ap_sync_continue <= (ap_sync_done and ap_continue);
-    ap_sync_done <= (sectors_weed_classif_U0_ap_done and add_2749_U0_ap_done);
-    ap_sync_duplicateMat438_U0_ap_ready <= (duplicateMat438_U0_ap_ready or ap_sync_reg_duplicateMat438_U0_ap_ready);
-    ap_sync_duplicateMat_2762_U0_ap_ready <= (duplicateMat_2762_U0_ap_ready or ap_sync_reg_duplicateMat_2762_U0_ap_ready);
-    ap_sync_ready <= (ap_sync_zero_0_180_320_1_U0_ap_ready and ap_sync_weed_detection_entry_U0_ap_ready and ap_sync_weed_detection_Block_U0_ap_ready and ap_sync_duplicateMat_2762_U0_ap_ready and ap_sync_duplicateMat438_U0_ap_ready);
+    ap_sync_done <= (sectors_weed_classif_U0_ap_done and add_2750_U0_ap_done);
+    ap_sync_duplicateMat439_U0_ap_ready <= (duplicateMat439_U0_ap_ready or ap_sync_reg_duplicateMat439_U0_ap_ready);
+    ap_sync_duplicateMat_2763_U0_ap_ready <= (duplicateMat_2763_U0_ap_ready or ap_sync_reg_duplicateMat_2763_U0_ap_ready);
+    ap_sync_ready <= (ap_sync_zero_0_180_320_1_U0_ap_ready and ap_sync_weed_detection_entry_U0_ap_ready and ap_sync_weed_detection_Block_U0_ap_ready and ap_sync_duplicateMat_2763_U0_ap_ready and ap_sync_duplicateMat439_U0_ap_ready);
     ap_sync_weed_detection_Block_U0_ap_ready <= (weed_detection_Block_U0_ap_ready or ap_sync_reg_weed_detection_Block_U0_ap_ready);
     ap_sync_weed_detection_entry_U0_ap_ready <= (weed_detection_entry_U0_ap_ready or ap_sync_reg_weed_detection_entry_U0_ap_ready);
     ap_sync_zero_0_180_320_1_U0_ap_ready <= (zero_0_180_320_1_U0_ap_ready or ap_sync_reg_zero_0_180_320_1_U0_ap_ready);
-    duplicateMat438_U0_ap_continue <= ap_const_logic_1;
-    duplicateMat438_U0_ap_start <= (real_start and (ap_sync_reg_duplicateMat438_U0_ap_ready xor ap_const_logic_1));
-    duplicateMat438_U0_p_src_data_V_din <= ap_const_lv8_0;
-    duplicateMat438_U0_p_src_data_V_full_n <= eroded_1_data_V_full_n;
-    duplicateMat438_U0_p_src_data_V_write <= ap_const_logic_0;
-    duplicateMat438_U0_start_full_n <= (start_for_get_crop_lines_U0_full_n and start_for_get_12th_segment_U0_full_n);
-    duplicateMat_2762_U0_ap_continue <= ap_const_logic_1;
-    duplicateMat_2762_U0_ap_start <= (real_start and img_in_0_rows_channe_empty_n and img_in_0_cols_channe_empty_n and (ap_sync_reg_duplicateMat_2762_U0_ap_ready xor ap_const_logic_1));
-    duplicateMat_2762_U0_start_full_n <= (start_for_resizeNNBilinear_U0_full_n and start_for_add_2749_U0_full_n);
-    erode437_U0_ap_continue <= ap_const_logic_1;
-    erode437_U0_ap_start <= start_for_erode437_U0_empty_n;
+    duplicateMat439_U0_ap_continue <= ap_const_logic_1;
+    duplicateMat439_U0_ap_start <= (real_start and (ap_sync_reg_duplicateMat439_U0_ap_ready xor ap_const_logic_1));
+    duplicateMat439_U0_p_src_data_V_din <= ap_const_lv8_0;
+    duplicateMat439_U0_p_src_data_V_full_n <= eroded_1_data_V_full_n;
+    duplicateMat439_U0_p_src_data_V_write <= ap_const_logic_0;
+    duplicateMat439_U0_start_full_n <= (start_for_get_crop_lines_U0_full_n and start_for_get_12th_segment_U0_full_n);
+    duplicateMat_2763_U0_ap_continue <= ap_const_logic_1;
+    duplicateMat_2763_U0_ap_start <= (real_start and img_in_0_rows_channe_empty_n and img_in_0_cols_channe_empty_n and (ap_sync_reg_duplicateMat_2763_U0_ap_ready xor ap_const_logic_1));
+    duplicateMat_2763_U0_start_full_n <= (start_for_resizeNNBilinear_U0_full_n and start_for_add_2750_U0_full_n);
+    erode438_U0_ap_continue <= ap_const_logic_1;
+    erode438_U0_ap_start <= start_for_erode438_U0_empty_n;
     get_12th_segment_U0_ap_continue <= ap_const_logic_1;
     get_12th_segment_U0_ap_start <= start_for_get_12th_segment_U0_empty_n;
     get_12th_segment_U0_start_full_n <= ap_const_logic_1;
@@ -1935,9 +1935,9 @@ begin
     get_crop_lines_U0_ap_start <= start_for_get_crop_lines_U0_empty_n;
     get_vegetation_image_4_U0_ap_continue <= ap_const_logic_1;
     get_vegetation_image_4_U0_ap_start <= start_for_get_vegetation_image_4_U0_empty_n;
-    img_in_data_V_read <= duplicateMat_2762_U0_p_src_data_V_read;
-    img_out_data_V_din <= add_2749_U0_p_dst_data_V_din;
-    img_out_data_V_write <= add_2749_U0_p_dst_data_V_write;
+    img_in_data_V_read <= duplicateMat_2763_U0_p_src_data_V_read;
+    img_out_data_V_din <= add_2750_U0_p_dst_data_V_din;
+    img_out_data_V_write <= add_2750_U0_p_dst_data_V_write;
     internal_ap_ready <= ap_sync_ready;
     merge_U0_ap_continue <= ap_const_logic_1;
     merge_U0_ap_start <= start_for_merge_U0_empty_n;
@@ -1972,8 +1972,8 @@ begin
     sectors_weed_classif_U0_start_write <= ap_const_logic_0;
     segment_image_U0_ap_continue <= ap_const_logic_1;
     segment_image_U0_ap_start <= start_for_segment_image_U0_empty_n;
-    start_for_add_2749_U0_din <= (0=>ap_const_logic_1, others=>'-');
-    start_for_erode437_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_add_2750_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    start_for_erode438_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_get_12th_segment_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_get_crop_lines_U0_din <= (0=>ap_const_logic_1, others=>'-');
     start_for_get_vegetation_image_4_U0_din <= (0=>ap_const_logic_1, others=>'-');

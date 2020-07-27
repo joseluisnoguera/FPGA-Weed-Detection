@@ -11737,12 +11737,12 @@ namespace hotbm_apfixed
               ap_int<fp_struct<double>::EXP_BITS> &Ex){
 
    const bool swap_table[8] = {0,1,1,0,0,1,1,0};
-#pragma HLS array_partition variable=&swap_table complete
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_cos_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_cos_K1 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_cos_K2 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_cos_K3 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_cos_K4 core=ROM_1P_LUTRAM
+#pragma HLS array_partition variable=swap_table complete
+#pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K2 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K3 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_cos_K4 core=ROM_1P_LUTRAM
 
  ap_uint<alpha+1> A = x(x.wl()-x.iwl()-1,x.wl()-x.iwl()-alpha);
    ap_ufixed<Wx-alpha-beta1, -alpha> B = x;
@@ -11771,16 +11771,16 @@ namespace hotbm_apfixed
           ap_ufixed<Wr, 1> &sin_result,
           ap_ufixed<Wr, 1> &cos_result
           ) {
-#pragma HLS RESOURCE variable=&fourth_order_double::cos_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::cos_K1 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::cos_K2 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::cos_K3 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::cos_K4 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_K1 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_K2 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_K3 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&fourth_order_double::sin_K4 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::cos_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::cos_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::cos_K2 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::cos_K3 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::cos_K4 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_K2 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_K3 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=fourth_order_double::sin_K4 core=ROM_1P_LUTRAM
 
  ap_uint<alpha> A = x(x.wl()-x.iwl()-1,
          x.wl()-x.iwl()-alpha);
@@ -11827,10 +11827,10 @@ namespace hotbm_apfixed
 
    const bool swap_table[8] = {0,1,1,0,0,1,1,0};
 
-#pragma HLS array_partition variable=&swap_table complete
-#pragma HLS RESOURCE variable=&second_order_float::sin_cos_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::sin_cos_K1 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::sin_cos_K2 core=ROM_1P_LUTRAM
+#pragma HLS array_partition variable=swap_table complete
+#pragma HLS RESOURCE variable=second_order_float::sin_cos_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::sin_cos_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::sin_cos_K2 core=ROM_1P_LUTRAM
 
  ap_uint<alpha+1> A = x(x.wl()-x.iwl()-1,x.wl()-x.iwl()-alpha);
    ap_ufixed<Wx-alpha-beta1, -alpha> B = x;
@@ -11856,12 +11856,12 @@ namespace hotbm_apfixed
           ap_ufixed<Wr, 1> &sin_result,
           ap_ufixed<Wr, 1> &cos_result
           ) {
-#pragma HLS RESOURCE variable=&second_order_float::cos_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::cos_K1 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::cos_K2 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::sin_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::sin_K1 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&second_order_float::sin_K2 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::cos_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::cos_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::cos_K2 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::sin_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::sin_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=second_order_float::sin_K2 core=ROM_1P_LUTRAM
 
  ap_uint<alpha> A = x(x.wl()-x.iwl()-1,
          x.wl()-x.iwl()-alpha);
@@ -11895,8 +11895,8 @@ namespace hotbm_apfixed
                ap_uint<2> &k,
                ap_ufixed<W_dout, 0> &x){
 
-#pragma HLS RESOURCE variable=&first_order_fixed_16::sin_cos_K0 core=ROM_1P_LUTRAM
-#pragma HLS RESOURCE variable=&first_order_fixed_16::sin_cos_K1 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=first_order_fixed_16::sin_cos_K0 core=ROM_1P_LUTRAM
+#pragma HLS RESOURCE variable=first_order_fixed_16::sin_cos_K1 core=ROM_1P_LUTRAM
 
  ap_uint<alpha> A = x(x.wl()-x.iwl()-1,x.wl()-x.iwl()-alpha);
 
@@ -11923,9 +11923,9 @@ namespace hotbm_apfixed
  const bool neg_sin_table[16] = {0,0,1,0,1,1,0,1, 1,0,1,1,0,1,0,0};
  const bool neg_cos_table[16] = {0,0,0,1,1,1,1,0, 0,1,1,1,1,0,0,0};
 
-#pragma HLS array_partition variable=&swap_table complete
-#pragma HLS array_partition variable=&neg_sin_table complete
-#pragma HLS array_partition variable=&neg_cos_table complete
+#pragma HLS array_partition variable=swap_table complete
+#pragma HLS array_partition variable=neg_sin_table complete
+#pragma HLS array_partition variable=neg_cos_table complete
 
  ap_uint<3> k;
  ap_ufixed<WO+1+g, 0> x;
@@ -11994,9 +11994,9 @@ namespace hotbm_apfixed
  const bool swap_table[8] = {0,1,1,0,0,1,1,0};
  const bool neg_sin_table[16] = {0,0,1,0,1,1,0,1, 1,0,1,1,0,1,0,0};
  const bool neg_cos_table[16] = {0,0,0,1,1,1,1,0, 0,1,1,1,1,0,0,0};
-#pragma HLS array_partition variable=&swap_table complete
-#pragma HLS array_partition variable=&neg_sin_table complete
-#pragma HLS array_partition variable=&neg_cos_table complete
+#pragma HLS array_partition variable=swap_table complete
+#pragma HLS array_partition variable=neg_sin_table complete
+#pragma HLS array_partition variable=neg_cos_table complete
 
  ap_uint<3> k;
  ap_ufixed<WO+1+g, 0> x;
@@ -12064,8 +12064,8 @@ namespace hotbm_apfixed
 
  const bool neg_sin_table[8] = {0,0,1,1, 1,1,0,0};
  const bool neg_cos_table[8] = {0,1,1,0, 0,1,1,0};
-#pragma HLS array_partition variable=&neg_sin_table complete
-#pragma HLS array_partition variable=&neg_cos_table complete
+#pragma HLS array_partition variable=neg_sin_table complete
+#pragma HLS array_partition variable=neg_cos_table complete
 
  ap_uint<2> k;
  ap_ufixed<WO+1+g, 0> x;
@@ -26235,29 +26235,29 @@ template<int N, typename T>
 class Scalar {
 public:
     Scalar() {
-#pragma HLS ARRAY_PARTITION variable=&val dim=1 complete
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
  (void) ((!!(N > 0)) || (_assert("N > 0","D:/Xilinx/xfopencv-master/include\\common/xf_structs.h",241),0));
     }
     Scalar(T v0) {
-#pragma HLS ARRAY_PARTITION variable=&val dim=1 complete
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
  (void) ((!!(N >= 1 && "Scalar must have enough channels for constructor.")) || (_assert("N >= 1 && \"Scalar must have enough channels for constructor.\"","D:/Xilinx/xfopencv-master/include\\common/xf_structs.h",245),0));
         val[0] = v0;
     }
     Scalar(T v0, T v1) {
-#pragma HLS ARRAY_PARTITION variable=&val dim=1 complete
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
  (void) ((!!(N >= 2 && "Scalar must have enough channels for constructor.")) || (_assert("N >= 2 && \"Scalar must have enough channels for constructor.\"","D:/Xilinx/xfopencv-master/include\\common/xf_structs.h",250),0));
         val[0] = v0;
         val[1] = v1;
     }
     Scalar(T v0, T v1, T v2) {
-#pragma HLS ARRAY_PARTITION variable=&val dim=1 complete
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
  (void) ((!!(N >= 3 && "Scalar must have enough channels for constructor.")) || (_assert("N >= 3 && \"Scalar must have enough channels for constructor.\"","D:/Xilinx/xfopencv-master/include\\common/xf_structs.h",256),0));
         val[0] = v0;
         val[1] = v1;
         val[2] = v2;
     }
     Scalar(T v0, T v1, T v2, T v3) {
-#pragma HLS ARRAY_PARTITION variable=&val dim=1 complete
+#pragma HLS ARRAY_PARTITION variable=val dim=1 complete
  (void) ((!!(N >= 4 && "Scalar must have enough channels for constructor.")) || (_assert("N >= 4 && \"Scalar must have enough channels for constructor.\"","D:/Xilinx/xfopencv-master/include\\common/xf_structs.h",263),0));
         val[0] = v0;
         val[1] = v1;
@@ -26391,7 +26391,7 @@ class Mat {
 
     typedef typename DataType<T,NPC>::name DATATYPE;
 # 403 "D:/Xilinx/xfopencv-master/include\\common/xf_structs.h"
-    DATATYPE *data __attribute(());
+    DATATYPE *data __attribute((xcl_array_geometry((ROWS)*(COLS>> (xfNPixelsPerCycle<NPC>::datashift)))));
 
 
 
@@ -26825,7 +26825,7 @@ void AXISetBitFields(ap_axiu<W,1,1,1>& axi, int start, int w, T val) {
 namespace xf
   {
 template<int SRC_T, int ROWS, int COLS, int NPC>
-void write(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,xf::Scalar<DataType<SRC_T,NPC>::channel, typename DataType<SRC_T,NPC>::name> s,int ind) {_ssdm_SpecArrayDimSize(img.data, 921600);
+void write(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,xf::Scalar<DataType<SRC_T,NPC>::channel, typename DataType<SRC_T,NPC>::name> s,int ind) {
 #pragma HLS inline
 
  img.write(ind,s.val[0]);
@@ -26836,13 +26836,13 @@ void write(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,xf::Scalar<DataType<SRC_T,NPC>::
 
 template<int SRC_T, int ROWS, int COLS, int NPC>
 void fetchingmatdata(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,xf::Scalar<DataType<SRC_T,NPC>::channel, typename DataType<SRC_T,NPC>::name> s,int val)
-{_ssdm_SpecArrayDimSize(img.data, 921600);
+{
 #pragma HLS inline
  write(img,s,val);
 }
 template<int SRC_T, int ROWS, int COLS, int NPC>
 xf::Scalar<DataType<SRC_T,NPC>::channel, typename DataType<SRC_T,NPC>::name>read(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,int index)
-{_ssdm_SpecArrayDimSize(img.data, 921600);
+{
 
 #pragma HLS inline
 
@@ -26857,7 +26857,7 @@ xf::Scalar<DataType<SRC_T,NPC>::channel, typename DataType<SRC_T,NPC>::name>read
 
 template<int SRC_T, int ROWS, int COLS, int NPC>
 void fillingdata(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,xf::Scalar<DataType<SRC_T,NPC>::channel, typename DataType<SRC_T,NPC>::name>& s, int index)
-{_ssdm_SpecArrayDimSize(img.data, 921600);
+{
 #pragma HLS inline
 
  s=read(img,index);
@@ -26865,7 +26865,7 @@ void fillingdata(xf::Mat<SRC_T, ROWS, COLS, NPC> &img,xf::Scalar<DataType<SRC_T,
 # 105 "D:/Xilinx/xfopencv-master/include\\common/xf_infra.h"
 template<int W,int T,int ROWS, int COLS,int NPC>
 int AXIvideo2xfMat(hls::stream< ap_axiu<W,1,1,1> >& AXI_video_strm, xf::Mat<T,ROWS, COLS, NPC>& img)
-{_ssdm_SpecArrayDimSize(img.data, 921600);
+{
 #pragma hls inline
 
  int res = 0,val=0,depth;
@@ -26928,7 +26928,7 @@ int AXIvideo2xfMat(hls::stream< ap_axiu<W,1,1,1> >& AXI_video_strm, xf::Mat<T,RO
 
 template<int W, int T, int ROWS, int COLS,int NPC>
 int xfMat2AXIvideo(xf::Mat<T,ROWS, COLS,NPC>& img,hls::stream<ap_axiu<W,1,1,1> >& AXI_video_strm)
-{_ssdm_SpecArrayDimSize(img.data, 921600);
+{
 #pragma hls inline
  int res = 0,index=0,depth;
     xf::Scalar<DataType<T,NPC>::channel, typename DataType<T,NPC>::name> pix;
@@ -26978,11 +26978,11 @@ int xfMat2AXIvideo(xf::Mat<T,ROWS, COLS,NPC>& img,hls::stream<ap_axiu<W,1,1,1> >
 typedef hls::stream< ap_axiu<32,1,1,1> > stream_t;
 
 
-typedef ap_fixed<24,16> fixed_40b_16i;
+typedef float fixed_40b_16i;
 typedef ap_ufixed<24,16> ufixed_32b_16i;
 typedef ap_ufixed<16,8> ufixed_24b_8i;
 typedef ap_fixed<24,16> fixed_32b_16i;
-typedef ap_fixed<56,48> fixed_88b_64i;
+typedef float fixed_88b_64i;
 
 
 struct Line{
@@ -27591,12 +27591,12 @@ template<int ROWS, int COLS,int PLANES, int TYPE, int NPC, int WORDWIDTH, int TC
 void Process_function(xf::Mat<TYPE, ROWS, COLS, NPC> & _src_mat, unsigned char kernel[K_ROWS][K_COLS],xf::Mat<TYPE, ROWS, COLS, NPC> & _out_mat,
   typename DataType<TYPE,NPC>::name buf[K_ROWS][(COLS >> xfNPixelsPerCycle<NPC>::datashift)], typename PixelType<TYPE>::uname src_buf[K_ROWS][xfNPixelsPerCycle<NPC>::nppc+(K_COLS-1)],
   typename DataType<TYPE,NPC>::name &P0, uint16_t img_width, uint16_t img_height, uint16_t &shift_x, ap_uint<13> row_ind[K_ROWS], ap_uint<13> row, int &rd_ind, int &wr_ind)
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);_ssdm_SpecArrayDimSize(_out_mat.data, 57600);
+{
 #pragma HLS INLINE
 
  typename DataType<TYPE,NPC>::name buf_cop[K_ROWS];
  typename PixelType<TYPE>::uname OutputValue;
-#pragma HLS ARRAY_PARTITION variable=&buf_cop complete dim=1
+#pragma HLS ARRAY_PARTITION variable=buf_cop complete dim=1
 
  uint16_t npc = xfNPixelsPerCycle<NPC>::nppc;
  uint16_t col_loop_var = (((K_COLS>>1)+(npc-1))/npc);
@@ -27744,23 +27744,23 @@ void Process_function(xf::Mat<TYPE, ROWS, COLS, NPC> & _src_mat, unsigned char k
 
 template<int ROWS, int COLS,int PLANES, int TYPE, int NPC, int WORDWIDTH, int TC,int K_ROWS,int K_COLS>
 void xferode(xf::Mat<TYPE, ROWS, COLS, NPC> & _src, xf::Mat<TYPE, ROWS, COLS, NPC> & _dst, uint16_t img_height, uint16_t img_width, unsigned char kernel[K_ROWS][K_COLS])
-{_ssdm_SpecArrayDimSize(_src.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+{
  ap_uint<13> row_ind[K_ROWS];
-#pragma HLS ARRAY_PARTITION variable=&row_ind complete dim=1
+#pragma HLS ARRAY_PARTITION variable=row_ind complete dim=1
 
  uint16_t shift_x = 0;
  ap_uint<13> row, col;
 
 
  typename PixelType<TYPE>::uname src_buf[K_ROWS][xfNPixelsPerCycle<NPC>::nppc+(K_COLS-1)];
-#pragma HLS ARRAY_PARTITION variable=&src_buf complete dim=1
-#pragma HLS ARRAY_PARTITION variable=&src_buf complete dim=2
+#pragma HLS ARRAY_PARTITION variable=src_buf complete dim=1
+#pragma HLS ARRAY_PARTITION variable=src_buf complete dim=2
 
  typename DataType<TYPE,NPC>::name P0;
 
  typename DataType<TYPE,NPC>::name buf[K_ROWS][(COLS >> xfNPixelsPerCycle<NPC>::datashift)];
-#pragma HLS RESOURCE variable=&buf core=RAM_S2P_BRAM
-#pragma HLS ARRAY_PARTITION variable=&buf complete dim=1
+#pragma HLS RESOURCE variable=buf core=RAM_S2P_BRAM
+#pragma HLS ARRAY_PARTITION variable=buf complete dim=1
 
 
 
@@ -27830,7 +27830,7 @@ void xferode(xf::Mat<TYPE, ROWS, COLS, NPC> & _src, xf::Mat<TYPE, ROWS, COLS, NP
 #pragma SDS data copy("_src.data"[0:"_src.size"], "_dst.data"[0:"_dst.size"])
 template<int BORDER_TYPE, int TYPE, int ROWS, int COLS, int K_SHAPE, int K_ROWS, int K_COLS, int ITERATIONS, int NPC>
 void erode (xf::Mat<TYPE, ROWS, COLS, NPC> & _src, xf::Mat<TYPE, ROWS, COLS, NPC> & _dst,unsigned char _kernel[K_ROWS*K_COLS])
-{_ssdm_SpecArrayDimSize(_src.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+{
 #pragma HLS INLINE OFF
 
  unsigned short imgheight = _src.rows;
@@ -27848,7 +27848,7 @@ void erode (xf::Mat<TYPE, ROWS, COLS, NPC> & _src, xf::Mat<TYPE, ROWS, COLS, NPC
 
 
   unsigned char kernel_new[(K_ROWS + ((ITERATIONS-1)*(K_ROWS-1)))][(K_COLS + ((ITERATIONS-1)*(K_COLS-1)))];
-#pragma HLS array partition variable=&kernel_new dim=0
+#pragma HLS array partition variable=kernel_new dim=0
  for(unsigned char i = 0; i < (K_ROWS + ((ITERATIONS-1)*(K_ROWS-1))); i++)
   {
    for(unsigned char j = 0; j < (K_COLS + ((ITERATIONS-1)*(K_COLS-1))); j++)
@@ -27862,7 +27862,7 @@ void erode (xf::Mat<TYPE, ROWS, COLS, NPC> & _src, xf::Mat<TYPE, ROWS, COLS, NPC
  else
  {
   unsigned char kernel[K_ROWS][K_COLS];
-#pragma HLS array partition variable=&kernel complete dim=0
+#pragma HLS array partition variable=kernel complete dim=0
  for(unsigned char i = 0; i < K_ROWS; i++)
   {
    for(unsigned char j = 0; j < K_COLS; j++)
@@ -27929,11 +27929,11 @@ void computeOutputPixel(typename DataType<DEPTH,NPPC>::name A0[NUMBEROFINPUTWORD
  (void) ((!!((indexx[xfNPixelsPerCycle<NPPC>::nppc-1] < (initIndex+NUMBEROFINPUTWORDS*xfNPixelsPerCycle<NPPC>::nppc-1)) && "Insufficient number of words to resize in X")) || (_assert("(indexx[XF_NPIXPERCYCLE(NPPC)-1] < (initIndex+NUMBEROFINPUTWORDS*XF_NPIXPERCYCLE(NPPC)-1)) && \"Insufficient number of words to resize in X\"","D:/Xilinx/xfopencv-master/include\\imgproc/xf_resize_nn_bilinear.hpp",81),0));
 
  typename PixelType<DEPTH>::uname unpackX1[xfNPixelsPerCycle<NPPC>::nppc*NUMBEROFINPUTWORDS];
-#pragma HLS ARRAY_PARTITION variable=&unpackX1 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=unpackX1 complete dim=1
  typename PixelType<DEPTH>::uname unpackX2[xfNPixelsPerCycle<NPPC>::nppc*NUMBEROFINPUTWORDS];
-#pragma HLS ARRAY_PARTITION variable=&unpackX2 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=unpackX2 complete dim=1
  typename PixelType<DEPTH>::uname outputPixel[xfNPixelsPerCycle<NPPC>::nppc];
-#pragma HLS ARRAY_PARTITION variable=&outputPixel complete dim=1
+#pragma HLS ARRAY_PARTITION variable=outputPixel complete dim=1
  for(int k=0; k<NUMBEROFINPUTWORDS; k++)
  {
 #pragma HLS UNROLL
@@ -27952,9 +27952,9 @@ void computeOutputPixel(typename DataType<DEPTH,NPPC>::name A0[NUMBEROFINPUTWORD
   {
 #pragma HLS UNROLL
  typename DataType<DEPTH,NPPC>::cname unpackX1temp[xfNPixelsPerCycle<NPPC>::nppc*NUMBEROFINPUTWORDS];
-#pragma HLS ARRAY_PARTITION variable=&unpackX1temp complete dim=1
+#pragma HLS ARRAY_PARTITION variable=unpackX1temp complete dim=1
  typename DataType<DEPTH,NPPC>::cname unpackX2temp[xfNPixelsPerCycle<NPPC>::nppc*NUMBEROFINPUTWORDS];
-#pragma HLS ARRAY_PARTITION variable=&unpackX2temp complete dim=1
+#pragma HLS ARRAY_PARTITION variable=unpackX2temp complete dim=1
  for(int l=0; l<xfNPixelsPerCycle<NPPC>::nppc*NUMBEROFINPUTWORDS; l++)
    {
 #pragma HLS UNROLL
@@ -28065,7 +28065,7 @@ void computeInterpolation(int inrows, int incols, int j, int output_rows_count, 
 
 template<int SRC_TYPE, int INHEIGHT, int INWIDTH, int NPPC, int OUTHEIGHT, int OUTWIDTH, int INTERPOLATION_TYPE, int MAX_DOWN_SCALE>
 void resizeNNBilinear(xf::Mat<SRC_TYPE, INHEIGHT, INWIDTH, NPPC> &imgInput,xf::Mat<SRC_TYPE, OUTHEIGHT, OUTWIDTH, NPPC> &imgOutput)
-{_ssdm_SpecArrayDimSize(imgInput.data, 921600);_ssdm_SpecArrayDimSize(imgOutput.data, 57600);
+{
 #pragma HLS ALLOCATION instances=scaleCompute limit=1 function
 #pragma HLS ALLOCATION instances=xfUDivResize limit=1 function
  const int INDEX_INT = 17;
@@ -28102,12 +28102,12 @@ void resizeNNBilinear(xf::Mat<SRC_TYPE, INHEIGHT, INWIDTH, NPPC> &imgInput,xf::M
  scaley = temp_scale_conv;
 
  ap_fixed<COMP_INDEX_WIDTH,COMP_INDEX_INT> scaleXParallel[xfNPixelsPerCycle<NPPC>::nppc];
-#pragma HLS ARRAY_PARTITION variable=&scaleXParallel complete dim=1
+#pragma HLS ARRAY_PARTITION variable=scaleXParallel complete dim=1
  scaleMult<NPPC,SCALE_WIDTH,SCALE_INT,COMP_INDEX_WIDTH,COMP_INDEX_INT>(scalex,scaleXParallel);
 
  typename DataType<SRC_TYPE,NPPC>::name line_buffer[3][BUFFER_DUP_FACTOR][INWIDTH>>(xfNPixelsPerCycle<NPPC>::datashift)];
-#pragma HLS ARRAY_PARTITION variable=&line_buffer complete dim=1
-#pragma HLS ARRAY_PARTITION variable=&line_buffer complete dim=2
+#pragma HLS ARRAY_PARTITION variable=line_buffer complete dim=1
+#pragma HLS ARRAY_PARTITION variable=line_buffer complete dim=2
  int input_read_pointer=0;
  int read_rows_count = 0;
  int output_write_pointer = 0;
@@ -28135,16 +28135,16 @@ void resizeNNBilinear(xf::Mat<SRC_TYPE, INHEIGHT, INWIDTH, NPPC> &imgInput,xf::M
  const int LOOPCOUNTROW = (INHEIGHT>OUTHEIGHT)? INHEIGHT: OUTHEIGHT;
  const int LOOPCOUNTCOL = (INWIDTH>OUTWIDTH)? INWIDTH: OUTWIDTH;
  ap_uint<INDEX_INT> indexx[xfNPixelsPerCycle<NPPC>::nppc];
-#pragma HLS ARRAY_PARTITION variable=&indexx complete dim=1
+#pragma HLS ARRAY_PARTITION variable=indexx complete dim=1
  ap_uint<INDEX_INT> indexy = 0;
  ap_uint<INDEX_INT> nextYScale = 0;
  ap_ufixed<WEIGHT_WIDTH,WEIGHT_INT> WeightX[xfNPixelsPerCycle<NPPC>::nppc];
-#pragma HLS ARRAY_PARTITION variable=&WeightX complete dim=1
+#pragma HLS ARRAY_PARTITION variable=WeightX complete dim=1
  ap_ufixed<WEIGHT_WIDTH,WEIGHT_INT> WeightY = 0;
  typename DataType<SRC_TYPE,NPPC>::name P0Buf[BUFFER_DUP_FACTOR<<1];
-#pragma HLS ARRAY_PARTITION variable=&P0Buf complete dim=1
+#pragma HLS ARRAY_PARTITION variable=P0Buf complete dim=1
  typename DataType<SRC_TYPE,NPPC>::name P1Buf[BUFFER_DUP_FACTOR<<1];
-#pragma HLS ARRAY_PARTITION variable=&P1Buf complete dim=1
+#pragma HLS ARRAY_PARTITION variable=P1Buf complete dim=1
 
  ap_fixed<COMP_INDEX_WIDTH,COMP_INDEX_INT> indexx_pre_comp = 0;
  ap_fixed<COMP_INDEX_WIDTH,COMP_INDEX_INT> indexy_pre_comp = 0;
@@ -28981,13 +28981,13 @@ namespace xf {
 
 template<int SRC_T, int ROWS, int COLS, int DEPTH, int NPC, int WORDWIDTH, int SRC_TC,int PLANES>
 void xFHistogramKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat , uint32_t hist_array[PLANES][256], uint16_t &imgheight, uint16_t &imgwidth)
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);
+{
 
 
  uint32_t tmp_hist[(PLANES<<xfNPixelsPerCycle<NPC>::datashift)][256]={0};
  uint32_t tmp_hist1[(PLANES<<xfNPixelsPerCycle<NPC>::datashift)][256]={0};
-#pragma HLS ARRAY_PARTITION variable=&tmp_hist complete dim=1
-#pragma HLS ARRAY_PARTITION variable=&tmp_hist1 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=tmp_hist complete dim=1
+#pragma HLS ARRAY_PARTITION variable=tmp_hist1 complete dim=1
  typename StreamType<WORDWIDTH>::name in_buf,in_buf1, temp_buf;
 
  bool flag =0;
@@ -29024,8 +29024,8 @@ void xFHistogramKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat , uint32_t his
    EXTRACT_UPDATE:
    for(ap_uint<9> i=0,j=0; i < ((8 << xfNPixelsPerCycle<NPC>::datashift)*PLANES);j++, i+= 8)
    {
-#pragma HLS DEPENDENCE variable=&tmp_hist array intra false
-#pragma HLS DEPENDENCE variable=&tmp_hist1 array intra false
+#pragma HLS DEPENDENCE variable=tmp_hist array intra false
+#pragma HLS DEPENDENCE variable=tmp_hist1 array intra false
 #pragma HLS UNROLL
 
  ap_uint<8> val=0,val1=0;
@@ -29239,7 +29239,7 @@ static void xfOtsuKernel(uint32_t _hist[0][256], uint16_t _height, uint16_t _wid
 
 template<int SRC_T, int ROWS, int COLS,int NPC>
 void OtsuThreshold(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat, uint8_t &_thresh)
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);
+{
 
  (void) ((!!(((NPC == XF_NPPC1) || (NPC == XF_NPPC8) )&& "NPC must be XF_NPPC1, XF_NPPC8 ")) || (_assert("((NPC == XF_NPPC1) || (NPC == XF_NPPC8) )&& \"NPC must be XF_NPPC1, XF_NPPC8 \"","D:/Xilinx/xfopencv-master/include\\imgproc/xf_otsuthreshold.hpp",163),0));
  (void) ((!!(((_src_mat.rows <= ROWS ) && (_src_mat.cols <= COLS)) && "ROWS and COLS should be greater than input image")) || (_assert("((_src_mat.rows <= ROWS ) && (_src_mat.cols <= COLS)) && \"ROWS and COLS should be greater than input image\"","D:/Xilinx/xfopencv-master/include\\imgproc/xf_otsuthreshold.hpp",164),0));
@@ -29248,7 +29248,7 @@ void OtsuThreshold(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat, uint8_t &_thresh)
  uint8_t thresh ;
 
 #pragma HLS INLINE off
-#pragma HLS interface ap_fifo port=&hist
+#pragma HLS interface ap_fifo port=hist
 
  uint16_t width = _src_mat.cols >> (xfNPixelsPerCycle<NPC>::datashift);
  uint16_t height = _src_mat.rows;
@@ -29282,7 +29282,7 @@ template<int SRC_T, int ROWS, int COLS,int DEPTH, int NPC, int WORDWIDTH_SRC,
 int WORDWIDTH_DST, int COLS_TRIP>
 void xFThresholdKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat, xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst_mat, ap_uint<8> _thresh_type,
   short int _thresh,short int maxval, unsigned short height, unsigned short width)
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);_ssdm_SpecArrayDimSize(_dst_mat.data, 57600);
+{
  typename StreamType<WORDWIDTH_SRC>::name val_src;
  typename StreamType<WORDWIDTH_DST>::name val_dst;
  typename PixelType<DEPTH>::name p;
@@ -29343,7 +29343,7 @@ void xFThresholdKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat, xf::Mat<SRC_T
 
 template<int THRESHOLD_TYPE, int SRC_T, int ROWS, int COLS,int NPC>
 void Threshold(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat,xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst_mat,short int thresh,short int maxval )
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);_ssdm_SpecArrayDimSize(_dst_mat.data, 57600);
+{
 
  unsigned short width = _src_mat.cols >> xfNPixelsPerCycle<NPC>::datashift;
  unsigned short height = _src_mat.rows;
@@ -29382,7 +29382,7 @@ template <int ROWS, int COLS, int SRC_T, int DST_T, int NPC, int TC>
 void xfChannelExtractKernel(
   xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat, xf::Mat<DST_T, ROWS, COLS, NPC> & _dst_mat,
   uint16_t _channel, uint16_t height,uint16_t width)
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);_ssdm_SpecArrayDimSize(_dst_mat.data, 57600);
+{
 
 const int noofbits = DataType<SRC_T,NPC>::bitdepth;
 
@@ -29447,7 +29447,7 @@ const int noofbits = DataType<SRC_T,NPC>::bitdepth;
 
 template<int SRC_T, int DST_T, int ROWS, int COLS, int NPC>
 void extractChannel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src_mat, xf::Mat<DST_T, ROWS, COLS, NPC> & _dst_mat, uint16_t _channel)
-{_ssdm_SpecArrayDimSize(_src_mat.data, 57600);_ssdm_SpecArrayDimSize(_dst_mat.data, 57600);
+{
  (void) ((!!(((_channel == XF_EXTRACT_CH_0) || (_channel == XF_EXTRACT_CH_1) || (_channel == XF_EXTRACT_CH_2) || (_channel == XF_EXTRACT_CH_3) || (_channel == XF_EXTRACT_CH_R) || (_channel == XF_EXTRACT_CH_G) || (_channel == XF_EXTRACT_CH_B) || (_channel == XF_EXTRACT_CH_A) || (_channel == XF_EXTRACT_CH_Y) || (_channel == XF_EXTRACT_CH_U) || (_channel == XF_EXTRACT_CH_V)) && "Invalid Channel Value. See xf_channel_extract_e enumerated type")) || (_assert("((_channel == XF_EXTRACT_CH_0) || (_channel == XF_EXTRACT_CH_1) || (_channel == XF_EXTRACT_CH_2) || (_channel == XF_EXTRACT_CH_3) || (_channel == XF_EXTRACT_CH_R) || (_channel == XF_EXTRACT_CH_G) || (_channel == XF_EXTRACT_CH_B) || (_channel == XF_EXTRACT_CH_A) || (_channel == XF_EXTRACT_CH_Y) || (_channel == XF_EXTRACT_CH_U) || (_channel == XF_EXTRACT_CH_V)) && \"Invalid Channel Value. See xf_channel_extract_e enumerated type\"","D:/Xilinx/xfopencv-master/include\\imgproc/xf_channel_extract.hpp",122),0));
 
 
@@ -29732,7 +29732,7 @@ void merge(xf::Mat<SRC_T, ROWS, COLS, NPC> &_src1, xf::Mat<SRC_T, ROWS, COLS, NP
 #pragma SDS data copy("_src3.data"[0:"_src3.size"])
 #pragma SDS data copy("_dst.data"[0:"_dst.size"])
 template<int SRC_T, int DST_T, int ROWS, int COLS, int NPC>
-void merge(xf::Mat<SRC_T, ROWS, COLS, NPC> &_src1, xf::Mat<SRC_T, ROWS, COLS, NPC> &_src2, xf::Mat<SRC_T, ROWS, COLS, NPC> &_src3, xf::Mat<DST_T, ROWS, COLS, NPC> &_dst){_ssdm_SpecArrayDimSize(_src1.data, 57600);_ssdm_SpecArrayDimSize(_src2.data, 57600);_ssdm_SpecArrayDimSize(_src3.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+void merge(xf::Mat<SRC_T, ROWS, COLS, NPC> &_src1, xf::Mat<SRC_T, ROWS, COLS, NPC> &_src2, xf::Mat<SRC_T, ROWS, COLS, NPC> &_src3, xf::Mat<DST_T, ROWS, COLS, NPC> &_dst){
 
  (void) ((!!(((_src1.rows <= ROWS ) && (_src1.cols <= COLS)) && "ROWS and COLS should be greater than input image")) || (_assert("((_src1.rows <= ROWS ) && (_src1.cols <= COLS)) && \"ROWS and COLS should be greater than input image\"","D:/Xilinx/xfopencv-master/include\\imgproc/xf_channel_combine.hpp",301),0));
  (void) ((!!(((_src2.rows <= ROWS ) && (_src2.cols <= COLS)) && "ROWS and COLS should be greater than input image")) || (_assert("((_src2.rows <= ROWS ) && (_src2.cols <= COLS)) && \"ROWS and COLS should be greater than input image\"","D:/Xilinx/xfopencv-master/include\\imgproc/xf_channel_combine.hpp",302),0));
@@ -29850,7 +29850,7 @@ template <int SRC_T, int ROWS, int COLS, int DEPTH, int NPC, int WORDWIDTH,int C
 void xFMinMaxLocKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src,
   int &_minval1, int &_maxval1,unsigned short int &_minlocx,unsigned short int &_minlocy,
   unsigned short int &_maxlocx,unsigned short int &_maxlocy,uint16_t height,uint16_t width)
-{_ssdm_SpecArrayDimSize(_src.data, 57600);
+{
 
  int _minval,_maxval;
 
@@ -29882,10 +29882,10 @@ void xFMinMaxLocKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src,
 
  int32_t min_val_tmp[(1<<xfNPixelsPerCycle<NPC>::datashift)+1], max_val_tmp[(1<<xfNPixelsPerCycle<NPC>::datashift)+1];
  ap_uint<26> min_loc_tmp[(1<<xfNPixelsPerCycle<NPC>::datashift)+1], max_loc_tmp[(1<<xfNPixelsPerCycle<NPC>::datashift)+1];
-#pragma HLS ARRAY_PARTITION variable=&min_val_tmp complete
-#pragma HLS ARRAY_PARTITION variable=&max_val_tmp complete
-#pragma HLS ARRAY_PARTITION variable=&min_loc_tmp complete
-#pragma HLS ARRAY_PARTITION variable=&max_loc_tmp complete
+#pragma HLS ARRAY_PARTITION variable=min_val_tmp complete
+#pragma HLS ARRAY_PARTITION variable=max_val_tmp complete
+#pragma HLS ARRAY_PARTITION variable=min_loc_tmp complete
+#pragma HLS ARRAY_PARTITION variable=max_loc_tmp complete
 
 
  fillTempBuf:
@@ -29912,7 +29912,7 @@ void xFMinMaxLocKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src,
 
  val_in = _src.read(i*width+j);
    typename PixelType<DEPTH>::name pixel_buf[(1<<xfNPixelsPerCycle<NPC>::datashift)+1];
-#pragma HLS ARRAY_PARTITION variable=&pixel_buf complete dim=1
+#pragma HLS ARRAY_PARTITION variable=pixel_buf complete dim=1
 
  ap_uint<9> k = 0;
    processLoop:
@@ -30030,7 +30030,7 @@ void xFMinMaxLocKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src,
 #pragma SDS data copy("_src.data"[0:"_src.size"])
 template<int SRC_T,int ROWS,int COLS,int NPC>
 void minMaxLoc(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src,int32_t *min_value, int32_t *max_value,uint16_t *_minlocx, uint16_t *_minlocy, uint16_t *_maxlocx, uint16_t *_maxlocy )
-{_ssdm_SpecArrayDimSize(_src.data, 57600);
+{
  (void) ((!!(((NPC == XF_NPPC1) || (NPC == XF_NPPC8) ) && "NPC must be XF_NPPC1, XF_NPPC8 or XF_NPPC16")) || (_assert("((NPC == XF_NPPC1) || (NPC == XF_NPPC8) ) && \"NPC must be XF_NPPC1, XF_NPPC8 or XF_NPPC16\"","D:/Xilinx/xfopencv-master/include\\core/xf_min_max_loc.hpp",239),0));
 
  (void) ((!!(((_src.rows <= ROWS ) && (_src.cols <= COLS)) && "ROWS and COLS should be greater than input image")) || (_assert("((_src.rows <= ROWS ) && (_src.cols <= COLS)) && \"ROWS and COLS should be greater than input image\"","D:/Xilinx/xfopencv-master/include\\core/xf_min_max_loc.hpp",240),0));
@@ -30298,7 +30298,7 @@ int STEP= PixelType<DEPTH>::bitdepth/PLANES;
 template<int SRC_T, int ROWS, int COLS,int PLANES, int DEPTH, int NPC, int WORDWIDTH_SRC,int WORDWIDTH_DST, int COLS_TRIP>
 void xFBitwiseANDKernel(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, xf::Mat<SRC_T, ROWS, COLS, NPC> & _src2, xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst,
   uint16_t image_height,uint16_t image_width)
-{_ssdm_SpecArrayDimSize(_src1.data, 57600);_ssdm_SpecArrayDimSize(_src2.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+{
 
  ap_uint <13> i,j,k;
  typename StreamType<WORDWIDTH_SRC>::name val_src1, val_src2;
@@ -30588,7 +30588,7 @@ void absdiff(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1,xf::Mat<SRC_T, ROWS, COLS, 
 #pragma SDS data copy("_dst.data"[0:"_dst.size"])
 template<int SRC_T, int ROWS, int COLS, int NPC>
 void bitwise_and(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, xf::Mat<SRC_T, ROWS, COLS, NPC> & _src2, xf::Mat<SRC_T, ROWS, COLS, NPC> &_dst)
-{_ssdm_SpecArrayDimSize(_src1.data, 57600);_ssdm_SpecArrayDimSize(_src2.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+{
 
 #pragma HLS inline off
 
@@ -30708,7 +30708,7 @@ void multiply(xf::Mat<SRC_T, ROWS, COLS, NPC> & src1, xf::Mat<SRC_T, ROWS, COLS,
 template<int SRC_T, int ROWS, int COLS, int PLANES,int DEPTH, int NPC, int WORDWIDTH_SRC,int WORDWIDTH_DST, int COLS_TRIP,typename KERNEL, int USE_SRC2>
 void xFarithm_proc(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, xf::Mat<SRC_T, ROWS, COLS, NPC> & _src2, xf::Scalar<DataType<SRC_T,NPC>::channel, unsigned char> scl, xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst,
 int _policytype,uint16_t image_height,uint16_t image_width)
-{_ssdm_SpecArrayDimSize(_src1.data, 57600);_ssdm_SpecArrayDimSize(_src2.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+{
  KERNEL opr;
  int STEP;
  STEP=PixelType<DEPTH>::bitdepth/PLANES;
@@ -31105,7 +31105,7 @@ void set(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, unsigned char _scl[DataType<SR
 
 template< int SRC_T, int ROWS, int COLS, int NPC>
 void zero(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1,xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst)
-{_ssdm_SpecArrayDimSize(_src1.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 57600);
+{
 
 #pragma HLS inline off
  uint16_t image_width = _src1.cols >> xfNPixelsPerCycle<NPC>::datashift;
@@ -31237,7 +31237,7 @@ void xFDuplicate(hls::stream< typename DataType<SRC_T,NPC>::name > &_src_mat,
 
 template<int SRC_T, int ROWS, int COLS,int NPC>
 void duplicateMat(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src, xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst1,xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst2)
-{_ssdm_SpecArrayDimSize(_src.data, 57600);_ssdm_SpecArrayDimSize(_dst1.data, 57600);_ssdm_SpecArrayDimSize(_dst2.data, 57600);
+{
 #pragma HLS inline off
 
 #pragma HLS dataflow
@@ -31300,7 +31300,7 @@ static unsigned char kernel_v1[3*3] = {0, 1, 0, 0, 1, 0, 0, 1, 0};
 
 
 void extract_channels(rs_rgb_img_t& img_in_0, rs_rgb_img_t& img_in_1, rs_rgb_img_t& img_in_2,
-  rs_gray_img_t& r_channel, rs_gray_img_t& g_channel, rs_gray_img_t& b_channel){_ssdm_SpecArrayDimSize(img_in_0.data, 57600);_ssdm_SpecArrayDimSize(img_in_1.data, 57600);_ssdm_SpecArrayDimSize(img_in_2.data, 57600);_ssdm_SpecArrayDimSize(r_channel.data, 57600);_ssdm_SpecArrayDimSize(g_channel.data, 57600);_ssdm_SpecArrayDimSize(b_channel.data, 57600);
+  rs_gray_img_t& r_channel, rs_gray_img_t& g_channel, rs_gray_img_t& b_channel){
 
 #pragma HLS dataflow
  xf::extractChannel<XF_8UC3, XF_8UC1, 180, 320, XF_NPPC1>(img_in_0, b_channel, XF_EXTRACT_CH_R);
@@ -31309,7 +31309,7 @@ void extract_channels(rs_rgb_img_t& img_in_0, rs_rgb_img_t& img_in_1, rs_rgb_img
 }
 
 void get_max_from_channels(rs_gray_img_t& r_channel, rs_gray_img_t& g_channel, rs_gray_img_t& b_channel,
-  int32_t& max_r, int32_t& max_g, int32_t& max_b){_ssdm_SpecArrayDimSize(r_channel.data, 57600);_ssdm_SpecArrayDimSize(g_channel.data, 57600);_ssdm_SpecArrayDimSize(b_channel.data, 57600);
+  int32_t& max_r, int32_t& max_g, int32_t& max_b){
 
 #pragma HLS dataflow
 
@@ -31326,7 +31326,7 @@ void get_max_from_channels(rs_gray_img_t& r_channel, rs_gray_img_t& g_channel, r
 
 void get_exg_image(rs_gray_img_t& r_channel, rs_gray_img_t& g_channel, rs_gray_img_t& b_channel,
   int32_t& max_r, int32_t& max_g, int32_t& max_b, rs_gray_float_img_t& veg_img,
-  fixed_88b_64i& min_value, fixed_88b_64i& max_value){_ssdm_SpecArrayDimSize(r_channel.data, 57600);_ssdm_SpecArrayDimSize(g_channel.data, 57600);_ssdm_SpecArrayDimSize(b_channel.data, 57600);_ssdm_SpecArrayDimSize(veg_img.data, 57600);
+  fixed_88b_64i& min_value, fixed_88b_64i& max_value){
 
 
  max_value = 0, min_value = 32760;
@@ -31347,40 +31347,37 @@ void get_exg_image(rs_gray_img_t& r_channel, rs_gray_img_t& g_channel, rs_gray_i
  }
 }
 
-void convert_fp_to_8b(fixed_88b_64i& min_value, fixed_88b_64i _d, rs_gray_float_img_t& veg, rs_gray_img_t& img_out){_ssdm_SpecArrayDimSize(veg.data, 57600);_ssdm_SpecArrayDimSize(img_out.data, 57600);
+void convert_fp_to_8b(fixed_88b_64i& min_value, fixed_88b_64i _d, rs_gray_float_img_t& veg, rs_gray_img_t& img_out){
 
 #pragma HL7S dataflow
  fixed_32b_16i scalar = 255/_d;
  convert_fp_to_8b_label1:for (uint16_t i=0; i<180*320; i++ ){
-#pragma HLS PIPELINE
-# 59 "./wd_stage_1.h"
-
   img_out.data[i] = (uint8_t)((fixed_88b_64i(veg.data[i])-min_value)*scalar);
  }
 }
 
 
-void get_vegetation_image(rs_rgb_img_t& img_in, rs_gray_img_t& img_out){_ssdm_SpecArrayDimSize(img_in.data, 57600);_ssdm_SpecArrayDimSize(img_out.data, 57600);
+void get_vegetation_image(rs_rgb_img_t& img_in, rs_gray_img_t& img_out){
 
 #pragma HLS dataflow
- rs_gray_img_t r_channel(180, 320);_ssdm_SpecArrayDimSize(r_channel.data, 57600);
-#pragma HLS STREAM variable=&r_channel depth=1 dim=1
- rs_gray_img_t g_channel(180, 320);_ssdm_SpecArrayDimSize(g_channel.data, 57600);
-#pragma HLS STREAM variable=&g_channel depth=1 dim=1
- rs_gray_img_t b_channel(180, 320);_ssdm_SpecArrayDimSize(b_channel.data, 57600);
-#pragma HLS STREAM variable=&b_channel depth=1 dim=1
+ rs_gray_img_t r_channel(180, 320);
+#pragma HLS STREAM variable=r_channel depth=1 dim=1
+ rs_gray_img_t g_channel(180, 320);
+#pragma HLS STREAM variable=g_channel depth=1 dim=1
+ rs_gray_img_t b_channel(180, 320);
+#pragma HLS STREAM variable=b_channel depth=1 dim=1
 
- rs_gray_float_img_t veg_temp(180, 320);_ssdm_SpecArrayDimSize(veg_temp.data, 57600);
-#pragma HLS STREAM variable=&veg_temp depth=1 dim=1
+ rs_gray_float_img_t veg_temp(180, 320);
+#pragma HLS STREAM variable=veg_temp depth=1 dim=1
 
- rs_rgb_img_t img_in_0(180, 320);_ssdm_SpecArrayDimSize(img_in_0.data, 57600);
-#pragma HLS STREAM variable=&img_in_0 depth=1 dim=1
- rs_rgb_img_t img_in_1(180, 320);_ssdm_SpecArrayDimSize(img_in_1.data, 57600);
-#pragma HLS STREAM variable=&img_in_1 depth=1 dim=1
- rs_rgb_img_t img_in_2(180, 320);_ssdm_SpecArrayDimSize(img_in_2.data, 57600);
-#pragma HLS STREAM variable=&img_in_2 depth=1 dim=1
- rs_rgb_img_t img_in_3(180, 320);_ssdm_SpecArrayDimSize(img_in_3.data, 57600);
-#pragma HLS STREAM variable=&img_in_3 depth=1 dim=1
+ rs_rgb_img_t img_in_0(180, 320);
+#pragma HLS STREAM variable=img_in_0 depth=1 dim=1
+ rs_rgb_img_t img_in_1(180, 320);
+#pragma HLS STREAM variable=img_in_1 depth=1 dim=1
+ rs_rgb_img_t img_in_2(180, 320);
+#pragma HLS STREAM variable=img_in_2 depth=1 dim=1
+ rs_rgb_img_t img_in_3(180, 320);
+#pragma HLS STREAM variable=img_in_3 depth=1 dim=1
 
  xf::duplicateMat<XF_8UC3, 180, 320, XF_NPPC1>(img_in, img_in_0, img_in_1);
  xf::duplicateMat<XF_8UC3, 180, 320, XF_NPPC1>(img_in_0, img_in_2, img_in_3);
@@ -31400,7 +31397,7 @@ void get_vegetation_image(rs_rgb_img_t& img_in, rs_gray_img_t& img_out){_ssdm_Sp
 }
 
 
-void segment_image(rs_gray_img_t& img_in, rs_gray_img_t& img_out){_ssdm_SpecArrayDimSize(img_in.data, 57600);_ssdm_SpecArrayDimSize(img_out.data, 57600);
+void segment_image(rs_gray_img_t& img_in, rs_gray_img_t& img_out){
 
 
  unsigned char otsuValue;
@@ -31412,29 +31409,23 @@ void segment_image(rs_gray_img_t& img_in, rs_gray_img_t& img_out){_ssdm_SpecArra
 }
 
 
-ufixed_32b_16i get_total_vegetation(rs_gray_img_t& img_in){_ssdm_SpecArrayDimSize(img_in.data, 57600);
+ufixed_32b_16i get_total_vegetation(rs_gray_img_t& img_in){
 
 #pragma HLS dataflow
  const uint16_t loop_bound = (180*320)>>1;
  ufixed_32b_16i total1 = 0, total2 = 0;
  get_total_vegetation_label0:for (uint16_t i=0; i<loop_bound; i++)
-#pragma HLS PIPELINE
-# 122 "./wd_stage_1.h"
-
   if (img_in.data[i]>0)
    total1++;
  get_total_vegetation_label1:for (uint16_t i=loop_bound; i<180*320; i++ )
-#pragma HLS PIPELINE
-# 125 "./wd_stage_1.h"
-
   if (img_in.data[i]>0)
    total2++;
  return ((total1 + total2) / (ufixed_32b_16i)rs_size);
 }
 
-void remark_crop_lines(rs_gray_img_t& eroded_0, rs_gray_img_t& eroded_1, rs_gray_img_t& eroded_2){_ssdm_SpecArrayDimSize(eroded_0.data, 57600);_ssdm_SpecArrayDimSize(eroded_1.data, 57600);_ssdm_SpecArrayDimSize(eroded_2.data, 57600);
+void remark_crop_lines(rs_gray_img_t& eroded_0, rs_gray_img_t& eroded_1, rs_gray_img_t& eroded_2){
 
- rs_gray_img_t eroded_tmp(180, 320);_ssdm_SpecArrayDimSize(eroded_tmp.data, 57600);
+ rs_gray_img_t eroded_tmp(180, 320);
 
  xf::duplicateMat<XF_8UC1, 180, 320, XF_NPPC1>(eroded_0, eroded_tmp, eroded_2);
 
@@ -31451,28 +31442,18 @@ void remark_crop_lines(rs_gray_img_t& eroded_0, rs_gray_img_t& eroded_1, rs_gray
 
 
 
-void get_12th_segment(rs_gray_img_t& eroded, rs_gray_img12th_t& bottom){_ssdm_SpecArrayDimSize(eroded.data, 57600);_ssdm_SpecArrayDimSize(bottom.data, 7360);
-
+void get_12th_segment(rs_gray_img_t& eroded, rs_gray_img12th_t& bottom){
 
 #pragma HLS dataflow
  static const uint32_t h_offset = ((180 - 23)*320)+1;
-_ssdm_SpecConstant(&h_offset);
-# 10 "./wd_stage_2.h"
-
  get_12th_segment_label2:for (uint16_t i = 0; i < 23*320; i++)
-#pragma HLS PIPELINE
-# 11 "./wd_stage_2.h"
-
    bottom.data[i] = eroded.data[i+h_offset];
 }
 
 
-void get_histogram(rs_gray_img12th_t& bottom, uint8_t* histogram) {_ssdm_SpecArrayDimSize(bottom.data, 7360);
+void get_histogram(rs_gray_img12th_t& bottom, uint8_t* histogram) {
 
  get_histogram_label3:for (uint16_t h=0; h<320; h++)
-#pragma HLS PIPELINE
-# 18 "./wd_stage_2.h"
-
   for (uint8_t v=0; v<23; v++)
    if (bottom.data[v*320 +h]>0)
     histogram[h]++;
@@ -31480,14 +31461,11 @@ void get_histogram(rs_gray_img12th_t& bottom, uint8_t* histogram) {_ssdm_SpecArr
 
 
 
-void get_line_bases(rs_gray_img12th_t& bottom, LineBase* line_bases){_ssdm_SpecArrayDimSize(bottom.data, 7360);
+void get_line_bases(rs_gray_img12th_t& bottom, LineBase* line_bases){
 
 #pragma HLS inline region
  static uint8_t histogram[320];
  get_line_bases_label4:for (uint16_t i=0; i<320; i++)
-#pragma HLS PIPELINE
-# 30 "./wd_stage_2.h"
-
   histogram[i]=0;
  static uint8_t smoothed[320];
  get_histogram(bottom, histogram);
@@ -31505,9 +31483,6 @@ void get_line_bases(rs_gray_img12th_t& bottom, LineBase* line_bases){_ssdm_SpecA
 
 
  get_line_bases_label0:for (uint8_t i=0; i<max_lines; i++)
-#pragma HLS PIPELINE
-# 47 "./wd_stage_2.h"
-
   line_bases[i].active=false;
  uint16_t last_max_dist = 0, meceta_counter = 0;
  uint8_t line_counter = 0;
@@ -31567,7 +31542,7 @@ void get_line_bases(rs_gray_img12th_t& bottom, LineBase* line_bases){_ssdm_SpecA
 }
 
 
-void extract_micro_roi(rs_gray_img_t& img_in_mr, uint16_t x_top, uint16_t x_bottom, uint16_t y_left, uint16_t y_right, micro_roi_t& micro_roi){_ssdm_SpecArrayDimSize(img_in_mr.data, 57600);_ssdm_SpecArrayDimSize(micro_roi.data, 736);
+void extract_micro_roi(rs_gray_img_t& img_in_mr, uint16_t x_top, uint16_t x_bottom, uint16_t y_left, uint16_t y_right, micro_roi_t& micro_roi){
 
 
  extract_micro_roi_label6:for(uint8_t v = 0; v < 23; v++)
@@ -31580,7 +31555,7 @@ void extract_micro_roi(rs_gray_img_t& img_in_mr, uint16_t x_top, uint16_t x_bott
 }
 
 
-void get_centroid_sh(micro_roi_t& micro_roi, uint16_t h_offset, uint8_t& v_offset, uint8_t v_limit, uint16_t h_limit, Centroid possible_c , Centroid& c){_ssdm_SpecArrayDimSize(micro_roi.data, 736);
+void get_centroid_sh(micro_roi_t& micro_roi, uint16_t h_offset, uint8_t& v_offset, uint8_t v_limit, uint16_t h_limit, Centroid possible_c , Centroid& c){
 
 #pragma HLS dataflow
  uint32_t v_sum = 0, h_sum = 0, _sum = 0;
@@ -31602,7 +31577,7 @@ void get_centroid_sh(micro_roi_t& micro_roi, uint16_t h_offset, uint8_t& v_offse
  }
 }
 
-void get_centroid_fh(micro_roi_t& micro_roi, uint16_t h_offset, uint8_t v_offset, uint8_t v_limit, uint16_t h_limit, Centroid& c){_ssdm_SpecArrayDimSize(micro_roi.data, 736);
+void get_centroid_fh(micro_roi_t& micro_roi, uint16_t h_offset, uint8_t v_offset, uint8_t v_limit, uint16_t h_limit, Centroid& c){
 
 #pragma HLS dataflow
  uint32_t v_sum = 0, h_sum = 0, _sum = 0;
@@ -31630,9 +31605,6 @@ void get_last_centroids(Centroid centroids[], uint8_t selected_line, Centroid la
 #pragma HLS dataflow
  uint8_t seg_index_end = seg_index_start + size;
  get_last_centroids_label9:for(uint8_t i=0; i<max_lines; i++){
-#pragma HLS PIPELINE
-# 169 "./wd_stage_2.h"
-
   uint8_t _i = i+seg_index_start;
   if (_i < seg_index_end){
    last_c[i]=centroids[_i*max_lines+selected_line];
@@ -31650,9 +31622,6 @@ void least_squares_line(Centroid* centroids, uint8_t size, fixed_40b_16i& m, int
  uint32_t sum_x=0, sum_y=0, sum_xy=0, sum_xx=0;
 
  least_squares_line_label10:for (uint8_t i=0; i<max_segments-1; i++)
-#pragma HLS PIPELINE
-# 186 "./wd_stage_2.h"
-
   if (i < size){
    sum_x+=centroids[i].x;
    sum_y+=centroids[i].y;
@@ -31665,11 +31634,11 @@ void least_squares_line(Centroid* centroids, uint8_t size, fixed_40b_16i& m, int
  b=(int32_t)((sum_y/size)-int32_t((sum_x/size)*m));
 }
 
-void extract_first_centroid(const ufixed_24b_8i& micro_roi_width_control, LineBase line_bases[], rs_gray_img_t& eroded, Centroid centroids[]){_ssdm_SpecArrayDimSize(eroded.data, 57600);
+void extract_first_centroid(const ufixed_24b_8i& micro_roi_width_control, LineBase line_bases[], rs_gray_img_t& eroded, Centroid centroids[]){
 
 
 
- micro_roi_t micro_roi_0(23, 32);_ssdm_SpecArrayDimSize(micro_roi_0.data, 736);
+ micro_roi_t micro_roi_0(23, 32);
 
  uint8_t half_width=(uint8_t(micro_roi_width_control)>>1);
  uint8_t x_bottom = segments[0], x_top = segments[1];
@@ -31680,18 +31649,18 @@ void extract_first_centroid(const ufixed_24b_8i& micro_roi_width_control, LineBa
    if(y_right>=320) y_right=320 -1;
    extract_micro_roi(eroded, x_top, x_bottom, (uint16_t)y_left, (uint16_t)y_right, micro_roi_0);
    Centroid c;
-#pragma HLS data_pack variable=&c
+#pragma HLS data_pack variable=c
  get_centroid_fh(micro_roi_0, (uint16_t)y_left, x_top, x_bottom-x_top,(uint16_t) y_right-y_left, c);
    centroids[line_index]=c;
   }
  }
 }
 
-void extract_second_centroid(const ufixed_24b_8i& micro_roi_width_control, LineBase line_bases[], rs_gray_img_t& eroded, Centroid centroids[]){_ssdm_SpecArrayDimSize(eroded.data, 57600);
+void extract_second_centroid(const ufixed_24b_8i& micro_roi_width_control, LineBase line_bases[], rs_gray_img_t& eroded, Centroid centroids[]){
 
 
 
- micro_roi_t micro_roi_1(23, 32);_ssdm_SpecArrayDimSize(micro_roi_1.data, 736);
+ micro_roi_t micro_roi_1(23, 32);
 
  uint8_t half_width = (uint8_t(micro_roi_width_control)>>1);
  uint8_t x_bottom = segments[1], x_top = segments[2];
@@ -31703,7 +31672,7 @@ void extract_second_centroid(const ufixed_24b_8i& micro_roi_width_control, LineB
    if(y_right >= 320) y_right = 320 -1;
    extract_micro_roi(eroded, x_top, x_bottom, (uint16_t)y_left, (uint16_t)y_right, micro_roi_1);
    Centroid c;
-#pragma HLS data_pack variable=&c
+#pragma HLS data_pack variable=c
  get_centroid_fh(micro_roi_1, (uint16_t)y_left, x_top, x_bottom-x_top,(uint16_t) y_right-y_left, c);
    centroids[line_index+max_lines]=c;
   }
@@ -31711,14 +31680,14 @@ void extract_second_centroid(const ufixed_24b_8i& micro_roi_width_control, LineB
 }
 
 void extract_third_and_fourth_c(ufixed_24b_8i& micro_roi_width_control, LineBase line_bases[], ufixed_24b_8i& micro_roi_width_control_out,
-  rs_gray_img_t& eroded, Centroid centroids[]){_ssdm_SpecArrayDimSize(eroded.data, 57600);
+  rs_gray_img_t& eroded, Centroid centroids[]){
 
 
 
- micro_roi_t micro_roi_2(23, 32);_ssdm_SpecArrayDimSize(micro_roi_2.data, 736);
+ micro_roi_t micro_roi_2(23, 32);
 
  static Centroid last_c[max_last_centroids];
-#pragma HLS data_pack variable=&last_c
+#pragma HLS data_pack variable=last_c
  extract_third_and_fourth_c_label13:for(uint8_t seg_index=3; seg_index<5; seg_index++){
   uint8_t c_offset = max_lines*(seg_index-1);
   uint8_t half_width = (uint8_t(micro_roi_width_control)>>1);
@@ -31736,7 +31705,7 @@ void extract_third_and_fourth_c(ufixed_24b_8i& micro_roi_width_control, LineBase
     if(y_right >= 320) y_right = 320 -1;
     extract_micro_roi(eroded, x_top, x_bottom, (uint16_t)y_left, (uint16_t)y_right, micro_roi_2);
     Centroid c;
-#pragma HLS data_pack variable=&c
+#pragma HLS data_pack variable=c
  get_centroid_fh(micro_roi_2, (uint16_t)y_left, x_top, x_bottom-x_top,(uint16_t)(y_right-y_left), c);
     centroids[line_index+c_offset]=c;
    }
@@ -31747,7 +31716,7 @@ void extract_third_and_fourth_c(ufixed_24b_8i& micro_roi_width_control, LineBase
 }
 
 void extr_half_1_cent(ufixed_24b_8i& micro_roi_width_control, ufixed_24b_8i& micro_roi_width_control_out, LineBase line_bases[],
-  rs_gray_img_t& eroded, Centroid centroids[]){_ssdm_SpecArrayDimSize(eroded.data, 57600);
+  rs_gray_img_t& eroded, Centroid centroids[]){
 
 
  micro_roi_t micro_roi_0(23, 32);
@@ -31758,12 +31727,12 @@ void extr_half_1_cent(ufixed_24b_8i& micro_roi_width_control, ufixed_24b_8i& mic
  extract_third_and_fourth_c(micro_roi_width_control, line_bases, micro_roi_width_control_out, eroded, centroids);
 }
 
-void extr_half_2_cent( ufixed_24b_8i& micro_roi_width_control, LineBase* line_bases, rs_gray_img_t& eroded, Centroid* centroids){_ssdm_SpecArrayDimSize(eroded.data, 57600);
+void extr_half_2_cent( ufixed_24b_8i& micro_roi_width_control, LineBase* line_bases, rs_gray_img_t& eroded, Centroid* centroids){
 
 
 
 
- micro_roi_t micro_roi_3(23, 32);_ssdm_SpecArrayDimSize(micro_roi_3.data, 736);
+ micro_roi_t micro_roi_3(23, 32);
 
 
  uint8_t last_seg_index=0;
@@ -31777,7 +31746,7 @@ void extr_half_2_cent( ufixed_24b_8i& micro_roi_width_control, LineBase* line_ba
 
    if (line_bases[line_index].active){
     static Centroid last_centroids[max_last_centroids];
-#pragma HLS data_pack variable=&last_centroids
+#pragma HLS data_pack variable=last_centroids
  get_last_centroids(centroids, line_index, last_centroids, last_seg_index, max_last_centroids);
     fixed_40b_16i m;
     int32_t b;
@@ -31789,8 +31758,8 @@ void extr_half_2_cent( ufixed_24b_8i& micro_roi_width_control, LineBase* line_ba
     extract_micro_roi(eroded, x_top, x_bottom, (uint16_t)y_left, (uint16_t)y_right, micro_roi_3);
     int32_t y_possible = get_y_lineal(x_middle, m, b);
     Centroid possible_c, c;
-#pragma HLS data_pack variable=&possible_c
-#pragma HLS data_pack variable=&c
+#pragma HLS data_pack variable=possible_c
+#pragma HLS data_pack variable=c
  possible_c.x = x_middle;
     possible_c.y = y_possible;
     get_centroid_sh(micro_roi_3, (uint16_t)y_left, x_top, x_bottom-x_top,(uint16_t) y_right-y_left, possible_c, c);
@@ -31803,7 +31772,7 @@ void extr_half_2_cent( ufixed_24b_8i& micro_roi_width_control, LineBase* line_ba
 }
 
 
-void get_centroids(LineBase* line_bases, rs_gray_img_t& eroded, Centroid* centroids){_ssdm_SpecArrayDimSize(eroded.data, 57600);
+void get_centroids(LineBase* line_bases, rs_gray_img_t& eroded, Centroid* centroids){
 
 
 
@@ -31821,11 +31790,8 @@ void get_lines_lsl(Centroid centroids[], LineBase line_bases[], Line final_lines
  get_lines_lsl_label15:for (uint8_t line_index=0; line_index<max_lines; line_index++){
   if (line_bases[line_index].active){
    static Centroid line_centroids[max_segments-1];
-#pragma HLS data_pack variable=&line_centroids
+#pragma HLS data_pack variable=line_centroids
  get_lines_lsl_label0:for (uint8_t s_index=0; s_index<max_segments-1; s_index++)
-#pragma HLS PIPELINE
-# 356 "./wd_stage_2.h"
-
     line_centroids[s_index]=centroids[(s_index)*max_lines+line_index];
    fixed_40b_16i m;
    int32_t b;
@@ -31876,7 +31842,7 @@ int8_t is_crop_or_furrow(Line* lines, int16_t& px, uint16_t& py, uint8_t& crop_w
  return (-1);
 }
 
-void get_weed_mask(rs_gray_img_t& weed_mask_tmp, ufixed_24b_8i crop_widh_control, Line lines[], bool& lines_founded){_ssdm_SpecArrayDimSize(weed_mask_tmp.data, 57600);
+void get_weed_mask(rs_gray_img_t& weed_mask_tmp, ufixed_24b_8i crop_widh_control, Line lines[], bool& lines_founded){
 
 
 
@@ -31893,18 +31859,18 @@ void get_weed_mask(rs_gray_img_t& weed_mask_tmp, ufixed_24b_8i crop_widh_control
  }
 }
 
-void get_crop_lines(rs_gray_img12th_t& bottom, rs_gray_img_t& eroded, rs_gray_img_t& weed_mask_tmp){_ssdm_SpecArrayDimSize(bottom.data, 7360);_ssdm_SpecArrayDimSize(eroded.data, 57600);_ssdm_SpecArrayDimSize(weed_mask_tmp.data, 57600);
+void get_crop_lines(rs_gray_img12th_t& bottom, rs_gray_img_t& eroded, rs_gray_img_t& weed_mask_tmp){
 
 
 
 
 
  static LineBase line_bases[max_lines];
-#pragma HLS data_pack variable=&line_bases
+#pragma HLS data_pack variable=line_bases
  static Centroid centroids[max_centroids];
-#pragma HLS data_pack variable=&centroids
+#pragma HLS data_pack variable=centroids
  static Line lines[max_lines];
-#pragma HLS data_pack variable=&lines
+#pragma HLS data_pack variable=lines
  bool lines_founded = false;
 
 
@@ -31912,7 +31878,7 @@ void get_crop_lines(rs_gray_img12th_t& bottom, rs_gray_img_t& eroded, rs_gray_im
 
 
  get_centroids(line_bases, eroded, centroids);
-# 454 "./wd_stage_2.h"
+# 453 "./wd_stage_2.h"
  get_lines_lsl(centroids, line_bases, lines, lines_founded);
 
 
@@ -31929,7 +31895,7 @@ void get_crop_lines(rs_gray_img12th_t& bottom, rs_gray_img_t& eroded, rs_gray_im
 
 
 
-void sectors_weed_classification(rs_gray_img_t& weed_mask_tmp,rs_gray_img_t& weed_mask_out, rs_gray_img_t& opened){_ssdm_SpecArrayDimSize(weed_mask_tmp.data, 57600);_ssdm_SpecArrayDimSize(weed_mask_out.data, 57600);_ssdm_SpecArrayDimSize(opened.data, 57600);
+void sectors_weed_classification(rs_gray_img_t& weed_mask_tmp,rs_gray_img_t& weed_mask_out, rs_gray_img_t& opened){
 
 #pragma HLS inline recursive
 
@@ -31940,9 +31906,6 @@ void sectors_weed_classification(rs_gray_img_t& weed_mask_tmp,rs_gray_img_t& wee
   uint16_t quadrant_space[max_lines-1];
   ufixed_32b_16i quadrant_weed[max_lines-1];
   sectors_weed_classification_label1:for (uint8_t i=0; i<max_lines-1; i++){
-#pragma HLS PIPELINE
-# 16 "./wd_stage_3.h"
-
    quadrant_space[i]=0;
    quadrant_weed[i]=0;
   }
@@ -31971,9 +31934,6 @@ void sectors_weed_classification(rs_gray_img_t& weed_mask_tmp,rs_gray_img_t& wee
   }
 
   sectors_weed_classification_label16:for(uint8_t i=0; i<max_lines-1; i++)
-#pragma HLS PIPELINE
-# 44 "./wd_stage_3.h"
-
    if (quadrant_space[i] != 0)
     quadrant_weed[i]=quadrant_weed[i]/(ufixed_32b_16i)quadrant_space[i];
 
@@ -32049,8 +32009,8 @@ static typename DataType<DEPTH,NPC>::name ProcessBlockAreaUp_2(ap_uint<13> Offse
 {
 #pragma HLS INLINE
  typename PixelType<DEPTH>::uname line0[4<<xfNPixelsPerCycle<NPC>::datashift],line1[4<<xfNPixelsPerCycle<NPC>::datashift];
-#pragma HLS ARRAY_PARTITION variable=&line0 complete dim=1
-#pragma HLS ARRAY_PARTITION variable=&line1 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=line0 complete dim=1
+#pragma HLS ARRAY_PARTITION variable=line1 complete dim=1
 
  uchar_t i,input_read,Pixels;
  uint16_t block_start_ind = (blockstart>>xfNPixelsPerCycle<NPC>::datashift)<<xfNPixelsPerCycle<NPC>::datashift;
@@ -32106,19 +32066,19 @@ static uint64_t xFUDivAreaUp_2 (uint64_t in_n, unsigned short in_d)
 
 template<int SRC_ROWS,int SRC_COLS,int PLANES,int DEPTH,int NPC,int WORDWIDTH,int DST_ROWS,int DST_COLS,int SRC_TC,int DST_TC>
 void xFResizeAreaUpScale_2(xf::Mat<DEPTH, SRC_ROWS, SRC_COLS, NPC> &stream_in, xf::Mat<DEPTH, DST_ROWS, DST_COLS, NPC> &resize_out, unsigned short height, unsigned short width, unsigned short out_height, unsigned short out_width)
-{_ssdm_SpecArrayDimSize(stream_in.data, 57600);_ssdm_SpecArrayDimSize(resize_out.data, 921600);
+{
  typename DataType<DEPTH,NPC>::name lbuf_in0[SRC_COLS>>xfNPixelsPerCycle<NPC>::datashift];
  typename DataType<DEPTH,NPC>::name lbuf_in1[SRC_COLS>>xfNPixelsPerCycle<NPC>::datashift];
  typename DataType<DEPTH,NPC>::name lbuf_in2[SRC_COLS>>xfNPixelsPerCycle<NPC>::datashift];
  ap_uint<13> Hoffset[DST_COLS],Voffset[DST_ROWS];
 if (NPC!=XF_NPPC1)
 {
-#pragma HLS ARRAY_PARTITION variable=&Hoffset cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=Hoffset cyclic factor=8 dim=1
 }
  uint32_t Hweight[DST_COLS],Vweight[DST_ROWS+1];
 if (NPC!=XF_NPPC1)
 {
-#pragma HLS ARRAY_PARTITION variable=&Hweight cyclic factor=8 dim=1
+#pragma HLS ARRAY_PARTITION variable=Hweight cyclic factor=8 dim=1
 }
  uchar_t idx=0,repcount=0,datacount=0;
  uint16_t Hstart[(DST_COLS>>xfNPixelsPerCycle<NPC>::datashift) + 1];
@@ -32402,7 +32362,7 @@ if (NPC!=XF_NPPC1)
 #pragma SDS data copy("_src.data"[0:"_src.size"], "_dst.data"[0:"_dst.size"])
 template<int INTERPOLATION_TYPE, int TYPE, int SRC_ROWS, int SRC_COLS, int DST_ROWS, int DST_COLS, int NPC, int MAX_DOWN_SCALE>
 void resize_2(xf::Mat<TYPE, SRC_ROWS, SRC_COLS, NPC> & _src, xf::Mat<TYPE, DST_ROWS, DST_COLS, NPC> & _dst)
-{_ssdm_SpecArrayDimSize(_src.data, 57600);_ssdm_SpecArrayDimSize(_dst.data, 921600);
+{
 #pragma HLS INLINE OFF
 
  (void) ((!!(((INTERPOLATION_TYPE == XF_INTERPOLATION_BILINEAR) ||(INTERPOLATION_TYPE == XF_INTERPOLATION_AREA)) && "Incorrect parameters interpolation type")) || (_assert("((INTERPOLATION_TYPE == XF_INTERPOLATION_BILINEAR) ||(INTERPOLATION_TYPE == XF_INTERPOLATION_AREA)) && \"Incorrect parameters interpolation type\"","./xf_resize_2.hpp",931),0));
@@ -32479,7 +32439,7 @@ void xFDuplicate_2(hls::stream< typename DataType<SRC_T,NPC>::name > &_src_mat,
 
 template<int SRC_T, int ROWS, int COLS,int NPC>
 void duplicateMat_2(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src, xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst1,xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst2)
-{_ssdm_SpecArrayDimSize(_src.data, 921600);_ssdm_SpecArrayDimSize(_dst1.data, 921600);_ssdm_SpecArrayDimSize(_dst2.data, 921600);
+{
 #pragma HLS inline off
 
 #pragma HLS dataflow
@@ -32564,7 +32524,7 @@ namespace xf {
 template<int SRC_T, int ROWS, int COLS, int PLANES,int DEPTH, int NPC, int WORDWIDTH_SRC,int WORDWIDTH_DST, int COLS_TRIP,typename KERNEL, int USE_SRC2>
 void xFarithm_proc_2(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, xf::Mat<SRC_T, ROWS, COLS, NPC> & _src2, xf::Scalar<DataType<SRC_T,NPC>::channel, unsigned char> scl, xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst,
 int _policytype,uint16_t image_height,uint16_t image_width)
-{_ssdm_SpecArrayDimSize(_src1.data, 921600);_ssdm_SpecArrayDimSize(_src2.data, 921600);_ssdm_SpecArrayDimSize(_dst.data, 921600);
+{
  KERNEL opr;
  int STEP;
  STEP=PixelType<DEPTH>::bitdepth/PLANES;
@@ -32616,7 +32576,7 @@ int _policytype,uint16_t image_height,uint16_t image_width)
 #pragma SDS data copy("_dst.data"[0:"_dst.size"])
 template<int POLICY_TYPE, int SRC_T, int ROWS, int COLS, int NPC>
 void add_2(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, xf::Mat<SRC_T, ROWS, COLS, NPC> & _src2,xf::Mat<SRC_T, ROWS, COLS, NPC> & _dst)
-{_ssdm_SpecArrayDimSize(_src1.data, 921600);_ssdm_SpecArrayDimSize(_src2.data, 921600);_ssdm_SpecArrayDimSize(_dst.data, 921600);
+{
 
 #pragma HLS inline off
  uint16_t image_width = _src1.cols >> xfNPixelsPerCycle<NPC>::datashift;
@@ -32642,56 +32602,56 @@ void add_2(xf::Mat<SRC_T, ROWS, COLS, NPC> & _src1, xf::Mat<SRC_T, ROWS, COLS, N
 
 
 void weed_detection(rgb_img_t& img_in, rgb_img_t& img_out)
-{_ssdm_SpecArrayDimSize(img_in.data, 921600);_ssdm_SpecArrayDimSize(img_out.data, 921600);
+{
 #pragma HLS dataflow
 
 
-rgb_img_t img_in_0(720, 1280);_ssdm_SpecArrayDimSize(img_in_0.data, 921600);
-#pragma HLS STREAM variable=&img_in_0 depth=1 dim=1
-rgb_img_t img_in_1(720, 1280);_ssdm_SpecArrayDimSize(img_in_1.data, 921600);
-#pragma HLS STREAM variable=&img_in_1 depth=1 dim=1
+rgb_img_t img_in_0(720, 1280);
+#pragma HLS STREAM variable=img_in_0 depth=1 dim=1
+rgb_img_t img_in_1(720, 1280);
+#pragma HLS STREAM variable=img_in_1 depth=1 dim=1
 
-rs_rgb_img_t resized(180, 320);_ssdm_SpecArrayDimSize(resized.data, 57600);
-#pragma HLS STREAM variable=&resized depth=1 dim=1
+rs_rgb_img_t resized(180, 320);
+#pragma HLS STREAM variable=resized depth=1 dim=1
 
-rs_gray_img_t veg_img(180, 320);_ssdm_SpecArrayDimSize(veg_img.data, 57600);
-#pragma HLS STREAM variable=&veg_img depth=1 dim=1
-rs_gray_img_t segmented(180, 320);_ssdm_SpecArrayDimSize(segmented.data, 57600);
-#pragma HLS STREAM variable=&segmented depth=1 dim=1
+rs_gray_img_t veg_img(180, 320);
+#pragma HLS STREAM variable=veg_img depth=1 dim=1
+rs_gray_img_t segmented(180, 320);
+#pragma HLS STREAM variable=segmented depth=1 dim=1
 
-rs_gray_img_t eroded_0a(180, 320);_ssdm_SpecArrayDimSize(eroded_0a.data, 57600);
-#pragma HLS STREAM variable=&eroded_0a depth=1 dim=1
-rs_gray_img_t eroded_0b(180, 320);_ssdm_SpecArrayDimSize(eroded_0b.data, 57600);
-#pragma HLS STREAM variable=&eroded_0b depth=1 dim=1
+rs_gray_img_t eroded_0a(180, 320);
+#pragma HLS STREAM variable=eroded_0a depth=1 dim=1
+rs_gray_img_t eroded_0b(180, 320);
+#pragma HLS STREAM variable=eroded_0b depth=1 dim=1
 
-rs_gray_img_t eroded_1(180, 320);_ssdm_SpecArrayDimSize(eroded_1.data, 57600);
-#pragma HLS STREAM variable=&eroded_1 depth=1 dim=1
-rs_gray_img_t eroded_1a(180, 320);_ssdm_SpecArrayDimSize(eroded_1a.data, 57600);
-#pragma HLS STREAM variable=&eroded_1a depth=1 dim=1
-rs_gray_img_t eroded_1b(180, 320);_ssdm_SpecArrayDimSize(eroded_1b.data, 57600);
-#pragma HLS STREAM variable=&eroded_1b depth=1 dim=1
+rs_gray_img_t eroded_1(180, 320);
+#pragma HLS STREAM variable=eroded_1 depth=1 dim=1
+rs_gray_img_t eroded_1a(180, 320);
+#pragma HLS STREAM variable=eroded_1a depth=1 dim=1
+rs_gray_img_t eroded_1b(180, 320);
+#pragma HLS STREAM variable=eroded_1b depth=1 dim=1
 
-rs_gray_img12th_t bottom(23, 320);_ssdm_SpecArrayDimSize(bottom.data, 7360);
-#pragma HLS STREAM variable=&bottom depth=1 dim=1
+rs_gray_img12th_t bottom(23, 320);
+#pragma HLS STREAM variable=bottom depth=1 dim=1
 
 rs_gray_img_t weed_mask(180, 320);
-#pragma HLS STREAM variable=&weed_mask depth=1 dim=1
-rs_gray_img_t weed_mask_tmp(180, 320);_ssdm_SpecArrayDimSize(weed_mask_tmp.data, 57600);
-#pragma HLS STREAM variable=&weed_mask_tmp depth=1 dim=1
-rs_gray_img_t weed_mask_out(180, 320);_ssdm_SpecArrayDimSize(weed_mask_out.data, 57600);
-#pragma HLS STREAM variable=&weed_mask_out depth=1 dim=1
+#pragma HLS STREAM variable=weed_mask depth=1 dim=1
+rs_gray_img_t weed_mask_tmp(180, 320);
+#pragma HLS STREAM variable=weed_mask_tmp depth=1 dim=1
+rs_gray_img_t weed_mask_out(180, 320);
+#pragma HLS STREAM variable=weed_mask_out depth=1 dim=1
 
-rs_gray_img_t zero(180, 320);_ssdm_SpecArrayDimSize(zero.data, 57600);
-#pragma HLS STREAM variable=&zero depth=1 dim=1
+rs_gray_img_t zero(180, 320);
+#pragma HLS STREAM variable=zero depth=1 dim=1
 rs_gray_img_t zero_a(180, 320);
-#pragma HLS STREAM variable=&zero_a depth=1 dim=1
+#pragma HLS STREAM variable=zero_a depth=1 dim=1
 rs_gray_img_t zero_b(180, 320);
-#pragma HLS STREAM variable=&zero_b depth=1 dim=1
+#pragma HLS STREAM variable=zero_b depth=1 dim=1
 
-rs_rgb_img_t mask_img_out(180,320);_ssdm_SpecArrayDimSize(mask_img_out.data, 57600);
-#pragma HLS STREAM variable=&mask_img_out depth=1 dim=1
-rgb_img_t rs_mask_img_out(720, 1280);_ssdm_SpecArrayDimSize(rs_mask_img_out.data, 921600);
-#pragma HLS STREAM variable=&rs_mask_img_out depth=1 dim=1
+rs_rgb_img_t mask_img_out(180,320);
+#pragma HLS STREAM variable=mask_img_out depth=1 dim=1
+rgb_img_t rs_mask_img_out(720, 1280);
+#pragma HLS STREAM variable=rs_mask_img_out depth=1 dim=1
 
 
 
@@ -32743,17 +32703,14 @@ sectors_weed_classification(weed_mask_tmp, weed_mask_out, eroded_0b);
 
 void ip_accel_app(stream_t& stream_in, stream_t& stream_out)
 {
-#pragma HLS INTERFACE ap_ctrl_none port=return
-# 111 "weed_detection.cpp"
-
 #pragma HLS dataflow
-#pragma HLS INTERFACE axis register both port=&stream_in
-#pragma HLS INTERFACE axis register both port=&stream_out
+#pragma HLS INTERFACE axis register both port=stream_in
+#pragma HLS INTERFACE axis register both port=stream_out
 
- rgb_img_t img_in(720, 1280);_ssdm_SpecArrayDimSize(img_in.data, 921600);
-#pragma HLS STREAM variable=&img_in depth=1 dim=1
- rgb_img_t img_out(720, 1280);_ssdm_SpecArrayDimSize(img_out.data, 921600);
-#pragma HLS STREAM variable=&img_out depth=1 dim=1
+ rgb_img_t img_in(720, 1280);
+#pragma HLS STREAM variable=img_in depth=1 dim=1
+ rgb_img_t img_out(720, 1280);
+#pragma HLS STREAM variable=img_out depth=1 dim=1
 
 
  xf::AXIvideo2xfMat(stream_in, img_in);

@@ -81,20 +81,20 @@ wire    ap_channel_done_img_in_0_rows_channe;
 wire    img_in_0_rows_channe_full_n;
 reg    ap_sync_reg_channel_write_img_in_0_rows_channe;
 wire    ap_sync_channel_write_img_in_0_rows_channe;
-wire    duplicateMat_2762_U0_ap_start;
-wire    duplicateMat_2762_U0_start_full_n;
-wire    duplicateMat_2762_U0_start_out;
-wire    duplicateMat_2762_U0_start_write;
-wire    duplicateMat_2762_U0_p_src_cols_read;
-wire    duplicateMat_2762_U0_p_src_data_V_read;
-wire   [23:0] duplicateMat_2762_U0_p_dst1_data_V_din;
-wire    duplicateMat_2762_U0_p_dst1_data_V_write;
-wire   [23:0] duplicateMat_2762_U0_p_dst2_data_V_din;
-wire    duplicateMat_2762_U0_p_dst2_data_V_write;
-wire    duplicateMat_2762_U0_ap_done;
-wire    duplicateMat_2762_U0_ap_ready;
-wire    duplicateMat_2762_U0_ap_idle;
-wire    duplicateMat_2762_U0_ap_continue;
+wire    duplicateMat_2763_U0_ap_start;
+wire    duplicateMat_2763_U0_start_full_n;
+wire    duplicateMat_2763_U0_start_out;
+wire    duplicateMat_2763_U0_start_write;
+wire    duplicateMat_2763_U0_p_src_cols_read;
+wire    duplicateMat_2763_U0_p_src_data_V_read;
+wire   [23:0] duplicateMat_2763_U0_p_dst1_data_V_din;
+wire    duplicateMat_2763_U0_p_dst1_data_V_write;
+wire   [23:0] duplicateMat_2763_U0_p_dst2_data_V_din;
+wire    duplicateMat_2763_U0_p_dst2_data_V_write;
+wire    duplicateMat_2763_U0_ap_done;
+wire    duplicateMat_2763_U0_ap_ready;
+wire    duplicateMat_2763_U0_ap_idle;
+wire    duplicateMat_2763_U0_ap_continue;
 wire    resizeNNBilinear_U0_ap_start;
 wire    resizeNNBilinear_U0_ap_done;
 wire    resizeNNBilinear_U0_ap_continue;
@@ -124,16 +124,16 @@ wire    segment_image_U0_start_write;
 wire    segment_image_U0_img_in_data_V_read;
 wire   [0:0] segment_image_U0_img_out_data_V_din;
 wire    segment_image_U0_img_out_data_V_write;
-wire    erode437_U0_ap_start;
-wire    erode437_U0_ap_done;
-wire    erode437_U0_ap_continue;
-wire    erode437_U0_ap_idle;
-wire    erode437_U0_ap_ready;
-wire    erode437_U0_start_out;
-wire    erode437_U0_start_write;
-wire    erode437_U0_p_src_data_V_read;
-wire   [7:0] erode437_U0_p_dst_data_V_din;
-wire    erode437_U0_p_dst_data_V_write;
+wire    erode438_U0_ap_start;
+wire    erode438_U0_ap_done;
+wire    erode438_U0_ap_continue;
+wire    erode438_U0_ap_idle;
+wire    erode438_U0_ap_ready;
+wire    erode438_U0_start_out;
+wire    erode438_U0_start_write;
+wire    erode438_U0_p_src_data_V_read;
+wire   [7:0] erode438_U0_p_dst_data_V_din;
+wire    erode438_U0_p_dst_data_V_write;
 wire    remark_crop_lines_U0_ap_start;
 wire    remark_crop_lines_U0_ap_done;
 wire    remark_crop_lines_U0_ap_continue;
@@ -145,19 +145,19 @@ wire   [7:0] remark_crop_lines_U0_eroded_1_data_V_din;
 wire    remark_crop_lines_U0_eroded_1_data_V_write;
 wire   [7:0] remark_crop_lines_U0_eroded_2_data_V_din;
 wire    remark_crop_lines_U0_eroded_2_data_V_write;
-wire    duplicateMat438_U0_ap_start;
-wire    duplicateMat438_U0_start_full_n;
-wire    duplicateMat438_U0_start_out;
-wire    duplicateMat438_U0_start_write;
-wire    duplicateMat438_U0_p_src_data_V_read;
-wire   [7:0] duplicateMat438_U0_p_dst1_data_V_din;
-wire    duplicateMat438_U0_p_dst1_data_V_write;
-wire   [7:0] duplicateMat438_U0_p_dst2_data_V_din;
-wire    duplicateMat438_U0_p_dst2_data_V_write;
-wire    duplicateMat438_U0_ap_done;
-wire    duplicateMat438_U0_ap_ready;
-wire    duplicateMat438_U0_ap_idle;
-wire    duplicateMat438_U0_ap_continue;
+wire    duplicateMat439_U0_ap_start;
+wire    duplicateMat439_U0_start_full_n;
+wire    duplicateMat439_U0_start_out;
+wire    duplicateMat439_U0_start_write;
+wire    duplicateMat439_U0_p_src_data_V_read;
+wire   [7:0] duplicateMat439_U0_p_dst1_data_V_din;
+wire    duplicateMat439_U0_p_dst1_data_V_write;
+wire   [7:0] duplicateMat439_U0_p_dst2_data_V_din;
+wire    duplicateMat439_U0_p_dst2_data_V_write;
+wire    duplicateMat439_U0_ap_done;
+wire    duplicateMat439_U0_ap_ready;
+wire    duplicateMat439_U0_ap_idle;
+wire    duplicateMat439_U0_ap_continue;
 wire    get_12th_segment_U0_eroded_data_V_read;
 wire   [7:0] get_12th_segment_U0_bottom_data_V_din;
 wire    get_12th_segment_U0_bottom_data_V_write;
@@ -216,15 +216,15 @@ wire    resize_2_U0_ap_ready;
 wire    resize_2_U0_p_src_data_V_read;
 wire   [23:0] resize_2_U0_p_dst_data_V_din;
 wire    resize_2_U0_p_dst_data_V_write;
-wire    add_2749_U0_ap_start;
-wire    add_2749_U0_ap_done;
-wire    add_2749_U0_ap_continue;
-wire    add_2749_U0_ap_idle;
-wire    add_2749_U0_ap_ready;
-wire    add_2749_U0_p_src1_data_V_read;
-wire    add_2749_U0_p_src2_data_V_read;
-wire   [23:0] add_2749_U0_p_dst_data_V_din;
-wire    add_2749_U0_p_dst_data_V_write;
+wire    add_2750_U0_ap_start;
+wire    add_2750_U0_ap_done;
+wire    add_2750_U0_ap_continue;
+wire    add_2750_U0_ap_idle;
+wire    add_2750_U0_ap_ready;
+wire    add_2750_U0_p_src1_data_V_read;
+wire    add_2750_U0_p_src2_data_V_read;
+wire   [23:0] add_2750_U0_p_dst_data_V_din;
+wire    add_2750_U0_p_dst_data_V_write;
 wire    img_in_cols_c_full_n;
 wire   [11:0] img_in_cols_c_dout;
 wire    img_in_cols_c_empty_n;
@@ -256,9 +256,9 @@ wire    eroded_0a_data_V_empty_n;
 wire    eroded_1_data_V_full_n;
 wire   [7:0] eroded_1_data_V_dout;
 wire    eroded_1_data_V_empty_n;
-wire    duplicateMat438_U0_p_src_data_V_full_n;
-wire    duplicateMat438_U0_p_src_data_V_write;
-wire   [7:0] duplicateMat438_U0_p_src_data_V_din;
+wire    duplicateMat439_U0_p_src_data_V_full_n;
+wire    duplicateMat439_U0_p_src_data_V_write;
+wire   [7:0] duplicateMat439_U0_p_src_data_V_din;
 wire    eroded_0b_data_V_full_n;
 wire   [7:0] eroded_0b_data_V_dout;
 wire    eroded_0b_data_V_empty_n;
@@ -297,12 +297,12 @@ reg   [1:0] weed_detection_entry_U0_ap_ready_count;
 reg    ap_sync_reg_weed_detection_Block_U0_ap_ready;
 wire    ap_sync_weed_detection_Block_U0_ap_ready;
 reg   [1:0] weed_detection_Block_U0_ap_ready_count;
-reg    ap_sync_reg_duplicateMat_2762_U0_ap_ready;
-wire    ap_sync_duplicateMat_2762_U0_ap_ready;
-reg   [1:0] duplicateMat_2762_U0_ap_ready_count;
-reg    ap_sync_reg_duplicateMat438_U0_ap_ready;
-wire    ap_sync_duplicateMat438_U0_ap_ready;
-reg   [1:0] duplicateMat438_U0_ap_ready_count;
+reg    ap_sync_reg_duplicateMat_2763_U0_ap_ready;
+wire    ap_sync_duplicateMat_2763_U0_ap_ready;
+reg   [1:0] duplicateMat_2763_U0_ap_ready_count;
+reg    ap_sync_reg_duplicateMat439_U0_ap_ready;
+wire    ap_sync_duplicateMat439_U0_ap_ready;
+reg   [1:0] duplicateMat439_U0_ap_ready_count;
 reg    ap_sync_reg_zero_0_180_320_1_U0_ap_ready;
 wire    ap_sync_zero_0_180_320_1_U0_ap_ready;
 reg   [1:0] zero_0_180_320_1_U0_ap_ready_count;
@@ -316,20 +316,20 @@ wire   [0:0] start_for_resizeNNBilinear_U0_din;
 wire    start_for_resizeNNBilinear_U0_full_n;
 wire   [0:0] start_for_resizeNNBilinear_U0_dout;
 wire    start_for_resizeNNBilinear_U0_empty_n;
-wire   [0:0] start_for_add_2749_U0_din;
-wire    start_for_add_2749_U0_full_n;
-wire   [0:0] start_for_add_2749_U0_dout;
-wire    start_for_add_2749_U0_empty_n;
+wire   [0:0] start_for_add_2750_U0_din;
+wire    start_for_add_2750_U0_full_n;
+wire   [0:0] start_for_add_2750_U0_dout;
+wire    start_for_add_2750_U0_empty_n;
 wire    resizeNNBilinear_U0_start_full_n;
 wire    resizeNNBilinear_U0_start_write;
 wire   [0:0] start_for_segment_image_U0_din;
 wire    start_for_segment_image_U0_full_n;
 wire   [0:0] start_for_segment_image_U0_dout;
 wire    start_for_segment_image_U0_empty_n;
-wire   [0:0] start_for_erode437_U0_din;
-wire    start_for_erode437_U0_full_n;
-wire   [0:0] start_for_erode437_U0_dout;
-wire    start_for_erode437_U0_empty_n;
+wire   [0:0] start_for_erode438_U0_din;
+wire    start_for_erode438_U0_full_n;
+wire   [0:0] start_for_erode438_U0_dout;
+wire    start_for_erode438_U0_empty_n;
 wire   [0:0] start_for_remark_crop_lines_U0_din;
 wire    start_for_remark_crop_lines_U0_full_n;
 wire   [0:0] start_for_remark_crop_lines_U0_dout;
@@ -362,8 +362,8 @@ wire   [0:0] start_for_resize_2_U0_dout;
 wire    start_for_resize_2_U0_empty_n;
 wire    resize_2_U0_start_full_n;
 wire    resize_2_U0_start_write;
-wire    add_2749_U0_start_full_n;
-wire    add_2749_U0_start_write;
+wire    add_2750_U0_start_full_n;
+wire    add_2750_U0_start_write;
 
 // power-on initialization
 initial begin
@@ -374,10 +374,10 @@ initial begin
 #0 weed_detection_entry_U0_ap_ready_count = 2'd0;
 #0 ap_sync_reg_weed_detection_Block_U0_ap_ready = 1'b0;
 #0 weed_detection_Block_U0_ap_ready_count = 2'd0;
-#0 ap_sync_reg_duplicateMat_2762_U0_ap_ready = 1'b0;
-#0 duplicateMat_2762_U0_ap_ready_count = 2'd0;
-#0 ap_sync_reg_duplicateMat438_U0_ap_ready = 1'b0;
-#0 duplicateMat438_U0_ap_ready_count = 2'd0;
+#0 ap_sync_reg_duplicateMat_2763_U0_ap_ready = 1'b0;
+#0 duplicateMat_2763_U0_ap_ready_count = 2'd0;
+#0 ap_sync_reg_duplicateMat439_U0_ap_ready = 1'b0;
+#0 duplicateMat439_U0_ap_ready_count = 2'd0;
 #0 ap_sync_reg_zero_0_180_320_1_U0_ap_ready = 1'b0;
 #0 zero_0_180_320_1_U0_ap_ready_count = 2'd0;
 end
@@ -416,33 +416,33 @@ weed_detection_Block weed_detection_Block_U0(
     .resized_cols_out_write(weed_detection_Block_U0_resized_cols_out_write)
 );
 
-duplicateMat_2762 duplicateMat_2762_U0(
-    .ap_start(duplicateMat_2762_U0_ap_start),
-    .start_full_n(duplicateMat_2762_U0_start_full_n),
-    .start_out(duplicateMat_2762_U0_start_out),
-    .start_write(duplicateMat_2762_U0_start_write),
+duplicateMat_2763 duplicateMat_2763_U0(
+    .ap_start(duplicateMat_2763_U0_ap_start),
+    .start_full_n(duplicateMat_2763_U0_start_full_n),
+    .start_out(duplicateMat_2763_U0_start_out),
+    .start_write(duplicateMat_2763_U0_start_write),
     .p_src_cols_dout(img_in_cols_c_dout),
     .p_src_cols_empty_n(img_in_cols_c_empty_n),
-    .p_src_cols_read(duplicateMat_2762_U0_p_src_cols_read),
+    .p_src_cols_read(duplicateMat_2763_U0_p_src_cols_read),
     .p_src_data_V_dout(img_in_data_V_dout),
     .p_src_data_V_empty_n(img_in_data_V_empty_n),
-    .p_src_data_V_read(duplicateMat_2762_U0_p_src_data_V_read),
+    .p_src_data_V_read(duplicateMat_2763_U0_p_src_data_V_read),
     .p_dst1_rows(img_in_0_rows_channe_dout),
     .p_dst1_cols(img_in_0_cols_channe_dout),
-    .p_dst1_data_V_din(duplicateMat_2762_U0_p_dst1_data_V_din),
+    .p_dst1_data_V_din(duplicateMat_2763_U0_p_dst1_data_V_din),
     .p_dst1_data_V_full_n(img_in_0_data_V_full_n),
-    .p_dst1_data_V_write(duplicateMat_2762_U0_p_dst1_data_V_write),
-    .p_dst2_data_V_din(duplicateMat_2762_U0_p_dst2_data_V_din),
+    .p_dst1_data_V_write(duplicateMat_2763_U0_p_dst1_data_V_write),
+    .p_dst2_data_V_din(duplicateMat_2763_U0_p_dst2_data_V_din),
     .p_dst2_data_V_full_n(img_in_1_data_V_full_n),
-    .p_dst2_data_V_write(duplicateMat_2762_U0_p_dst2_data_V_write),
+    .p_dst2_data_V_write(duplicateMat_2763_U0_p_dst2_data_V_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
     .p_dst1_rows_ap_vld(1'b0),
     .p_dst1_cols_ap_vld(1'b0),
-    .ap_done(duplicateMat_2762_U0_ap_done),
-    .ap_ready(duplicateMat_2762_U0_ap_ready),
-    .ap_idle(duplicateMat_2762_U0_ap_idle),
-    .ap_continue(duplicateMat_2762_U0_ap_continue)
+    .ap_done(duplicateMat_2763_U0_ap_done),
+    .ap_ready(duplicateMat_2763_U0_ap_ready),
+    .ap_idle(duplicateMat_2763_U0_ap_idle),
+    .ap_continue(duplicateMat_2763_U0_ap_continue)
 );
 
 resizeNNBilinear resizeNNBilinear_U0(
@@ -487,7 +487,7 @@ segment_image segment_image_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
     .ap_start(segment_image_U0_ap_start),
-    .start_full_n(start_for_erode437_U0_full_n),
+    .start_full_n(start_for_erode438_U0_full_n),
     .ap_done(segment_image_U0_ap_done),
     .ap_continue(segment_image_U0_ap_continue),
     .ap_idle(segment_image_U0_ap_idle),
@@ -502,23 +502,23 @@ segment_image segment_image_U0(
     .img_out_data_V_write(segment_image_U0_img_out_data_V_write)
 );
 
-erode437 erode437_U0(
+erode438 erode438_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(erode437_U0_ap_start),
+    .ap_start(erode438_U0_ap_start),
     .start_full_n(start_for_remark_crop_lines_U0_full_n),
-    .ap_done(erode437_U0_ap_done),
-    .ap_continue(erode437_U0_ap_continue),
-    .ap_idle(erode437_U0_ap_idle),
-    .ap_ready(erode437_U0_ap_ready),
-    .start_out(erode437_U0_start_out),
-    .start_write(erode437_U0_start_write),
+    .ap_done(erode438_U0_ap_done),
+    .ap_continue(erode438_U0_ap_continue),
+    .ap_idle(erode438_U0_ap_idle),
+    .ap_ready(erode438_U0_ap_ready),
+    .start_out(erode438_U0_start_out),
+    .start_write(erode438_U0_start_write),
     .p_src_data_V_dout(segmented_data_V_dout),
     .p_src_data_V_empty_n(segmented_data_V_empty_n),
-    .p_src_data_V_read(erode437_U0_p_src_data_V_read),
-    .p_dst_data_V_din(erode437_U0_p_dst_data_V_din),
+    .p_src_data_V_read(erode438_U0_p_src_data_V_read),
+    .p_dst_data_V_din(erode438_U0_p_dst_data_V_din),
     .p_dst_data_V_full_n(eroded_0a_data_V_full_n),
-    .p_dst_data_V_write(erode437_U0_p_dst_data_V_write)
+    .p_dst_data_V_write(erode438_U0_p_dst_data_V_write)
 );
 
 remark_crop_lines remark_crop_lines_U0(
@@ -543,26 +543,26 @@ remark_crop_lines remark_crop_lines_U0(
     .eroded_2_data_V_write(remark_crop_lines_U0_eroded_2_data_V_write)
 );
 
-duplicateMat438 duplicateMat438_U0(
-    .ap_start(duplicateMat438_U0_ap_start),
-    .start_full_n(duplicateMat438_U0_start_full_n),
-    .start_out(duplicateMat438_U0_start_out),
-    .start_write(duplicateMat438_U0_start_write),
+duplicateMat439 duplicateMat439_U0(
+    .ap_start(duplicateMat439_U0_ap_start),
+    .start_full_n(duplicateMat439_U0_start_full_n),
+    .start_out(duplicateMat439_U0_start_out),
+    .start_write(duplicateMat439_U0_start_write),
     .p_src_data_V_dout(8'd0),
     .p_src_data_V_empty_n(1'b1),
-    .p_src_data_V_read(duplicateMat438_U0_p_src_data_V_read),
-    .p_dst1_data_V_din(duplicateMat438_U0_p_dst1_data_V_din),
+    .p_src_data_V_read(duplicateMat439_U0_p_src_data_V_read),
+    .p_dst1_data_V_din(duplicateMat439_U0_p_dst1_data_V_din),
     .p_dst1_data_V_full_n(eroded_1a_data_V_full_n),
-    .p_dst1_data_V_write(duplicateMat438_U0_p_dst1_data_V_write),
-    .p_dst2_data_V_din(duplicateMat438_U0_p_dst2_data_V_din),
+    .p_dst1_data_V_write(duplicateMat439_U0_p_dst1_data_V_write),
+    .p_dst2_data_V_din(duplicateMat439_U0_p_dst2_data_V_din),
     .p_dst2_data_V_full_n(eroded_1b_data_V_full_n),
-    .p_dst2_data_V_write(duplicateMat438_U0_p_dst2_data_V_write),
+    .p_dst2_data_V_write(duplicateMat439_U0_p_dst2_data_V_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_done(duplicateMat438_U0_ap_done),
-    .ap_ready(duplicateMat438_U0_ap_ready),
-    .ap_idle(duplicateMat438_U0_ap_idle),
-    .ap_continue(duplicateMat438_U0_ap_continue)
+    .ap_done(duplicateMat439_U0_ap_done),
+    .ap_ready(duplicateMat439_U0_ap_ready),
+    .ap_idle(duplicateMat439_U0_ap_idle),
+    .ap_continue(duplicateMat439_U0_ap_continue)
 );
 
 get_12th_segment get_12th_segment_U0(
@@ -679,23 +679,23 @@ resize_2 resize_2_U0(
     .p_dst_data_V_write(resize_2_U0_p_dst_data_V_write)
 );
 
-add_2749 add_2749_U0(
+add_2750 add_2750_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(add_2749_U0_ap_start),
-    .ap_done(add_2749_U0_ap_done),
-    .ap_continue(add_2749_U0_ap_continue),
-    .ap_idle(add_2749_U0_ap_idle),
-    .ap_ready(add_2749_U0_ap_ready),
+    .ap_start(add_2750_U0_ap_start),
+    .ap_done(add_2750_U0_ap_done),
+    .ap_continue(add_2750_U0_ap_continue),
+    .ap_idle(add_2750_U0_ap_idle),
+    .ap_ready(add_2750_U0_ap_ready),
     .p_src1_data_V_dout(img_in_1_data_V_dout),
     .p_src1_data_V_empty_n(img_in_1_data_V_empty_n),
-    .p_src1_data_V_read(add_2749_U0_p_src1_data_V_read),
+    .p_src1_data_V_read(add_2750_U0_p_src1_data_V_read),
     .p_src2_data_V_dout(rs_mask_img_out_data_dout),
     .p_src2_data_V_empty_n(rs_mask_img_out_data_empty_n),
-    .p_src2_data_V_read(add_2749_U0_p_src2_data_V_read),
-    .p_dst_data_V_din(add_2749_U0_p_dst_data_V_din),
+    .p_src2_data_V_read(add_2750_U0_p_src2_data_V_read),
+    .p_dst_data_V_din(add_2750_U0_p_dst_data_V_din),
     .p_dst_data_V_full_n(img_out_data_V_full_n),
-    .p_dst_data_V_write(add_2749_U0_p_dst_data_V_write)
+    .p_dst_data_V_write(add_2750_U0_p_dst_data_V_write)
 );
 
 fifo_w12_d3_A img_in_cols_c_U(
@@ -708,7 +708,7 @@ fifo_w12_d3_A img_in_cols_c_U(
     .if_write(weed_detection_entry_U0_img_in_cols_out_write),
     .if_dout(img_in_cols_c_dout),
     .if_empty_n(img_in_cols_c_empty_n),
-    .if_read(duplicateMat_2762_U0_p_src_cols_read)
+    .if_read(duplicateMat_2763_U0_p_src_cols_read)
 );
 
 fifo_w11_d2_A img_in_0_rows_channe_U(
@@ -721,7 +721,7 @@ fifo_w11_d2_A img_in_0_rows_channe_U(
     .if_write(ap_channel_done_img_in_0_rows_channe),
     .if_dout(img_in_0_rows_channe_dout),
     .if_empty_n(img_in_0_rows_channe_empty_n),
-    .if_read(duplicateMat_2762_U0_ap_ready)
+    .if_read(duplicateMat_2763_U0_ap_ready)
 );
 
 fifo_w12_d2_A_x img_in_0_cols_channe_U(
@@ -734,7 +734,7 @@ fifo_w12_d2_A_x img_in_0_cols_channe_U(
     .if_write(ap_channel_done_img_in_0_cols_channe),
     .if_dout(img_in_0_cols_channe_dout),
     .if_empty_n(img_in_0_cols_channe_empty_n),
-    .if_read(duplicateMat_2762_U0_ap_ready)
+    .if_read(duplicateMat_2763_U0_ap_ready)
 );
 
 fifo_w10_d4_A_x resized_cols_channel_U(
@@ -755,9 +755,9 @@ fifo_w24_d1_A_x img_in_0_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat_2762_U0_p_dst1_data_V_din),
+    .if_din(duplicateMat_2763_U0_p_dst1_data_V_din),
     .if_full_n(img_in_0_data_V_full_n),
-    .if_write(duplicateMat_2762_U0_p_dst1_data_V_write),
+    .if_write(duplicateMat_2763_U0_p_dst1_data_V_write),
     .if_dout(img_in_0_data_V_dout),
     .if_empty_n(img_in_0_data_V_empty_n),
     .if_read(resizeNNBilinear_U0_imgInput_data_V_read)
@@ -768,12 +768,12 @@ fifo_w24_d1_A_x img_in_1_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat_2762_U0_p_dst2_data_V_din),
+    .if_din(duplicateMat_2763_U0_p_dst2_data_V_din),
     .if_full_n(img_in_1_data_V_full_n),
-    .if_write(duplicateMat_2762_U0_p_dst2_data_V_write),
+    .if_write(duplicateMat_2763_U0_p_dst2_data_V_write),
     .if_dout(img_in_1_data_V_dout),
     .if_empty_n(img_in_1_data_V_empty_n),
-    .if_read(add_2749_U0_p_src1_data_V_read)
+    .if_read(add_2750_U0_p_src1_data_V_read)
 );
 
 fifo_w24_d1_A_x resized_data_V_U(
@@ -812,7 +812,7 @@ fifo_w1_d1_A segmented_data_V_U(
     .if_write(segment_image_U0_img_out_data_V_write),
     .if_dout(segmented_data_V_dout),
     .if_empty_n(segmented_data_V_empty_n),
-    .if_read(erode437_U0_p_src_data_V_read)
+    .if_read(erode438_U0_p_src_data_V_read)
 );
 
 fifo_w8_d1_A_x eroded_0a_data_V_U(
@@ -820,9 +820,9 @@ fifo_w8_d1_A_x eroded_0a_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(erode437_U0_p_dst_data_V_din),
+    .if_din(erode438_U0_p_dst_data_V_din),
     .if_full_n(eroded_0a_data_V_full_n),
-    .if_write(erode437_U0_p_dst_data_V_write),
+    .if_write(erode438_U0_p_dst_data_V_write),
     .if_dout(eroded_0a_data_V_dout),
     .if_empty_n(eroded_0a_data_V_empty_n),
     .if_read(remark_crop_lines_U0_eroded_0_data_V_read)
@@ -833,9 +833,9 @@ fifo_w8_d1_A_x eroded_1_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat438_U0_p_src_data_V_din),
+    .if_din(duplicateMat439_U0_p_src_data_V_din),
     .if_full_n(eroded_1_data_V_full_n),
-    .if_write(duplicateMat438_U0_p_src_data_V_write),
+    .if_write(duplicateMat439_U0_p_src_data_V_write),
     .if_dout(eroded_1_data_V_dout),
     .if_empty_n(eroded_1_data_V_empty_n),
     .if_read(remark_crop_lines_U0_eroded_1_data_V_read)
@@ -859,9 +859,9 @@ fifo_w8_d1_A_x eroded_1a_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat438_U0_p_dst1_data_V_din),
+    .if_din(duplicateMat439_U0_p_dst1_data_V_din),
     .if_full_n(eroded_1a_data_V_full_n),
-    .if_write(duplicateMat438_U0_p_dst1_data_V_write),
+    .if_write(duplicateMat439_U0_p_dst1_data_V_write),
     .if_dout(eroded_1a_data_V_dout),
     .if_empty_n(eroded_1a_data_V_empty_n),
     .if_read(get_12th_segment_U0_eroded_data_V_read)
@@ -872,9 +872,9 @@ fifo_w8_d1_A_x eroded_1b_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat438_U0_p_dst2_data_V_din),
+    .if_din(duplicateMat439_U0_p_dst2_data_V_din),
     .if_full_n(eroded_1b_data_V_full_n),
-    .if_write(duplicateMat438_U0_p_dst2_data_V_write),
+    .if_write(duplicateMat439_U0_p_dst2_data_V_write),
     .if_dout(eroded_1b_data_V_dout),
     .if_empty_n(eroded_1b_data_V_empty_n),
     .if_read(get_crop_lines_U0_eroded_data_V_read)
@@ -955,10 +955,10 @@ fifo_w24_d1_A_x rs_mask_img_out_data_U(
     .if_write(resize_2_U0_p_dst_data_V_write),
     .if_dout(rs_mask_img_out_data_dout),
     .if_empty_n(rs_mask_img_out_data_empty_n),
-    .if_read(add_2749_U0_p_src2_data_V_read)
+    .if_read(add_2750_U0_p_src2_data_V_read)
 );
 
-start_for_get_vegbjl start_for_get_vegbjl_U(
+start_for_get_vegbll start_for_get_vegbll_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -971,33 +971,33 @@ start_for_get_vegbjl start_for_get_vegbjl_U(
     .if_read(get_vegetation_image_4_U0_ap_ready)
 );
 
-start_for_resizeNbkl start_for_resizeNbkl_U(
+start_for_resizeNbml start_for_resizeNbml_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(start_for_resizeNNBilinear_U0_din),
     .if_full_n(start_for_resizeNNBilinear_U0_full_n),
-    .if_write(duplicateMat_2762_U0_start_write),
+    .if_write(duplicateMat_2763_U0_start_write),
     .if_dout(start_for_resizeNNBilinear_U0_dout),
     .if_empty_n(start_for_resizeNNBilinear_U0_empty_n),
     .if_read(resizeNNBilinear_U0_ap_ready)
 );
 
-start_for_add_274bll start_for_add_274bll_U(
+start_for_add_275bnm start_for_add_275bnm_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(start_for_add_2749_U0_din),
-    .if_full_n(start_for_add_2749_U0_full_n),
-    .if_write(duplicateMat_2762_U0_start_write),
-    .if_dout(start_for_add_2749_U0_dout),
-    .if_empty_n(start_for_add_2749_U0_empty_n),
-    .if_read(add_2749_U0_ap_ready)
+    .if_din(start_for_add_2750_U0_din),
+    .if_full_n(start_for_add_2750_U0_full_n),
+    .if_write(duplicateMat_2763_U0_start_write),
+    .if_dout(start_for_add_2750_U0_dout),
+    .if_empty_n(start_for_add_2750_U0_empty_n),
+    .if_read(add_2750_U0_ap_ready)
 );
 
-start_for_segmentbml start_for_segmentbml_U(
+start_for_segmentbom start_for_segmentbom_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -1010,59 +1010,59 @@ start_for_segmentbml start_for_segmentbml_U(
     .if_read(segment_image_U0_ap_ready)
 );
 
-start_for_erode43bnm start_for_erode43bnm_U(
+start_for_erode43bpm start_for_erode43bpm_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(start_for_erode437_U0_din),
-    .if_full_n(start_for_erode437_U0_full_n),
+    .if_din(start_for_erode438_U0_din),
+    .if_full_n(start_for_erode438_U0_full_n),
     .if_write(segment_image_U0_start_write),
-    .if_dout(start_for_erode437_U0_dout),
-    .if_empty_n(start_for_erode437_U0_empty_n),
-    .if_read(erode437_U0_ap_ready)
+    .if_dout(start_for_erode438_U0_dout),
+    .if_empty_n(start_for_erode438_U0_empty_n),
+    .if_read(erode438_U0_ap_ready)
 );
 
-start_for_remark_bom start_for_remark_bom_U(
+start_for_remark_bqm start_for_remark_bqm_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(start_for_remark_crop_lines_U0_din),
     .if_full_n(start_for_remark_crop_lines_U0_full_n),
-    .if_write(erode437_U0_start_write),
+    .if_write(erode438_U0_start_write),
     .if_dout(start_for_remark_crop_lines_U0_dout),
     .if_empty_n(start_for_remark_crop_lines_U0_empty_n),
     .if_read(remark_crop_lines_U0_ap_ready)
 );
 
-start_for_get_12tbpm start_for_get_12tbpm_U(
+start_for_get_12tbrm start_for_get_12tbrm_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(start_for_get_12th_segment_U0_din),
     .if_full_n(start_for_get_12th_segment_U0_full_n),
-    .if_write(duplicateMat438_U0_start_write),
+    .if_write(duplicateMat439_U0_start_write),
     .if_dout(start_for_get_12th_segment_U0_dout),
     .if_empty_n(start_for_get_12th_segment_U0_empty_n),
     .if_read(get_12th_segment_U0_ap_ready)
 );
 
-start_for_get_crobqm start_for_get_crobqm_U(
+start_for_get_crobsm start_for_get_crobsm_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(start_for_get_crop_lines_U0_din),
     .if_full_n(start_for_get_crop_lines_U0_full_n),
-    .if_write(duplicateMat438_U0_start_write),
+    .if_write(duplicateMat439_U0_start_write),
     .if_dout(start_for_get_crop_lines_U0_dout),
     .if_empty_n(start_for_get_crop_lines_U0_empty_n),
     .if_read(get_crop_lines_U0_ap_ready)
 );
 
-start_for_sectorsbrm start_for_sectorsbrm_U(
+start_for_sectorsbtn start_for_sectorsbtn_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -1088,7 +1088,7 @@ start_for_merge_U0 start_for_merge_U0_U(
     .if_read(merge_U0_ap_ready)
 );
 
-start_for_resize_bsm start_for_resize_bsm_U(
+start_for_resize_bun start_for_resize_bun_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -1127,24 +1127,24 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_duplicateMat438_U0_ap_ready <= 1'b0;
+        ap_sync_reg_duplicateMat439_U0_ap_ready <= 1'b0;
     end else begin
         if (((real_start & ap_sync_ready) == 1'b1)) begin
-            ap_sync_reg_duplicateMat438_U0_ap_ready <= 1'b0;
+            ap_sync_reg_duplicateMat439_U0_ap_ready <= 1'b0;
         end else begin
-            ap_sync_reg_duplicateMat438_U0_ap_ready <= ap_sync_duplicateMat438_U0_ap_ready;
+            ap_sync_reg_duplicateMat439_U0_ap_ready <= ap_sync_duplicateMat439_U0_ap_ready;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_duplicateMat_2762_U0_ap_ready <= 1'b0;
+        ap_sync_reg_duplicateMat_2763_U0_ap_ready <= 1'b0;
     end else begin
         if (((real_start & ap_sync_ready) == 1'b1)) begin
-            ap_sync_reg_duplicateMat_2762_U0_ap_ready <= 1'b0;
+            ap_sync_reg_duplicateMat_2763_U0_ap_ready <= 1'b0;
         end else begin
-            ap_sync_reg_duplicateMat_2762_U0_ap_ready <= ap_sync_duplicateMat_2762_U0_ap_ready;
+            ap_sync_reg_duplicateMat_2763_U0_ap_ready <= ap_sync_duplicateMat_2763_U0_ap_ready;
         end
     end
 end
@@ -1198,18 +1198,18 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((duplicateMat438_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
-        duplicateMat438_U0_ap_ready_count <= (duplicateMat438_U0_ap_ready_count - 2'd1);
-    end else if (((ap_sync_ready == 1'b0) & (duplicateMat438_U0_ap_ready == 1'b1))) begin
-        duplicateMat438_U0_ap_ready_count <= (duplicateMat438_U0_ap_ready_count + 2'd1);
+    if (((duplicateMat439_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
+        duplicateMat439_U0_ap_ready_count <= (duplicateMat439_U0_ap_ready_count - 2'd1);
+    end else if (((ap_sync_ready == 1'b0) & (duplicateMat439_U0_ap_ready == 1'b1))) begin
+        duplicateMat439_U0_ap_ready_count <= (duplicateMat439_U0_ap_ready_count + 2'd1);
     end
 end
 
 always @ (posedge ap_clk) begin
-    if (((duplicateMat_2762_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
-        duplicateMat_2762_U0_ap_ready_count <= (duplicateMat_2762_U0_ap_ready_count - 2'd1);
-    end else if (((ap_sync_ready == 1'b0) & (duplicateMat_2762_U0_ap_ready == 1'b1))) begin
-        duplicateMat_2762_U0_ap_ready_count <= (duplicateMat_2762_U0_ap_ready_count + 2'd1);
+    if (((duplicateMat_2763_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
+        duplicateMat_2763_U0_ap_ready_count <= (duplicateMat_2763_U0_ap_ready_count - 2'd1);
+    end else if (((ap_sync_ready == 1'b0) & (duplicateMat_2763_U0_ap_ready == 1'b1))) begin
+        duplicateMat_2763_U0_ap_ready_count <= (duplicateMat_2763_U0_ap_ready_count + 2'd1);
     end
 end
 
@@ -1253,13 +1253,13 @@ always @ (*) begin
     end
 end
 
-assign add_2749_U0_ap_continue = ap_sync_continue;
+assign add_2750_U0_ap_continue = ap_sync_continue;
 
-assign add_2749_U0_ap_start = start_for_add_2749_U0_empty_n;
+assign add_2750_U0_ap_start = start_for_add_2750_U0_empty_n;
 
-assign add_2749_U0_start_full_n = 1'b1;
+assign add_2750_U0_start_full_n = 1'b1;
 
-assign add_2749_U0_start_write = 1'b0;
+assign add_2750_U0_start_write = 1'b0;
 
 assign ap_channel_done_img_in_0_cols_channe = (weed_detection_Block_U0_ap_done & (ap_sync_reg_channel_write_img_in_0_cols_channe ^ 1'b1));
 
@@ -1267,7 +1267,7 @@ assign ap_channel_done_img_in_0_rows_channe = (weed_detection_Block_U0_ap_done &
 
 assign ap_done = ap_sync_done;
 
-assign ap_idle = (zero_0_180_320_1_U0_ap_idle & weed_detection_entry_U0_ap_idle & weed_detection_Block_U0_ap_idle & segment_image_U0_ap_idle & sectors_weed_classif_U0_ap_idle & resize_2_U0_ap_idle & resizeNNBilinear_U0_ap_idle & remark_crop_lines_U0_ap_idle & merge_U0_ap_idle & get_vegetation_image_4_U0_ap_idle & get_crop_lines_U0_ap_idle & get_12th_segment_U0_ap_idle & (img_in_0_cols_channe_empty_n ^ 1'b1) & (img_in_0_rows_channe_empty_n ^ 1'b1) & erode437_U0_ap_idle & duplicateMat_2762_U0_ap_idle & duplicateMat438_U0_ap_idle & add_2749_U0_ap_idle);
+assign ap_idle = (zero_0_180_320_1_U0_ap_idle & weed_detection_entry_U0_ap_idle & weed_detection_Block_U0_ap_idle & segment_image_U0_ap_idle & sectors_weed_classif_U0_ap_idle & resize_2_U0_ap_idle & resizeNNBilinear_U0_ap_idle & remark_crop_lines_U0_ap_idle & merge_U0_ap_idle & get_vegetation_image_4_U0_ap_idle & get_crop_lines_U0_ap_idle & get_12th_segment_U0_ap_idle & (img_in_0_cols_channe_empty_n ^ 1'b1) & (img_in_0_rows_channe_empty_n ^ 1'b1) & erode438_U0_ap_idle & duplicateMat_2763_U0_ap_idle & duplicateMat439_U0_ap_idle & add_2750_U0_ap_idle);
 
 assign ap_ready = internal_ap_ready;
 
@@ -1277,13 +1277,13 @@ assign ap_sync_channel_write_img_in_0_rows_channe = ((img_in_0_rows_channe_full_
 
 assign ap_sync_continue = (ap_sync_done & ap_continue);
 
-assign ap_sync_done = (sectors_weed_classif_U0_ap_done & add_2749_U0_ap_done);
+assign ap_sync_done = (sectors_weed_classif_U0_ap_done & add_2750_U0_ap_done);
 
-assign ap_sync_duplicateMat438_U0_ap_ready = (duplicateMat438_U0_ap_ready | ap_sync_reg_duplicateMat438_U0_ap_ready);
+assign ap_sync_duplicateMat439_U0_ap_ready = (duplicateMat439_U0_ap_ready | ap_sync_reg_duplicateMat439_U0_ap_ready);
 
-assign ap_sync_duplicateMat_2762_U0_ap_ready = (duplicateMat_2762_U0_ap_ready | ap_sync_reg_duplicateMat_2762_U0_ap_ready);
+assign ap_sync_duplicateMat_2763_U0_ap_ready = (duplicateMat_2763_U0_ap_ready | ap_sync_reg_duplicateMat_2763_U0_ap_ready);
 
-assign ap_sync_ready = (ap_sync_zero_0_180_320_1_U0_ap_ready & ap_sync_weed_detection_entry_U0_ap_ready & ap_sync_weed_detection_Block_U0_ap_ready & ap_sync_duplicateMat_2762_U0_ap_ready & ap_sync_duplicateMat438_U0_ap_ready);
+assign ap_sync_ready = (ap_sync_zero_0_180_320_1_U0_ap_ready & ap_sync_weed_detection_entry_U0_ap_ready & ap_sync_weed_detection_Block_U0_ap_ready & ap_sync_duplicateMat_2763_U0_ap_ready & ap_sync_duplicateMat439_U0_ap_ready);
 
 assign ap_sync_weed_detection_Block_U0_ap_ready = (weed_detection_Block_U0_ap_ready | ap_sync_reg_weed_detection_Block_U0_ap_ready);
 
@@ -1291,27 +1291,27 @@ assign ap_sync_weed_detection_entry_U0_ap_ready = (weed_detection_entry_U0_ap_re
 
 assign ap_sync_zero_0_180_320_1_U0_ap_ready = (zero_0_180_320_1_U0_ap_ready | ap_sync_reg_zero_0_180_320_1_U0_ap_ready);
 
-assign duplicateMat438_U0_ap_continue = 1'b1;
+assign duplicateMat439_U0_ap_continue = 1'b1;
 
-assign duplicateMat438_U0_ap_start = (real_start & (ap_sync_reg_duplicateMat438_U0_ap_ready ^ 1'b1));
+assign duplicateMat439_U0_ap_start = (real_start & (ap_sync_reg_duplicateMat439_U0_ap_ready ^ 1'b1));
 
-assign duplicateMat438_U0_p_src_data_V_din = 8'd0;
+assign duplicateMat439_U0_p_src_data_V_din = 8'd0;
 
-assign duplicateMat438_U0_p_src_data_V_full_n = eroded_1_data_V_full_n;
+assign duplicateMat439_U0_p_src_data_V_full_n = eroded_1_data_V_full_n;
 
-assign duplicateMat438_U0_p_src_data_V_write = 1'b0;
+assign duplicateMat439_U0_p_src_data_V_write = 1'b0;
 
-assign duplicateMat438_U0_start_full_n = (start_for_get_crop_lines_U0_full_n & start_for_get_12th_segment_U0_full_n);
+assign duplicateMat439_U0_start_full_n = (start_for_get_crop_lines_U0_full_n & start_for_get_12th_segment_U0_full_n);
 
-assign duplicateMat_2762_U0_ap_continue = 1'b1;
+assign duplicateMat_2763_U0_ap_continue = 1'b1;
 
-assign duplicateMat_2762_U0_ap_start = (real_start & img_in_0_rows_channe_empty_n & img_in_0_cols_channe_empty_n & (ap_sync_reg_duplicateMat_2762_U0_ap_ready ^ 1'b1));
+assign duplicateMat_2763_U0_ap_start = (real_start & img_in_0_rows_channe_empty_n & img_in_0_cols_channe_empty_n & (ap_sync_reg_duplicateMat_2763_U0_ap_ready ^ 1'b1));
 
-assign duplicateMat_2762_U0_start_full_n = (start_for_resizeNNBilinear_U0_full_n & start_for_add_2749_U0_full_n);
+assign duplicateMat_2763_U0_start_full_n = (start_for_resizeNNBilinear_U0_full_n & start_for_add_2750_U0_full_n);
 
-assign erode437_U0_ap_continue = 1'b1;
+assign erode438_U0_ap_continue = 1'b1;
 
-assign erode437_U0_ap_start = start_for_erode437_U0_empty_n;
+assign erode438_U0_ap_start = start_for_erode438_U0_empty_n;
 
 assign get_12th_segment_U0_ap_continue = 1'b1;
 
@@ -1329,11 +1329,11 @@ assign get_vegetation_image_4_U0_ap_continue = 1'b1;
 
 assign get_vegetation_image_4_U0_ap_start = start_for_get_vegetation_image_4_U0_empty_n;
 
-assign img_in_data_V_read = duplicateMat_2762_U0_p_src_data_V_read;
+assign img_in_data_V_read = duplicateMat_2763_U0_p_src_data_V_read;
 
-assign img_out_data_V_din = add_2749_U0_p_dst_data_V_din;
+assign img_out_data_V_din = add_2750_U0_p_dst_data_V_din;
 
-assign img_out_data_V_write = add_2749_U0_p_dst_data_V_write;
+assign img_out_data_V_write = add_2750_U0_p_dst_data_V_write;
 
 assign internal_ap_ready = ap_sync_ready;
 
@@ -1383,9 +1383,9 @@ assign segment_image_U0_ap_continue = 1'b1;
 
 assign segment_image_U0_ap_start = start_for_segment_image_U0_empty_n;
 
-assign start_for_add_2749_U0_din = 1'b1;
+assign start_for_add_2750_U0_din = 1'b1;
 
-assign start_for_erode437_U0_din = 1'b1;
+assign start_for_erode438_U0_din = 1'b1;
 
 assign start_for_get_12th_segment_U0_din = 1'b1;
 

@@ -274,7 +274,7 @@ architecture behav of merge is
     end component;
 
 
-    component start_for_xfChann8jQ IS
+    component start_for_xfChannbak IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -289,7 +289,7 @@ architecture behav of merge is
     end component;
 
 
-    component start_for_merge_L9j0 IS
+    component start_for_merge_Lbbk IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -475,7 +475,7 @@ begin
         if_empty_n => p_out_V_V_empty_n,
         if_read => merge_Loop_Write_Mat_U0_p_out_V_V_read);
 
-    start_for_xfChann8jQ_U : component start_for_xfChann8jQ
+    start_for_xfChannbak_U : component start_for_xfChannbak
     port map (
         clk => ap_clk,
         reset => ap_rst,
@@ -488,7 +488,7 @@ begin
         if_empty_n => start_for_xfChannelCombine_U0_empty_n,
         if_read => xfChannelCombine_U0_ap_ready);
 
-    start_for_merge_L9j0_U : component start_for_merge_L9j0
+    start_for_merge_Lbbk_U : component start_for_merge_Lbbk
     port map (
         clk => ap_clk,
         reset => ap_rst,

@@ -59,20 +59,20 @@ architecture behav of duplicateMat_1 is
     signal duplicateMat_Loop_Re_2_U0_p_src_cols_read_out_write : STD_LOGIC;
     signal duplicateMat_Loop_Re_2_U0_p_dst2_cols_read_out_din : STD_LOGIC_VECTOR (9 downto 0);
     signal duplicateMat_Loop_Re_2_U0_p_dst2_cols_read_out_write : STD_LOGIC;
-    signal xFDuplicate637_U0_ap_start : STD_LOGIC;
-    signal xFDuplicate637_U0_ap_done : STD_LOGIC;
-    signal xFDuplicate637_U0_ap_continue : STD_LOGIC;
-    signal xFDuplicate637_U0_ap_idle : STD_LOGIC;
-    signal xFDuplicate637_U0_ap_ready : STD_LOGIC;
-    signal xFDuplicate637_U0_start_out : STD_LOGIC;
-    signal xFDuplicate637_U0_start_write : STD_LOGIC;
-    signal xFDuplicate637_U0_src_V_V_read : STD_LOGIC;
-    signal xFDuplicate637_U0_dst_V_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal xFDuplicate637_U0_dst_V_V_write : STD_LOGIC;
-    signal xFDuplicate637_U0_dst1_V_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal xFDuplicate637_U0_dst1_V_V_write : STD_LOGIC;
-    signal xFDuplicate637_U0_p_src_rows_read_read : STD_LOGIC;
-    signal xFDuplicate637_U0_p_src_cols_read_read : STD_LOGIC;
+    signal xFDuplicate638_U0_ap_start : STD_LOGIC;
+    signal xFDuplicate638_U0_ap_done : STD_LOGIC;
+    signal xFDuplicate638_U0_ap_continue : STD_LOGIC;
+    signal xFDuplicate638_U0_ap_idle : STD_LOGIC;
+    signal xFDuplicate638_U0_ap_ready : STD_LOGIC;
+    signal xFDuplicate638_U0_start_out : STD_LOGIC;
+    signal xFDuplicate638_U0_start_write : STD_LOGIC;
+    signal xFDuplicate638_U0_src_V_V_read : STD_LOGIC;
+    signal xFDuplicate638_U0_dst_V_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal xFDuplicate638_U0_dst_V_V_write : STD_LOGIC;
+    signal xFDuplicate638_U0_dst1_V_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal xFDuplicate638_U0_dst1_V_V_write : STD_LOGIC;
+    signal xFDuplicate638_U0_p_src_rows_read_read : STD_LOGIC;
+    signal xFDuplicate638_U0_p_src_cols_read_read : STD_LOGIC;
     signal duplicateMat_Loop_2_2_U0_ap_start : STD_LOGIC;
     signal duplicateMat_Loop_2_2_U0_ap_done : STD_LOGIC;
     signal duplicateMat_Loop_2_2_U0_ap_continue : STD_LOGIC;
@@ -104,10 +104,10 @@ architecture behav of duplicateMat_1 is
     signal dst1_V_V_empty_n : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
-    signal start_for_xFDuplicate637_U0_din : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_xFDuplicate637_U0_full_n : STD_LOGIC;
-    signal start_for_xFDuplicate637_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
-    signal start_for_xFDuplicate637_U0_empty_n : STD_LOGIC;
+    signal start_for_xFDuplicate638_U0_din : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_xFDuplicate638_U0_full_n : STD_LOGIC;
+    signal start_for_xFDuplicate638_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
+    signal start_for_xFDuplicate638_U0_empty_n : STD_LOGIC;
     signal start_for_duplicateMat_Loop_2_2_U0_din : STD_LOGIC_VECTOR (0 downto 0);
     signal start_for_duplicateMat_Loop_2_2_U0_full_n : STD_LOGIC;
     signal start_for_duplicateMat_Loop_2_2_U0_dout : STD_LOGIC_VECTOR (0 downto 0);
@@ -145,7 +145,7 @@ architecture behav of duplicateMat_1 is
     end component;
 
 
-    component xFDuplicate637 IS
+    component xFDuplicate638 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -282,7 +282,7 @@ begin
         ap_clk => ap_clk,
         ap_rst => ap_rst,
         ap_start => duplicateMat_Loop_Re_2_U0_ap_start,
-        start_full_n => start_for_xFDuplicate637_U0_full_n,
+        start_full_n => start_for_xFDuplicate638_U0_full_n,
         ap_done => duplicateMat_Loop_Re_2_U0_ap_done,
         ap_continue => duplicateMat_Loop_Re_2_U0_ap_continue,
         ap_idle => duplicateMat_Loop_Re_2_U0_ap_idle,
@@ -305,33 +305,33 @@ begin
         p_dst2_cols_read_out_full_n => ap_const_logic_1,
         p_dst2_cols_read_out_write => duplicateMat_Loop_Re_2_U0_p_dst2_cols_read_out_write);
 
-    xFDuplicate637_U0 : component xFDuplicate637
+    xFDuplicate638_U0 : component xFDuplicate638
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => xFDuplicate637_U0_ap_start,
+        ap_start => xFDuplicate638_U0_ap_start,
         start_full_n => start_for_duplicateMat_Loop_2_2_U0_full_n,
-        ap_done => xFDuplicate637_U0_ap_done,
-        ap_continue => xFDuplicate637_U0_ap_continue,
-        ap_idle => xFDuplicate637_U0_ap_idle,
-        ap_ready => xFDuplicate637_U0_ap_ready,
-        start_out => xFDuplicate637_U0_start_out,
-        start_write => xFDuplicate637_U0_start_write,
+        ap_done => xFDuplicate638_U0_ap_done,
+        ap_continue => xFDuplicate638_U0_ap_continue,
+        ap_idle => xFDuplicate638_U0_ap_idle,
+        ap_ready => xFDuplicate638_U0_ap_ready,
+        start_out => xFDuplicate638_U0_start_out,
+        start_write => xFDuplicate638_U0_start_write,
         src_V_V_dout => src_V_V_dout,
         src_V_V_empty_n => src_V_V_empty_n,
-        src_V_V_read => xFDuplicate637_U0_src_V_V_read,
-        dst_V_V_din => xFDuplicate637_U0_dst_V_V_din,
+        src_V_V_read => xFDuplicate638_U0_src_V_V_read,
+        dst_V_V_din => xFDuplicate638_U0_dst_V_V_din,
         dst_V_V_full_n => dst_V_V_full_n,
-        dst_V_V_write => xFDuplicate637_U0_dst_V_V_write,
-        dst1_V_V_din => xFDuplicate637_U0_dst1_V_V_din,
+        dst_V_V_write => xFDuplicate638_U0_dst_V_V_write,
+        dst1_V_V_din => xFDuplicate638_U0_dst1_V_V_din,
         dst1_V_V_full_n => dst1_V_V_full_n,
-        dst1_V_V_write => xFDuplicate637_U0_dst1_V_V_write,
+        dst1_V_V_write => xFDuplicate638_U0_dst1_V_V_write,
         p_src_rows_read_dout => p_src_rows_read_c_dout,
         p_src_rows_read_empty_n => p_src_rows_read_c_empty_n,
-        p_src_rows_read_read => xFDuplicate637_U0_p_src_rows_read_read,
+        p_src_rows_read_read => xFDuplicate638_U0_p_src_rows_read_read,
         p_src_cols_read_dout => p_src_cols_read_c_dout,
         p_src_cols_read_empty_n => p_src_cols_read_c_empty_n,
-        p_src_cols_read_read => xFDuplicate637_U0_p_src_cols_read_read);
+        p_src_cols_read_read => xFDuplicate638_U0_p_src_cols_read_read);
 
     duplicateMat_Loop_2_2_U0 : component duplicateMat_Loop_2_2
     port map (
@@ -367,7 +367,7 @@ begin
         if_write => duplicateMat_Loop_Re_2_U0_src_V_V_write,
         if_dout => src_V_V_dout,
         if_empty_n => src_V_V_empty_n,
-        if_read => xFDuplicate637_U0_src_V_V_read);
+        if_read => xFDuplicate638_U0_src_V_V_read);
 
     p_src_rows_read_c_U : component fifo_w9_d2_A_x
     port map (
@@ -380,7 +380,7 @@ begin
         if_write => duplicateMat_Loop_Re_2_U0_p_src_rows_read_out_write,
         if_dout => p_src_rows_read_c_dout,
         if_empty_n => p_src_rows_read_c_empty_n,
-        if_read => xFDuplicate637_U0_p_src_rows_read_read);
+        if_read => xFDuplicate638_U0_p_src_rows_read_read);
 
     p_src_cols_read_c_U : component fifo_w10_d2_A_x1
     port map (
@@ -393,7 +393,7 @@ begin
         if_write => duplicateMat_Loop_Re_2_U0_p_src_cols_read_out_write,
         if_dout => p_src_cols_read_c_dout,
         if_empty_n => p_src_cols_read_c_empty_n,
-        if_read => xFDuplicate637_U0_p_src_cols_read_read);
+        if_read => xFDuplicate638_U0_p_src_cols_read_read);
 
     dst_V_V_U : component fifo_w8_d2_A
     port map (
@@ -401,9 +401,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => xFDuplicate637_U0_dst_V_V_din,
+        if_din => xFDuplicate638_U0_dst_V_V_din,
         if_full_n => dst_V_V_full_n,
-        if_write => xFDuplicate637_U0_dst_V_V_write,
+        if_write => xFDuplicate638_U0_dst_V_V_write,
         if_dout => dst_V_V_dout,
         if_empty_n => dst_V_V_empty_n,
         if_read => duplicateMat_Loop_2_2_U0_dst_V_V_read);
@@ -414,9 +414,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => xFDuplicate637_U0_dst1_V_V_din,
+        if_din => xFDuplicate638_U0_dst1_V_V_din,
         if_full_n => dst1_V_V_full_n,
-        if_write => xFDuplicate637_U0_dst1_V_V_write,
+        if_write => xFDuplicate638_U0_dst1_V_V_write,
         if_dout => dst1_V_V_dout,
         if_empty_n => dst1_V_V_empty_n,
         if_read => duplicateMat_Loop_2_2_U0_dst1_V_V_read);
@@ -427,12 +427,12 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => start_for_xFDuplicate637_U0_din,
-        if_full_n => start_for_xFDuplicate637_U0_full_n,
+        if_din => start_for_xFDuplicate638_U0_din,
+        if_full_n => start_for_xFDuplicate638_U0_full_n,
         if_write => duplicateMat_Loop_Re_2_U0_start_write,
-        if_dout => start_for_xFDuplicate637_U0_dout,
-        if_empty_n => start_for_xFDuplicate637_U0_empty_n,
-        if_read => xFDuplicate637_U0_ap_ready);
+        if_dout => start_for_xFDuplicate638_U0_dout,
+        if_empty_n => start_for_xFDuplicate638_U0_empty_n,
+        if_read => xFDuplicate638_U0_ap_ready);
 
     start_for_duplicaAem_U : component start_for_duplicaAem
     port map (
@@ -442,7 +442,7 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_duplicateMat_Loop_2_2_U0_din,
         if_full_n => start_for_duplicateMat_Loop_2_2_U0_full_n,
-        if_write => xFDuplicate637_U0_start_write,
+        if_write => xFDuplicate638_U0_start_write,
         if_dout => start_for_duplicateMat_Loop_2_2_U0_dout,
         if_empty_n => start_for_duplicateMat_Loop_2_2_U0_empty_n,
         if_read => duplicateMat_Loop_2_2_U0_ap_ready);
@@ -451,7 +451,7 @@ begin
 
 
     ap_done <= duplicateMat_Loop_2_2_U0_ap_done;
-    ap_idle <= (xFDuplicate637_U0_ap_idle and duplicateMat_Loop_Re_2_U0_ap_idle and duplicateMat_Loop_2_2_U0_ap_idle);
+    ap_idle <= (xFDuplicate638_U0_ap_idle and duplicateMat_Loop_Re_2_U0_ap_idle and duplicateMat_Loop_2_2_U0_ap_idle);
     ap_ready <= duplicateMat_Loop_Re_2_U0_ap_ready;
     ap_sync_continue <= ap_continue;
     ap_sync_done <= duplicateMat_Loop_2_2_U0_ap_done;
@@ -474,7 +474,7 @@ begin
     p_dst2_data_V_write <= duplicateMat_Loop_2_2_U0_p_dst2_data_V_write;
     p_src_data_V_read <= duplicateMat_Loop_Re_2_U0_p_src_data_V_read;
     start_for_duplicateMat_Loop_2_2_U0_din <= (0=>ap_const_logic_1, others=>'-');
-    start_for_xFDuplicate637_U0_din <= (0=>ap_const_logic_1, others=>'-');
-    xFDuplicate637_U0_ap_continue <= ap_const_logic_1;
-    xFDuplicate637_U0_ap_start <= start_for_xFDuplicate637_U0_empty_n;
+    start_for_xFDuplicate638_U0_din <= (0=>ap_const_logic_1, others=>'-');
+    xFDuplicate638_U0_ap_continue <= ap_const_logic_1;
+    xFDuplicate638_U0_ap_start <= start_for_xFDuplicate638_U0_empty_n;
 end behav;

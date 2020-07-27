@@ -87,7 +87,7 @@ wire   [47:0] centroids_q0;
 reg   [2:0] lines_address0;
 reg    lines_ce0;
 reg    lines_we0;
-wire   [56:0] lines_q0;
+wire   [64:0] lines_q0;
 wire   [0:0] grp_get_lines_lsl_fu_76_ap_return;
 reg   [0:0] lines_founded_reg_109;
 wire    ap_CS_fsm_state8;
@@ -124,29 +124,29 @@ wire    grp_get_lines_lsl_fu_76_centroids_ce0;
 wire   [2:0] grp_get_lines_lsl_fu_76_lines_address0;
 wire    grp_get_lines_lsl_fu_76_lines_ce0;
 wire    grp_get_lines_lsl_fu_76_lines_we0;
-wire   [56:0] grp_get_lines_lsl_fu_76_lines_d0;
-wire    grp_get_line_bases_fu_88_ap_start;
-wire    grp_get_line_bases_fu_88_ap_done;
-wire    grp_get_line_bases_fu_88_ap_idle;
-wire    grp_get_line_bases_fu_88_ap_ready;
-wire    grp_get_line_bases_fu_88_bottom_data_V_read;
-wire   [2:0] grp_get_line_bases_fu_88_line_bases_address0;
-wire    grp_get_line_bases_fu_88_line_bases_ce0;
-wire    grp_get_line_bases_fu_88_line_bases_we0;
-wire   [16:0] grp_get_line_bases_fu_88_line_bases_d0;
-wire   [2:0] grp_get_line_bases_fu_88_line_bases_address1;
-wire    grp_get_line_bases_fu_88_line_bases_ce1;
-wire    grp_get_line_bases_fu_88_line_bases_we1;
-wire   [16:0] grp_get_line_bases_fu_88_line_bases_d1;
-wire    grp_get_weed_mask_fu_100_ap_start;
-wire    grp_get_weed_mask_fu_100_ap_done;
-wire    grp_get_weed_mask_fu_100_ap_idle;
-wire    grp_get_weed_mask_fu_100_ap_ready;
-wire   [1:0] grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_din;
-wire    grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write;
-wire    grp_get_weed_mask_fu_100_lines_founded_read;
-wire   [2:0] grp_get_weed_mask_fu_100_lines_address0;
-wire    grp_get_weed_mask_fu_100_lines_ce0;
+wire   [64:0] grp_get_lines_lsl_fu_76_lines_d0;
+wire    grp_get_weed_mask_fu_88_ap_start;
+wire    grp_get_weed_mask_fu_88_ap_done;
+wire    grp_get_weed_mask_fu_88_ap_idle;
+wire    grp_get_weed_mask_fu_88_ap_ready;
+wire   [1:0] grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_din;
+wire    grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write;
+wire    grp_get_weed_mask_fu_88_lines_founded_read;
+wire   [2:0] grp_get_weed_mask_fu_88_lines_address0;
+wire    grp_get_weed_mask_fu_88_lines_ce0;
+wire    grp_get_line_bases_fu_97_ap_start;
+wire    grp_get_line_bases_fu_97_ap_done;
+wire    grp_get_line_bases_fu_97_ap_idle;
+wire    grp_get_line_bases_fu_97_ap_ready;
+wire    grp_get_line_bases_fu_97_bottom_data_V_read;
+wire   [2:0] grp_get_line_bases_fu_97_line_bases_address0;
+wire    grp_get_line_bases_fu_97_line_bases_ce0;
+wire    grp_get_line_bases_fu_97_line_bases_we0;
+wire   [16:0] grp_get_line_bases_fu_97_line_bases_d0;
+wire   [2:0] grp_get_line_bases_fu_97_line_bases_address1;
+wire    grp_get_line_bases_fu_97_line_bases_ce1;
+wire    grp_get_line_bases_fu_97_line_bases_we1;
+wire   [16:0] grp_get_line_bases_fu_97_line_bases_d1;
 reg    grp_extr_half_1_cent_fu_48_ap_start_reg;
 wire    ap_CS_fsm_state3;
 wire    ap_CS_fsm_state4;
@@ -155,12 +155,12 @@ wire    ap_CS_fsm_state5;
 wire    ap_CS_fsm_state6;
 reg    grp_get_lines_lsl_fu_76_ap_start_reg;
 wire    ap_CS_fsm_state7;
-reg    grp_get_line_bases_fu_88_ap_start_reg;
-reg    ap_block_state1_ignore_call3;
-wire    ap_CS_fsm_state2;
-reg    grp_get_weed_mask_fu_100_ap_start_reg;
+reg    grp_get_weed_mask_fu_88_ap_start_reg;
 wire    ap_CS_fsm_state9;
 wire    ap_CS_fsm_state10;
+reg    grp_get_line_bases_fu_97_ap_start_reg;
+reg    ap_block_state1_ignore_call3;
+wire    ap_CS_fsm_state2;
 reg   [9:0] ap_NS_fsm;
 reg    ap_block_state1;
 
@@ -172,11 +172,11 @@ initial begin
 #0 grp_extr_half_1_cent_fu_48_ap_start_reg = 1'b0;
 #0 grp_extr_half_2_cent_fu_62_ap_start_reg = 1'b0;
 #0 grp_get_lines_lsl_fu_76_ap_start_reg = 1'b0;
-#0 grp_get_line_bases_fu_88_ap_start_reg = 1'b0;
-#0 grp_get_weed_mask_fu_100_ap_start_reg = 1'b0;
+#0 grp_get_weed_mask_fu_88_ap_start_reg = 1'b0;
+#0 grp_get_line_bases_fu_97_ap_start_reg = 1'b0;
 end
 
-get_crop_lines_li0iy #(
+get_crop_lines_li2iS #(
     .DataWidth( 17 ),
     .AddressRange( 6 ),
     .AddressWidth( 3 ))
@@ -186,15 +186,15 @@ line_bases_U(
     .address0(line_bases_address0),
     .ce0(line_bases_ce0),
     .we0(line_bases_we0),
-    .d0(grp_get_line_bases_fu_88_line_bases_d0),
+    .d0(grp_get_line_bases_fu_97_line_bases_d0),
     .q0(line_bases_q0),
-    .address1(grp_get_line_bases_fu_88_line_bases_address1),
+    .address1(grp_get_line_bases_fu_97_line_bases_address1),
     .ce1(line_bases_ce1),
     .we1(line_bases_we1),
-    .d1(grp_get_line_bases_fu_88_line_bases_d1)
+    .d1(grp_get_line_bases_fu_97_line_bases_d1)
 );
 
-get_crop_lines_ce1iI #(
+get_crop_lines_ce3i2 #(
     .DataWidth( 48 ),
     .AddressRange( 72 ),
     .AddressWidth( 7 ))
@@ -208,8 +208,8 @@ centroids_U(
     .q0(centroids_q0)
 );
 
-get_crop_lines_li2iS #(
-    .DataWidth( 57 ),
+get_crop_lines_li4jc #(
+    .DataWidth( 65 ),
     .AddressRange( 6 ),
     .AddressWidth( 3 ))
 lines_U(
@@ -283,41 +283,41 @@ get_lines_lsl grp_get_lines_lsl_fu_76(
     .ap_return(grp_get_lines_lsl_fu_76_ap_return)
 );
 
-get_line_bases grp_get_line_bases_fu_88(
+get_weed_mask grp_get_weed_mask_fu_88(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_get_line_bases_fu_88_ap_start),
-    .ap_done(grp_get_line_bases_fu_88_ap_done),
-    .ap_idle(grp_get_line_bases_fu_88_ap_idle),
-    .ap_ready(grp_get_line_bases_fu_88_ap_ready),
-    .bottom_data_V_dout(bottom_data_V_dout),
-    .bottom_data_V_empty_n(bottom_data_V_empty_n),
-    .bottom_data_V_read(grp_get_line_bases_fu_88_bottom_data_V_read),
-    .line_bases_address0(grp_get_line_bases_fu_88_line_bases_address0),
-    .line_bases_ce0(grp_get_line_bases_fu_88_line_bases_ce0),
-    .line_bases_we0(grp_get_line_bases_fu_88_line_bases_we0),
-    .line_bases_d0(grp_get_line_bases_fu_88_line_bases_d0),
-    .line_bases_q0(line_bases_q0),
-    .line_bases_address1(grp_get_line_bases_fu_88_line_bases_address1),
-    .line_bases_ce1(grp_get_line_bases_fu_88_line_bases_ce1),
-    .line_bases_we1(grp_get_line_bases_fu_88_line_bases_we1),
-    .line_bases_d1(grp_get_line_bases_fu_88_line_bases_d1)
+    .ap_start(grp_get_weed_mask_fu_88_ap_start),
+    .ap_done(grp_get_weed_mask_fu_88_ap_done),
+    .ap_idle(grp_get_weed_mask_fu_88_ap_idle),
+    .ap_ready(grp_get_weed_mask_fu_88_ap_ready),
+    .weed_mask_tmp_data_V_din(grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_din),
+    .weed_mask_tmp_data_V_full_n(weed_mask_tmp_data_V_full_n),
+    .weed_mask_tmp_data_V_write(grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write),
+    .lines_founded_read(grp_get_weed_mask_fu_88_lines_founded_read),
+    .lines_address0(grp_get_weed_mask_fu_88_lines_address0),
+    .lines_ce0(grp_get_weed_mask_fu_88_lines_ce0),
+    .lines_q0(lines_q0)
 );
 
-get_weed_mask grp_get_weed_mask_fu_100(
+get_line_bases grp_get_line_bases_fu_97(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(grp_get_weed_mask_fu_100_ap_start),
-    .ap_done(grp_get_weed_mask_fu_100_ap_done),
-    .ap_idle(grp_get_weed_mask_fu_100_ap_idle),
-    .ap_ready(grp_get_weed_mask_fu_100_ap_ready),
-    .weed_mask_tmp_data_V_din(grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_din),
-    .weed_mask_tmp_data_V_full_n(weed_mask_tmp_data_V_full_n),
-    .weed_mask_tmp_data_V_write(grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write),
-    .lines_founded_read(grp_get_weed_mask_fu_100_lines_founded_read),
-    .lines_address0(grp_get_weed_mask_fu_100_lines_address0),
-    .lines_ce0(grp_get_weed_mask_fu_100_lines_ce0),
-    .lines_q0(lines_q0)
+    .ap_start(grp_get_line_bases_fu_97_ap_start),
+    .ap_done(grp_get_line_bases_fu_97_ap_done),
+    .ap_idle(grp_get_line_bases_fu_97_ap_idle),
+    .ap_ready(grp_get_line_bases_fu_97_ap_ready),
+    .bottom_data_V_dout(bottom_data_V_dout),
+    .bottom_data_V_empty_n(bottom_data_V_empty_n),
+    .bottom_data_V_read(grp_get_line_bases_fu_97_bottom_data_V_read),
+    .line_bases_address0(grp_get_line_bases_fu_97_line_bases_address0),
+    .line_bases_ce0(grp_get_line_bases_fu_97_line_bases_ce0),
+    .line_bases_we0(grp_get_line_bases_fu_97_line_bases_we0),
+    .line_bases_d0(grp_get_line_bases_fu_97_line_bases_d0),
+    .line_bases_q0(line_bases_q0),
+    .line_bases_address1(grp_get_line_bases_fu_97_line_bases_address1),
+    .line_bases_ce1(grp_get_line_bases_fu_97_line_bases_ce1),
+    .line_bases_we1(grp_get_line_bases_fu_97_line_bases_we1),
+    .line_bases_d1(grp_get_line_bases_fu_97_line_bases_d1)
 );
 
 always @ (posedge ap_clk) begin
@@ -334,7 +334,7 @@ always @ (posedge ap_clk) begin
     end else begin
         if ((ap_continue == 1'b1)) begin
             ap_done_reg <= 1'b0;
-        end else if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_100_ap_done == 1'b1))) begin
+        end else if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_88_ap_done == 1'b1))) begin
             ap_done_reg <= 1'b1;
         end
     end
@@ -366,12 +366,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_get_line_bases_fu_88_ap_start_reg <= 1'b0;
+        grp_get_line_bases_fu_97_ap_start_reg <= 1'b0;
     end else begin
         if ((~((real_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-            grp_get_line_bases_fu_88_ap_start_reg <= 1'b1;
-        end else if ((grp_get_line_bases_fu_88_ap_ready == 1'b1)) begin
-            grp_get_line_bases_fu_88_ap_start_reg <= 1'b0;
+            grp_get_line_bases_fu_97_ap_start_reg <= 1'b1;
+        end else if ((grp_get_line_bases_fu_97_ap_ready == 1'b1)) begin
+            grp_get_line_bases_fu_97_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -390,12 +390,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        grp_get_weed_mask_fu_100_ap_start_reg <= 1'b0;
+        grp_get_weed_mask_fu_88_ap_start_reg <= 1'b0;
     end else begin
         if ((1'b1 == ap_CS_fsm_state9)) begin
-            grp_get_weed_mask_fu_100_ap_start_reg <= 1'b1;
-        end else if ((grp_get_weed_mask_fu_100_ap_ready == 1'b1)) begin
-            grp_get_weed_mask_fu_100_ap_start_reg <= 1'b0;
+            grp_get_weed_mask_fu_88_ap_start_reg <= 1'b1;
+        end else if ((grp_get_weed_mask_fu_88_ap_ready == 1'b1)) begin
+            grp_get_weed_mask_fu_88_ap_start_reg <= 1'b0;
         end
     end
 end
@@ -419,7 +419,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_100_ap_done == 1'b1))) begin
+    if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_88_ap_done == 1'b1))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = ap_done_reg;
@@ -436,7 +436,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        bottom_data_V_read = grp_get_line_bases_fu_88_bottom_data_V_read;
+        bottom_data_V_read = grp_get_line_bases_fu_97_bottom_data_V_read;
     end else begin
         bottom_data_V_read = 1'b0;
     end
@@ -497,7 +497,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_100_ap_done == 1'b1))) begin
+    if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_88_ap_done == 1'b1))) begin
         internal_ap_ready = 1'b1;
     end else begin
         internal_ap_ready = 1'b0;
@@ -506,7 +506,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        line_bases_address0 = grp_get_line_bases_fu_88_line_bases_address0;
+        line_bases_address0 = grp_get_line_bases_fu_97_line_bases_address0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         line_bases_address0 = grp_get_lines_lsl_fu_76_line_bases_address0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
@@ -520,7 +520,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        line_bases_ce0 = grp_get_line_bases_fu_88_line_bases_ce0;
+        line_bases_ce0 = grp_get_line_bases_fu_97_line_bases_ce0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         line_bases_ce0 = grp_get_lines_lsl_fu_76_line_bases_ce0;
     end else if ((1'b1 == ap_CS_fsm_state6)) begin
@@ -534,7 +534,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        line_bases_ce1 = grp_get_line_bases_fu_88_line_bases_ce1;
+        line_bases_ce1 = grp_get_line_bases_fu_97_line_bases_ce1;
     end else begin
         line_bases_ce1 = 1'b0;
     end
@@ -542,7 +542,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        line_bases_we0 = grp_get_line_bases_fu_88_line_bases_we0;
+        line_bases_we0 = grp_get_line_bases_fu_97_line_bases_we0;
     end else begin
         line_bases_we0 = 1'b0;
     end
@@ -550,7 +550,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state2)) begin
-        line_bases_we1 = grp_get_line_bases_fu_88_line_bases_we1;
+        line_bases_we1 = grp_get_line_bases_fu_97_line_bases_we1;
     end else begin
         line_bases_we1 = 1'b0;
     end
@@ -558,7 +558,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        lines_address0 = grp_get_weed_mask_fu_100_lines_address0;
+        lines_address0 = grp_get_weed_mask_fu_88_lines_address0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         lines_address0 = grp_get_lines_lsl_fu_76_lines_address0;
     end else begin
@@ -568,7 +568,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        lines_ce0 = grp_get_weed_mask_fu_100_lines_ce0;
+        lines_ce0 = grp_get_weed_mask_fu_88_lines_ce0;
     end else if ((1'b1 == ap_CS_fsm_state8)) begin
         lines_ce0 = grp_get_lines_lsl_fu_76_lines_ce0;
     end else begin
@@ -602,7 +602,7 @@ end
 
 always @ (*) begin
     if ((1'b1 == ap_CS_fsm_state10)) begin
-        weed_mask_tmp_data_V_write = grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write;
+        weed_mask_tmp_data_V_write = grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write;
     end else begin
         weed_mask_tmp_data_V_write = 1'b0;
     end
@@ -618,7 +618,7 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((1'b1 == ap_CS_fsm_state2) & (grp_get_line_bases_fu_88_ap_done == 1'b1))) begin
+            if (((1'b1 == ap_CS_fsm_state2) & (grp_get_line_bases_fu_97_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state2;
@@ -658,7 +658,7 @@ always @ (*) begin
             ap_NS_fsm = ap_ST_fsm_state10;
         end
         ap_ST_fsm_state10 : begin
-            if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_100_ap_done == 1'b1))) begin
+            if (((1'b1 == ap_CS_fsm_state10) & (grp_get_weed_mask_fu_88_ap_done == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state10;
@@ -704,16 +704,16 @@ assign grp_extr_half_1_cent_fu_48_ap_start = grp_extr_half_1_cent_fu_48_ap_start
 
 assign grp_extr_half_2_cent_fu_62_ap_start = grp_extr_half_2_cent_fu_62_ap_start_reg;
 
-assign grp_get_line_bases_fu_88_ap_start = grp_get_line_bases_fu_88_ap_start_reg;
+assign grp_get_line_bases_fu_97_ap_start = grp_get_line_bases_fu_97_ap_start_reg;
 
 assign grp_get_lines_lsl_fu_76_ap_start = grp_get_lines_lsl_fu_76_ap_start_reg;
 
-assign grp_get_weed_mask_fu_100_ap_start = grp_get_weed_mask_fu_100_ap_start_reg;
+assign grp_get_weed_mask_fu_88_ap_start = grp_get_weed_mask_fu_88_ap_start_reg;
 
-assign grp_get_weed_mask_fu_100_lines_founded_read = lines_founded_reg_109;
+assign grp_get_weed_mask_fu_88_lines_founded_read = lines_founded_reg_109;
 
 assign start_out = real_start;
 
-assign weed_mask_tmp_data_V_din = grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_din;
+assign weed_mask_tmp_data_V_din = grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_din;
 
 endmodule //get_crop_lines

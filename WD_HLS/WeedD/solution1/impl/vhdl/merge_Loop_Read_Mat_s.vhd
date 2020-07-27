@@ -176,7 +176,7 @@ architecture behav of merge_Loop_Read_Mat_s is
     end component;
 
 
-    component ip_accel_app_mul_7jG IS
+    component ip_accel_app_mul_9j0 IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -225,7 +225,7 @@ begin
         Mat_0_180_320_1_data_V_addr_blk_n => tmp_V_4_read_r_fu_118_Mat_0_180_320_1_data_V_addr_blk_n,
         ap_ce => tmp_V_4_read_r_fu_118_ap_ce);
 
-    ip_accel_app_mul_7jG_U506 : component ip_accel_app_mul_7jG
+    ip_accel_app_mul_9j0_U528 : component ip_accel_app_mul_9j0
     generic map (
         ID => 1,
         NUM_STAGE => 4,

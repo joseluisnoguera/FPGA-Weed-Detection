@@ -319,7 +319,7 @@ fifo_w24_d2_A_x3 p_out_V_V_U(
     .if_read(merge_Loop_Write_Mat_U0_p_out_V_V_read)
 );
 
-start_for_xfChann8jQ start_for_xfChann8jQ_U(
+start_for_xfChannbak start_for_xfChannbak_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
@@ -332,7 +332,7 @@ start_for_xfChann8jQ start_for_xfChann8jQ_U(
     .if_read(xfChannelCombine_U0_ap_ready)
 );
 
-start_for_merge_L9j0 start_for_merge_L9j0_U(
+start_for_merge_Lbbk start_for_merge_Lbbk_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),

@@ -62,15 +62,6 @@ output   ap_ready;
 output   ap_idle;
 input   ap_continue;
 
-wire    minMaxLoc435_U0_ap_start;
-wire    minMaxLoc435_U0_ap_done;
-wire    minMaxLoc435_U0_ap_continue;
-wire    minMaxLoc435_U0_ap_idle;
-wire    minMaxLoc435_U0_ap_ready;
-wire    minMaxLoc435_U0_p_src_data_V_read;
-wire   [31:0] minMaxLoc435_U0_ap_return;
-wire    ap_channel_done_max_r_dc_channel;
-wire    max_r_dc_channel_full_n;
 wire    minMaxLoc436_U0_ap_start;
 wire    minMaxLoc436_U0_ap_done;
 wire    minMaxLoc436_U0_ap_continue;
@@ -78,6 +69,15 @@ wire    minMaxLoc436_U0_ap_idle;
 wire    minMaxLoc436_U0_ap_ready;
 wire    minMaxLoc436_U0_p_src_data_V_read;
 wire   [31:0] minMaxLoc436_U0_ap_return;
+wire    ap_channel_done_max_r_dc_channel;
+wire    max_r_dc_channel_full_n;
+wire    minMaxLoc437_U0_ap_start;
+wire    minMaxLoc437_U0_ap_done;
+wire    minMaxLoc437_U0_ap_continue;
+wire    minMaxLoc437_U0_ap_idle;
+wire    minMaxLoc437_U0_ap_ready;
+wire    minMaxLoc437_U0_p_src_data_V_read;
+wire   [31:0] minMaxLoc437_U0_ap_return;
 wire    ap_channel_done_max_g_dc_channel;
 wire    max_g_dc_channel_full_n;
 wire    minMaxLoc_U0_ap_start;
@@ -119,19 +119,19 @@ wire   [31:0] max_b_dc_channel_dout;
 wire    max_b_dc_channel_empty_n;
 wire    ap_sync_done;
 wire    ap_sync_ready;
-reg    ap_sync_reg_minMaxLoc435_U0_ap_ready;
-wire    ap_sync_minMaxLoc435_U0_ap_ready;
-reg   [1:0] minMaxLoc435_U0_ap_ready_count;
 reg    ap_sync_reg_minMaxLoc436_U0_ap_ready;
 wire    ap_sync_minMaxLoc436_U0_ap_ready;
 reg   [1:0] minMaxLoc436_U0_ap_ready_count;
+reg    ap_sync_reg_minMaxLoc437_U0_ap_ready;
+wire    ap_sync_minMaxLoc437_U0_ap_ready;
+reg   [1:0] minMaxLoc437_U0_ap_ready_count;
 reg    ap_sync_reg_minMaxLoc_U0_ap_ready;
 wire    ap_sync_minMaxLoc_U0_ap_ready;
 reg   [1:0] minMaxLoc_U0_ap_ready_count;
-wire    minMaxLoc435_U0_start_full_n;
-wire    minMaxLoc435_U0_start_write;
 wire    minMaxLoc436_U0_start_full_n;
 wire    minMaxLoc436_U0_start_write;
+wire    minMaxLoc437_U0_start_full_n;
+wire    minMaxLoc437_U0_start_write;
 wire    minMaxLoc_U0_start_full_n;
 wire    minMaxLoc_U0_start_write;
 wire    p_prop_ret_max_b_dc_U0_start_full_n;
@@ -143,27 +143,13 @@ wire    p_prop_ret_max_r_dc_U0_start_write;
 
 // power-on initialization
 initial begin
-#0 ap_sync_reg_minMaxLoc435_U0_ap_ready = 1'b0;
-#0 minMaxLoc435_U0_ap_ready_count = 2'd0;
 #0 ap_sync_reg_minMaxLoc436_U0_ap_ready = 1'b0;
 #0 minMaxLoc436_U0_ap_ready_count = 2'd0;
+#0 ap_sync_reg_minMaxLoc437_U0_ap_ready = 1'b0;
+#0 minMaxLoc437_U0_ap_ready_count = 2'd0;
 #0 ap_sync_reg_minMaxLoc_U0_ap_ready = 1'b0;
 #0 minMaxLoc_U0_ap_ready_count = 2'd0;
 end
-
-minMaxLoc435 minMaxLoc435_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(minMaxLoc435_U0_ap_start),
-    .ap_done(minMaxLoc435_U0_ap_done),
-    .ap_continue(minMaxLoc435_U0_ap_continue),
-    .ap_idle(minMaxLoc435_U0_ap_idle),
-    .ap_ready(minMaxLoc435_U0_ap_ready),
-    .p_src_data_V_dout(r_channel_data_V_dout),
-    .p_src_data_V_empty_n(r_channel_data_V_empty_n),
-    .p_src_data_V_read(minMaxLoc435_U0_p_src_data_V_read),
-    .ap_return(minMaxLoc435_U0_ap_return)
-);
 
 minMaxLoc436 minMaxLoc436_U0(
     .ap_clk(ap_clk),
@@ -173,10 +159,24 @@ minMaxLoc436 minMaxLoc436_U0(
     .ap_continue(minMaxLoc436_U0_ap_continue),
     .ap_idle(minMaxLoc436_U0_ap_idle),
     .ap_ready(minMaxLoc436_U0_ap_ready),
-    .p_src_data_V_dout(g_channel_data_V_dout),
-    .p_src_data_V_empty_n(g_channel_data_V_empty_n),
+    .p_src_data_V_dout(r_channel_data_V_dout),
+    .p_src_data_V_empty_n(r_channel_data_V_empty_n),
     .p_src_data_V_read(minMaxLoc436_U0_p_src_data_V_read),
     .ap_return(minMaxLoc436_U0_ap_return)
+);
+
+minMaxLoc437 minMaxLoc437_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(minMaxLoc437_U0_ap_start),
+    .ap_done(minMaxLoc437_U0_ap_done),
+    .ap_continue(minMaxLoc437_U0_ap_continue),
+    .ap_idle(minMaxLoc437_U0_ap_idle),
+    .ap_ready(minMaxLoc437_U0_ap_ready),
+    .p_src_data_V_dout(g_channel_data_V_dout),
+    .p_src_data_V_empty_n(g_channel_data_V_empty_n),
+    .p_src_data_V_read(minMaxLoc437_U0_p_src_data_V_read),
+    .ap_return(minMaxLoc437_U0_ap_return)
 );
 
 minMaxLoc minMaxLoc_U0(
@@ -240,9 +240,9 @@ fifo_w32_d2_A max_r_dc_channel_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(minMaxLoc435_U0_ap_return),
+    .if_din(minMaxLoc436_U0_ap_return),
     .if_full_n(max_r_dc_channel_full_n),
-    .if_write(minMaxLoc435_U0_ap_done),
+    .if_write(minMaxLoc436_U0_ap_done),
     .if_dout(max_r_dc_channel_dout),
     .if_empty_n(max_r_dc_channel_empty_n),
     .if_read(p_prop_ret_max_r_dc_U0_ap_ready)
@@ -253,9 +253,9 @@ fifo_w32_d2_A max_g_dc_channel_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(minMaxLoc436_U0_ap_return),
+    .if_din(minMaxLoc437_U0_ap_return),
     .if_full_n(max_g_dc_channel_full_n),
-    .if_write(minMaxLoc436_U0_ap_done),
+    .if_write(minMaxLoc437_U0_ap_done),
     .if_dout(max_g_dc_channel_dout),
     .if_empty_n(max_g_dc_channel_empty_n),
     .if_read(p_prop_ret_max_g_dc_U0_ap_ready)
@@ -276,24 +276,24 @@ fifo_w32_d2_A max_b_dc_channel_U(
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_minMaxLoc435_U0_ap_ready <= 1'b0;
-    end else begin
-        if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_minMaxLoc435_U0_ap_ready <= 1'b0;
-        end else begin
-            ap_sync_reg_minMaxLoc435_U0_ap_ready <= ap_sync_minMaxLoc435_U0_ap_ready;
-        end
-    end
-end
-
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
         ap_sync_reg_minMaxLoc436_U0_ap_ready <= 1'b0;
     end else begin
         if (((ap_sync_ready & ap_start) == 1'b1)) begin
             ap_sync_reg_minMaxLoc436_U0_ap_ready <= 1'b0;
         end else begin
             ap_sync_reg_minMaxLoc436_U0_ap_ready <= ap_sync_minMaxLoc436_U0_ap_ready;
+        end
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (ap_rst == 1'b1) begin
+        ap_sync_reg_minMaxLoc437_U0_ap_ready <= 1'b0;
+    end else begin
+        if (((ap_sync_ready & ap_start) == 1'b1)) begin
+            ap_sync_reg_minMaxLoc437_U0_ap_ready <= 1'b0;
+        end else begin
+            ap_sync_reg_minMaxLoc437_U0_ap_ready <= ap_sync_minMaxLoc437_U0_ap_ready;
         end
     end
 end
@@ -311,18 +311,18 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((minMaxLoc435_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
-        minMaxLoc435_U0_ap_ready_count <= (minMaxLoc435_U0_ap_ready_count - 2'd1);
-    end else if (((ap_sync_ready == 1'b0) & (minMaxLoc435_U0_ap_ready == 1'b1))) begin
-        minMaxLoc435_U0_ap_ready_count <= (minMaxLoc435_U0_ap_ready_count + 2'd1);
-    end
-end
-
-always @ (posedge ap_clk) begin
     if (((minMaxLoc436_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
         minMaxLoc436_U0_ap_ready_count <= (minMaxLoc436_U0_ap_ready_count - 2'd1);
     end else if (((ap_sync_ready == 1'b0) & (minMaxLoc436_U0_ap_ready == 1'b1))) begin
         minMaxLoc436_U0_ap_ready_count <= (minMaxLoc436_U0_ap_ready_count + 2'd1);
+    end
+end
+
+always @ (posedge ap_clk) begin
+    if (((minMaxLoc437_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
+        minMaxLoc437_U0_ap_ready_count <= (minMaxLoc437_U0_ap_ready_count - 2'd1);
+    end else if (((ap_sync_ready == 1'b0) & (minMaxLoc437_U0_ap_ready == 1'b1))) begin
+        minMaxLoc437_U0_ap_ready_count <= (minMaxLoc437_U0_ap_ready_count + 2'd1);
     end
 end
 
@@ -336,13 +336,13 @@ end
 
 assign ap_channel_done_max_b_dc_channel = minMaxLoc_U0_ap_done;
 
-assign ap_channel_done_max_g_dc_channel = minMaxLoc436_U0_ap_done;
+assign ap_channel_done_max_g_dc_channel = minMaxLoc437_U0_ap_done;
 
-assign ap_channel_done_max_r_dc_channel = minMaxLoc435_U0_ap_done;
+assign ap_channel_done_max_r_dc_channel = minMaxLoc436_U0_ap_done;
 
 assign ap_done = ap_sync_done;
 
-assign ap_idle = (p_prop_ret_max_r_dc_U0_ap_idle & p_prop_ret_max_g_dc_U0_ap_idle & p_prop_ret_max_b_dc_U0_ap_idle & minMaxLoc_U0_ap_idle & minMaxLoc436_U0_ap_idle & minMaxLoc435_U0_ap_idle & (max_b_dc_channel_empty_n ^ 1'b1) & (max_g_dc_channel_empty_n ^ 1'b1) & (max_r_dc_channel_empty_n ^ 1'b1));
+assign ap_idle = (p_prop_ret_max_r_dc_U0_ap_idle & p_prop_ret_max_g_dc_U0_ap_idle & p_prop_ret_max_b_dc_U0_ap_idle & minMaxLoc_U0_ap_idle & minMaxLoc437_U0_ap_idle & minMaxLoc436_U0_ap_idle & (max_b_dc_channel_empty_n ^ 1'b1) & (max_g_dc_channel_empty_n ^ 1'b1) & (max_r_dc_channel_empty_n ^ 1'b1));
 
 assign ap_ready = ap_sync_ready;
 
@@ -350,17 +350,17 @@ assign ap_sync_continue = (ap_sync_done & ap_continue);
 
 assign ap_sync_done = (p_prop_ret_max_r_dc_U0_ap_done & p_prop_ret_max_g_dc_U0_ap_done & p_prop_ret_max_b_dc_U0_ap_done);
 
-assign ap_sync_minMaxLoc435_U0_ap_ready = (minMaxLoc435_U0_ap_ready | ap_sync_reg_minMaxLoc435_U0_ap_ready);
-
 assign ap_sync_minMaxLoc436_U0_ap_ready = (minMaxLoc436_U0_ap_ready | ap_sync_reg_minMaxLoc436_U0_ap_ready);
+
+assign ap_sync_minMaxLoc437_U0_ap_ready = (minMaxLoc437_U0_ap_ready | ap_sync_reg_minMaxLoc437_U0_ap_ready);
 
 assign ap_sync_minMaxLoc_U0_ap_ready = (minMaxLoc_U0_ap_ready | ap_sync_reg_minMaxLoc_U0_ap_ready);
 
-assign ap_sync_ready = (ap_sync_minMaxLoc_U0_ap_ready & ap_sync_minMaxLoc436_U0_ap_ready & ap_sync_minMaxLoc435_U0_ap_ready);
+assign ap_sync_ready = (ap_sync_minMaxLoc_U0_ap_ready & ap_sync_minMaxLoc437_U0_ap_ready & ap_sync_minMaxLoc436_U0_ap_ready);
 
 assign b_channel_data_V_read = minMaxLoc_U0_p_src_data_V_read;
 
-assign g_channel_data_V_read = minMaxLoc436_U0_p_src_data_V_read;
+assign g_channel_data_V_read = minMaxLoc437_U0_p_src_data_V_read;
 
 assign max_b_out_din = p_prop_ret_max_b_dc_U0_max_b_out_din;
 
@@ -374,21 +374,21 @@ assign max_r_out_din = p_prop_ret_max_r_dc_U0_max_r_out_din;
 
 assign max_r_out_write = p_prop_ret_max_r_dc_U0_max_r_out_write;
 
-assign minMaxLoc435_U0_ap_continue = max_r_dc_channel_full_n;
-
-assign minMaxLoc435_U0_ap_start = ((ap_sync_reg_minMaxLoc435_U0_ap_ready ^ 1'b1) & ap_start);
-
-assign minMaxLoc435_U0_start_full_n = 1'b1;
-
-assign minMaxLoc435_U0_start_write = 1'b0;
-
-assign minMaxLoc436_U0_ap_continue = max_g_dc_channel_full_n;
+assign minMaxLoc436_U0_ap_continue = max_r_dc_channel_full_n;
 
 assign minMaxLoc436_U0_ap_start = ((ap_sync_reg_minMaxLoc436_U0_ap_ready ^ 1'b1) & ap_start);
 
 assign minMaxLoc436_U0_start_full_n = 1'b1;
 
 assign minMaxLoc436_U0_start_write = 1'b0;
+
+assign minMaxLoc437_U0_ap_continue = max_g_dc_channel_full_n;
+
+assign minMaxLoc437_U0_ap_start = ((ap_sync_reg_minMaxLoc437_U0_ap_ready ^ 1'b1) & ap_start);
+
+assign minMaxLoc437_U0_start_full_n = 1'b1;
+
+assign minMaxLoc437_U0_start_write = 1'b0;
 
 assign minMaxLoc_U0_ap_continue = max_b_dc_channel_full_n;
 
@@ -422,6 +422,6 @@ assign p_prop_ret_max_r_dc_U0_start_full_n = 1'b1;
 
 assign p_prop_ret_max_r_dc_U0_start_write = 1'b0;
 
-assign r_channel_data_V_read = minMaxLoc435_U0_p_src_data_V_read;
+assign r_channel_data_V_read = minMaxLoc436_U0_p_src_data_V_read;
 
 endmodule //get_max_from_channel

@@ -86,8 +86,8 @@ wire    get_total_vegetation_1_U0_ap_ready;
 wire   [15:0] get_total_vegetation_1_U0_img_in_data_V_address0;
 wire    get_total_vegetation_1_U0_img_in_data_V_ce0;
 wire   [23:0] get_total_vegetation_1_U0_ap_return;
-wire    ap_channel_done_p_Val2_19_loc_chan;
-wire    p_Val2_19_loc_chan_full_n;
+wire    ap_channel_done_p_Val2_20_loc_chan;
+wire    p_Val2_20_loc_chan_full_n;
 wire    get_total_vegetation_2_U0_ap_start;
 wire    get_total_vegetation_2_U0_ap_done;
 wire    get_total_vegetation_2_U0_ap_continue;
@@ -110,8 +110,8 @@ wire   [7:0] img_in_data_V_t_q0_x;
 wire    img_in_data_V_t_we0;
 wire   [23:0] p_Val2_loc_channel_dout;
 wire    p_Val2_loc_channel_empty_n;
-wire   [23:0] p_Val2_19_loc_chan_dout;
-wire    p_Val2_19_loc_chan_empty_n;
+wire   [23:0] p_Val2_20_loc_chan_dout;
+wire    p_Val2_20_loc_chan_empty_n;
 wire    ap_sync_done;
 wire    ap_sync_ready;
 wire    get_total_vegetation_U0_start_full_n;
@@ -164,7 +164,7 @@ get_total_vegetation_2 get_total_vegetation_2_U0(
     .ap_idle(get_total_vegetation_2_U0_ap_idle),
     .ap_ready(get_total_vegetation_2_U0_ap_ready),
     .p_read(p_Val2_loc_channel_dout),
-    .p_read1(p_Val2_19_loc_chan_dout),
+    .p_read1(p_Val2_20_loc_chan_dout),
     .agg_result_V(get_total_vegetation_2_U0_agg_result_V),
     .agg_result_V_ap_vld(get_total_vegetation_2_U0_agg_result_V_ap_vld)
 );
@@ -203,16 +203,16 @@ fifo_w24_d2_A_x2 p_Val2_loc_channel_U(
     .if_read(get_total_vegetation_2_U0_ap_ready)
 );
 
-fifo_w24_d2_A_x2 p_Val2_19_loc_chan_U(
+fifo_w24_d2_A_x2 p_Val2_20_loc_chan_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(get_total_vegetation_1_U0_ap_return),
-    .if_full_n(p_Val2_19_loc_chan_full_n),
+    .if_full_n(p_Val2_20_loc_chan_full_n),
     .if_write(get_total_vegetation_1_U0_ap_done),
-    .if_dout(p_Val2_19_loc_chan_dout),
-    .if_empty_n(p_Val2_19_loc_chan_empty_n),
+    .if_dout(p_Val2_20_loc_chan_dout),
+    .if_empty_n(p_Val2_20_loc_chan_empty_n),
     .if_read(get_total_vegetation_2_U0_ap_ready)
 );
 
@@ -246,13 +246,13 @@ assign agg_result_V_ap_vld = get_total_vegetation_2_U0_agg_result_V_ap_vld;
 
 assign ap_channel_done_img_in_data_V = (get_total_vegetation_U0_ap_done & (ap_sync_reg_channel_write_img_in_data_V ^ 1'b1));
 
-assign ap_channel_done_p_Val2_19_loc_chan = get_total_vegetation_1_U0_ap_done;
+assign ap_channel_done_p_Val2_20_loc_chan = get_total_vegetation_1_U0_ap_done;
 
 assign ap_channel_done_p_Val2_loc_channel = (get_total_vegetation_U0_ap_done & (ap_sync_reg_channel_write_p_Val2_loc_channel ^ 1'b1));
 
 assign ap_done = get_total_vegetation_2_U0_ap_done;
 
-assign ap_idle = (get_total_vegetation_U0_ap_idle & get_total_vegetation_2_U0_ap_idle & get_total_vegetation_1_U0_ap_idle & (img_in_data_V_t_empty_n ^ 1'b1) & (p_Val2_19_loc_chan_empty_n ^ 1'b1) & (p_Val2_loc_channel_empty_n ^ 1'b1));
+assign ap_idle = (get_total_vegetation_U0_ap_idle & get_total_vegetation_2_U0_ap_idle & get_total_vegetation_1_U0_ap_idle & (img_in_data_V_t_empty_n ^ 1'b1) & (p_Val2_20_loc_chan_empty_n ^ 1'b1) & (p_Val2_loc_channel_empty_n ^ 1'b1));
 
 assign ap_ready = get_total_vegetation_2_U0_ap_done;
 
@@ -266,7 +266,7 @@ assign ap_sync_done = get_total_vegetation_2_U0_ap_done;
 
 assign ap_sync_ready = ap_sync_done;
 
-assign get_total_vegetation_1_U0_ap_continue = p_Val2_19_loc_chan_full_n;
+assign get_total_vegetation_1_U0_ap_continue = p_Val2_20_loc_chan_full_n;
 
 assign get_total_vegetation_1_U0_ap_start = img_in_data_V_t_empty_n;
 
@@ -276,7 +276,7 @@ assign get_total_vegetation_1_U0_start_write = 1'b0;
 
 assign get_total_vegetation_2_U0_ap_continue = ap_continue;
 
-assign get_total_vegetation_2_U0_ap_start = (p_Val2_loc_channel_empty_n & p_Val2_19_loc_chan_empty_n);
+assign get_total_vegetation_2_U0_ap_start = (p_Val2_loc_channel_empty_n & p_Val2_20_loc_chan_empty_n);
 
 assign get_total_vegetation_2_U0_start_full_n = 1'b1;
 

@@ -82,7 +82,7 @@ xfChannelExtractKern grp_xfChannelExtractKern_fu_20(
     .p_dst_mat_data_V_din(grp_xfChannelExtractKern_fu_20_p_dst_mat_data_V_din),
     .p_dst_mat_data_V_full_n(p_dst_mat_data_V_full_n),
     .p_dst_mat_data_V_write(grp_xfChannelExtractKern_fu_20_p_dst_mat_data_V_write),
-    .p_channel(4'd5)
+    .p_channel(4'd4)
 );
 
 always @ (posedge ap_clk) begin

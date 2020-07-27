@@ -37,7 +37,7 @@ end;
 architecture behav of ip_accel_app is 
     attribute CORE_GENERATION_INFO : STRING;
     attribute CORE_GENERATION_INFO of behav : architecture is
-    "ip_accel_app,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=50.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=43.397000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=117,HLS_SYN_DSP=148,HLS_SYN_FF=23889,HLS_SYN_LUT=51685,HLS_VERSION=2019_2_1}";
+    "ip_accel_app,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=50.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=43.397000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=117,HLS_SYN_DSP=167,HLS_SYN_FF=27979,HLS_SYN_LUT=67520,HLS_VERSION=2019_2_1}";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv4_0 : STD_LOGIC_VECTOR (3 downto 0) := "0000";
     constant ap_const_lv1_0 : STD_LOGIC_VECTOR (0 downto 0) := "0";
@@ -45,13 +45,13 @@ architecture behav of ip_accel_app is
     constant ap_const_logic_0 : STD_LOGIC := '0';
 
     signal ap_rst_n_inv : STD_LOGIC;
-    signal Block_proc642_U0_ap_start : STD_LOGIC;
-    signal Block_proc642_U0_ap_done : STD_LOGIC;
-    signal Block_proc642_U0_ap_continue : STD_LOGIC;
-    signal Block_proc642_U0_ap_idle : STD_LOGIC;
-    signal Block_proc642_U0_ap_ready : STD_LOGIC;
-    signal Block_proc642_U0_img_in_cols : STD_LOGIC_VECTOR (11 downto 0);
-    signal Block_proc642_U0_img_in_cols_ap_vld : STD_LOGIC;
+    signal Block_proc643_U0_ap_start : STD_LOGIC;
+    signal Block_proc643_U0_ap_done : STD_LOGIC;
+    signal Block_proc643_U0_ap_continue : STD_LOGIC;
+    signal Block_proc643_U0_ap_idle : STD_LOGIC;
+    signal Block_proc643_U0_ap_ready : STD_LOGIC;
+    signal Block_proc643_U0_img_in_cols : STD_LOGIC_VECTOR (11 downto 0);
+    signal Block_proc643_U0_img_in_cols_ap_vld : STD_LOGIC;
     signal ap_channel_done_img_in_cols_channel7 : STD_LOGIC;
     signal img_in_cols_channel7_full_n : STD_LOGIC;
     signal AXIvideo2xfMat_U0_ap_start : STD_LOGIC;
@@ -95,8 +95,8 @@ architecture behav of ip_accel_app is
     signal img_out_data_V_full_n : STD_LOGIC;
     signal img_out_data_V_dout : STD_LOGIC_VECTOR (23 downto 0);
     signal img_out_data_V_empty_n : STD_LOGIC;
-    signal Block_proc642_U0_start_full_n : STD_LOGIC;
-    signal Block_proc642_U0_start_write : STD_LOGIC;
+    signal Block_proc643_U0_start_full_n : STD_LOGIC;
+    signal Block_proc643_U0_start_write : STD_LOGIC;
     signal AXIvideo2xfMat_U0_start_full_n : STD_LOGIC;
     signal AXIvideo2xfMat_U0_start_write : STD_LOGIC;
     signal start_for_xfMat2AXIvideo_U0_din : STD_LOGIC_VECTOR (0 downto 0);
@@ -106,7 +106,7 @@ architecture behav of ip_accel_app is
     signal xfMat2AXIvideo_U0_start_full_n : STD_LOGIC;
     signal xfMat2AXIvideo_U0_start_write : STD_LOGIC;
 
-    component Block_proc642 IS
+    component Block_proc643 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -221,7 +221,7 @@ architecture behav of ip_accel_app is
     end component;
 
 
-    component start_for_xfMat2Abtn IS
+    component start_for_xfMat2Abvn IS
     port (
         clk : IN STD_LOGIC;
         reset : IN STD_LOGIC;
@@ -238,17 +238,17 @@ architecture behav of ip_accel_app is
 
 
 begin
-    Block_proc642_U0 : component Block_proc642
+    Block_proc643_U0 : component Block_proc643
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst_n_inv,
-        ap_start => Block_proc642_U0_ap_start,
-        ap_done => Block_proc642_U0_ap_done,
-        ap_continue => Block_proc642_U0_ap_continue,
-        ap_idle => Block_proc642_U0_ap_idle,
-        ap_ready => Block_proc642_U0_ap_ready,
-        img_in_cols => Block_proc642_U0_img_in_cols,
-        img_in_cols_ap_vld => Block_proc642_U0_img_in_cols_ap_vld);
+        ap_start => Block_proc643_U0_ap_start,
+        ap_done => Block_proc643_U0_ap_done,
+        ap_continue => Block_proc643_U0_ap_continue,
+        ap_idle => Block_proc643_U0_ap_idle,
+        ap_ready => Block_proc643_U0_ap_ready,
+        img_in_cols => Block_proc643_U0_img_in_cols,
+        img_in_cols_ap_vld => Block_proc643_U0_img_in_cols_ap_vld);
 
     AXIvideo2xfMat_U0 : component AXIvideo2xfMat
     port map (
@@ -321,9 +321,9 @@ begin
         reset => ap_rst_n_inv,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => Block_proc642_U0_img_in_cols,
+        if_din => Block_proc643_U0_img_in_cols,
         if_full_n => img_in_cols_channel7_full_n,
-        if_write => Block_proc642_U0_ap_done,
+        if_write => Block_proc643_U0_ap_done,
         if_dout => img_in_cols_channel7_dout,
         if_empty_n => img_in_cols_channel7_empty_n,
         if_read => weed_detection_U0_ap_ready);
@@ -354,7 +354,7 @@ begin
         if_empty_n => img_out_data_V_empty_n,
         if_read => xfMat2AXIvideo_U0_img_data_V_read);
 
-    start_for_xfMat2Abtn_U : component start_for_xfMat2Abtn
+    start_for_xfMat2Abvn_U : component start_for_xfMat2Abvn
     port map (
         clk => ap_clk,
         reset => ap_rst_n_inv,
@@ -374,11 +374,11 @@ begin
     AXIvideo2xfMat_U0_ap_start <= ap_const_logic_1;
     AXIvideo2xfMat_U0_start_full_n <= ap_const_logic_1;
     AXIvideo2xfMat_U0_start_write <= ap_const_logic_0;
-    Block_proc642_U0_ap_continue <= img_in_cols_channel7_full_n;
-    Block_proc642_U0_ap_start <= ap_const_logic_1;
-    Block_proc642_U0_start_full_n <= ap_const_logic_1;
-    Block_proc642_U0_start_write <= ap_const_logic_0;
-    ap_channel_done_img_in_cols_channel7 <= Block_proc642_U0_ap_done;
+    Block_proc643_U0_ap_continue <= img_in_cols_channel7_full_n;
+    Block_proc643_U0_ap_start <= ap_const_logic_1;
+    Block_proc643_U0_start_full_n <= ap_const_logic_1;
+    Block_proc643_U0_start_write <= ap_const_logic_0;
+    ap_channel_done_img_in_cols_channel7 <= Block_proc643_U0_ap_done;
 
     ap_rst_n_inv_assign_proc : process(ap_rst_n)
     begin

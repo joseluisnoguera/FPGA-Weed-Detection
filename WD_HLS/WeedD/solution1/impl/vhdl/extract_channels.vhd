@@ -47,15 +47,6 @@ architecture behav of extract_channels is
     constant ap_const_lv2_1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
-    signal extractChannel432_U0_ap_start : STD_LOGIC;
-    signal extractChannel432_U0_ap_done : STD_LOGIC;
-    signal extractChannel432_U0_ap_continue : STD_LOGIC;
-    signal extractChannel432_U0_ap_idle : STD_LOGIC;
-    signal extractChannel432_U0_ap_ready : STD_LOGIC;
-    signal extractChannel432_U0_p_src_mat_data_V_read : STD_LOGIC;
-    signal extractChannel432_U0_p_dst_mat_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal extractChannel432_U0_p_dst_mat_data_V_write : STD_LOGIC;
-    signal ap_sync_continue : STD_LOGIC;
     signal extractChannel433_U0_ap_start : STD_LOGIC;
     signal extractChannel433_U0_ap_done : STD_LOGIC;
     signal extractChannel433_U0_ap_continue : STD_LOGIC;
@@ -64,6 +55,7 @@ architecture behav of extract_channels is
     signal extractChannel433_U0_p_src_mat_data_V_read : STD_LOGIC;
     signal extractChannel433_U0_p_dst_mat_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal extractChannel433_U0_p_dst_mat_data_V_write : STD_LOGIC;
+    signal ap_sync_continue : STD_LOGIC;
     signal extractChannel434_U0_ap_start : STD_LOGIC;
     signal extractChannel434_U0_ap_done : STD_LOGIC;
     signal extractChannel434_U0_ap_continue : STD_LOGIC;
@@ -72,41 +64,31 @@ architecture behav of extract_channels is
     signal extractChannel434_U0_p_src_mat_data_V_read : STD_LOGIC;
     signal extractChannel434_U0_p_dst_mat_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
     signal extractChannel434_U0_p_dst_mat_data_V_write : STD_LOGIC;
+    signal extractChannel435_U0_ap_start : STD_LOGIC;
+    signal extractChannel435_U0_ap_done : STD_LOGIC;
+    signal extractChannel435_U0_ap_continue : STD_LOGIC;
+    signal extractChannel435_U0_ap_idle : STD_LOGIC;
+    signal extractChannel435_U0_ap_ready : STD_LOGIC;
+    signal extractChannel435_U0_p_src_mat_data_V_read : STD_LOGIC;
+    signal extractChannel435_U0_p_dst_mat_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal extractChannel435_U0_p_dst_mat_data_V_write : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
-    signal ap_sync_reg_extractChannel432_U0_ap_ready : STD_LOGIC := '0';
-    signal ap_sync_extractChannel432_U0_ap_ready : STD_LOGIC;
-    signal extractChannel432_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal ap_sync_reg_extractChannel433_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_extractChannel433_U0_ap_ready : STD_LOGIC;
     signal extractChannel433_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal ap_sync_reg_extractChannel434_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_extractChannel434_U0_ap_ready : STD_LOGIC;
     signal extractChannel434_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    signal extractChannel432_U0_start_full_n : STD_LOGIC;
-    signal extractChannel432_U0_start_write : STD_LOGIC;
+    signal ap_sync_reg_extractChannel435_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_extractChannel435_U0_ap_ready : STD_LOGIC;
+    signal extractChannel435_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal extractChannel433_U0_start_full_n : STD_LOGIC;
     signal extractChannel433_U0_start_write : STD_LOGIC;
     signal extractChannel434_U0_start_full_n : STD_LOGIC;
     signal extractChannel434_U0_start_write : STD_LOGIC;
-
-    component extractChannel432 IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_continue : IN STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        p_src_mat_data_V_dout : IN STD_LOGIC_VECTOR (23 downto 0);
-        p_src_mat_data_V_empty_n : IN STD_LOGIC;
-        p_src_mat_data_V_read : OUT STD_LOGIC;
-        p_dst_mat_data_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
-        p_dst_mat_data_V_full_n : IN STD_LOGIC;
-        p_dst_mat_data_V_write : OUT STD_LOGIC );
-    end component;
-
+    signal extractChannel435_U0_start_full_n : STD_LOGIC;
+    signal extractChannel435_U0_start_write : STD_LOGIC;
 
     component extractChannel433 IS
     port (
@@ -144,24 +126,26 @@ architecture behav of extract_channels is
     end component;
 
 
+    component extractChannel435 IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_continue : IN STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        p_src_mat_data_V_dout : IN STD_LOGIC_VECTOR (23 downto 0);
+        p_src_mat_data_V_empty_n : IN STD_LOGIC;
+        p_src_mat_data_V_read : OUT STD_LOGIC;
+        p_dst_mat_data_V_din : OUT STD_LOGIC_VECTOR (7 downto 0);
+        p_dst_mat_data_V_full_n : IN STD_LOGIC;
+        p_dst_mat_data_V_write : OUT STD_LOGIC );
+    end component;
+
+
 
 begin
-    extractChannel432_U0 : component extractChannel432
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst,
-        ap_start => extractChannel432_U0_ap_start,
-        ap_done => extractChannel432_U0_ap_done,
-        ap_continue => extractChannel432_U0_ap_continue,
-        ap_idle => extractChannel432_U0_ap_idle,
-        ap_ready => extractChannel432_U0_ap_ready,
-        p_src_mat_data_V_dout => img_in_0_data_V_dout,
-        p_src_mat_data_V_empty_n => img_in_0_data_V_empty_n,
-        p_src_mat_data_V_read => extractChannel432_U0_p_src_mat_data_V_read,
-        p_dst_mat_data_V_din => extractChannel432_U0_p_dst_mat_data_V_din,
-        p_dst_mat_data_V_full_n => b_channel_data_V_full_n,
-        p_dst_mat_data_V_write => extractChannel432_U0_p_dst_mat_data_V_write);
-
     extractChannel433_U0 : component extractChannel433
     port map (
         ap_clk => ap_clk,
@@ -171,11 +155,11 @@ begin
         ap_continue => extractChannel433_U0_ap_continue,
         ap_idle => extractChannel433_U0_ap_idle,
         ap_ready => extractChannel433_U0_ap_ready,
-        p_src_mat_data_V_dout => img_in_1_data_V_dout,
-        p_src_mat_data_V_empty_n => img_in_1_data_V_empty_n,
+        p_src_mat_data_V_dout => img_in_0_data_V_dout,
+        p_src_mat_data_V_empty_n => img_in_0_data_V_empty_n,
         p_src_mat_data_V_read => extractChannel433_U0_p_src_mat_data_V_read,
         p_dst_mat_data_V_din => extractChannel433_U0_p_dst_mat_data_V_din,
-        p_dst_mat_data_V_full_n => g_channel_data_V_full_n,
+        p_dst_mat_data_V_full_n => b_channel_data_V_full_n,
         p_dst_mat_data_V_write => extractChannel433_U0_p_dst_mat_data_V_write);
 
     extractChannel434_U0 : component extractChannel434
@@ -187,31 +171,31 @@ begin
         ap_continue => extractChannel434_U0_ap_continue,
         ap_idle => extractChannel434_U0_ap_idle,
         ap_ready => extractChannel434_U0_ap_ready,
-        p_src_mat_data_V_dout => img_in_2_data_V_dout,
-        p_src_mat_data_V_empty_n => img_in_2_data_V_empty_n,
+        p_src_mat_data_V_dout => img_in_1_data_V_dout,
+        p_src_mat_data_V_empty_n => img_in_1_data_V_empty_n,
         p_src_mat_data_V_read => extractChannel434_U0_p_src_mat_data_V_read,
         p_dst_mat_data_V_din => extractChannel434_U0_p_dst_mat_data_V_din,
-        p_dst_mat_data_V_full_n => r_channel_data_V_full_n,
+        p_dst_mat_data_V_full_n => g_channel_data_V_full_n,
         p_dst_mat_data_V_write => extractChannel434_U0_p_dst_mat_data_V_write);
 
+    extractChannel435_U0 : component extractChannel435
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => extractChannel435_U0_ap_start,
+        ap_done => extractChannel435_U0_ap_done,
+        ap_continue => extractChannel435_U0_ap_continue,
+        ap_idle => extractChannel435_U0_ap_idle,
+        ap_ready => extractChannel435_U0_ap_ready,
+        p_src_mat_data_V_dout => img_in_2_data_V_dout,
+        p_src_mat_data_V_empty_n => img_in_2_data_V_empty_n,
+        p_src_mat_data_V_read => extractChannel435_U0_p_src_mat_data_V_read,
+        p_dst_mat_data_V_din => extractChannel435_U0_p_dst_mat_data_V_din,
+        p_dst_mat_data_V_full_n => r_channel_data_V_full_n,
+        p_dst_mat_data_V_write => extractChannel435_U0_p_dst_mat_data_V_write);
 
 
 
-
-    ap_sync_reg_extractChannel432_U0_ap_ready_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst = '1') then
-                ap_sync_reg_extractChannel432_U0_ap_ready <= ap_const_logic_0;
-            else
-                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
-                    ap_sync_reg_extractChannel432_U0_ap_ready <= ap_const_logic_0;
-                else 
-                    ap_sync_reg_extractChannel432_U0_ap_ready <= ap_sync_extractChannel432_U0_ap_ready;
-                end if; 
-            end if;
-        end if;
-    end process;
 
 
     ap_sync_reg_extractChannel433_U0_ap_ready_assign_proc : process(ap_clk)
@@ -246,16 +230,21 @@ begin
     end process;
 
 
-    extractChannel432_U0_ap_ready_count_assign_proc : process (ap_clk)
+    ap_sync_reg_extractChannel435_U0_ap_ready_assign_proc : process(ap_clk)
     begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((extractChannel432_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
-                extractChannel432_U0_ap_ready_count <= std_logic_vector(unsigned(extractChannel432_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
-            elsif (((ap_sync_ready = ap_const_logic_0) and (extractChannel432_U0_ap_ready = ap_const_logic_1))) then 
-                extractChannel432_U0_ap_ready_count <= std_logic_vector(unsigned(extractChannel432_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
-            end if; 
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_sync_reg_extractChannel435_U0_ap_ready <= ap_const_logic_0;
+            else
+                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
+                    ap_sync_reg_extractChannel435_U0_ap_ready <= ap_const_logic_0;
+                else 
+                    ap_sync_reg_extractChannel435_U0_ap_ready <= ap_sync_extractChannel435_U0_ap_ready;
+                end if; 
+            end if;
         end if;
     end process;
+
 
     extractChannel433_U0_ap_ready_count_assign_proc : process (ap_clk)
     begin
@@ -278,21 +267,28 @@ begin
             end if; 
         end if;
     end process;
+
+    extractChannel435_U0_ap_ready_count_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((extractChannel435_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
+                extractChannel435_U0_ap_ready_count <= std_logic_vector(unsigned(extractChannel435_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
+            elsif (((ap_sync_ready = ap_const_logic_0) and (extractChannel435_U0_ap_ready = ap_const_logic_1))) then 
+                extractChannel435_U0_ap_ready_count <= std_logic_vector(unsigned(extractChannel435_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
+            end if; 
+        end if;
+    end process;
     ap_done <= ap_sync_done;
-    ap_idle <= (extractChannel434_U0_ap_idle and extractChannel433_U0_ap_idle and extractChannel432_U0_ap_idle);
+    ap_idle <= (extractChannel435_U0_ap_idle and extractChannel434_U0_ap_idle and extractChannel433_U0_ap_idle);
     ap_ready <= ap_sync_ready;
     ap_sync_continue <= (ap_sync_done and ap_continue);
-    ap_sync_done <= (extractChannel434_U0_ap_done and extractChannel433_U0_ap_done and extractChannel432_U0_ap_done);
-    ap_sync_extractChannel432_U0_ap_ready <= (extractChannel432_U0_ap_ready or ap_sync_reg_extractChannel432_U0_ap_ready);
+    ap_sync_done <= (extractChannel435_U0_ap_done and extractChannel434_U0_ap_done and extractChannel433_U0_ap_done);
     ap_sync_extractChannel433_U0_ap_ready <= (extractChannel433_U0_ap_ready or ap_sync_reg_extractChannel433_U0_ap_ready);
     ap_sync_extractChannel434_U0_ap_ready <= (extractChannel434_U0_ap_ready or ap_sync_reg_extractChannel434_U0_ap_ready);
-    ap_sync_ready <= (ap_sync_extractChannel434_U0_ap_ready and ap_sync_extractChannel433_U0_ap_ready and ap_sync_extractChannel432_U0_ap_ready);
-    b_channel_data_V_din <= extractChannel432_U0_p_dst_mat_data_V_din;
-    b_channel_data_V_write <= extractChannel432_U0_p_dst_mat_data_V_write;
-    extractChannel432_U0_ap_continue <= ap_sync_continue;
-    extractChannel432_U0_ap_start <= ((ap_sync_reg_extractChannel432_U0_ap_ready xor ap_const_logic_1) and ap_start);
-    extractChannel432_U0_start_full_n <= ap_const_logic_1;
-    extractChannel432_U0_start_write <= ap_const_logic_0;
+    ap_sync_extractChannel435_U0_ap_ready <= (extractChannel435_U0_ap_ready or ap_sync_reg_extractChannel435_U0_ap_ready);
+    ap_sync_ready <= (ap_sync_extractChannel435_U0_ap_ready and ap_sync_extractChannel434_U0_ap_ready and ap_sync_extractChannel433_U0_ap_ready);
+    b_channel_data_V_din <= extractChannel433_U0_p_dst_mat_data_V_din;
+    b_channel_data_V_write <= extractChannel433_U0_p_dst_mat_data_V_write;
     extractChannel433_U0_ap_continue <= ap_sync_continue;
     extractChannel433_U0_ap_start <= ((ap_sync_reg_extractChannel433_U0_ap_ready xor ap_const_logic_1) and ap_start);
     extractChannel433_U0_start_full_n <= ap_const_logic_1;
@@ -301,11 +297,15 @@ begin
     extractChannel434_U0_ap_start <= ((ap_sync_reg_extractChannel434_U0_ap_ready xor ap_const_logic_1) and ap_start);
     extractChannel434_U0_start_full_n <= ap_const_logic_1;
     extractChannel434_U0_start_write <= ap_const_logic_0;
-    g_channel_data_V_din <= extractChannel433_U0_p_dst_mat_data_V_din;
-    g_channel_data_V_write <= extractChannel433_U0_p_dst_mat_data_V_write;
-    img_in_0_data_V_read <= extractChannel432_U0_p_src_mat_data_V_read;
-    img_in_1_data_V_read <= extractChannel433_U0_p_src_mat_data_V_read;
-    img_in_2_data_V_read <= extractChannel434_U0_p_src_mat_data_V_read;
-    r_channel_data_V_din <= extractChannel434_U0_p_dst_mat_data_V_din;
-    r_channel_data_V_write <= extractChannel434_U0_p_dst_mat_data_V_write;
+    extractChannel435_U0_ap_continue <= ap_sync_continue;
+    extractChannel435_U0_ap_start <= ((ap_sync_reg_extractChannel435_U0_ap_ready xor ap_const_logic_1) and ap_start);
+    extractChannel435_U0_start_full_n <= ap_const_logic_1;
+    extractChannel435_U0_start_write <= ap_const_logic_0;
+    g_channel_data_V_din <= extractChannel434_U0_p_dst_mat_data_V_din;
+    g_channel_data_V_write <= extractChannel434_U0_p_dst_mat_data_V_write;
+    img_in_0_data_V_read <= extractChannel433_U0_p_src_mat_data_V_read;
+    img_in_1_data_V_read <= extractChannel434_U0_p_src_mat_data_V_read;
+    img_in_2_data_V_read <= extractChannel435_U0_p_src_mat_data_V_read;
+    r_channel_data_V_din <= extractChannel435_U0_p_dst_mat_data_V_din;
+    r_channel_data_V_write <= extractChannel435_U0_p_dst_mat_data_V_write;
 end behav;

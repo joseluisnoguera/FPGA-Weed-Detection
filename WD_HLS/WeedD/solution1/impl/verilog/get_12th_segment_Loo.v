@@ -54,10 +54,10 @@ reg    eroded_data_V_blk_n;
 wire    ap_CS_fsm_pp0_stage0;
 reg    ap_enable_reg_pp0_iter1;
 wire    ap_block_pp0_stage0;
-reg   [0:0] icmp_ln11_reg_81;
+reg   [0:0] icmp_ln10_reg_81;
 reg    bottom_data_V_blk_n;
 reg   [12:0] i_0_i_i_reg_58;
-wire   [0:0] icmp_ln11_fu_69_p2;
+wire   [0:0] icmp_ln10_fu_69_p2;
 wire    ap_block_state2_pp0_stage0_iter0;
 reg    ap_block_state3_pp0_stage0_iter1;
 reg    ap_block_pp0_stage0_11001;
@@ -127,7 +127,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln11_fu_69_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln10_fu_69_p2 == 1'd0) & (ap_enable_reg_pp0_iter0 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         i_0_i_i_reg_58 <= i_fu_75_p2;
     end else if ((~((ap_start == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
         i_0_i_i_reg_58 <= 13'd0;
@@ -136,12 +136,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
-        icmp_ln11_reg_81 <= icmp_ln11_fu_69_p2;
+        icmp_ln10_reg_81 <= icmp_ln10_fu_69_p2;
     end
 end
 
 always @ (*) begin
-    if ((icmp_ln11_fu_69_p2 == 1'd1)) begin
+    if ((icmp_ln10_fu_69_p2 == 1'd1)) begin
         ap_condition_pp0_exit_iter0_state2 = 1'b1;
     end else begin
         ap_condition_pp0_exit_iter0_state2 = 1'b0;
@@ -181,7 +181,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln11_reg_81 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln10_reg_81 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         bottom_data_V_blk_n = bottom_data_V_full_n;
     end else begin
         bottom_data_V_blk_n = 1'b1;
@@ -189,7 +189,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln11_reg_81 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln10_reg_81 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         bottom_data_V_write = 1'b1;
     end else begin
         bottom_data_V_write = 1'b0;
@@ -197,7 +197,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln11_reg_81 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((icmp_ln10_reg_81 == 1'd0) & (1'b0 == ap_block_pp0_stage0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         eroded_data_V_blk_n = eroded_data_V_empty_n;
     end else begin
         eroded_data_V_blk_n = 1'b1;
@@ -205,7 +205,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln11_reg_81 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
+    if (((1'b0 == ap_block_pp0_stage0_11001) & (icmp_ln10_reg_81 == 1'd0) & (ap_enable_reg_pp0_iter1 == 1'b1) & (1'b1 == ap_CS_fsm_pp0_stage0))) begin
         eroded_data_V_read = 1'b1;
     end else begin
         eroded_data_V_read = 1'b0;
@@ -222,9 +222,9 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_pp0_stage0 : begin
-            if (~((1'b0 == ap_block_pp0_stage0_subdone) & (icmp_ln11_fu_69_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            if (~((1'b0 == ap_block_pp0_stage0_subdone) & (icmp_ln10_fu_69_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
-            end else if (((1'b0 == ap_block_pp0_stage0_subdone) & (icmp_ln11_fu_69_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
+            end else if (((1'b0 == ap_block_pp0_stage0_subdone) & (icmp_ln10_fu_69_p2 == 1'd1) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
                 ap_NS_fsm = ap_ST_fsm_state4;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_pp0_stage0;
@@ -248,15 +248,15 @@ assign ap_CS_fsm_state4 = ap_CS_fsm[32'd2];
 assign ap_block_pp0_stage0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_pp0_stage0_01001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & (((icmp_ln11_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln11_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0))));
+    ap_block_pp0_stage0_01001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & (((icmp_ln10_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln10_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0))));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_11001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & (((icmp_ln11_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln11_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0))));
+    ap_block_pp0_stage0_11001 = ((ap_enable_reg_pp0_iter1 == 1'b1) & (((icmp_ln10_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln10_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0))));
 end
 
 always @ (*) begin
-    ap_block_pp0_stage0_subdone = ((ap_enable_reg_pp0_iter1 == 1'b1) & (((icmp_ln11_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln11_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0))));
+    ap_block_pp0_stage0_subdone = ((ap_enable_reg_pp0_iter1 == 1'b1) & (((icmp_ln10_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln10_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0))));
 end
 
 always @ (*) begin
@@ -266,7 +266,7 @@ end
 assign ap_block_state2_pp0_stage0_iter0 = ~(1'b1 == 1'b1);
 
 always @ (*) begin
-    ap_block_state3_pp0_stage0_iter1 = (((icmp_ln11_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln11_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0)));
+    ap_block_state3_pp0_stage0_iter1 = (((icmp_ln10_reg_81 == 1'd0) & (bottom_data_V_full_n == 1'b0)) | ((icmp_ln10_reg_81 == 1'd0) & (eroded_data_V_empty_n == 1'b0)));
 end
 
 assign ap_enable_pp0 = (ap_idle_pp0 ^ 1'b1);
@@ -275,6 +275,6 @@ assign bottom_data_V_din = eroded_data_V_dout;
 
 assign i_fu_75_p2 = (i_0_i_i_reg_58 + 13'd1);
 
-assign icmp_ln11_fu_69_p2 = ((i_0_i_i_reg_58 == 13'd7360) ? 1'b1 : 1'b0);
+assign icmp_ln10_fu_69_p2 = ((i_0_i_i_reg_58 == 13'd7360) ? 1'b1 : 1'b0);
 
 endmodule //get_12th_segment_Loo

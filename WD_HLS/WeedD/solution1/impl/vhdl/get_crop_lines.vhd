@@ -53,9 +53,9 @@ architecture behav of get_crop_lines is
     constant ap_const_lv32_4 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000100";
     constant ap_const_lv32_5 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000101";
     constant ap_const_lv32_6 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000110";
-    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_lv32_8 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001000";
     constant ap_const_lv32_9 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000001001";
+    constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
     signal real_start : STD_LOGIC;
@@ -81,7 +81,7 @@ architecture behav of get_crop_lines is
     signal lines_address0 : STD_LOGIC_VECTOR (2 downto 0);
     signal lines_ce0 : STD_LOGIC;
     signal lines_we0 : STD_LOGIC;
-    signal lines_q0 : STD_LOGIC_VECTOR (56 downto 0);
+    signal lines_q0 : STD_LOGIC_VECTOR (64 downto 0);
     signal grp_get_lines_lsl_fu_76_ap_return : STD_LOGIC_VECTOR (0 downto 0);
     signal lines_founded_reg_109 : STD_LOGIC_VECTOR (0 downto 0);
     signal ap_CS_fsm_state8 : STD_LOGIC;
@@ -119,29 +119,29 @@ architecture behav of get_crop_lines is
     signal grp_get_lines_lsl_fu_76_lines_address0 : STD_LOGIC_VECTOR (2 downto 0);
     signal grp_get_lines_lsl_fu_76_lines_ce0 : STD_LOGIC;
     signal grp_get_lines_lsl_fu_76_lines_we0 : STD_LOGIC;
-    signal grp_get_lines_lsl_fu_76_lines_d0 : STD_LOGIC_VECTOR (56 downto 0);
-    signal grp_get_line_bases_fu_88_ap_start : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_ap_done : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_ap_idle : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_ap_ready : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_bottom_data_V_read : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_line_bases_address0 : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_get_line_bases_fu_88_line_bases_ce0 : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_line_bases_we0 : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_line_bases_d0 : STD_LOGIC_VECTOR (16 downto 0);
-    signal grp_get_line_bases_fu_88_line_bases_address1 : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_get_line_bases_fu_88_line_bases_ce1 : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_line_bases_we1 : STD_LOGIC;
-    signal grp_get_line_bases_fu_88_line_bases_d1 : STD_LOGIC_VECTOR (16 downto 0);
-    signal grp_get_weed_mask_fu_100_ap_start : STD_LOGIC;
-    signal grp_get_weed_mask_fu_100_ap_done : STD_LOGIC;
-    signal grp_get_weed_mask_fu_100_ap_idle : STD_LOGIC;
-    signal grp_get_weed_mask_fu_100_ap_ready : STD_LOGIC;
-    signal grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_din : STD_LOGIC_VECTOR (1 downto 0);
-    signal grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write : STD_LOGIC;
-    signal grp_get_weed_mask_fu_100_lines_founded_read : STD_LOGIC;
-    signal grp_get_weed_mask_fu_100_lines_address0 : STD_LOGIC_VECTOR (2 downto 0);
-    signal grp_get_weed_mask_fu_100_lines_ce0 : STD_LOGIC;
+    signal grp_get_lines_lsl_fu_76_lines_d0 : STD_LOGIC_VECTOR (64 downto 0);
+    signal grp_get_weed_mask_fu_88_ap_start : STD_LOGIC;
+    signal grp_get_weed_mask_fu_88_ap_done : STD_LOGIC;
+    signal grp_get_weed_mask_fu_88_ap_idle : STD_LOGIC;
+    signal grp_get_weed_mask_fu_88_ap_ready : STD_LOGIC;
+    signal grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_din : STD_LOGIC_VECTOR (1 downto 0);
+    signal grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write : STD_LOGIC;
+    signal grp_get_weed_mask_fu_88_lines_founded_read : STD_LOGIC;
+    signal grp_get_weed_mask_fu_88_lines_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_get_weed_mask_fu_88_lines_ce0 : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_ap_start : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_ap_done : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_ap_idle : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_ap_ready : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_bottom_data_V_read : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_line_bases_address0 : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_get_line_bases_fu_97_line_bases_ce0 : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_line_bases_we0 : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_line_bases_d0 : STD_LOGIC_VECTOR (16 downto 0);
+    signal grp_get_line_bases_fu_97_line_bases_address1 : STD_LOGIC_VECTOR (2 downto 0);
+    signal grp_get_line_bases_fu_97_line_bases_ce1 : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_line_bases_we1 : STD_LOGIC;
+    signal grp_get_line_bases_fu_97_line_bases_d1 : STD_LOGIC_VECTOR (16 downto 0);
     signal grp_extr_half_1_cent_fu_48_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
@@ -155,15 +155,15 @@ architecture behav of get_crop_lines is
     signal grp_get_lines_lsl_fu_76_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state7 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state7 : signal is "none";
-    signal grp_get_line_bases_fu_88_ap_start_reg : STD_LOGIC := '0';
-    signal ap_block_state1_ignore_call3 : BOOLEAN;
-    signal ap_CS_fsm_state2 : STD_LOGIC;
-    attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal grp_get_weed_mask_fu_100_ap_start_reg : STD_LOGIC := '0';
+    signal grp_get_weed_mask_fu_88_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state9 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state9 : signal is "none";
     signal ap_CS_fsm_state10 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state10 : signal is "none";
+    signal grp_get_line_bases_fu_97_ap_start_reg : STD_LOGIC := '0';
+    signal ap_block_state1_ignore_call3 : BOOLEAN;
+    signal ap_CS_fsm_state2 : STD_LOGIC;
+    attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_block_state1 : BOOLEAN;
 
@@ -228,9 +228,27 @@ architecture behav of get_crop_lines is
         lines_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
         lines_ce0 : OUT STD_LOGIC;
         lines_we0 : OUT STD_LOGIC;
-        lines_d0 : OUT STD_LOGIC_VECTOR (56 downto 0);
-        lines_q0 : IN STD_LOGIC_VECTOR (56 downto 0);
+        lines_d0 : OUT STD_LOGIC_VECTOR (64 downto 0);
+        lines_q0 : IN STD_LOGIC_VECTOR (64 downto 0);
         ap_return : OUT STD_LOGIC_VECTOR (0 downto 0) );
+    end component;
+
+
+    component get_weed_mask IS
+    port (
+        ap_clk : IN STD_LOGIC;
+        ap_rst : IN STD_LOGIC;
+        ap_start : IN STD_LOGIC;
+        ap_done : OUT STD_LOGIC;
+        ap_idle : OUT STD_LOGIC;
+        ap_ready : OUT STD_LOGIC;
+        weed_mask_tmp_data_V_din : OUT STD_LOGIC_VECTOR (1 downto 0);
+        weed_mask_tmp_data_V_full_n : IN STD_LOGIC;
+        weed_mask_tmp_data_V_write : OUT STD_LOGIC;
+        lines_founded_read : IN STD_LOGIC;
+        lines_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
+        lines_ce0 : OUT STD_LOGIC;
+        lines_q0 : IN STD_LOGIC_VECTOR (64 downto 0) );
     end component;
 
 
@@ -257,25 +275,7 @@ architecture behav of get_crop_lines is
     end component;
 
 
-    component get_weed_mask IS
-    port (
-        ap_clk : IN STD_LOGIC;
-        ap_rst : IN STD_LOGIC;
-        ap_start : IN STD_LOGIC;
-        ap_done : OUT STD_LOGIC;
-        ap_idle : OUT STD_LOGIC;
-        ap_ready : OUT STD_LOGIC;
-        weed_mask_tmp_data_V_din : OUT STD_LOGIC_VECTOR (1 downto 0);
-        weed_mask_tmp_data_V_full_n : IN STD_LOGIC;
-        weed_mask_tmp_data_V_write : OUT STD_LOGIC;
-        lines_founded_read : IN STD_LOGIC;
-        lines_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
-        lines_ce0 : OUT STD_LOGIC;
-        lines_q0 : IN STD_LOGIC_VECTOR (56 downto 0) );
-    end component;
-
-
-    component get_crop_lines_li0iy IS
+    component get_crop_lines_li2iS IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -295,7 +295,7 @@ architecture behav of get_crop_lines is
     end component;
 
 
-    component get_crop_lines_ce1iI IS
+    component get_crop_lines_ce3i2 IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -311,7 +311,7 @@ architecture behav of get_crop_lines is
     end component;
 
 
-    component get_crop_lines_li2iS IS
+    component get_crop_lines_li4jc IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -322,14 +322,14 @@ architecture behav of get_crop_lines is
         address0 : IN STD_LOGIC_VECTOR (2 downto 0);
         ce0 : IN STD_LOGIC;
         we0 : IN STD_LOGIC;
-        d0 : IN STD_LOGIC_VECTOR (56 downto 0);
-        q0 : OUT STD_LOGIC_VECTOR (56 downto 0) );
+        d0 : IN STD_LOGIC_VECTOR (64 downto 0);
+        q0 : OUT STD_LOGIC_VECTOR (64 downto 0) );
     end component;
 
 
 
 begin
-    line_bases_U : component get_crop_lines_li0iy
+    line_bases_U : component get_crop_lines_li2iS
     generic map (
         DataWidth => 17,
         AddressRange => 6,
@@ -340,14 +340,14 @@ begin
         address0 => line_bases_address0,
         ce0 => line_bases_ce0,
         we0 => line_bases_we0,
-        d0 => grp_get_line_bases_fu_88_line_bases_d0,
+        d0 => grp_get_line_bases_fu_97_line_bases_d0,
         q0 => line_bases_q0,
-        address1 => grp_get_line_bases_fu_88_line_bases_address1,
+        address1 => grp_get_line_bases_fu_97_line_bases_address1,
         ce1 => line_bases_ce1,
         we1 => line_bases_we1,
-        d1 => grp_get_line_bases_fu_88_line_bases_d1);
+        d1 => grp_get_line_bases_fu_97_line_bases_d1);
 
-    centroids_U : component get_crop_lines_ce1iI
+    centroids_U : component get_crop_lines_ce3i2
     generic map (
         DataWidth => 48,
         AddressRange => 72,
@@ -361,9 +361,9 @@ begin
         d0 => centroids_d0,
         q0 => centroids_q0);
 
-    lines_U : component get_crop_lines_li2iS
+    lines_U : component get_crop_lines_li4jc
     generic map (
-        DataWidth => 57,
+        DataWidth => 65,
         AddressRange => 6,
         AddressWidth => 3)
     port map (
@@ -436,42 +436,42 @@ begin
         lines_q0 => lines_q0,
         ap_return => grp_get_lines_lsl_fu_76_ap_return);
 
-    grp_get_line_bases_fu_88 : component get_line_bases
+    grp_get_weed_mask_fu_88 : component get_weed_mask
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_get_line_bases_fu_88_ap_start,
-        ap_done => grp_get_line_bases_fu_88_ap_done,
-        ap_idle => grp_get_line_bases_fu_88_ap_idle,
-        ap_ready => grp_get_line_bases_fu_88_ap_ready,
+        ap_start => grp_get_weed_mask_fu_88_ap_start,
+        ap_done => grp_get_weed_mask_fu_88_ap_done,
+        ap_idle => grp_get_weed_mask_fu_88_ap_idle,
+        ap_ready => grp_get_weed_mask_fu_88_ap_ready,
+        weed_mask_tmp_data_V_din => grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_din,
+        weed_mask_tmp_data_V_full_n => weed_mask_tmp_data_V_full_n,
+        weed_mask_tmp_data_V_write => grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write,
+        lines_founded_read => grp_get_weed_mask_fu_88_lines_founded_read,
+        lines_address0 => grp_get_weed_mask_fu_88_lines_address0,
+        lines_ce0 => grp_get_weed_mask_fu_88_lines_ce0,
+        lines_q0 => lines_q0);
+
+    grp_get_line_bases_fu_97 : component get_line_bases
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => grp_get_line_bases_fu_97_ap_start,
+        ap_done => grp_get_line_bases_fu_97_ap_done,
+        ap_idle => grp_get_line_bases_fu_97_ap_idle,
+        ap_ready => grp_get_line_bases_fu_97_ap_ready,
         bottom_data_V_dout => bottom_data_V_dout,
         bottom_data_V_empty_n => bottom_data_V_empty_n,
-        bottom_data_V_read => grp_get_line_bases_fu_88_bottom_data_V_read,
-        line_bases_address0 => grp_get_line_bases_fu_88_line_bases_address0,
-        line_bases_ce0 => grp_get_line_bases_fu_88_line_bases_ce0,
-        line_bases_we0 => grp_get_line_bases_fu_88_line_bases_we0,
-        line_bases_d0 => grp_get_line_bases_fu_88_line_bases_d0,
+        bottom_data_V_read => grp_get_line_bases_fu_97_bottom_data_V_read,
+        line_bases_address0 => grp_get_line_bases_fu_97_line_bases_address0,
+        line_bases_ce0 => grp_get_line_bases_fu_97_line_bases_ce0,
+        line_bases_we0 => grp_get_line_bases_fu_97_line_bases_we0,
+        line_bases_d0 => grp_get_line_bases_fu_97_line_bases_d0,
         line_bases_q0 => line_bases_q0,
-        line_bases_address1 => grp_get_line_bases_fu_88_line_bases_address1,
-        line_bases_ce1 => grp_get_line_bases_fu_88_line_bases_ce1,
-        line_bases_we1 => grp_get_line_bases_fu_88_line_bases_we1,
-        line_bases_d1 => grp_get_line_bases_fu_88_line_bases_d1);
-
-    grp_get_weed_mask_fu_100 : component get_weed_mask
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst,
-        ap_start => grp_get_weed_mask_fu_100_ap_start,
-        ap_done => grp_get_weed_mask_fu_100_ap_done,
-        ap_idle => grp_get_weed_mask_fu_100_ap_idle,
-        ap_ready => grp_get_weed_mask_fu_100_ap_ready,
-        weed_mask_tmp_data_V_din => grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_din,
-        weed_mask_tmp_data_V_full_n => weed_mask_tmp_data_V_full_n,
-        weed_mask_tmp_data_V_write => grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write,
-        lines_founded_read => grp_get_weed_mask_fu_100_lines_founded_read,
-        lines_address0 => grp_get_weed_mask_fu_100_lines_address0,
-        lines_ce0 => grp_get_weed_mask_fu_100_lines_ce0,
-        lines_q0 => lines_q0);
+        line_bases_address1 => grp_get_line_bases_fu_97_line_bases_address1,
+        line_bases_ce1 => grp_get_line_bases_fu_97_line_bases_ce1,
+        line_bases_we1 => grp_get_line_bases_fu_97_line_bases_we1,
+        line_bases_d1 => grp_get_line_bases_fu_97_line_bases_d1);
 
 
 
@@ -497,7 +497,7 @@ begin
             else
                 if ((ap_continue = ap_const_logic_1)) then 
                     ap_done_reg <= ap_const_logic_0;
-                elsif (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_100_ap_done = ap_const_logic_1))) then 
+                elsif (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_88_ap_done = ap_const_logic_1))) then 
                     ap_done_reg <= ap_const_logic_1;
                 end if; 
             end if;
@@ -537,16 +537,16 @@ begin
     end process;
 
 
-    grp_get_line_bases_fu_88_ap_start_reg_assign_proc : process(ap_clk)
+    grp_get_line_bases_fu_97_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_get_line_bases_fu_88_ap_start_reg <= ap_const_logic_0;
+                grp_get_line_bases_fu_97_ap_start_reg <= ap_const_logic_0;
             else
                 if ((not(((real_start = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                    grp_get_line_bases_fu_88_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_get_line_bases_fu_88_ap_ready = ap_const_logic_1)) then 
-                    grp_get_line_bases_fu_88_ap_start_reg <= ap_const_logic_0;
+                    grp_get_line_bases_fu_97_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_get_line_bases_fu_97_ap_ready = ap_const_logic_1)) then 
+                    grp_get_line_bases_fu_97_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -569,16 +569,16 @@ begin
     end process;
 
 
-    grp_get_weed_mask_fu_100_ap_start_reg_assign_proc : process(ap_clk)
+    grp_get_weed_mask_fu_88_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_get_weed_mask_fu_100_ap_start_reg <= ap_const_logic_0;
+                grp_get_weed_mask_fu_88_ap_start_reg <= ap_const_logic_0;
             else
                 if ((ap_const_logic_1 = ap_CS_fsm_state9)) then 
-                    grp_get_weed_mask_fu_100_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_get_weed_mask_fu_100_ap_ready = ap_const_logic_1)) then 
-                    grp_get_weed_mask_fu_100_ap_start_reg <= ap_const_logic_0;
+                    grp_get_weed_mask_fu_88_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_get_weed_mask_fu_88_ap_ready = ap_const_logic_1)) then 
+                    grp_get_weed_mask_fu_88_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -609,7 +609,7 @@ begin
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (real_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state8, grp_get_lines_lsl_fu_76_ap_done, grp_extr_half_1_cent_fu_48_ap_done, grp_extr_half_2_cent_fu_62_ap_done, grp_get_line_bases_fu_88_ap_done, grp_get_weed_mask_fu_100_ap_done, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state2, ap_CS_fsm_state10)
+    ap_NS_fsm_assign_proc : process (real_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, ap_CS_fsm_state8, grp_get_lines_lsl_fu_76_ap_done, grp_extr_half_1_cent_fu_48_ap_done, grp_extr_half_2_cent_fu_62_ap_done, grp_get_weed_mask_fu_88_ap_done, grp_get_line_bases_fu_97_ap_done, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state10, ap_CS_fsm_state2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -619,7 +619,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (grp_get_line_bases_fu_88_ap_done = ap_const_logic_1))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state2) and (grp_get_line_bases_fu_97_ap_done = ap_const_logic_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -651,7 +651,7 @@ begin
             when ap_ST_fsm_state9 => 
                 ap_NS_fsm <= ap_ST_fsm_state10;
             when ap_ST_fsm_state10 => 
-                if (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_100_ap_done = ap_const_logic_1))) then
+                if (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_88_ap_done = ap_const_logic_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state10;
@@ -683,9 +683,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(ap_done_reg, grp_get_weed_mask_fu_100_ap_done, ap_CS_fsm_state10)
+    ap_done_assign_proc : process(ap_done_reg, grp_get_weed_mask_fu_88_ap_done, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_100_ap_done = ap_const_logic_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_88_ap_done = ap_const_logic_1))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_done_reg;
@@ -704,10 +704,10 @@ begin
 
     ap_ready <= internal_ap_ready;
 
-    bottom_data_V_read_assign_proc : process(grp_get_line_bases_fu_88_bottom_data_V_read, ap_CS_fsm_state2)
+    bottom_data_V_read_assign_proc : process(grp_get_line_bases_fu_97_bottom_data_V_read, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            bottom_data_V_read <= grp_get_line_bases_fu_88_bottom_data_V_read;
+            bottom_data_V_read <= grp_get_line_bases_fu_97_bottom_data_V_read;
         else 
             bottom_data_V_read <= ap_const_logic_0;
         end if; 
@@ -779,14 +779,14 @@ begin
 
     grp_extr_half_1_cent_fu_48_ap_start <= grp_extr_half_1_cent_fu_48_ap_start_reg;
     grp_extr_half_2_cent_fu_62_ap_start <= grp_extr_half_2_cent_fu_62_ap_start_reg;
-    grp_get_line_bases_fu_88_ap_start <= grp_get_line_bases_fu_88_ap_start_reg;
+    grp_get_line_bases_fu_97_ap_start <= grp_get_line_bases_fu_97_ap_start_reg;
     grp_get_lines_lsl_fu_76_ap_start <= grp_get_lines_lsl_fu_76_ap_start_reg;
-    grp_get_weed_mask_fu_100_ap_start <= grp_get_weed_mask_fu_100_ap_start_reg;
-    grp_get_weed_mask_fu_100_lines_founded_read <= lines_founded_reg_109(0);
+    grp_get_weed_mask_fu_88_ap_start <= grp_get_weed_mask_fu_88_ap_start_reg;
+    grp_get_weed_mask_fu_88_lines_founded_read <= lines_founded_reg_109(0);
 
-    internal_ap_ready_assign_proc : process(grp_get_weed_mask_fu_100_ap_done, ap_CS_fsm_state10)
+    internal_ap_ready_assign_proc : process(grp_get_weed_mask_fu_88_ap_done, ap_CS_fsm_state10)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_100_ap_done = ap_const_logic_1))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state10) and (grp_get_weed_mask_fu_88_ap_done = ap_const_logic_1))) then 
             internal_ap_ready <= ap_const_logic_1;
         else 
             internal_ap_ready <= ap_const_logic_0;
@@ -794,10 +794,10 @@ begin
     end process;
 
 
-    line_bases_address0_assign_proc : process(ap_CS_fsm_state8, grp_extr_half_1_cent_fu_48_line_bases_address0, grp_extr_half_2_cent_fu_62_line_bases_active_address0, grp_get_lines_lsl_fu_76_line_bases_address0, grp_get_line_bases_fu_88_line_bases_address0, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state2)
+    line_bases_address0_assign_proc : process(ap_CS_fsm_state8, grp_extr_half_1_cent_fu_48_line_bases_address0, grp_extr_half_2_cent_fu_62_line_bases_active_address0, grp_get_lines_lsl_fu_76_line_bases_address0, grp_get_line_bases_fu_97_line_bases_address0, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            line_bases_address0 <= grp_get_line_bases_fu_88_line_bases_address0;
+            line_bases_address0 <= grp_get_line_bases_fu_97_line_bases_address0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
             line_bases_address0 <= grp_get_lines_lsl_fu_76_line_bases_address0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -810,10 +810,10 @@ begin
     end process;
 
 
-    line_bases_ce0_assign_proc : process(ap_CS_fsm_state8, grp_extr_half_1_cent_fu_48_line_bases_ce0, grp_extr_half_2_cent_fu_62_line_bases_active_ce0, grp_get_lines_lsl_fu_76_line_bases_ce0, grp_get_line_bases_fu_88_line_bases_ce0, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state2)
+    line_bases_ce0_assign_proc : process(ap_CS_fsm_state8, grp_extr_half_1_cent_fu_48_line_bases_ce0, grp_extr_half_2_cent_fu_62_line_bases_active_ce0, grp_get_lines_lsl_fu_76_line_bases_ce0, grp_get_line_bases_fu_97_line_bases_ce0, ap_CS_fsm_state4, ap_CS_fsm_state6, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            line_bases_ce0 <= grp_get_line_bases_fu_88_line_bases_ce0;
+            line_bases_ce0 <= grp_get_line_bases_fu_97_line_bases_ce0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
             line_bases_ce0 <= grp_get_lines_lsl_fu_76_line_bases_ce0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state6)) then 
@@ -826,40 +826,40 @@ begin
     end process;
 
 
-    line_bases_ce1_assign_proc : process(grp_get_line_bases_fu_88_line_bases_ce1, ap_CS_fsm_state2)
+    line_bases_ce1_assign_proc : process(grp_get_line_bases_fu_97_line_bases_ce1, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            line_bases_ce1 <= grp_get_line_bases_fu_88_line_bases_ce1;
+            line_bases_ce1 <= grp_get_line_bases_fu_97_line_bases_ce1;
         else 
             line_bases_ce1 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    line_bases_we0_assign_proc : process(grp_get_line_bases_fu_88_line_bases_we0, ap_CS_fsm_state2)
+    line_bases_we0_assign_proc : process(grp_get_line_bases_fu_97_line_bases_we0, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            line_bases_we0 <= grp_get_line_bases_fu_88_line_bases_we0;
+            line_bases_we0 <= grp_get_line_bases_fu_97_line_bases_we0;
         else 
             line_bases_we0 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    line_bases_we1_assign_proc : process(grp_get_line_bases_fu_88_line_bases_we1, ap_CS_fsm_state2)
+    line_bases_we1_assign_proc : process(grp_get_line_bases_fu_97_line_bases_we1, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            line_bases_we1 <= grp_get_line_bases_fu_88_line_bases_we1;
+            line_bases_we1 <= grp_get_line_bases_fu_97_line_bases_we1;
         else 
             line_bases_we1 <= ap_const_logic_0;
         end if; 
     end process;
 
 
-    lines_address0_assign_proc : process(ap_CS_fsm_state8, grp_get_lines_lsl_fu_76_lines_address0, grp_get_weed_mask_fu_100_lines_address0, ap_CS_fsm_state10)
+    lines_address0_assign_proc : process(ap_CS_fsm_state8, grp_get_lines_lsl_fu_76_lines_address0, grp_get_weed_mask_fu_88_lines_address0, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            lines_address0 <= grp_get_weed_mask_fu_100_lines_address0;
+            lines_address0 <= grp_get_weed_mask_fu_88_lines_address0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
             lines_address0 <= grp_get_lines_lsl_fu_76_lines_address0;
         else 
@@ -868,10 +868,10 @@ begin
     end process;
 
 
-    lines_ce0_assign_proc : process(ap_CS_fsm_state8, grp_get_lines_lsl_fu_76_lines_ce0, grp_get_weed_mask_fu_100_lines_ce0, ap_CS_fsm_state10)
+    lines_ce0_assign_proc : process(ap_CS_fsm_state8, grp_get_lines_lsl_fu_76_lines_ce0, grp_get_weed_mask_fu_88_lines_ce0, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            lines_ce0 <= grp_get_weed_mask_fu_100_lines_ce0;
+            lines_ce0 <= grp_get_weed_mask_fu_88_lines_ce0;
         elsif ((ap_const_logic_1 = ap_CS_fsm_state8)) then 
             lines_ce0 <= grp_get_lines_lsl_fu_76_lines_ce0;
         else 
@@ -910,12 +910,12 @@ begin
         end if; 
     end process;
 
-    weed_mask_tmp_data_V_din <= grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_din;
+    weed_mask_tmp_data_V_din <= grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_din;
 
-    weed_mask_tmp_data_V_write_assign_proc : process(grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write, ap_CS_fsm_state10)
+    weed_mask_tmp_data_V_write_assign_proc : process(grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write, ap_CS_fsm_state10)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state10)) then 
-            weed_mask_tmp_data_V_write <= grp_get_weed_mask_fu_100_weed_mask_tmp_data_V_write;
+            weed_mask_tmp_data_V_write <= grp_get_weed_mask_fu_88_weed_mask_tmp_data_V_write;
         else 
             weed_mask_tmp_data_V_write <= ap_const_logic_0;
         end if; 

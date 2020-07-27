@@ -51,8 +51,8 @@ architecture behav of get_centroid_fh_Bloc_1 is
     signal ap_block_state1 : BOOLEAN;
     signal lshr_ln_fu_46_p4 : STD_LOGIC_VECTOR (6 downto 0);
     signal lshr_ln1_fu_60_p4 : STD_LOGIC_VECTOR (14 downto 0);
-    signal zext_ln146_fu_56_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal zext_ln147_fu_70_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal zext_ln145_fu_56_p1 : STD_LOGIC_VECTOR (15 downto 0);
+    signal zext_ln146_fu_70_p1 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_return_0_preg : STD_LOGIC_VECTOR (15 downto 0) := "0000000000000000";
     signal ap_return_1_preg : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (0 downto 0);
@@ -104,7 +104,7 @@ begin
                 ap_return_0_preg(6) <= '0';
             else
                 if ((not(((ap_start = ap_const_logic_0) or (h_limit_empty_n = ap_const_logic_0) or (v_limit_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                                        ap_return_0_preg(6 downto 0) <= zext_ln146_fu_56_p1(6 downto 0);
+                                        ap_return_0_preg(6 downto 0) <= zext_ln145_fu_56_p1(6 downto 0);
                 end if; 
             end if;
         end if;
@@ -132,7 +132,7 @@ begin
                 ap_return_1_preg(14) <= '0';
             else
                 if ((not(((ap_start = ap_const_logic_0) or (h_limit_empty_n = ap_const_logic_0) or (v_limit_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                                        ap_return_1_preg(14 downto 0) <= zext_ln147_fu_70_p1(14 downto 0);
+                                        ap_return_1_preg(14 downto 0) <= zext_ln146_fu_70_p1(14 downto 0);
                 end if; 
             end if;
         end if;
@@ -188,20 +188,20 @@ begin
     end process;
 
 
-    ap_return_0_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_limit_empty_n, h_limit_empty_n, zext_ln146_fu_56_p1, ap_return_0_preg)
+    ap_return_0_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_limit_empty_n, h_limit_empty_n, zext_ln145_fu_56_p1, ap_return_0_preg)
     begin
         if ((not(((ap_start = ap_const_logic_0) or (h_limit_empty_n = ap_const_logic_0) or (v_limit_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            ap_return_0 <= zext_ln146_fu_56_p1;
+            ap_return_0 <= zext_ln145_fu_56_p1;
         else 
             ap_return_0 <= ap_return_0_preg;
         end if; 
     end process;
 
 
-    ap_return_1_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_limit_empty_n, h_limit_empty_n, zext_ln147_fu_70_p1, ap_return_1_preg)
+    ap_return_1_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_limit_empty_n, h_limit_empty_n, zext_ln146_fu_70_p1, ap_return_1_preg)
     begin
         if ((not(((ap_start = ap_const_logic_0) or (h_limit_empty_n = ap_const_logic_0) or (v_limit_empty_n = ap_const_logic_0) or (ap_done_reg = ap_const_logic_1))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-            ap_return_1 <= zext_ln147_fu_70_p1;
+            ap_return_1 <= zext_ln146_fu_70_p1;
         else 
             ap_return_1 <= ap_return_1_preg;
         end if; 
@@ -249,6 +249,6 @@ begin
         end if; 
     end process;
 
-    zext_ln146_fu_56_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(lshr_ln_fu_46_p4),16));
-    zext_ln147_fu_70_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(lshr_ln1_fu_60_p4),32));
+    zext_ln145_fu_56_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(lshr_ln_fu_46_p4),16));
+    zext_ln146_fu_70_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(lshr_ln1_fu_60_p4),32));
 end behav;

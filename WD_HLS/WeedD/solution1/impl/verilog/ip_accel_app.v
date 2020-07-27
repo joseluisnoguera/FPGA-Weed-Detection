@@ -7,7 +7,7 @@
 
 `timescale 1 ns / 1 ps 
 
-(* CORE_GENERATION_INFO="ip_accel_app,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=50.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=43.397000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=117,HLS_SYN_DSP=148,HLS_SYN_FF=23889,HLS_SYN_LUT=51685,HLS_VERSION=2019_2_1}" *)
+(* CORE_GENERATION_INFO="ip_accel_app,hls_ip_2019_2_1,{HLS_INPUT_TYPE=cxx,HLS_INPUT_FLOAT=0,HLS_INPUT_FIXED=0,HLS_INPUT_PART=xc7z020-clg400-1,HLS_INPUT_CLOCK=50.000000,HLS_INPUT_ARCH=dataflow,HLS_SYN_CLOCK=43.397000,HLS_SYN_LAT=-1,HLS_SYN_TPT=-1,HLS_SYN_MEM=117,HLS_SYN_DSP=167,HLS_SYN_FF=27979,HLS_SYN_LUT=67520,HLS_VERSION=2019_2_1}" *)
 
 module ip_accel_app (
         stream_in_TDATA,
@@ -55,13 +55,13 @@ output   stream_out_TVALID;
 input   stream_out_TREADY;
 
  reg    ap_rst_n_inv;
-wire    Block_proc642_U0_ap_start;
-wire    Block_proc642_U0_ap_done;
-wire    Block_proc642_U0_ap_continue;
-wire    Block_proc642_U0_ap_idle;
-wire    Block_proc642_U0_ap_ready;
-wire   [11:0] Block_proc642_U0_img_in_cols;
-wire    Block_proc642_U0_img_in_cols_ap_vld;
+wire    Block_proc643_U0_ap_start;
+wire    Block_proc643_U0_ap_done;
+wire    Block_proc643_U0_ap_continue;
+wire    Block_proc643_U0_ap_idle;
+wire    Block_proc643_U0_ap_ready;
+wire   [11:0] Block_proc643_U0_img_in_cols;
+wire    Block_proc643_U0_img_in_cols_ap_vld;
 wire    ap_channel_done_img_in_cols_channel7;
 wire    img_in_cols_channel7_full_n;
 wire    AXIvideo2xfMat_U0_ap_start;
@@ -105,8 +105,8 @@ wire    img_in_data_V_empty_n;
 wire    img_out_data_V_full_n;
 wire   [23:0] img_out_data_V_dout;
 wire    img_out_data_V_empty_n;
-wire    Block_proc642_U0_start_full_n;
-wire    Block_proc642_U0_start_write;
+wire    Block_proc643_U0_start_full_n;
+wire    Block_proc643_U0_start_write;
 wire    AXIvideo2xfMat_U0_start_full_n;
 wire    AXIvideo2xfMat_U0_start_write;
 wire   [0:0] start_for_xfMat2AXIvideo_U0_din;
@@ -116,16 +116,16 @@ wire    start_for_xfMat2AXIvideo_U0_empty_n;
 wire    xfMat2AXIvideo_U0_start_full_n;
 wire    xfMat2AXIvideo_U0_start_write;
 
-Block_proc642 Block_proc642_U0(
+Block_proc643 Block_proc643_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst_n_inv),
-    .ap_start(Block_proc642_U0_ap_start),
-    .ap_done(Block_proc642_U0_ap_done),
-    .ap_continue(Block_proc642_U0_ap_continue),
-    .ap_idle(Block_proc642_U0_ap_idle),
-    .ap_ready(Block_proc642_U0_ap_ready),
-    .img_in_cols(Block_proc642_U0_img_in_cols),
-    .img_in_cols_ap_vld(Block_proc642_U0_img_in_cols_ap_vld)
+    .ap_start(Block_proc643_U0_ap_start),
+    .ap_done(Block_proc643_U0_ap_done),
+    .ap_continue(Block_proc643_U0_ap_continue),
+    .ap_idle(Block_proc643_U0_ap_idle),
+    .ap_ready(Block_proc643_U0_ap_ready),
+    .img_in_cols(Block_proc643_U0_img_in_cols),
+    .img_in_cols_ap_vld(Block_proc643_U0_img_in_cols_ap_vld)
 );
 
 AXIvideo2xfMat AXIvideo2xfMat_U0(
@@ -198,9 +198,9 @@ fifo_w12_d2_A_x0 img_in_cols_channel7_U(
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(Block_proc642_U0_img_in_cols),
+    .if_din(Block_proc643_U0_img_in_cols),
     .if_full_n(img_in_cols_channel7_full_n),
-    .if_write(Block_proc642_U0_ap_done),
+    .if_write(Block_proc643_U0_ap_done),
     .if_dout(img_in_cols_channel7_dout),
     .if_empty_n(img_in_cols_channel7_empty_n),
     .if_read(weed_detection_U0_ap_ready)
@@ -232,7 +232,7 @@ fifo_w24_d1_A_x0 img_out_data_V_U(
     .if_read(xfMat2AXIvideo_U0_img_data_V_read)
 );
 
-start_for_xfMat2Abtn start_for_xfMat2Abtn_U(
+start_for_xfMat2Abvn start_for_xfMat2Abvn_U(
     .clk(ap_clk),
     .reset(ap_rst_n_inv),
     .if_read_ce(1'b1),
@@ -253,15 +253,15 @@ assign AXIvideo2xfMat_U0_start_full_n = 1'b1;
 
 assign AXIvideo2xfMat_U0_start_write = 1'b0;
 
-assign Block_proc642_U0_ap_continue = img_in_cols_channel7_full_n;
+assign Block_proc643_U0_ap_continue = img_in_cols_channel7_full_n;
 
-assign Block_proc642_U0_ap_start = 1'b1;
+assign Block_proc643_U0_ap_start = 1'b1;
 
-assign Block_proc642_U0_start_full_n = 1'b1;
+assign Block_proc643_U0_start_full_n = 1'b1;
 
-assign Block_proc642_U0_start_write = 1'b0;
+assign Block_proc643_U0_start_write = 1'b0;
 
-assign ap_channel_done_img_in_cols_channel7 = Block_proc642_U0_ap_done;
+assign ap_channel_done_img_in_cols_channel7 = Block_proc643_U0_ap_done;
 
 always @ (*) begin
     ap_rst_n_inv = ~ap_rst_n;

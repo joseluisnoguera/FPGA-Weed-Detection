@@ -47,15 +47,6 @@ architecture behav of get_max_from_channel is
     constant ap_const_lv2_1 : STD_LOGIC_VECTOR (1 downto 0) := "01";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
-    signal minMaxLoc435_U0_ap_start : STD_LOGIC;
-    signal minMaxLoc435_U0_ap_done : STD_LOGIC;
-    signal minMaxLoc435_U0_ap_continue : STD_LOGIC;
-    signal minMaxLoc435_U0_ap_idle : STD_LOGIC;
-    signal minMaxLoc435_U0_ap_ready : STD_LOGIC;
-    signal minMaxLoc435_U0_p_src_data_V_read : STD_LOGIC;
-    signal minMaxLoc435_U0_ap_return : STD_LOGIC_VECTOR (31 downto 0);
-    signal ap_channel_done_max_r_dc_channel : STD_LOGIC;
-    signal max_r_dc_channel_full_n : STD_LOGIC;
     signal minMaxLoc436_U0_ap_start : STD_LOGIC;
     signal minMaxLoc436_U0_ap_done : STD_LOGIC;
     signal minMaxLoc436_U0_ap_continue : STD_LOGIC;
@@ -63,6 +54,15 @@ architecture behav of get_max_from_channel is
     signal minMaxLoc436_U0_ap_ready : STD_LOGIC;
     signal minMaxLoc436_U0_p_src_data_V_read : STD_LOGIC;
     signal minMaxLoc436_U0_ap_return : STD_LOGIC_VECTOR (31 downto 0);
+    signal ap_channel_done_max_r_dc_channel : STD_LOGIC;
+    signal max_r_dc_channel_full_n : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_start : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_done : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_continue : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_idle : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_ready : STD_LOGIC;
+    signal minMaxLoc437_U0_p_src_data_V_read : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_return : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_channel_done_max_g_dc_channel : STD_LOGIC;
     signal max_g_dc_channel_full_n : STD_LOGIC;
     signal minMaxLoc_U0_ap_start : STD_LOGIC;
@@ -104,19 +104,19 @@ architecture behav of get_max_from_channel is
     signal max_b_dc_channel_empty_n : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
-    signal ap_sync_reg_minMaxLoc435_U0_ap_ready : STD_LOGIC := '0';
-    signal ap_sync_minMaxLoc435_U0_ap_ready : STD_LOGIC;
-    signal minMaxLoc435_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal ap_sync_reg_minMaxLoc436_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_minMaxLoc436_U0_ap_ready : STD_LOGIC;
     signal minMaxLoc436_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    signal ap_sync_reg_minMaxLoc437_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_minMaxLoc437_U0_ap_ready : STD_LOGIC;
+    signal minMaxLoc437_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal ap_sync_reg_minMaxLoc_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_minMaxLoc_U0_ap_ready : STD_LOGIC;
     signal minMaxLoc_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    signal minMaxLoc435_U0_start_full_n : STD_LOGIC;
-    signal minMaxLoc435_U0_start_write : STD_LOGIC;
     signal minMaxLoc436_U0_start_full_n : STD_LOGIC;
     signal minMaxLoc436_U0_start_write : STD_LOGIC;
+    signal minMaxLoc437_U0_start_full_n : STD_LOGIC;
+    signal minMaxLoc437_U0_start_write : STD_LOGIC;
     signal minMaxLoc_U0_start_full_n : STD_LOGIC;
     signal minMaxLoc_U0_start_write : STD_LOGIC;
     signal p_prop_ret_max_b_dc_U0_start_full_n : STD_LOGIC;
@@ -126,7 +126,7 @@ architecture behav of get_max_from_channel is
     signal p_prop_ret_max_r_dc_U0_start_full_n : STD_LOGIC;
     signal p_prop_ret_max_r_dc_U0_start_write : STD_LOGIC;
 
-    component minMaxLoc435 IS
+    component minMaxLoc436 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -142,7 +142,7 @@ architecture behav of get_max_from_channel is
     end component;
 
 
-    component minMaxLoc436 IS
+    component minMaxLoc437 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -239,20 +239,6 @@ architecture behav of get_max_from_channel is
 
 
 begin
-    minMaxLoc435_U0 : component minMaxLoc435
-    port map (
-        ap_clk => ap_clk,
-        ap_rst => ap_rst,
-        ap_start => minMaxLoc435_U0_ap_start,
-        ap_done => minMaxLoc435_U0_ap_done,
-        ap_continue => minMaxLoc435_U0_ap_continue,
-        ap_idle => minMaxLoc435_U0_ap_idle,
-        ap_ready => minMaxLoc435_U0_ap_ready,
-        p_src_data_V_dout => r_channel_data_V_dout,
-        p_src_data_V_empty_n => r_channel_data_V_empty_n,
-        p_src_data_V_read => minMaxLoc435_U0_p_src_data_V_read,
-        ap_return => minMaxLoc435_U0_ap_return);
-
     minMaxLoc436_U0 : component minMaxLoc436
     port map (
         ap_clk => ap_clk,
@@ -262,10 +248,24 @@ begin
         ap_continue => minMaxLoc436_U0_ap_continue,
         ap_idle => minMaxLoc436_U0_ap_idle,
         ap_ready => minMaxLoc436_U0_ap_ready,
-        p_src_data_V_dout => g_channel_data_V_dout,
-        p_src_data_V_empty_n => g_channel_data_V_empty_n,
+        p_src_data_V_dout => r_channel_data_V_dout,
+        p_src_data_V_empty_n => r_channel_data_V_empty_n,
         p_src_data_V_read => minMaxLoc436_U0_p_src_data_V_read,
         ap_return => minMaxLoc436_U0_ap_return);
+
+    minMaxLoc437_U0 : component minMaxLoc437
+    port map (
+        ap_clk => ap_clk,
+        ap_rst => ap_rst,
+        ap_start => minMaxLoc437_U0_ap_start,
+        ap_done => minMaxLoc437_U0_ap_done,
+        ap_continue => minMaxLoc437_U0_ap_continue,
+        ap_idle => minMaxLoc437_U0_ap_idle,
+        ap_ready => minMaxLoc437_U0_ap_ready,
+        p_src_data_V_dout => g_channel_data_V_dout,
+        p_src_data_V_empty_n => g_channel_data_V_empty_n,
+        p_src_data_V_read => minMaxLoc437_U0_p_src_data_V_read,
+        ap_return => minMaxLoc437_U0_ap_return);
 
     minMaxLoc_U0 : component minMaxLoc
     port map (
@@ -329,9 +329,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => minMaxLoc435_U0_ap_return,
+        if_din => minMaxLoc436_U0_ap_return,
         if_full_n => max_r_dc_channel_full_n,
-        if_write => minMaxLoc435_U0_ap_done,
+        if_write => minMaxLoc436_U0_ap_done,
         if_dout => max_r_dc_channel_dout,
         if_empty_n => max_r_dc_channel_empty_n,
         if_read => p_prop_ret_max_r_dc_U0_ap_ready);
@@ -342,9 +342,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => minMaxLoc436_U0_ap_return,
+        if_din => minMaxLoc437_U0_ap_return,
         if_full_n => max_g_dc_channel_full_n,
-        if_write => minMaxLoc436_U0_ap_done,
+        if_write => minMaxLoc437_U0_ap_done,
         if_dout => max_g_dc_channel_dout,
         if_empty_n => max_g_dc_channel_empty_n,
         if_read => p_prop_ret_max_g_dc_U0_ap_ready);
@@ -366,22 +366,6 @@ begin
 
 
 
-    ap_sync_reg_minMaxLoc435_U0_ap_ready_assign_proc : process(ap_clk)
-    begin
-        if (ap_clk'event and ap_clk =  '1') then
-            if (ap_rst = '1') then
-                ap_sync_reg_minMaxLoc435_U0_ap_ready <= ap_const_logic_0;
-            else
-                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
-                    ap_sync_reg_minMaxLoc435_U0_ap_ready <= ap_const_logic_0;
-                else 
-                    ap_sync_reg_minMaxLoc435_U0_ap_ready <= ap_sync_minMaxLoc435_U0_ap_ready;
-                end if; 
-            end if;
-        end if;
-    end process;
-
-
     ap_sync_reg_minMaxLoc436_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
@@ -392,6 +376,22 @@ begin
                     ap_sync_reg_minMaxLoc436_U0_ap_ready <= ap_const_logic_0;
                 else 
                     ap_sync_reg_minMaxLoc436_U0_ap_ready <= ap_sync_minMaxLoc436_U0_ap_ready;
+                end if; 
+            end if;
+        end if;
+    end process;
+
+
+    ap_sync_reg_minMaxLoc437_U0_ap_ready_assign_proc : process(ap_clk)
+    begin
+        if (ap_clk'event and ap_clk =  '1') then
+            if (ap_rst = '1') then
+                ap_sync_reg_minMaxLoc437_U0_ap_ready <= ap_const_logic_0;
+            else
+                if (((ap_sync_ready and ap_start) = ap_const_logic_1)) then 
+                    ap_sync_reg_minMaxLoc437_U0_ap_ready <= ap_const_logic_0;
+                else 
+                    ap_sync_reg_minMaxLoc437_U0_ap_ready <= ap_sync_minMaxLoc437_U0_ap_ready;
                 end if; 
             end if;
         end if;
@@ -414,17 +414,6 @@ begin
     end process;
 
 
-    minMaxLoc435_U0_ap_ready_count_assign_proc : process (ap_clk)
-    begin
-        if (ap_clk'event and ap_clk = '1') then
-            if (((minMaxLoc435_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
-                minMaxLoc435_U0_ap_ready_count <= std_logic_vector(unsigned(minMaxLoc435_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
-            elsif (((ap_sync_ready = ap_const_logic_0) and (minMaxLoc435_U0_ap_ready = ap_const_logic_1))) then 
-                minMaxLoc435_U0_ap_ready_count <= std_logic_vector(unsigned(minMaxLoc435_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
-            end if; 
-        end if;
-    end process;
-
     minMaxLoc436_U0_ap_ready_count_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
@@ -432,6 +421,17 @@ begin
                 minMaxLoc436_U0_ap_ready_count <= std_logic_vector(unsigned(minMaxLoc436_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
             elsif (((ap_sync_ready = ap_const_logic_0) and (minMaxLoc436_U0_ap_ready = ap_const_logic_1))) then 
                 minMaxLoc436_U0_ap_ready_count <= std_logic_vector(unsigned(minMaxLoc436_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
+            end if; 
+        end if;
+    end process;
+
+    minMaxLoc437_U0_ap_ready_count_assign_proc : process (ap_clk)
+    begin
+        if (ap_clk'event and ap_clk = '1') then
+            if (((minMaxLoc437_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
+                minMaxLoc437_U0_ap_ready_count <= std_logic_vector(unsigned(minMaxLoc437_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
+            elsif (((ap_sync_ready = ap_const_logic_0) and (minMaxLoc437_U0_ap_ready = ap_const_logic_1))) then 
+                minMaxLoc437_U0_ap_ready_count <= std_logic_vector(unsigned(minMaxLoc437_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
             end if; 
         end if;
     end process;
@@ -447,33 +447,33 @@ begin
         end if;
     end process;
     ap_channel_done_max_b_dc_channel <= minMaxLoc_U0_ap_done;
-    ap_channel_done_max_g_dc_channel <= minMaxLoc436_U0_ap_done;
-    ap_channel_done_max_r_dc_channel <= minMaxLoc435_U0_ap_done;
+    ap_channel_done_max_g_dc_channel <= minMaxLoc437_U0_ap_done;
+    ap_channel_done_max_r_dc_channel <= minMaxLoc436_U0_ap_done;
     ap_done <= ap_sync_done;
-    ap_idle <= (p_prop_ret_max_r_dc_U0_ap_idle and p_prop_ret_max_g_dc_U0_ap_idle and p_prop_ret_max_b_dc_U0_ap_idle and minMaxLoc_U0_ap_idle and minMaxLoc436_U0_ap_idle and minMaxLoc435_U0_ap_idle and (max_b_dc_channel_empty_n xor ap_const_logic_1) and (max_g_dc_channel_empty_n xor ap_const_logic_1) and (max_r_dc_channel_empty_n xor ap_const_logic_1));
+    ap_idle <= (p_prop_ret_max_r_dc_U0_ap_idle and p_prop_ret_max_g_dc_U0_ap_idle and p_prop_ret_max_b_dc_U0_ap_idle and minMaxLoc_U0_ap_idle and minMaxLoc437_U0_ap_idle and minMaxLoc436_U0_ap_idle and (max_b_dc_channel_empty_n xor ap_const_logic_1) and (max_g_dc_channel_empty_n xor ap_const_logic_1) and (max_r_dc_channel_empty_n xor ap_const_logic_1));
     ap_ready <= ap_sync_ready;
     ap_sync_continue <= (ap_sync_done and ap_continue);
     ap_sync_done <= (p_prop_ret_max_r_dc_U0_ap_done and p_prop_ret_max_g_dc_U0_ap_done and p_prop_ret_max_b_dc_U0_ap_done);
-    ap_sync_minMaxLoc435_U0_ap_ready <= (minMaxLoc435_U0_ap_ready or ap_sync_reg_minMaxLoc435_U0_ap_ready);
     ap_sync_minMaxLoc436_U0_ap_ready <= (minMaxLoc436_U0_ap_ready or ap_sync_reg_minMaxLoc436_U0_ap_ready);
+    ap_sync_minMaxLoc437_U0_ap_ready <= (minMaxLoc437_U0_ap_ready or ap_sync_reg_minMaxLoc437_U0_ap_ready);
     ap_sync_minMaxLoc_U0_ap_ready <= (minMaxLoc_U0_ap_ready or ap_sync_reg_minMaxLoc_U0_ap_ready);
-    ap_sync_ready <= (ap_sync_minMaxLoc_U0_ap_ready and ap_sync_minMaxLoc436_U0_ap_ready and ap_sync_minMaxLoc435_U0_ap_ready);
+    ap_sync_ready <= (ap_sync_minMaxLoc_U0_ap_ready and ap_sync_minMaxLoc437_U0_ap_ready and ap_sync_minMaxLoc436_U0_ap_ready);
     b_channel_data_V_read <= minMaxLoc_U0_p_src_data_V_read;
-    g_channel_data_V_read <= minMaxLoc436_U0_p_src_data_V_read;
+    g_channel_data_V_read <= minMaxLoc437_U0_p_src_data_V_read;
     max_b_out_din <= p_prop_ret_max_b_dc_U0_max_b_out_din;
     max_b_out_write <= p_prop_ret_max_b_dc_U0_max_b_out_write;
     max_g_out_din <= p_prop_ret_max_g_dc_U0_max_g_out_din;
     max_g_out_write <= p_prop_ret_max_g_dc_U0_max_g_out_write;
     max_r_out_din <= p_prop_ret_max_r_dc_U0_max_r_out_din;
     max_r_out_write <= p_prop_ret_max_r_dc_U0_max_r_out_write;
-    minMaxLoc435_U0_ap_continue <= max_r_dc_channel_full_n;
-    minMaxLoc435_U0_ap_start <= ((ap_sync_reg_minMaxLoc435_U0_ap_ready xor ap_const_logic_1) and ap_start);
-    minMaxLoc435_U0_start_full_n <= ap_const_logic_1;
-    minMaxLoc435_U0_start_write <= ap_const_logic_0;
-    minMaxLoc436_U0_ap_continue <= max_g_dc_channel_full_n;
+    minMaxLoc436_U0_ap_continue <= max_r_dc_channel_full_n;
     minMaxLoc436_U0_ap_start <= ((ap_sync_reg_minMaxLoc436_U0_ap_ready xor ap_const_logic_1) and ap_start);
     minMaxLoc436_U0_start_full_n <= ap_const_logic_1;
     minMaxLoc436_U0_start_write <= ap_const_logic_0;
+    minMaxLoc437_U0_ap_continue <= max_g_dc_channel_full_n;
+    minMaxLoc437_U0_ap_start <= ((ap_sync_reg_minMaxLoc437_U0_ap_ready xor ap_const_logic_1) and ap_start);
+    minMaxLoc437_U0_start_full_n <= ap_const_logic_1;
+    minMaxLoc437_U0_start_write <= ap_const_logic_0;
     minMaxLoc_U0_ap_continue <= max_b_dc_channel_full_n;
     minMaxLoc_U0_ap_start <= ((ap_sync_reg_minMaxLoc_U0_ap_ready xor ap_const_logic_1) and ap_start);
     minMaxLoc_U0_start_full_n <= ap_const_logic_1;
@@ -490,5 +490,5 @@ begin
     p_prop_ret_max_r_dc_U0_ap_start <= max_r_dc_channel_empty_n;
     p_prop_ret_max_r_dc_U0_start_full_n <= ap_const_logic_1;
     p_prop_ret_max_r_dc_U0_start_write <= ap_const_logic_0;
-    r_channel_data_V_read <= minMaxLoc435_U0_p_src_data_V_read;
+    r_channel_data_V_read <= minMaxLoc436_U0_p_src_data_V_read;
 end behav;

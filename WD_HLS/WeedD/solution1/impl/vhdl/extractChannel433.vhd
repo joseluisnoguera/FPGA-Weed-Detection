@@ -34,7 +34,7 @@ architecture behav of extractChannel433 is
     constant ap_ST_fsm_state2 : STD_LOGIC_VECTOR (1 downto 0) := "10";
     constant ap_const_lv32_0 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000000";
     constant ap_const_lv32_1 : STD_LOGIC_VECTOR (31 downto 0) := "00000000000000000000000000000001";
-    constant ap_const_lv4_5 : STD_LOGIC_VECTOR (3 downto 0) := "0101";
+    constant ap_const_lv4_4 : STD_LOGIC_VECTOR (3 downto 0) := "0100";
     constant ap_const_boolean_1 : BOOLEAN := true;
 
     signal ap_done_reg : STD_LOGIC := '0';
@@ -91,7 +91,7 @@ begin
         p_dst_mat_data_V_din => grp_xfChannelExtractKern_fu_20_p_dst_mat_data_V_din,
         p_dst_mat_data_V_full_n => p_dst_mat_data_V_full_n,
         p_dst_mat_data_V_write => grp_xfChannelExtractKern_fu_20_p_dst_mat_data_V_write,
-        p_channel => ap_const_lv4_5);
+        p_channel => ap_const_lv4_4);
 
 
 

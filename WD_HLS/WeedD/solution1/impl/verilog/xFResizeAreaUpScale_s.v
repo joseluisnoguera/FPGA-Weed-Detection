@@ -420,7 +420,7 @@ wire   [0:0] and_ln879_2_fu_1692_p2;
 wire   [0:0] xor_ln879_1_fu_1698_p2;
 wire   [0:0] tmp145_fu_1704_p2;
 wire   [0:0] sel_tmp88_fu_1710_p2;
-wire   [0:0] empty_93_fu_1720_p2;
+wire   [0:0] empty_90_fu_1720_p2;
 wire   [1:0] sel_tmp83_fu_1716_p1;
 wire   [1:0] sel_tmp81_fu_1684_p3;
 wire   [1:0] select_ln782_1_fu_1638_p3;
@@ -497,7 +497,7 @@ initial begin
 #0 grp_xFUDivAreaUp_2_fu_984_ap_start_reg = 1'b0;
 end
 
-xFResizeAreaUpScabck #(
+xFResizeAreaUpScabek #(
     .DataWidth( 24 ),
     .AddressRange( 320 ),
     .AddressWidth( 9 ))
@@ -514,7 +514,7 @@ lbuf_in0_V_U(
     .q1(lbuf_in0_V_q1)
 );
 
-xFResizeAreaUpScabck #(
+xFResizeAreaUpScabek #(
     .DataWidth( 24 ),
     .AddressRange( 320 ),
     .AddressWidth( 9 ))
@@ -531,7 +531,7 @@ lbuf_in1_V_U(
     .q1(lbuf_in1_V_q1)
 );
 
-xFResizeAreaUpScabck #(
+xFResizeAreaUpScabek #(
     .DataWidth( 24 ),
     .AddressRange( 320 ),
     .AddressWidth( 9 ))
@@ -548,7 +548,7 @@ lbuf_in2_V_U(
     .q1(lbuf_in2_V_q1)
 );
 
-xFResizeAreaUpScabfk #(
+xFResizeAreaUpScabhl #(
     .DataWidth( 13 ),
     .AddressRange( 1280 ),
     .AddressWidth( 11 ))
@@ -562,7 +562,7 @@ Hoffset_V_U(
     .q0(Hoffset_V_q0)
 );
 
-xFResizeAreaUpScabgk #(
+xFResizeAreaUpScabil #(
     .DataWidth( 13 ),
     .AddressRange( 720 ),
     .AddressWidth( 10 ))
@@ -579,7 +579,7 @@ Voffset_V_U(
     .q1(Voffset_V_q1)
 );
 
-xFResizeAreaUpScabhl #(
+xFResizeAreaUpScabjl #(
     .DataWidth( 32 ),
     .AddressRange( 1280 ),
     .AddressWidth( 11 ))
@@ -593,7 +593,7 @@ Hweight_U(
     .q0(Hweight_q0)
 );
 
-xFResizeAreaUpScabil #(
+xFResizeAreaUpScabkl #(
     .DataWidth( 32 ),
     .AddressRange( 721 ),
     .AddressWidth( 10 ))
@@ -2066,7 +2066,7 @@ always @ (*) begin
     ap_predicate_op305_read_state19 = ((1'd1 == and_ln813_reg_2731) & (1'd1 == and_ln887_reg_2651));
 end
 
-assign empty_93_fu_1720_p2 = (sel_tmp88_fu_1710_p2 | and_ln879_fu_1654_p2);
+assign empty_90_fu_1720_p2 = (sel_tmp88_fu_1710_p2 | and_ln879_fu_1654_p2);
 
 assign grp_xFUDivAreaUp_2_fu_984_ap_start = grp_xFUDivAreaUp_2_fu_984_ap_start_reg;
 
@@ -2182,11 +2182,11 @@ assign out_j_V_1_fu_1551_p3 = ((read_flag_0_reg_802[0:0] === 1'b1) ? out_j_V_fu_
 
 assign out_j_V_fu_1521_p2 = (lind1_V_7_reg_779 + 16'd1);
 
-assign p_01010_3_fu_1750_p3 = ((empty_93_fu_1720_p2[0:0] === 1'b1) ? sel_tmp108_fu_1742_p3 : sel_tmp106_fu_1734_p3);
+assign p_01010_3_fu_1750_p3 = ((empty_90_fu_1720_p2[0:0] === 1'b1) ? sel_tmp108_fu_1742_p3 : sel_tmp106_fu_1734_p3);
 
-assign p_0887_3_fu_1726_p3 = ((empty_93_fu_1720_p2[0:0] === 1'b1) ? sel_tmp83_fu_1716_p1 : sel_tmp81_fu_1684_p3);
+assign p_0887_3_fu_1726_p3 = ((empty_90_fu_1720_p2[0:0] === 1'b1) ? sel_tmp83_fu_1716_p1 : sel_tmp81_fu_1684_p3);
 
-assign p_0893_3_fu_1774_p3 = ((empty_93_fu_1720_p2[0:0] === 1'b1) ? sel_tmp133_fu_1766_p3 : sel_tmp131_fu_1758_p3);
+assign p_0893_3_fu_1774_p3 = ((empty_90_fu_1720_p2[0:0] === 1'b1) ? sel_tmp133_fu_1766_p3 : sel_tmp131_fu_1758_p3);
 
 assign read_index_fu_1446_p2 = (index_assign_2_reg_676 + 17'd1);
 

@@ -209,23 +209,23 @@
   "Files": {
     "CSource": ["..\/..\/weed_detection.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/add_2749.vhd",
+      "impl\/vhdl\/add_2750.vhd",
       "impl\/vhdl\/AXIvideo2xfMat.vhd",
       "impl\/vhdl\/bitwise_and.vhd",
-      "impl\/vhdl\/Block_proc642.vhd",
-      "impl\/vhdl\/convert_fp_to_8b770.vhd",
+      "impl\/vhdl\/Block_proc643.vhd",
+      "impl\/vhdl\/convert_fp_to_8b771.vhd",
       "impl\/vhdl\/CoreProcessUpArea_2.vhd",
       "impl\/vhdl\/duplicateMat.vhd",
-      "impl\/vhdl\/duplicateMat438.vhd",
-      "impl\/vhdl\/duplicateMat438_Bloc.vhd",
-      "impl\/vhdl\/duplicateMat438_Loop.vhd",
-      "impl\/vhdl\/duplicateMat438_Loop_1.vhd",
-      "impl\/vhdl\/duplicateMat635769.vhd",
+      "impl\/vhdl\/duplicateMat439.vhd",
+      "impl\/vhdl\/duplicateMat439_Bloc.vhd",
+      "impl\/vhdl\/duplicateMat439_Loop.vhd",
+      "impl\/vhdl\/duplicateMat439_Loop_1.vhd",
+      "impl\/vhdl\/duplicateMat636770.vhd",
       "impl\/vhdl\/duplicateMat_1.vhd",
       "impl\/vhdl\/duplicateMat_2_Block.vhd",
       "impl\/vhdl\/duplicateMat_2_Loop_1.vhd",
       "impl\/vhdl\/duplicateMat_2_Loop_s.vhd",
-      "impl\/vhdl\/duplicateMat_2762.vhd",
+      "impl\/vhdl\/duplicateMat_2763.vhd",
       "impl\/vhdl\/duplicateMat_Block_1.vhd",
       "impl\/vhdl\/duplicateMat_Block_s.vhd",
       "impl\/vhdl\/duplicateMat_Loop_2_1.vhd",
@@ -235,20 +235,21 @@
       "impl\/vhdl\/duplicateMat_Loop_Re_1.vhd",
       "impl\/vhdl\/duplicateMat_Loop_Re_2.vhd",
       "impl\/vhdl\/erode.vhd",
-      "impl\/vhdl\/erode437.vhd",
+      "impl\/vhdl\/erode438.vhd",
       "impl\/vhdl\/extr_half_1_cent.vhd",
-      "impl\/vhdl\/extr_half_1_cent_Rg6.vhd",
+      "impl\/vhdl\/extr_half_1_cent_UhA.vhd",
       "impl\/vhdl\/extr_half_2_cent.vhd",
-      "impl\/vhdl\/extr_half_2_cent_VhK.vhd",
+      "impl\/vhdl\/extr_half_2_cent_Xh4.vhd",
+      "impl\/vhdl\/extr_half_2_cent_Yie.vhd",
       "impl\/vhdl\/extract_channels.vhd",
       "impl\/vhdl\/extract_micro_roi.vhd",
-      "impl\/vhdl\/extract_third_and_fo_1.vhd",
-      "impl\/vhdl\/extract_third_andKfY.vhd",
-      "impl\/vhdl\/extract_third_andLf8.vhd",
-      "impl\/vhdl\/extract_third_andMgi.vhd",
-      "impl\/vhdl\/extractChannel432.vhd",
+      "impl\/vhdl\/extract_third_and_fo.vhd",
+      "impl\/vhdl\/extract_third_andPgM.vhd",
+      "impl\/vhdl\/extract_third_andQgW.vhd",
+      "impl\/vhdl\/extract_third_andRg6.vhd",
       "impl\/vhdl\/extractChannel433.vhd",
       "impl\/vhdl\/extractChannel434.vhd",
+      "impl\/vhdl\/extractChannel435.vhd",
       "impl\/vhdl\/fifo_w1_d1_A.vhd",
       "impl\/vhdl\/fifo_w2_d1_A.vhd",
       "impl\/vhdl\/fifo_w8_d1_A.vhd",
@@ -309,9 +310,9 @@
       "impl\/vhdl\/get_centroid_sh_Bloc.vhd",
       "impl\/vhdl\/get_centroid_sh_Loop.vhd",
       "impl\/vhdl\/get_crop_lines.vhd",
-      "impl\/vhdl\/get_crop_lines_ce1iI.vhd",
-      "impl\/vhdl\/get_crop_lines_li0iy.vhd",
+      "impl\/vhdl\/get_crop_lines_ce3i2.vhd",
       "impl\/vhdl\/get_crop_lines_li2iS.vhd",
+      "impl\/vhdl\/get_crop_lines_li4jc.vhd",
       "impl\/vhdl\/get_exg_image.vhd",
       "impl\/vhdl\/get_last_centroids.vhd",
       "impl\/vhdl\/get_last_centroids_L.vhd",
@@ -319,7 +320,7 @@
       "impl\/vhdl\/get_line_bases_hiFfa.vhd",
       "impl\/vhdl\/get_line_bases_smGfk.vhd",
       "impl\/vhdl\/get_lines_lsl.vhd",
-      "impl\/vhdl\/get_lines_lsl_linWhU.vhd",
+      "impl\/vhdl\/get_lines_lsl_lin0iy.vhd",
       "impl\/vhdl\/get_max_from_channel.vhd",
       "impl\/vhdl\/get_total_vegetatBew.vhd",
       "impl\/vhdl\/get_total_vegetatBew_memcore.vhd",
@@ -335,42 +336,46 @@
       "impl\/vhdl\/get_weed_mask.vhd",
       "impl\/vhdl\/Inverse.vhd",
       "impl\/vhdl\/Inverse_xf_divisiwdI.vhd",
+      "impl\/vhdl\/ip_accel_app_faddShg.vhd",
+      "impl\/vhdl\/ip_accel_app_fcmp1iI.vhd",
+      "impl\/vhdl\/ip_accel_app_fmulKfY.vhd",
       "impl\/vhdl\/ip_accel_app_mac_jbC.vhd",
       "impl\/vhdl\/ip_accel_app_mac_kbM.vhd",
-      "impl\/vhdl\/ip_accel_app_mac_PgM.vhd",
-      "impl\/vhdl\/ip_accel_app_mul_7jG.vhd",
+      "impl\/vhdl\/ip_accel_app_mac_OgC.vhd",
+      "impl\/vhdl\/ip_accel_app_mul_9j0.vhd",
       "impl\/vhdl\/ip_accel_app_mul_hbi.vhd",
       "impl\/vhdl\/ip_accel_app_mul_ibs.vhd",
-      "impl\/vhdl\/ip_accel_app_mul_QgW.vhd",
-      "impl\/vhdl\/ip_accel_app_mul_Yie.vhd",
-      "impl\/vhdl\/ip_accel_app_mul_Zio.vhd",
-      "impl\/vhdl\/ip_accel_app_mux_bbk.vhd",
+      "impl\/vhdl\/ip_accel_app_mux_bdk.vhd",
       "impl\/vhdl\/ip_accel_app_mux_yd2.vhd",
-      "impl\/vhdl\/ip_accel_app_sdivNgs.vhd",
+      "impl\/vhdl\/ip_accel_app_sdivMgi.vhd",
       "impl\/vhdl\/ip_accel_app_sdivpcA.vhd",
       "impl\/vhdl\/ip_accel_app_sdivqcK.vhd",
       "impl\/vhdl\/ip_accel_app_sdivrcU.vhd",
-      "impl\/vhdl\/ip_accel_app_sdivXh4.vhd",
-      "impl\/vhdl\/ip_accel_app_udiv6jw.vhd",
-      "impl\/vhdl\/ip_accel_app_udivbak.vhd",
+      "impl\/vhdl\/ip_accel_app_sdivZio.vhd",
+      "impl\/vhdl\/ip_accel_app_sitoThq.vhd",
+      "impl\/vhdl\/ip_accel_app_udiv8jQ.vhd",
+      "impl\/vhdl\/ip_accel_app_udivbck.vhd",
       "impl\/vhdl\/ip_accel_app_udivdEe.vhd",
       "impl\/vhdl\/ip_accel_app_udivHfu.vhd",
       "impl\/vhdl\/ip_accel_app_udivIfE.vhd",
-      "impl\/vhdl\/ip_accel_app_udivOgC.vhd",
+      "impl\/vhdl\/ip_accel_app_udivNgs.vhd",
+      "impl\/vhdl\/ip_accel_app_uitoLf8.vhd",
       "impl\/vhdl\/is_crop_or_furrow.vhd",
+      "impl\/vhdl\/least_squares_line.vhd",
+      "impl\/vhdl\/least_squares_line_1.vhd",
       "impl\/vhdl\/merge.vhd",
       "impl\/vhdl\/merge_Block_crit_e.vhd",
       "impl\/vhdl\/merge_Loop_Read_Mat_s.vhd",
       "impl\/vhdl\/merge_Loop_Write_Mat.vhd",
       "impl\/vhdl\/minMaxLoc.vhd",
-      "impl\/vhdl\/minMaxLoc435.vhd",
       "impl\/vhdl\/minMaxLoc436.vhd",
+      "impl\/vhdl\/minMaxLoc437.vhd",
       "impl\/vhdl\/OtsuThreshold.vhd",
       "impl\/vhdl\/p_prop_ret_max_b_dc_s.vhd",
       "impl\/vhdl\/p_prop_ret_max_g_dc_s.vhd",
       "impl\/vhdl\/p_prop_ret_max_r_dc_s.vhd",
-      "impl\/vhdl\/read765.vhd",
-      "impl\/vhdl\/read779.vhd",
+      "impl\/vhdl\/read766.vhd",
+      "impl\/vhdl\/read780.vhd",
       "impl\/vhdl\/read_r.vhd",
       "impl\/vhdl\/regslice_core.vhd",
       "impl\/vhdl\/remark_crop_lines.vhd",
@@ -379,57 +384,57 @@
       "impl\/vhdl\/resizeNNBilinear.vhd",
       "impl\/vhdl\/resizeNNBilinear_eOg.vhd",
       "impl\/vhdl\/scaleCompute.vhd",
-      "impl\/vhdl\/sectors_weed_clas3i2.vhd",
-      "impl\/vhdl\/sectors_weed_clas4jc.vhd",
       "impl\/vhdl\/sectors_weed_clas5jm.vhd",
+      "impl\/vhdl\/sectors_weed_clas6jw.vhd",
+      "impl\/vhdl\/sectors_weed_clas7jG.vhd",
       "impl\/vhdl\/sectors_weed_classif.vhd",
       "impl\/vhdl\/segment_image.vhd",
-      "impl\/vhdl\/start_for_add_274bll.vhd",
+      "impl\/vhdl\/start_for_add_275bnm.vhd",
       "impl\/vhdl\/start_for_duplicaAem.vhd",
       "impl\/vhdl\/start_for_duplicabkb.vhd",
       "impl\/vhdl\/start_for_duplicaEe0.vhd",
       "impl\/vhdl\/start_for_duplicalbW.vhd",
       "impl\/vhdl\/start_for_duplicaocq.vhd",
       "impl\/vhdl\/start_for_duplicasc4.vhd",
-      "impl\/vhdl\/start_for_erode43bnm.vhd",
+      "impl\/vhdl\/start_for_erode43bpm.vhd",
       "impl\/vhdl\/start_for_extracttde.vhd",
-      "impl\/vhdl\/start_for_get_12tbpm.vhd",
+      "impl\/vhdl\/start_for_get_12tbrm.vhd",
       "impl\/vhdl\/start_for_get_cenJfO.vhd",
-      "impl\/vhdl\/start_for_get_crobqm.vhd",
-      "impl\/vhdl\/start_for_get_vegbjl.vhd",
-      "impl\/vhdl\/start_for_merge_L9j0.vhd",
+      "impl\/vhdl\/start_for_get_crobsm.vhd",
+      "impl\/vhdl\/start_for_get_vegbll.vhd",
+      "impl\/vhdl\/start_for_merge_Lbbk.vhd",
       "impl\/vhdl\/start_for_merge_U0.vhd",
-      "impl\/vhdl\/start_for_remark_bom.vhd",
-      "impl\/vhdl\/start_for_resize_bsm.vhd",
-      "impl\/vhdl\/start_for_resizeNbkl.vhd",
-      "impl\/vhdl\/start_for_sectorsbrm.vhd",
-      "impl\/vhdl\/start_for_segmentbml.vhd",
-      "impl\/vhdl\/start_for_xfChann8jQ.vhd",
+      "impl\/vhdl\/start_for_remark_bqm.vhd",
+      "impl\/vhdl\/start_for_resize_bun.vhd",
+      "impl\/vhdl\/start_for_resizeNbml.vhd",
+      "impl\/vhdl\/start_for_sectorsbtn.vhd",
+      "impl\/vhdl\/start_for_segmentbom.vhd",
+      "impl\/vhdl\/start_for_xfChannbak.vhd",
       "impl\/vhdl\/start_for_xFDuplicud.vhd",
       "impl\/vhdl\/start_for_xFDupliDeQ.vhd",
       "impl\/vhdl\/start_for_xFDuplimb6.vhd",
       "impl\/vhdl\/start_for_xFDuplincg.vhd",
       "impl\/vhdl\/start_for_xFDuplizec.vhd",
-      "impl\/vhdl\/start_for_xfMat2Abtn.vhd",
+      "impl\/vhdl\/start_for_xfMat2Abvn.vhd",
       "impl\/vhdl\/Threshold.vhd",
       "impl\/vhdl\/weed_detection.vhd",
       "impl\/vhdl\/weed_detection_Block.vhd",
       "impl\/vhdl\/weed_detection_entry.vhd",
-      "impl\/vhdl\/write797.vhd",
+      "impl\/vhdl\/write798.vhd",
       "impl\/vhdl\/write_1.vhd",
       "impl\/vhdl\/write_r.vhd",
-      "impl\/vhdl\/xFarithm_proc_2811.vhd",
+      "impl\/vhdl\/xFarithm_proc_2812.vhd",
       "impl\/vhdl\/xfChannelCombine.vhd",
       "impl\/vhdl\/xfChannelExtractKern.vhd",
       "impl\/vhdl\/xFDuplicate.vhd",
-      "impl\/vhdl\/xFDuplicate637.vhd",
-      "impl\/vhdl\/xFDuplicate645.vhd",
+      "impl\/vhdl\/xFDuplicate638.vhd",
+      "impl\/vhdl\/xFDuplicate646.vhd",
       "impl\/vhdl\/xFDuplicate_1.vhd",
       "impl\/vhdl\/xFDuplicate_2.vhd",
-      "impl\/vhdl\/xferode790.vhd",
-      "impl\/vhdl\/xferode790_buf_0_V.vhd",
-      "impl\/vhdl\/xferode793.vhd",
-      "impl\/vhdl\/xferode793_buf_0_V.vhd",
+      "impl\/vhdl\/xferode791.vhd",
+      "impl\/vhdl\/xferode791_buf_0_V.vhd",
+      "impl\/vhdl\/xferode794.vhd",
+      "impl\/vhdl\/xferode794_buf_0_V.vhd",
       "impl\/vhdl\/xfExtractPixels.vhd",
       "impl\/vhdl\/xfExtractPixels_1.vhd",
       "impl\/vhdl\/xFHistogramKernel.vhd",
@@ -438,11 +443,11 @@
       "impl\/vhdl\/xFMinMaxLocKernel.vhd",
       "impl\/vhdl\/xfOtsuKernel.vhd",
       "impl\/vhdl\/xfOtsuKernel_HistxdS.vhd",
-      "impl\/vhdl\/xFResizeAreaUpScabck.vhd",
-      "impl\/vhdl\/xFResizeAreaUpScabfk.vhd",
-      "impl\/vhdl\/xFResizeAreaUpScabgk.vhd",
+      "impl\/vhdl\/xFResizeAreaUpScabek.vhd",
       "impl\/vhdl\/xFResizeAreaUpScabhl.vhd",
       "impl\/vhdl\/xFResizeAreaUpScabil.vhd",
+      "impl\/vhdl\/xFResizeAreaUpScabjl.vhd",
+      "impl\/vhdl\/xFResizeAreaUpScabkl.vhd",
       "impl\/vhdl\/xFResizeAreaUpScale_s.vhd",
       "impl\/vhdl\/xFUDivAreaUp_2.vhd",
       "impl\/vhdl\/xfUDivResize.vhd",
@@ -450,23 +455,23 @@
       "impl\/vhdl\/ip_accel_app.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/add_2749.v",
+      "impl\/verilog\/add_2750.v",
       "impl\/verilog\/AXIvideo2xfMat.v",
       "impl\/verilog\/bitwise_and.v",
-      "impl\/verilog\/Block_proc642.v",
-      "impl\/verilog\/convert_fp_to_8b770.v",
+      "impl\/verilog\/Block_proc643.v",
+      "impl\/verilog\/convert_fp_to_8b771.v",
       "impl\/verilog\/CoreProcessUpArea_2.v",
       "impl\/verilog\/duplicateMat.v",
-      "impl\/verilog\/duplicateMat438.v",
-      "impl\/verilog\/duplicateMat438_Bloc.v",
-      "impl\/verilog\/duplicateMat438_Loop.v",
-      "impl\/verilog\/duplicateMat438_Loop_1.v",
-      "impl\/verilog\/duplicateMat635769.v",
+      "impl\/verilog\/duplicateMat439.v",
+      "impl\/verilog\/duplicateMat439_Bloc.v",
+      "impl\/verilog\/duplicateMat439_Loop.v",
+      "impl\/verilog\/duplicateMat439_Loop_1.v",
+      "impl\/verilog\/duplicateMat636770.v",
       "impl\/verilog\/duplicateMat_1.v",
       "impl\/verilog\/duplicateMat_2_Block.v",
       "impl\/verilog\/duplicateMat_2_Loop_1.v",
       "impl\/verilog\/duplicateMat_2_Loop_s.v",
-      "impl\/verilog\/duplicateMat_2762.v",
+      "impl\/verilog\/duplicateMat_2763.v",
       "impl\/verilog\/duplicateMat_Block_1.v",
       "impl\/verilog\/duplicateMat_Block_s.v",
       "impl\/verilog\/duplicateMat_Loop_2_1.v",
@@ -476,22 +481,24 @@
       "impl\/verilog\/duplicateMat_Loop_Re_1.v",
       "impl\/verilog\/duplicateMat_Loop_Re_2.v",
       "impl\/verilog\/erode.v",
-      "impl\/verilog\/erode437.v",
+      "impl\/verilog\/erode438.v",
       "impl\/verilog\/extr_half_1_cent.v",
-      "impl\/verilog\/extr_half_1_cent_Rg6.v",
+      "impl\/verilog\/extr_half_1_cent_UhA.v",
       "impl\/verilog\/extr_half_2_cent.v",
-      "impl\/verilog\/extr_half_2_cent_VhK.v",
+      "impl\/verilog\/extr_half_2_cent_Xh4.v",
+      "impl\/verilog\/extr_half_2_cent_Xh4_ram.dat",
+      "impl\/verilog\/extr_half_2_cent_Yie.v",
       "impl\/verilog\/extract_channels.v",
       "impl\/verilog\/extract_micro_roi.v",
-      "impl\/verilog\/extract_third_and_fo_1.v",
-      "impl\/verilog\/extract_third_andKfY.v",
-      "impl\/verilog\/extract_third_andKfY_rom.dat",
-      "impl\/verilog\/extract_third_andLf8.v",
-      "impl\/verilog\/extract_third_andLf8_ram.dat",
-      "impl\/verilog\/extract_third_andMgi.v",
-      "impl\/verilog\/extractChannel432.v",
+      "impl\/verilog\/extract_third_and_fo.v",
+      "impl\/verilog\/extract_third_andPgM.v",
+      "impl\/verilog\/extract_third_andPgM_rom.dat",
+      "impl\/verilog\/extract_third_andQgW.v",
+      "impl\/verilog\/extract_third_andQgW_ram.dat",
+      "impl\/verilog\/extract_third_andRg6.v",
       "impl\/verilog\/extractChannel433.v",
       "impl\/verilog\/extractChannel434.v",
+      "impl\/verilog\/extractChannel435.v",
       "impl\/verilog\/fifo_w1_d1_A.v",
       "impl\/verilog\/fifo_w2_d1_A.v",
       "impl\/verilog\/fifo_w8_d1_A.v",
@@ -552,12 +559,12 @@
       "impl\/verilog\/get_centroid_sh_Bloc.v",
       "impl\/verilog\/get_centroid_sh_Loop.v",
       "impl\/verilog\/get_crop_lines.v",
-      "impl\/verilog\/get_crop_lines_ce1iI.v",
-      "impl\/verilog\/get_crop_lines_ce1iI_ram.dat",
-      "impl\/verilog\/get_crop_lines_li0iy.v",
-      "impl\/verilog\/get_crop_lines_li0iy_ram.dat",
+      "impl\/verilog\/get_crop_lines_ce3i2.v",
+      "impl\/verilog\/get_crop_lines_ce3i2_ram.dat",
       "impl\/verilog\/get_crop_lines_li2iS.v",
       "impl\/verilog\/get_crop_lines_li2iS_ram.dat",
+      "impl\/verilog\/get_crop_lines_li4jc.v",
+      "impl\/verilog\/get_crop_lines_li4jc_ram.dat",
       "impl\/verilog\/get_exg_image.v",
       "impl\/verilog\/get_last_centroids.v",
       "impl\/verilog\/get_last_centroids_L.v",
@@ -567,8 +574,8 @@
       "impl\/verilog\/get_line_bases_smGfk.v",
       "impl\/verilog\/get_line_bases_smGfk_ram.dat",
       "impl\/verilog\/get_lines_lsl.v",
-      "impl\/verilog\/get_lines_lsl_linWhU.v",
-      "impl\/verilog\/get_lines_lsl_linWhU_ram.dat",
+      "impl\/verilog\/get_lines_lsl_lin0iy.v",
+      "impl\/verilog\/get_lines_lsl_lin0iy_ram.dat",
       "impl\/verilog\/get_max_from_channel.v",
       "impl\/verilog\/get_total_vegetatBew.v",
       "impl\/verilog\/get_total_vegetatBew_memcore.v",
@@ -586,42 +593,46 @@
       "impl\/verilog\/Inverse.v",
       "impl\/verilog\/Inverse_xf_divisiwdI.v",
       "impl\/verilog\/Inverse_xf_divisiwdI_rom.dat",
+      "impl\/verilog\/ip_accel_app_faddShg.v",
+      "impl\/verilog\/ip_accel_app_fcmp1iI.v",
+      "impl\/verilog\/ip_accel_app_fmulKfY.v",
       "impl\/verilog\/ip_accel_app_mac_jbC.v",
       "impl\/verilog\/ip_accel_app_mac_kbM.v",
-      "impl\/verilog\/ip_accel_app_mac_PgM.v",
-      "impl\/verilog\/ip_accel_app_mul_7jG.v",
+      "impl\/verilog\/ip_accel_app_mac_OgC.v",
+      "impl\/verilog\/ip_accel_app_mul_9j0.v",
       "impl\/verilog\/ip_accel_app_mul_hbi.v",
       "impl\/verilog\/ip_accel_app_mul_ibs.v",
-      "impl\/verilog\/ip_accel_app_mul_QgW.v",
-      "impl\/verilog\/ip_accel_app_mul_Yie.v",
-      "impl\/verilog\/ip_accel_app_mul_Zio.v",
-      "impl\/verilog\/ip_accel_app_mux_bbk.v",
+      "impl\/verilog\/ip_accel_app_mux_bdk.v",
       "impl\/verilog\/ip_accel_app_mux_yd2.v",
-      "impl\/verilog\/ip_accel_app_sdivNgs.v",
+      "impl\/verilog\/ip_accel_app_sdivMgi.v",
       "impl\/verilog\/ip_accel_app_sdivpcA.v",
       "impl\/verilog\/ip_accel_app_sdivqcK.v",
       "impl\/verilog\/ip_accel_app_sdivrcU.v",
-      "impl\/verilog\/ip_accel_app_sdivXh4.v",
-      "impl\/verilog\/ip_accel_app_udiv6jw.v",
-      "impl\/verilog\/ip_accel_app_udivbak.v",
+      "impl\/verilog\/ip_accel_app_sdivZio.v",
+      "impl\/verilog\/ip_accel_app_sitoThq.v",
+      "impl\/verilog\/ip_accel_app_udiv8jQ.v",
+      "impl\/verilog\/ip_accel_app_udivbck.v",
       "impl\/verilog\/ip_accel_app_udivdEe.v",
       "impl\/verilog\/ip_accel_app_udivHfu.v",
       "impl\/verilog\/ip_accel_app_udivIfE.v",
-      "impl\/verilog\/ip_accel_app_udivOgC.v",
+      "impl\/verilog\/ip_accel_app_udivNgs.v",
+      "impl\/verilog\/ip_accel_app_uitoLf8.v",
       "impl\/verilog\/is_crop_or_furrow.v",
+      "impl\/verilog\/least_squares_line.v",
+      "impl\/verilog\/least_squares_line_1.v",
       "impl\/verilog\/merge.v",
       "impl\/verilog\/merge_Block_crit_e.v",
       "impl\/verilog\/merge_Loop_Read_Mat_s.v",
       "impl\/verilog\/merge_Loop_Write_Mat.v",
       "impl\/verilog\/minMaxLoc.v",
-      "impl\/verilog\/minMaxLoc435.v",
       "impl\/verilog\/minMaxLoc436.v",
+      "impl\/verilog\/minMaxLoc437.v",
       "impl\/verilog\/OtsuThreshold.v",
       "impl\/verilog\/p_prop_ret_max_b_dc_s.v",
       "impl\/verilog\/p_prop_ret_max_g_dc_s.v",
       "impl\/verilog\/p_prop_ret_max_r_dc_s.v",
-      "impl\/verilog\/read765.v",
-      "impl\/verilog\/read779.v",
+      "impl\/verilog\/read766.v",
+      "impl\/verilog\/read780.v",
       "impl\/verilog\/read_r.v",
       "impl\/verilog\/regslice_core.v",
       "impl\/verilog\/remark_crop_lines.v",
@@ -630,58 +641,58 @@
       "impl\/verilog\/resizeNNBilinear.v",
       "impl\/verilog\/resizeNNBilinear_eOg.v",
       "impl\/verilog\/scaleCompute.v",
-      "impl\/verilog\/sectors_weed_clas3i2.v",
-      "impl\/verilog\/sectors_weed_clas3i2_rom.dat",
-      "impl\/verilog\/sectors_weed_clas4jc.v",
       "impl\/verilog\/sectors_weed_clas5jm.v",
+      "impl\/verilog\/sectors_weed_clas5jm_rom.dat",
+      "impl\/verilog\/sectors_weed_clas6jw.v",
+      "impl\/verilog\/sectors_weed_clas7jG.v",
       "impl\/verilog\/sectors_weed_classif.v",
       "impl\/verilog\/segment_image.v",
-      "impl\/verilog\/start_for_add_274bll.v",
+      "impl\/verilog\/start_for_add_275bnm.v",
       "impl\/verilog\/start_for_duplicaAem.v",
       "impl\/verilog\/start_for_duplicabkb.v",
       "impl\/verilog\/start_for_duplicaEe0.v",
       "impl\/verilog\/start_for_duplicalbW.v",
       "impl\/verilog\/start_for_duplicaocq.v",
       "impl\/verilog\/start_for_duplicasc4.v",
-      "impl\/verilog\/start_for_erode43bnm.v",
+      "impl\/verilog\/start_for_erode43bpm.v",
       "impl\/verilog\/start_for_extracttde.v",
-      "impl\/verilog\/start_for_get_12tbpm.v",
+      "impl\/verilog\/start_for_get_12tbrm.v",
       "impl\/verilog\/start_for_get_cenJfO.v",
-      "impl\/verilog\/start_for_get_crobqm.v",
-      "impl\/verilog\/start_for_get_vegbjl.v",
-      "impl\/verilog\/start_for_merge_L9j0.v",
+      "impl\/verilog\/start_for_get_crobsm.v",
+      "impl\/verilog\/start_for_get_vegbll.v",
+      "impl\/verilog\/start_for_merge_Lbbk.v",
       "impl\/verilog\/start_for_merge_U0.v",
-      "impl\/verilog\/start_for_remark_bom.v",
-      "impl\/verilog\/start_for_resize_bsm.v",
-      "impl\/verilog\/start_for_resizeNbkl.v",
-      "impl\/verilog\/start_for_sectorsbrm.v",
-      "impl\/verilog\/start_for_segmentbml.v",
-      "impl\/verilog\/start_for_xfChann8jQ.v",
+      "impl\/verilog\/start_for_remark_bqm.v",
+      "impl\/verilog\/start_for_resize_bun.v",
+      "impl\/verilog\/start_for_resizeNbml.v",
+      "impl\/verilog\/start_for_sectorsbtn.v",
+      "impl\/verilog\/start_for_segmentbom.v",
+      "impl\/verilog\/start_for_xfChannbak.v",
       "impl\/verilog\/start_for_xFDuplicud.v",
       "impl\/verilog\/start_for_xFDupliDeQ.v",
       "impl\/verilog\/start_for_xFDuplimb6.v",
       "impl\/verilog\/start_for_xFDuplincg.v",
       "impl\/verilog\/start_for_xFDuplizec.v",
-      "impl\/verilog\/start_for_xfMat2Abtn.v",
+      "impl\/verilog\/start_for_xfMat2Abvn.v",
       "impl\/verilog\/Threshold.v",
       "impl\/verilog\/weed_detection.v",
       "impl\/verilog\/weed_detection_Block.v",
       "impl\/verilog\/weed_detection_entry.v",
-      "impl\/verilog\/write797.v",
+      "impl\/verilog\/write798.v",
       "impl\/verilog\/write_1.v",
       "impl\/verilog\/write_r.v",
-      "impl\/verilog\/xFarithm_proc_2811.v",
+      "impl\/verilog\/xFarithm_proc_2812.v",
       "impl\/verilog\/xfChannelCombine.v",
       "impl\/verilog\/xfChannelExtractKern.v",
       "impl\/verilog\/xFDuplicate.v",
-      "impl\/verilog\/xFDuplicate637.v",
-      "impl\/verilog\/xFDuplicate645.v",
+      "impl\/verilog\/xFDuplicate638.v",
+      "impl\/verilog\/xFDuplicate646.v",
       "impl\/verilog\/xFDuplicate_1.v",
       "impl\/verilog\/xFDuplicate_2.v",
-      "impl\/verilog\/xferode790.v",
-      "impl\/verilog\/xferode790_buf_0_V.v",
-      "impl\/verilog\/xferode793.v",
-      "impl\/verilog\/xferode793_buf_0_V.v",
+      "impl\/verilog\/xferode791.v",
+      "impl\/verilog\/xferode791_buf_0_V.v",
+      "impl\/verilog\/xferode794.v",
+      "impl\/verilog\/xferode794_buf_0_V.v",
       "impl\/verilog\/xfExtractPixels.v",
       "impl\/verilog\/xfExtractPixels_1.v",
       "impl\/verilog\/xFHistogramKernel.v",
@@ -690,11 +701,11 @@
       "impl\/verilog\/xFMinMaxLocKernel.v",
       "impl\/verilog\/xfOtsuKernel.v",
       "impl\/verilog\/xfOtsuKernel_HistxdS.v",
-      "impl\/verilog\/xFResizeAreaUpScabck.v",
-      "impl\/verilog\/xFResizeAreaUpScabfk.v",
-      "impl\/verilog\/xFResizeAreaUpScabgk.v",
+      "impl\/verilog\/xFResizeAreaUpScabek.v",
       "impl\/verilog\/xFResizeAreaUpScabhl.v",
       "impl\/verilog\/xFResizeAreaUpScabil.v",
+      "impl\/verilog\/xFResizeAreaUpScabjl.v",
+      "impl\/verilog\/xFResizeAreaUpScabkl.v",
       "impl\/verilog\/xFResizeAreaUpScale_s.v",
       "impl\/verilog\/xFUDivAreaUp_2.v",
       "impl\/verilog\/xfUDivResize.v",
@@ -702,6 +713,13 @@
       "impl\/verilog\/ip_accel_app.v"
     ],
     "Misc": ["impl\/misc\/logo.png"],
+    "Subcore": [
+      "impl\/misc\/ip_accel_app_ap_fadd_0_full_dsp_32_ip.tcl",
+      "impl\/misc\/ip_accel_app_ap_fcmp_0_no_dsp_32_ip.tcl",
+      "impl\/misc\/ip_accel_app_ap_fmul_0_max_dsp_32_ip.tcl",
+      "impl\/misc\/ip_accel_app_ap_sitofp_0_no_dsp_32_ip.tcl",
+      "impl\/misc\/ip_accel_app_ap_uitofp_0_no_dsp_32_ip.tcl"
+    ],
     "DesignXml": "D:\/GitHub\/Weed_Detection\/WD_HLS\/WeedD\/solution1\/.autopilot\/db\/ip_accel_app.design.xml",
     "DebugDir": "D:\/GitHub\/Weed_Detection\/WD_HLS\/WeedD\/solution1\/.debug",
     "ProtoInst": ["D:\/GitHub\/Weed_Detection\/WD_HLS\/WeedD\/solution1\/.debug\/ip_accel_app.protoinst"]
@@ -709,7 +727,33 @@
   "SubcoreInfo": {
     "HasXpmMemory": false,
     "HasClockedDsp": false,
-    "IP": []
+    "IP": [
+      {
+        "name": "ip_accel_app_ap_fadd_0_full_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name ip_accel_app_ap_fadd_0_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "ip_accel_app_ap_fcmp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 1 CONFIG.c_result_fraction_width 0 CONFIG.component_name ip_accel_app_ap_fcmp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Compare CONFIG.result_precision_type Custom CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "ip_accel_app_ap_fmul_0_max_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name ip_accel_app_ap_fmul_0_max_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "ip_accel_app_ap_sitofp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Custom CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 32 CONFIG.c_a_fraction_width 0 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name ip_accel_app_ap_sitofp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Fixed_to_Float CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      },
+      {
+        "name": "ip_accel_app_ap_uitofp_0_no_dsp_32",
+        "vlnv": "xilinx.com:ip:floating_point:7.1",
+        "params": "CONFIG.a_precision_type Custom CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 64 CONFIG.c_a_fraction_width 0 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name ip_accel_app_ap_uitofp_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Fixed_to_Float CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+      }
+    ]
   },
   "Interfaces": {
     "ap_clk": {
@@ -929,12 +973,16 @@
                   "InstanceName": "grp_extr_half_1_cent_fu_48",
                   "Instances": [
                     {
-                      "ModuleName": "extract_third_and_fo_1",
-                      "InstanceName": "grp_extract_third_and_fo_1_fu_189",
+                      "ModuleName": "extract_third_and_fo",
+                      "InstanceName": "grp_extract_third_and_fo_fu_189",
                       "Instances": [
                         {
+                          "ModuleName": "least_squares_line",
+                          "InstanceName": "grp_least_squares_line_fu_209"
+                        },
+                        {
                           "ModuleName": "get_centroid_fh",
-                          "InstanceName": "grp_get_centroid_fh_fu_350",
+                          "InstanceName": "grp_get_centroid_fh_fu_216",
                           "Instances": [
                             {
                               "ModuleName": "get_centroid_fh_Bloc",
@@ -956,11 +1004,11 @@
                         },
                         {
                           "ModuleName": "extract_micro_roi",
-                          "InstanceName": "grp_extract_micro_roi_fu_360"
+                          "InstanceName": "grp_extract_micro_roi_fu_226"
                         },
                         {
                           "ModuleName": "get_last_centroids",
-                          "InstanceName": "grp_get_last_centroids_fu_371",
+                          "InstanceName": "grp_get_last_centroids_fu_237",
                           "Instances": [{
                               "ModuleName": "get_last_centroids_L",
                               "InstanceName": "get_last_centroids_L_U0"
@@ -1001,8 +1049,12 @@
                   "InstanceName": "grp_extr_half_2_cent_fu_62",
                   "Instances": [
                     {
+                      "ModuleName": "least_squares_line",
+                      "InstanceName": "grp_least_squares_line_fu_225"
+                    },
+                    {
                       "ModuleName": "get_centroid_sh",
-                      "InstanceName": "grp_get_centroid_sh_fu_382",
+                      "InstanceName": "grp_get_centroid_sh_fu_233",
                       "Instances": [
                         {
                           "ModuleName": "get_centroid_sh_Bloc",
@@ -1016,11 +1068,11 @@
                     },
                     {
                       "ModuleName": "extract_micro_roi",
-                      "InstanceName": "grp_extract_micro_roi_fu_395"
+                      "InstanceName": "grp_extract_micro_roi_fu_246"
                     },
                     {
                       "ModuleName": "get_last_centroids",
-                      "InstanceName": "grp_get_last_centroids_fu_406",
+                      "InstanceName": "grp_get_last_centroids_fu_257",
                       "Instances": [{
                           "ModuleName": "get_last_centroids_L",
                           "InstanceName": "get_last_centroids_L_U0"
@@ -1030,19 +1082,23 @@
                 },
                 {
                   "ModuleName": "get_lines_lsl",
-                  "InstanceName": "grp_get_lines_lsl_fu_76"
-                },
-                {
-                  "ModuleName": "get_line_bases",
-                  "InstanceName": "grp_get_line_bases_fu_88"
+                  "InstanceName": "grp_get_lines_lsl_fu_76",
+                  "Instances": [{
+                      "ModuleName": "least_squares_line_1",
+                      "InstanceName": "grp_least_squares_line_1_fu_213"
+                    }]
                 },
                 {
                   "ModuleName": "get_weed_mask",
-                  "InstanceName": "grp_get_weed_mask_fu_100",
+                  "InstanceName": "grp_get_weed_mask_fu_88",
                   "Instances": [{
                       "ModuleName": "is_crop_or_furrow",
                       "InstanceName": "grp_is_crop_or_furrow_fu_117"
                     }]
+                },
+                {
+                  "ModuleName": "get_line_bases",
+                  "InstanceName": "grp_get_line_bases_fu_97"
                 }
               ]
             },
@@ -1059,14 +1115,6 @@
                   "InstanceName": "extract_channels_U0",
                   "Instances": [
                     {
-                      "ModuleName": "extractChannel432",
-                      "InstanceName": "extractChannel432_U0",
-                      "Instances": [{
-                          "ModuleName": "xfChannelExtractKern",
-                          "InstanceName": "grp_xfChannelExtractKern_fu_20"
-                        }]
-                    },
-                    {
                       "ModuleName": "extractChannel433",
                       "InstanceName": "extractChannel433_U0",
                       "Instances": [{
@@ -1081,28 +1129,36 @@
                           "ModuleName": "xfChannelExtractKern",
                           "InstanceName": "grp_xfChannelExtractKern_fu_20"
                         }]
+                    },
+                    {
+                      "ModuleName": "extractChannel435",
+                      "InstanceName": "extractChannel435_U0",
+                      "Instances": [{
+                          "ModuleName": "xfChannelExtractKern",
+                          "InstanceName": "grp_xfChannelExtractKern_fu_20"
+                        }]
                     }
                   ]
                 },
                 {
-                  "ModuleName": "convert_fp_to_8b770",
-                  "InstanceName": "convert_fp_to_8b770_U0"
+                  "ModuleName": "convert_fp_to_8b771",
+                  "InstanceName": "convert_fp_to_8b771_U0"
                 },
                 {
                   "ModuleName": "get_max_from_channel",
                   "InstanceName": "get_max_from_channel_U0",
                   "Instances": [
                     {
-                      "ModuleName": "minMaxLoc435",
-                      "InstanceName": "minMaxLoc435_U0",
+                      "ModuleName": "minMaxLoc436",
+                      "InstanceName": "minMaxLoc436_U0",
                       "Instances": [{
                           "ModuleName": "xFMinMaxLocKernel",
                           "InstanceName": "grp_xFMinMaxLocKernel_fu_16"
                         }]
                     },
                     {
-                      "ModuleName": "minMaxLoc436",
-                      "InstanceName": "minMaxLoc436_U0",
+                      "ModuleName": "minMaxLoc437",
+                      "InstanceName": "minMaxLoc437_U0",
                       "Instances": [{
                           "ModuleName": "xFMinMaxLocKernel",
                           "InstanceName": "grp_xFMinMaxLocKernel_fu_16"
@@ -1131,8 +1187,8 @@
                   ]
                 },
                 {
-                  "ModuleName": "duplicateMat635769",
-                  "InstanceName": "duplicateMat635769_U0",
+                  "ModuleName": "duplicateMat636770",
+                  "InstanceName": "duplicateMat636770_U0",
                   "Instances": [
                     {
                       "ModuleName": "duplicateMat_Loop_2_s",
@@ -1149,15 +1205,15 @@
                       ]
                     },
                     {
-                      "ModuleName": "xFDuplicate645",
-                      "InstanceName": "xFDuplicate645_U0"
+                      "ModuleName": "xFDuplicate646",
+                      "InstanceName": "xFDuplicate646_U0"
                     },
                     {
                       "ModuleName": "duplicateMat_Loop_Re",
                       "InstanceName": "duplicateMat_Loop_Re_U0",
                       "Instances": [{
-                          "ModuleName": "read779",
-                          "InstanceName": "tmp_V_read779_fu_105"
+                          "ModuleName": "read780",
+                          "InstanceName": "tmp_V_read780_fu_105"
                         }]
                     },
                     {
@@ -1178,8 +1234,8 @@
                       "ModuleName": "duplicateMat_Loop_Re_1",
                       "InstanceName": "duplicateMat_Loop_Re_1_U0",
                       "Instances": [{
-                          "ModuleName": "read779",
-                          "InstanceName": "tmp_V_read779_fu_105"
+                          "ModuleName": "read780",
+                          "InstanceName": "tmp_V_read780_fu_105"
                         }]
                     },
                     {
@@ -1326,8 +1382,8 @@
                   "ModuleName": "erode",
                   "InstanceName": "grp_erode_fu_111",
                   "Instances": [{
-                      "ModuleName": "xferode793",
-                      "InstanceName": "grp_xferode793_fu_18",
+                      "ModuleName": "xferode794",
+                      "InstanceName": "grp_xferode794_fu_18",
                       "Instances": [
                         {
                           "ModuleName": "xfExtractPixels_1",
@@ -1370,13 +1426,13 @@
                       "ModuleName": "duplicateMat_Loop_2_2",
                       "InstanceName": "duplicateMat_Loop_2_2_U0",
                       "Instances": [{
-                          "ModuleName": "write797",
-                          "InstanceName": "call_ln115_write797_fu_112"
+                          "ModuleName": "write798",
+                          "InstanceName": "call_ln115_write798_fu_112"
                         }]
                     },
                     {
-                      "ModuleName": "xFDuplicate637",
-                      "InstanceName": "xFDuplicate637_U0"
+                      "ModuleName": "xFDuplicate638",
+                      "InstanceName": "xFDuplicate638_U0"
                     },
                     {
                       "ModuleName": "duplicateMat_Loop_Re_2",
@@ -1391,11 +1447,11 @@
               ]
             },
             {
-              "ModuleName": "erode437",
-              "InstanceName": "erode437_U0",
+              "ModuleName": "erode438",
+              "InstanceName": "erode438_U0",
               "Instances": [{
-                  "ModuleName": "xferode790",
-                  "InstanceName": "grp_xferode790_fu_18",
+                  "ModuleName": "xferode791",
+                  "InstanceName": "grp_xferode791_fu_18",
                   "Instances": [
                     {
                       "ModuleName": "xfExtractPixels_1",
@@ -1413,8 +1469,8 @@
                 }]
             },
             {
-              "ModuleName": "duplicateMat_2762",
-              "InstanceName": "duplicateMat_2762_U0",
+              "ModuleName": "duplicateMat_2763",
+              "InstanceName": "duplicateMat_2763_U0",
               "Instances": [
                 {
                   "ModuleName": "duplicateMat_2_Loop_1",
@@ -1438,8 +1494,8 @@
                   "ModuleName": "duplicateMat_2_Loop_s",
                   "InstanceName": "duplicateMat_2_Loop_U0",
                   "Instances": [{
-                      "ModuleName": "read765",
-                      "InstanceName": "tmp_V_read765_fu_105"
+                      "ModuleName": "read766",
+                      "InstanceName": "tmp_V_read766_fu_105"
                     }]
                 },
                 {
@@ -1485,47 +1541,47 @@
               ]
             },
             {
-              "ModuleName": "duplicateMat438",
-              "InstanceName": "duplicateMat438_U0",
+              "ModuleName": "duplicateMat439",
+              "InstanceName": "duplicateMat439_U0",
               "Instances": [
                 {
                   "ModuleName": "xFDuplicate_1",
                   "InstanceName": "xFDuplicate_1_U0"
                 },
                 {
-                  "ModuleName": "duplicateMat438_Loop",
-                  "InstanceName": "duplicateMat438_Loop_U0",
+                  "ModuleName": "duplicateMat439_Loop",
+                  "InstanceName": "duplicateMat439_Loop_U0",
                   "Instances": [{
                       "ModuleName": "read_r",
                       "InstanceName": "tmp_V_read_r_fu_105"
                     }]
                 },
                 {
-                  "ModuleName": "duplicateMat438_Loop_1",
-                  "InstanceName": "duplicateMat438_Loop_1_U0",
+                  "ModuleName": "duplicateMat439_Loop_1",
+                  "InstanceName": "duplicateMat439_Loop_1_U0",
                   "Instances": [
                     {
-                      "ModuleName": "write797",
-                      "InstanceName": "call_ln114_write797_fu_90"
+                      "ModuleName": "write798",
+                      "InstanceName": "call_ln114_write798_fu_90"
                     },
                     {
-                      "ModuleName": "write797",
-                      "InstanceName": "call_ln115_write797_fu_98"
+                      "ModuleName": "write798",
+                      "InstanceName": "call_ln115_write798_fu_98"
                     }
                   ]
                 },
                 {
-                  "ModuleName": "duplicateMat438_Bloc",
-                  "InstanceName": "duplicateMat438_Bloc_U0"
+                  "ModuleName": "duplicateMat439_Bloc",
+                  "InstanceName": "duplicateMat439_Bloc_U0"
                 }
               ]
             },
             {
-              "ModuleName": "add_2749",
-              "InstanceName": "add_2749_U0",
+              "ModuleName": "add_2750",
+              "InstanceName": "add_2750_U0",
               "Instances": [{
-                  "ModuleName": "xFarithm_proc_2811",
-                  "InstanceName": "grp_xFarithm_proc_2811_fu_20"
+                  "ModuleName": "xFarithm_proc_2812",
+                  "InstanceName": "grp_xFarithm_proc_2812_fu_20"
                 }]
             },
             {
@@ -1559,13 +1615,13 @@
           "InstanceName": "xfMat2AXIvideo_U0"
         },
         {
-          "ModuleName": "Block_proc642",
-          "InstanceName": "Block_proc642_U0"
+          "ModuleName": "Block_proc643",
+          "InstanceName": "Block_proc643_U0"
         }
       ]
     },
     "Info": {
-      "Block_proc642": {
+      "Block_proc643": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1600,7 +1656,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "read765": {
+      "read766": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1635,7 +1691,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "duplicateMat_2762": {
+      "duplicateMat_2763": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "1",
@@ -1677,7 +1733,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "read779": {
+      "read780": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1691,7 +1747,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "xFDuplicate645": {
+      "xFDuplicate646": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1712,7 +1768,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "duplicateMat635769": {
+      "duplicateMat636770": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "1",
@@ -1761,13 +1817,6 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "extractChannel432": {
-        "FunctionProtocol": "ap_ctrl_hs",
-        "isTaskLevelControl": "1",
-        "isPipelined": "0",
-        "isCombinational": "0",
-        "isOneStateSeq": "0"
-      },
       "extractChannel433": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
@@ -1776,6 +1825,13 @@
         "isOneStateSeq": "0"
       },
       "extractChannel434": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "extractChannel435": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1796,14 +1852,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "minMaxLoc435": {
+      "minMaxLoc436": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "minMaxLoc436": {
+      "minMaxLoc437": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1873,7 +1929,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "convert_fp_to_8b770": {
+      "convert_fp_to_8b771": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1936,14 +1992,14 @@
         "isCombinational": "1",
         "isOneStateSeq": "0"
       },
-      "xferode790": {
+      "xferode791": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "erode437": {
+      "erode438": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -1964,14 +2020,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "xFDuplicate637": {
+      "xFDuplicate638": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "write797": {
+      "write798": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -2020,7 +2076,7 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "xferode793": {
+      "xferode794": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -2041,14 +2097,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "duplicateMat438_Bloc": {
+      "duplicateMat439_Bloc": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "1"
       },
-      "duplicateMat438_Loop": {
+      "duplicateMat439_Loop": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -2062,14 +2118,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "duplicateMat438_Loop_1": {
+      "duplicateMat439_Loop_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "duplicateMat438": {
+      "duplicateMat439": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "1",
@@ -2153,7 +2209,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "extract_third_and_fo_1": {
+      "least_squares_line": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "extract_third_and_fo": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -2189,6 +2252,13 @@
         "isOneStateSeq": "0"
       },
       "extr_half_2_cent": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "least_squares_line_1": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -2314,14 +2384,14 @@
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "xFarithm_proc_2811": {
+      "xFarithm_proc_2812": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
         "isCombinational": "0",
         "isOneStateSeq": "0"
       },
-      "add_2749": {
+      "add_2750": {
         "FunctionProtocol": "ap_ctrl_hs",
         "isTaskLevelControl": "1",
         "isPipelined": "0",
@@ -2351,7 +2421,7 @@
       }
     },
     "Metrics": {
-      "Block_proc642": {
+      "Block_proc643": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -2493,7 +2563,7 @@
           "URAM": "0"
         }
       },
-      "read765": {
+      "read766": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -2661,7 +2731,7 @@
           "URAM": "0"
         }
       },
-      "duplicateMat_2762": {
+      "duplicateMat_2763": {
         "Latency": {
           "LatencyBest": "174963",
           "LatencyAvg": "",
@@ -2818,7 +2888,7 @@
           "URAM": "0"
         }
       },
-      "read779": {
+      "read780": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -2884,7 +2954,7 @@
           "URAM": "0"
         }
       },
-      "xFDuplicate645": {
+      "xFDuplicate646": {
         "Latency": {
           "LatencyBest": "43741",
           "LatencyAvg": "43741",
@@ -2986,7 +3056,7 @@
           "URAM": "0"
         }
       },
-      "duplicateMat635769": {
+      "duplicateMat636770": {
         "Latency": {
           "LatencyBest": "43743",
           "LatencyAvg": "",
@@ -3206,28 +3276,6 @@
           "URAM": "0"
         }
       },
-      "extractChannel432": {
-        "Latency": {
-          "LatencyBest": "58142",
-          "LatencyAvg": "58142",
-          "LatencyWorst": "58142",
-          "PipelineII": "58142",
-          "PipelineDepth": "",
-          "PipelineType": "none"
-        },
-        "Timing": {
-          "Target": "50.00",
-          "Uncertainty": "6.25",
-          "Estimate": "14.141"
-        },
-        "Area": {
-          "FF": "40",
-          "LUT": "619",
-          "BRAM_18K": "0",
-          "DSP48E": "0",
-          "URAM": "0"
-        }
-      },
       "extractChannel433": {
         "Latency": {
           "LatencyBest": "58142",
@@ -3251,6 +3299,28 @@
         }
       },
       "extractChannel434": {
+        "Latency": {
+          "LatencyBest": "58142",
+          "LatencyAvg": "58142",
+          "LatencyWorst": "58142",
+          "PipelineII": "58142",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "50.00",
+          "Uncertainty": "6.25",
+          "Estimate": "14.141"
+        },
+        "Area": {
+          "FF": "40",
+          "LUT": "619",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "extractChannel435": {
         "Latency": {
           "LatencyBest": "58142",
           "LatencyAvg": "58142",
@@ -3330,7 +3400,7 @@
           "URAM": "0"
         }
       },
-      "minMaxLoc435": {
+      "minMaxLoc436": {
         "Latency": {
           "LatencyBest": "58142",
           "LatencyAvg": "58142",
@@ -3352,7 +3422,7 @@
           "URAM": "0"
         }
       },
-      "minMaxLoc436": {
+      "minMaxLoc437": {
         "Latency": {
           "LatencyBest": "58142",
           "LatencyAvg": "58142",
@@ -3579,7 +3649,7 @@
           "URAM": "0"
         }
       },
-      "convert_fp_to_8b770": {
+      "convert_fp_to_8b771": {
         "Latency": {
           "LatencyBest": "57623",
           "LatencyAvg": "57623",
@@ -3865,7 +3935,7 @@
           "URAM": "0"
         }
       },
-      "xferode790": {
+      "xferode791": {
         "Latency": {
           "LatencyBest": "59328",
           "LatencyAvg": "59328",
@@ -3924,7 +3994,7 @@
           "DSP48E": "0"
         }
       },
-      "erode437": {
+      "erode438": {
         "Latency": {
           "LatencyBest": "59329",
           "LatencyAvg": "59329",
@@ -4004,7 +4074,7 @@
           "URAM": "0"
         }
       },
-      "xFDuplicate637": {
+      "xFDuplicate638": {
         "Latency": {
           "LatencyBest": "43741",
           "LatencyAvg": "43741",
@@ -4040,7 +4110,7 @@
           "URAM": "0"
         }
       },
-      "write797": {
+      "write798": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -4222,7 +4292,7 @@
           "URAM": "0"
         }
       },
-      "xferode793": {
+      "xferode794": {
         "Latency": {
           "LatencyBest": "59328",
           "LatencyAvg": "59328",
@@ -4341,7 +4411,7 @@
           "URAM": "0"
         }
       },
-      "duplicateMat438_Bloc": {
+      "duplicateMat439_Bloc": {
         "Latency": {
           "LatencyBest": "0",
           "LatencyAvg": "0",
@@ -4363,7 +4433,7 @@
           "URAM": "0"
         }
       },
-      "duplicateMat438_Loop": {
+      "duplicateMat439_Loop": {
         "Latency": {
           "LatencyBest": "721",
           "LatencyAvg": "",
@@ -4443,7 +4513,7 @@
           "URAM": "0"
         }
       },
-      "duplicateMat438_Loop_1": {
+      "duplicateMat439_Loop_1": {
         "Latency": {
           "LatencyBest": "58141",
           "LatencyAvg": "58141",
@@ -4479,7 +4549,7 @@
           "URAM": "0"
         }
       },
-      "duplicateMat438": {
+      "duplicateMat439": {
         "Latency": {
           "LatencyBest": "58144",
           "LatencyAvg": "",
@@ -4837,63 +4907,96 @@
           "URAM": "0"
         }
       },
-      "extract_third_and_fo_1": {
+      "least_squares_line": {
         "Latency": {
-          "LatencyBest": "50",
-          "LatencyAvg": "14954",
-          "LatencyWorst": "30050",
-          "PipelineIIMin": "50",
-          "PipelineIIMax": "30050",
-          "PipelineII": "50 ~ 30050",
+          "LatencyBest": "86",
+          "LatencyAvg": "86",
+          "LatencyWorst": "86",
+          "PipelineII": "86",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "18.685"
+          "Estimate": "36.124"
         },
         "Loops": [{
-            "Name": "extract_third_and_fourth_c_label13_L",
+            "Name": "least_squares_line_label10",
             "TripCount": "12",
-            "LatencyMin": "49",
-            "LatencyMax": "30049",
-            "Latency": "49 ~ 30049",
+            "Latency": "15",
+            "PipelineII": "1",
+            "PipelineDepth": "5"
+          }],
+        "Area": {
+          "BRAM_18K": "0",
+          "DSP48E": "14",
+          "FF": "2564",
+          "LUT": "4766",
+          "URAM": "0"
+        }
+      },
+      "extract_third_and_fo": {
+        "Latency": {
+          "LatencyBest": "45",
+          "LatencyAvg": "14697",
+          "LatencyWorst": "29553",
+          "PipelineIIMin": "45",
+          "PipelineIIMax": "29553",
+          "PipelineII": "45 ~ 29553",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "50.00",
+          "Uncertainty": "6.25",
+          "Estimate": "42.782"
+        },
+        "Loops": [{
+            "Name": "extract_third_and_fourth_c_label13",
+            "TripCount": "2",
+            "LatencyMin": "44",
+            "LatencyMax": "29552",
+            "Latency": "44 ~ 29552",
             "PipelineII": "",
-            "PipelineDepthMin": "4",
-            "PipelineDepthMax": "2504",
-            "PipelineDepth": "4 ~ 2504",
+            "PipelineDepthMin": "22",
+            "PipelineDepthMax": "14776",
+            "PipelineDepth": "22 ~ 14776",
             "Loops": [{
-                "Name": "least_squares_line_label10",
-                "TripCount": "12",
-                "Latency": "60",
+                "Name": "extract_third_and_fourth_c_label13.1",
+                "TripCount": "6",
+                "LatencyMin": "18",
+                "LatencyMax": "14772",
+                "Latency": "18 ~ 14772",
                 "PipelineII": "",
-                "PipelineDepth": "5"
+                "PipelineDepthMin": "3",
+                "PipelineDepthMax": "2462",
+                "PipelineDepth": "3 ~ 2462"
               }]
           }],
         "Area": {
           "BRAM_18K": "1",
-          "DSP48E": "14",
-          "FF": "3618",
-          "LUT": "5146",
+          "DSP48E": "19",
+          "FF": "4596",
+          "LUT": "9258",
           "URAM": "0"
         }
       },
       "extr_half_1_cent": {
         "Latency": {
-          "LatencyBest": "89",
-          "LatencyAvg": "29057",
-          "LatencyWorst": "58415",
-          "PipelineIIMin": "89",
-          "PipelineIIMax": "58415",
-          "PipelineII": "89 ~ 58415",
+          "LatencyBest": "84",
+          "LatencyAvg": "28800",
+          "LatencyWorst": "57918",
+          "PipelineIIMin": "84",
+          "PipelineIIMax": "57918",
+          "PipelineII": "84 ~ 57918",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "18.685"
+          "Estimate": "42.782"
         },
         "Loops": [
           {
@@ -4921,9 +5024,9 @@
         ],
         "Area": {
           "BRAM_18K": "3",
-          "DSP48E": "14",
-          "FF": "5091",
-          "LUT": "8094",
+          "DSP48E": "19",
+          "FF": "6069",
+          "LUT": "12206",
           "URAM": "0"
         }
       },
@@ -5011,128 +5114,152 @@
       },
       "extr_half_2_cent": {
         "Latency": {
-          "LatencyBest": "194",
-          "LatencyAvg": "59762",
-          "LatencyWorst": "120146",
-          "PipelineIIMin": "194",
-          "PipelineIIMax": "120146",
-          "PipelineII": "194 ~ 120146",
+          "LatencyBest": "177",
+          "LatencyAvg": "58785",
+          "LatencyWorst": "118161",
+          "PipelineIIMin": "177",
+          "PipelineIIMax": "118161",
+          "PipelineII": "177 ~ 118161",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "18.154"
+          "Estimate": "42.782"
         },
         "Loops": [{
-            "Name": "extr_half_2_cent_label14_L",
-            "TripCount": "48",
-            "LatencyMin": "193",
-            "LatencyMax": "120145",
-            "Latency": "193 ~ 120145",
+            "Name": "extr_half_2_cent_label14",
+            "TripCount": "8",
+            "LatencyMin": "176",
+            "LatencyMax": "118160",
+            "Latency": "176 ~ 118160",
             "PipelineII": "",
-            "PipelineDepthMin": "4",
-            "PipelineDepthMax": "2503",
-            "PipelineDepth": "4 ~ 2503",
+            "PipelineDepthMin": "22",
+            "PipelineDepthMax": "14770",
+            "PipelineDepth": "22 ~ 14770",
             "Loops": [{
-                "Name": "least_squares_line_label10",
-                "TripCount": "12",
-                "Latency": "60",
+                "Name": "extr_half_2_cent_label14.1",
+                "TripCount": "6",
+                "LatencyMin": "18",
+                "LatencyMax": "14766",
+                "Latency": "18 ~ 14766",
                 "PipelineII": "",
-                "PipelineDepth": "5"
+                "PipelineDepthMin": "3",
+                "PipelineDepthMax": "2461",
+                "PipelineDepth": "3 ~ 2461"
               }]
           }],
         "Area": {
           "BRAM_18K": "1",
-          "DSP48E": "14",
-          "FF": "2898",
-          "LUT": "4484",
+          "DSP48E": "19",
+          "FF": "4698",
+          "LUT": "9082",
+          "URAM": "0"
+        }
+      },
+      "least_squares_line_1": {
+        "Latency": {
+          "LatencyBest": "97",
+          "LatencyAvg": "97",
+          "LatencyWorst": "97",
+          "PipelineII": "97",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "50.00",
+          "Uncertainty": "6.25",
+          "Estimate": "36.124"
+        },
+        "Loops": [{
+            "Name": "least_squares_line_label10",
+            "TripCount": "12",
+            "Latency": "26",
+            "PipelineII": "2",
+            "PipelineDepth": "5"
+          }],
+        "Area": {
+          "DSP48E": "16",
+          "FF": "1581",
+          "LUT": "4141",
+          "BRAM_18K": "0",
           "URAM": "0"
         }
       },
       "get_lines_lsl": {
         "Latency": {
           "LatencyBest": "19",
-          "LatencyAvg": "355",
-          "LatencyWorst": "691",
+          "LatencyAvg": "361",
+          "LatencyWorst": "703",
           "PipelineIIMin": "19",
-          "PipelineIIMax": "691",
-          "PipelineII": "19 ~ 691",
+          "PipelineIIMax": "703",
+          "PipelineII": "19 ~ 703",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "16.715"
+          "Estimate": "42.782"
         },
         "Loops": [{
             "Name": "get_lines_lsl_label15",
             "TripCount": "6",
             "LatencyMin": "18",
-            "LatencyMax": "690",
-            "Latency": "18 ~ 690",
+            "LatencyMax": "702",
+            "Latency": "18 ~ 702",
             "PipelineII": "",
             "PipelineDepthMin": "3",
-            "PipelineDepthMax": "115",
-            "PipelineDepth": "3 ~ 115",
-            "Loops": [
-              {
+            "PipelineDepthMax": "117",
+            "PipelineDepth": "3 ~ 117",
+            "Loops": [{
                 "Name": "get_lines_lsl_label0",
                 "TripCount": "12",
                 "Latency": "12",
                 "PipelineII": "1",
                 "PipelineDepth": "2"
-              },
-              {
-                "Name": "least_squares_line_label10",
-                "TripCount": "12",
-                "Latency": "26",
-                "PipelineII": "2",
-                "PipelineDepth": "5"
-              }
-            ]
+              }]
           }],
         "Area": {
           "BRAM_18K": "0",
-          "DSP48E": "16",
-          "FF": "1336",
-          "LUT": "2119",
+          "DSP48E": "21",
+          "FF": "2215",
+          "LUT": "7695",
           "URAM": "0"
         }
       },
       "is_crop_or_furrow": {
         "Latency": {
-          "LatencyBest": "4",
-          "LatencyAvg": "16",
-          "LatencyWorst": "36",
-          "PipelineIIMin": "4",
-          "PipelineIIMax": "36",
-          "PipelineII": "4 ~ 36",
+          "LatencyBest": "5",
+          "LatencyAvg": "17",
+          "LatencyWorst": "30",
+          "PipelineIIMin": "5",
+          "PipelineIIMax": "30",
+          "PipelineII": "5 ~ 30",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "15.536"
+          "Estimate": "40.622"
         },
         "Loops": [{
             "Name": "is_crop_or_furrow_label5",
             "TripCount": "",
             "LatencyMin": "3",
-            "LatencyMax": "34",
-            "Latency": "3 ~ 34",
+            "LatencyMax": "27",
+            "Latency": "3 ~ 27",
             "PipelineII": "",
             "PipelineDepthMin": "3",
-            "PipelineDepthMax": "5",
-            "PipelineDepth": "3 ~ 5"
+            "PipelineDepthMax": "4",
+            "PipelineDepth": "3 ~ 4"
           }],
         "Area": {
-          "DSP48E": "1",
-          "FF": "145",
-          "LUT": "520",
+          "DSP48E": "5",
+          "FF": "562",
+          "LUT": "2068",
           "BRAM_18K": "0",
           "URAM": "0"
         }
@@ -5140,70 +5267,70 @@
       "get_weed_mask": {
         "Latency": {
           "LatencyBest": "115561",
-          "LatencyAvg": "806761",
-          "LatencyWorst": "2189161",
+          "LatencyAvg": "864361",
+          "LatencyWorst": "1843561",
           "PipelineIIMin": "115561",
-          "PipelineIIMax": "2189161",
-          "PipelineII": "115561 ~ 2189161",
+          "PipelineIIMax": "1843561",
+          "PipelineII": "115561 ~ 1843561",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "15.536"
+          "Estimate": "40.622"
         },
         "Loops": [{
             "Name": "get_weed_mask_label17",
             "TripCount": "180",
             "LatencyMin": "115560",
-            "LatencyMax": "2189160",
-            "Latency": "115560 ~ 2189160",
+            "LatencyMax": "1843560",
+            "Latency": "115560 ~ 1843560",
             "PipelineII": "",
             "PipelineDepthMin": "642",
-            "PipelineDepthMax": "12162",
-            "PipelineDepth": "642 ~ 12162",
+            "PipelineDepthMax": "10242",
+            "PipelineDepth": "642 ~ 10242",
             "Loops": [{
                 "Name": "get_weed_mask_label17.1",
                 "TripCount": "320",
                 "LatencyMin": "640",
-                "LatencyMax": "12160",
-                "Latency": "640 ~ 12160",
+                "LatencyMax": "10240",
+                "Latency": "640 ~ 10240",
                 "PipelineII": "",
                 "PipelineDepthMin": "2",
-                "PipelineDepthMax": "38",
-                "PipelineDepth": "2 ~ 38"
+                "PipelineDepthMax": "32",
+                "PipelineDepth": "2 ~ 32"
               }]
           }],
         "Area": {
-          "DSP48E": "1",
-          "FF": "196",
-          "LUT": "678",
+          "DSP48E": "5",
+          "FF": "613",
+          "LUT": "2226",
           "BRAM_18K": "0",
           "URAM": "0"
         }
       },
       "get_crop_lines": {
         "Latency": {
-          "LatencyBest": "135429",
-          "LatencyAvg": "916141",
-          "LatencyWorst": "2388939",
-          "PipelineIIMin": "135429",
-          "PipelineIIMax": "2388939",
-          "PipelineII": "135429 ~ 2388939",
+          "LatencyBest": "135407",
+          "LatencyAvg": "972513",
+          "LatencyWorst": "2040869",
+          "PipelineIIMin": "135407",
+          "PipelineIIMax": "2040869",
+          "PipelineII": "135407 ~ 2040869",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "50.00",
           "Uncertainty": "6.25",
-          "Estimate": "18.685"
+          "Estimate": "42.782"
         },
         "Area": {
           "BRAM_18K": "9",
-          "DSP48E": "45",
-          "FF": "9963",
-          "LUT": "16711",
+          "DSP48E": "64",
+          "FF": "14053",
+          "LUT": "32546",
           "URAM": "0"
         }
       },
@@ -5668,7 +5795,7 @@
           "URAM": "0"
         }
       },
-      "xFarithm_proc_2811": {
+      "xFarithm_proc_2812": {
         "Latency": {
           "LatencyBest": "923761",
           "LatencyAvg": "923761",
@@ -5704,7 +5831,7 @@
           "URAM": "0"
         }
       },
-      "add_2749": {
+      "add_2750": {
         "Latency": {
           "LatencyBest": "923762",
           "LatencyAvg": "923762",
@@ -5742,9 +5869,9 @@
         },
         "Area": {
           "BRAM_18K": "117",
-          "DSP48E": "148",
-          "FF": "23594",
-          "LUT": "51085",
+          "DSP48E": "167",
+          "FF": "27684",
+          "LUT": "66920",
           "URAM": "0"
         }
       },
@@ -5800,9 +5927,9 @@
         },
         "Area": {
           "BRAM_18K": "117",
-          "DSP48E": "148",
-          "FF": "23889",
-          "LUT": "51685",
+          "DSP48E": "167",
+          "FF": "27979",
+          "LUT": "67520",
           "URAM": "0"
         }
       }
@@ -5818,7 +5945,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-03-18 11:37:17 -0300",
+    "Time": "2020-07-21 00:37:32 -0300",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2.1"
   }

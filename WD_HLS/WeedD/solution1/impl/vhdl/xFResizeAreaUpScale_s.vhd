@@ -498,7 +498,7 @@ architecture behav of xFResizeAreaUpScale_s is
     signal xor_ln879_1_fu_1698_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp145_fu_1704_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal sel_tmp88_fu_1710_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal empty_93_fu_1720_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal empty_90_fu_1720_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal sel_tmp83_fu_1716_p1 : STD_LOGIC_VECTOR (1 downto 0);
     signal sel_tmp81_fu_1684_p3 : STD_LOGIC_VECTOR (1 downto 0);
     signal select_ln782_1_fu_1638_p3 : STD_LOGIC_VECTOR (1 downto 0);
@@ -605,7 +605,7 @@ architecture behav of xFResizeAreaUpScale_s is
     end component;
 
 
-    component xFResizeAreaUpScabck IS
+    component xFResizeAreaUpScabek IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -624,7 +624,7 @@ architecture behav of xFResizeAreaUpScale_s is
     end component;
 
 
-    component xFResizeAreaUpScabfk IS
+    component xFResizeAreaUpScabhl IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -640,7 +640,7 @@ architecture behav of xFResizeAreaUpScale_s is
     end component;
 
 
-    component xFResizeAreaUpScabgk IS
+    component xFResizeAreaUpScabil IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -659,7 +659,7 @@ architecture behav of xFResizeAreaUpScale_s is
     end component;
 
 
-    component xFResizeAreaUpScabhl IS
+    component xFResizeAreaUpScabjl IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -675,7 +675,7 @@ architecture behav of xFResizeAreaUpScale_s is
     end component;
 
 
-    component xFResizeAreaUpScabil IS
+    component xFResizeAreaUpScabkl IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -693,7 +693,7 @@ architecture behav of xFResizeAreaUpScale_s is
 
 
 begin
-    lbuf_in0_V_U : component xFResizeAreaUpScabck
+    lbuf_in0_V_U : component xFResizeAreaUpScabek
     generic map (
         DataWidth => 24,
         AddressRange => 320,
@@ -710,7 +710,7 @@ begin
         ce1 => lbuf_in0_V_ce1,
         q1 => lbuf_in0_V_q1);
 
-    lbuf_in1_V_U : component xFResizeAreaUpScabck
+    lbuf_in1_V_U : component xFResizeAreaUpScabek
     generic map (
         DataWidth => 24,
         AddressRange => 320,
@@ -727,7 +727,7 @@ begin
         ce1 => lbuf_in1_V_ce1,
         q1 => lbuf_in1_V_q1);
 
-    lbuf_in2_V_U : component xFResizeAreaUpScabck
+    lbuf_in2_V_U : component xFResizeAreaUpScabek
     generic map (
         DataWidth => 24,
         AddressRange => 320,
@@ -744,7 +744,7 @@ begin
         ce1 => lbuf_in2_V_ce1,
         q1 => lbuf_in2_V_q1);
 
-    Hoffset_V_U : component xFResizeAreaUpScabfk
+    Hoffset_V_U : component xFResizeAreaUpScabhl
     generic map (
         DataWidth => 13,
         AddressRange => 1280,
@@ -758,7 +758,7 @@ begin
         d0 => Hoffset_V_d0,
         q0 => Hoffset_V_q0);
 
-    Voffset_V_U : component xFResizeAreaUpScabgk
+    Voffset_V_U : component xFResizeAreaUpScabil
     generic map (
         DataWidth => 13,
         AddressRange => 720,
@@ -775,7 +775,7 @@ begin
         ce1 => Voffset_V_ce1,
         q1 => Voffset_V_q1);
 
-    Hweight_U : component xFResizeAreaUpScabhl
+    Hweight_U : component xFResizeAreaUpScabjl
     generic map (
         DataWidth => 32,
         AddressRange => 1280,
@@ -789,7 +789,7 @@ begin
         d0 => Hweight_d0,
         q0 => Hweight_q0);
 
-    Vweight_U : component xFResizeAreaUpScabil
+    Vweight_U : component xFResizeAreaUpScabkl
     generic map (
         DataWidth => 32,
         AddressRange => 721,
@@ -2208,7 +2208,7 @@ begin
         end if; 
     end process;
 
-    empty_93_fu_1720_p2 <= (sel_tmp88_fu_1710_p2 or and_ln879_fu_1654_p2);
+    empty_90_fu_1720_p2 <= (sel_tmp88_fu_1710_p2 or and_ln879_fu_1654_p2);
     grp_xFUDivAreaUp_2_fu_984_ap_start <= grp_xFUDivAreaUp_2_fu_984_ap_start_reg;
 
     grp_xFUDivAreaUp_2_fu_984_in_d_assign_proc : process(ap_CS_fsm_state4, ap_CS_fsm_state5, ap_CS_fsm_state2, ap_CS_fsm_state3)
@@ -2525,13 +2525,13 @@ begin
         lind1_V_7_reg_779;
     out_j_V_fu_1521_p2 <= std_logic_vector(unsigned(lind1_V_7_reg_779) + unsigned(ap_const_lv16_1));
     p_01010_3_fu_1750_p3 <= 
-        sel_tmp108_fu_1742_p3 when (empty_93_fu_1720_p2(0) = '1') else 
+        sel_tmp108_fu_1742_p3 when (empty_90_fu_1720_p2(0) = '1') else 
         sel_tmp106_fu_1734_p3;
     p_0887_3_fu_1726_p3 <= 
-        sel_tmp83_fu_1716_p1 when (empty_93_fu_1720_p2(0) = '1') else 
+        sel_tmp83_fu_1716_p1 when (empty_90_fu_1720_p2(0) = '1') else 
         sel_tmp81_fu_1684_p3;
     p_0893_3_fu_1774_p3 <= 
-        sel_tmp133_fu_1766_p3 when (empty_93_fu_1720_p2(0) = '1') else 
+        sel_tmp133_fu_1766_p3 when (empty_90_fu_1720_p2(0) = '1') else 
         sel_tmp131_fu_1758_p3;
     read_index_fu_1446_p2 <= std_logic_vector(unsigned(index_assign_2_reg_676) + unsigned(ap_const_lv17_1));
 

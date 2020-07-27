@@ -94,14 +94,14 @@ wire    get_centroid_fh_Bloc_1_U0_v_limit_read;
 wire    get_centroid_fh_Bloc_1_U0_h_limit_read;
 wire   [15:0] get_centroid_fh_Bloc_1_U0_ap_return_0;
 wire   [31:0] get_centroid_fh_Bloc_1_U0_ap_return_1;
-wire    ap_channel_done_lshr_ln147_cast_loc_s;
-wire    lshr_ln147_cast_loc_s_full_n;
-reg    ap_sync_reg_channel_write_lshr_ln147_cast_loc_s;
-wire    ap_sync_channel_write_lshr_ln147_cast_loc_s;
 wire    ap_channel_done_lshr_ln146_cast_loc_s;
 wire    lshr_ln146_cast_loc_s_full_n;
 reg    ap_sync_reg_channel_write_lshr_ln146_cast_loc_s;
 wire    ap_sync_channel_write_lshr_ln146_cast_loc_s;
+wire    ap_channel_done_lshr_ln145_cast_loc_s;
+wire    lshr_ln145_cast_loc_s_full_n;
+reg    ap_sync_reg_channel_write_lshr_ln145_cast_loc_s;
+wire    ap_sync_channel_write_lshr_ln145_cast_loc_s;
 wire    get_centroid_fh_Loop_U0_ap_start;
 wire    get_centroid_fh_Loop_U0_ap_done;
 wire    get_centroid_fh_Loop_U0_ap_continue;
@@ -154,10 +154,10 @@ wire    h_limit_c_empty_n;
 wire    h_limit_c9_full_n;
 wire   [15:0] h_limit_c9_dout;
 wire    h_limit_c9_empty_n;
-wire   [15:0] lshr_ln146_cast_loc_s_dout;
+wire   [15:0] lshr_ln145_cast_loc_s_dout;
+wire    lshr_ln145_cast_loc_s_empty_n;
+wire   [31:0] lshr_ln146_cast_loc_s_dout;
 wire    lshr_ln146_cast_loc_s_empty_n;
-wire   [31:0] lshr_ln147_cast_loc_s_dout;
-wire    lshr_ln147_cast_loc_s_empty_n;
 wire   [31:0] v_sum_0_loc_channel_dout;
 wire    v_sum_0_loc_channel_empty_n;
 wire   [31:0] h_sum_0_loc_channel_dout;
@@ -185,8 +185,8 @@ wire    get_centroid_fh_Bloc_U0_start_write;
 
 // power-on initialization
 initial begin
-#0 ap_sync_reg_channel_write_lshr_ln147_cast_loc_s = 1'b0;
 #0 ap_sync_reg_channel_write_lshr_ln146_cast_loc_s = 1'b0;
+#0 ap_sync_reg_channel_write_lshr_ln145_cast_loc_s = 1'b0;
 #0 ap_sync_reg_channel_write_p_sum_0_loc_channel = 1'b0;
 #0 ap_sync_reg_channel_write_h_sum_0_loc_channel = 1'b0;
 #0 ap_sync_reg_channel_write_v_sum_0_loc_channel = 1'b0;
@@ -280,8 +280,8 @@ get_centroid_fh_Bloc get_centroid_fh_Bloc_U0(
     .ap_idle(get_centroid_fh_Bloc_U0_ap_idle),
     .ap_ready(get_centroid_fh_Bloc_U0_ap_ready),
     .p_read(p_sum_0_loc_channel_dout),
-    .p_read1(lshr_ln147_cast_loc_s_dout),
-    .p_read2(lshr_ln146_cast_loc_s_dout),
+    .p_read1(lshr_ln146_cast_loc_s_dout),
+    .p_read2(lshr_ln145_cast_loc_s_dout),
     .v_offset_dout(v_offset_c_dout),
     .v_offset_empty_n(v_offset_c_empty_n),
     .v_offset_read(get_centroid_fh_Bloc_U0_v_offset_read),
@@ -372,29 +372,29 @@ fifo_w16_d2_A h_limit_c9_U(
     .if_read(get_centroid_fh_Loop_U0_h_limit_read)
 );
 
-fifo_w16_d2_A lshr_ln146_cast_loc_s_U(
+fifo_w16_d2_A lshr_ln145_cast_loc_s_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(get_centroid_fh_Bloc_1_U0_ap_return_0),
-    .if_full_n(lshr_ln146_cast_loc_s_full_n),
-    .if_write(ap_channel_done_lshr_ln146_cast_loc_s),
-    .if_dout(lshr_ln146_cast_loc_s_dout),
-    .if_empty_n(lshr_ln146_cast_loc_s_empty_n),
+    .if_full_n(lshr_ln145_cast_loc_s_full_n),
+    .if_write(ap_channel_done_lshr_ln145_cast_loc_s),
+    .if_dout(lshr_ln145_cast_loc_s_dout),
+    .if_empty_n(lshr_ln145_cast_loc_s_empty_n),
     .if_read(get_centroid_fh_Bloc_U0_ap_ready)
 );
 
-fifo_w32_d2_A_x0 lshr_ln147_cast_loc_s_U(
+fifo_w32_d2_A_x0 lshr_ln146_cast_loc_s_U(
     .clk(ap_clk),
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
     .if_din(get_centroid_fh_Bloc_1_U0_ap_return_1),
-    .if_full_n(lshr_ln147_cast_loc_s_full_n),
-    .if_write(ap_channel_done_lshr_ln147_cast_loc_s),
-    .if_dout(lshr_ln147_cast_loc_s_dout),
-    .if_empty_n(lshr_ln147_cast_loc_s_empty_n),
+    .if_full_n(lshr_ln146_cast_loc_s_full_n),
+    .if_write(ap_channel_done_lshr_ln146_cast_loc_s),
+    .if_dout(lshr_ln146_cast_loc_s_dout),
+    .if_empty_n(lshr_ln146_cast_loc_s_empty_n),
     .if_read(get_centroid_fh_Bloc_U0_ap_ready)
 );
 
@@ -464,24 +464,24 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_lshr_ln146_cast_loc_s <= 1'b0;
+        ap_sync_reg_channel_write_lshr_ln145_cast_loc_s <= 1'b0;
     end else begin
         if (((get_centroid_fh_Bloc_1_U0_ap_done & get_centroid_fh_Bloc_1_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_lshr_ln146_cast_loc_s <= 1'b0;
+            ap_sync_reg_channel_write_lshr_ln145_cast_loc_s <= 1'b0;
         end else begin
-            ap_sync_reg_channel_write_lshr_ln146_cast_loc_s <= ap_sync_channel_write_lshr_ln146_cast_loc_s;
+            ap_sync_reg_channel_write_lshr_ln145_cast_loc_s <= ap_sync_channel_write_lshr_ln145_cast_loc_s;
         end
     end
 end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_channel_write_lshr_ln147_cast_loc_s <= 1'b0;
+        ap_sync_reg_channel_write_lshr_ln146_cast_loc_s <= 1'b0;
     end else begin
         if (((get_centroid_fh_Bloc_1_U0_ap_done & get_centroid_fh_Bloc_1_U0_ap_continue) == 1'b1)) begin
-            ap_sync_reg_channel_write_lshr_ln147_cast_loc_s <= 1'b0;
+            ap_sync_reg_channel_write_lshr_ln146_cast_loc_s <= 1'b0;
         end else begin
-            ap_sync_reg_channel_write_lshr_ln147_cast_loc_s <= ap_sync_channel_write_lshr_ln147_cast_loc_s;
+            ap_sync_reg_channel_write_lshr_ln146_cast_loc_s <= ap_sync_channel_write_lshr_ln146_cast_loc_s;
         end
     end
 end
@@ -552,9 +552,9 @@ end
 
 assign ap_channel_done_h_sum_0_loc_channel = (get_centroid_fh_Loop_U0_ap_done & (ap_sync_reg_channel_write_h_sum_0_loc_channel ^ 1'b1));
 
-assign ap_channel_done_lshr_ln146_cast_loc_s = (get_centroid_fh_Bloc_1_U0_ap_done & (ap_sync_reg_channel_write_lshr_ln146_cast_loc_s ^ 1'b1));
+assign ap_channel_done_lshr_ln145_cast_loc_s = (get_centroid_fh_Bloc_1_U0_ap_done & (ap_sync_reg_channel_write_lshr_ln145_cast_loc_s ^ 1'b1));
 
-assign ap_channel_done_lshr_ln147_cast_loc_s = (get_centroid_fh_Bloc_1_U0_ap_done & (ap_sync_reg_channel_write_lshr_ln147_cast_loc_s ^ 1'b1));
+assign ap_channel_done_lshr_ln146_cast_loc_s = (get_centroid_fh_Bloc_1_U0_ap_done & (ap_sync_reg_channel_write_lshr_ln146_cast_loc_s ^ 1'b1));
 
 assign ap_channel_done_p_sum_0_loc_channel = (get_centroid_fh_Loop_U0_ap_done & (ap_sync_reg_channel_write_p_sum_0_loc_channel ^ 1'b1));
 
@@ -562,15 +562,15 @@ assign ap_channel_done_v_sum_0_loc_channel = (get_centroid_fh_Loop_U0_ap_done & 
 
 assign ap_done = get_centroid_fh_Bloc_U0_ap_done;
 
-assign ap_idle = (get_centroid_fh_entr_U0_ap_idle & get_centroid_fh_Loop_U0_ap_idle & get_centroid_fh_Bloc_U0_ap_idle & get_centroid_fh_Bloc_1_U0_ap_idle & (p_sum_0_loc_channel_empty_n ^ 1'b1) & (h_sum_0_loc_channel_empty_n ^ 1'b1) & (v_sum_0_loc_channel_empty_n ^ 1'b1) & (lshr_ln147_cast_loc_s_empty_n ^ 1'b1) & (lshr_ln146_cast_loc_s_empty_n ^ 1'b1));
+assign ap_idle = (get_centroid_fh_entr_U0_ap_idle & get_centroid_fh_Loop_U0_ap_idle & get_centroid_fh_Bloc_U0_ap_idle & get_centroid_fh_Bloc_1_U0_ap_idle & (p_sum_0_loc_channel_empty_n ^ 1'b1) & (h_sum_0_loc_channel_empty_n ^ 1'b1) & (v_sum_0_loc_channel_empty_n ^ 1'b1) & (lshr_ln146_cast_loc_s_empty_n ^ 1'b1) & (lshr_ln145_cast_loc_s_empty_n ^ 1'b1));
 
 assign ap_ready = ap_sync_ready;
 
 assign ap_sync_channel_write_h_sum_0_loc_channel = ((h_sum_0_loc_channel_full_n & ap_channel_done_h_sum_0_loc_channel) | ap_sync_reg_channel_write_h_sum_0_loc_channel);
 
-assign ap_sync_channel_write_lshr_ln146_cast_loc_s = ((lshr_ln146_cast_loc_s_full_n & ap_channel_done_lshr_ln146_cast_loc_s) | ap_sync_reg_channel_write_lshr_ln146_cast_loc_s);
+assign ap_sync_channel_write_lshr_ln145_cast_loc_s = ((lshr_ln145_cast_loc_s_full_n & ap_channel_done_lshr_ln145_cast_loc_s) | ap_sync_reg_channel_write_lshr_ln145_cast_loc_s);
 
-assign ap_sync_channel_write_lshr_ln147_cast_loc_s = ((lshr_ln147_cast_loc_s_full_n & ap_channel_done_lshr_ln147_cast_loc_s) | ap_sync_reg_channel_write_lshr_ln147_cast_loc_s);
+assign ap_sync_channel_write_lshr_ln146_cast_loc_s = ((lshr_ln146_cast_loc_s_full_n & ap_channel_done_lshr_ln146_cast_loc_s) | ap_sync_reg_channel_write_lshr_ln146_cast_loc_s);
 
 assign ap_sync_channel_write_p_sum_0_loc_channel = ((p_sum_0_loc_channel_full_n & ap_channel_done_p_sum_0_loc_channel) | ap_sync_reg_channel_write_p_sum_0_loc_channel);
 
@@ -590,7 +590,7 @@ assign c = get_centroid_fh_Bloc_U0_c;
 
 assign c_ap_vld = get_centroid_fh_Bloc_U0_c_ap_vld;
 
-assign get_centroid_fh_Bloc_1_U0_ap_continue = (ap_sync_channel_write_lshr_ln147_cast_loc_s & ap_sync_channel_write_lshr_ln146_cast_loc_s);
+assign get_centroid_fh_Bloc_1_U0_ap_continue = (ap_sync_channel_write_lshr_ln146_cast_loc_s & ap_sync_channel_write_lshr_ln145_cast_loc_s);
 
 assign get_centroid_fh_Bloc_1_U0_ap_start = start_for_get_centroid_fh_Bloc_1_U0_empty_n;
 
@@ -600,7 +600,7 @@ assign get_centroid_fh_Bloc_1_U0_start_write = 1'b0;
 
 assign get_centroid_fh_Bloc_U0_ap_continue = ap_continue;
 
-assign get_centroid_fh_Bloc_U0_ap_start = (v_sum_0_loc_channel_empty_n & p_sum_0_loc_channel_empty_n & lshr_ln147_cast_loc_s_empty_n & lshr_ln146_cast_loc_s_empty_n & h_sum_0_loc_channel_empty_n);
+assign get_centroid_fh_Bloc_U0_ap_start = (v_sum_0_loc_channel_empty_n & p_sum_0_loc_channel_empty_n & lshr_ln146_cast_loc_s_empty_n & lshr_ln145_cast_loc_s_empty_n & h_sum_0_loc_channel_empty_n);
 
 assign get_centroid_fh_Bloc_U0_start_full_n = 1'b1;
 

@@ -62,15 +62,6 @@ output   ap_ready;
 output   ap_idle;
 input   ap_continue;
 
-wire    extractChannel432_U0_ap_start;
-wire    extractChannel432_U0_ap_done;
-wire    extractChannel432_U0_ap_continue;
-wire    extractChannel432_U0_ap_idle;
-wire    extractChannel432_U0_ap_ready;
-wire    extractChannel432_U0_p_src_mat_data_V_read;
-wire   [7:0] extractChannel432_U0_p_dst_mat_data_V_din;
-wire    extractChannel432_U0_p_dst_mat_data_V_write;
-wire    ap_sync_continue;
 wire    extractChannel433_U0_ap_start;
 wire    extractChannel433_U0_ap_done;
 wire    extractChannel433_U0_ap_continue;
@@ -79,6 +70,7 @@ wire    extractChannel433_U0_ap_ready;
 wire    extractChannel433_U0_p_src_mat_data_V_read;
 wire   [7:0] extractChannel433_U0_p_dst_mat_data_V_din;
 wire    extractChannel433_U0_p_dst_mat_data_V_write;
+wire    ap_sync_continue;
 wire    extractChannel434_U0_ap_start;
 wire    extractChannel434_U0_ap_done;
 wire    extractChannel434_U0_ap_continue;
@@ -87,49 +79,41 @@ wire    extractChannel434_U0_ap_ready;
 wire    extractChannel434_U0_p_src_mat_data_V_read;
 wire   [7:0] extractChannel434_U0_p_dst_mat_data_V_din;
 wire    extractChannel434_U0_p_dst_mat_data_V_write;
+wire    extractChannel435_U0_ap_start;
+wire    extractChannel435_U0_ap_done;
+wire    extractChannel435_U0_ap_continue;
+wire    extractChannel435_U0_ap_idle;
+wire    extractChannel435_U0_ap_ready;
+wire    extractChannel435_U0_p_src_mat_data_V_read;
+wire   [7:0] extractChannel435_U0_p_dst_mat_data_V_din;
+wire    extractChannel435_U0_p_dst_mat_data_V_write;
 wire    ap_sync_done;
 wire    ap_sync_ready;
-reg    ap_sync_reg_extractChannel432_U0_ap_ready;
-wire    ap_sync_extractChannel432_U0_ap_ready;
-reg   [1:0] extractChannel432_U0_ap_ready_count;
 reg    ap_sync_reg_extractChannel433_U0_ap_ready;
 wire    ap_sync_extractChannel433_U0_ap_ready;
 reg   [1:0] extractChannel433_U0_ap_ready_count;
 reg    ap_sync_reg_extractChannel434_U0_ap_ready;
 wire    ap_sync_extractChannel434_U0_ap_ready;
 reg   [1:0] extractChannel434_U0_ap_ready_count;
-wire    extractChannel432_U0_start_full_n;
-wire    extractChannel432_U0_start_write;
+reg    ap_sync_reg_extractChannel435_U0_ap_ready;
+wire    ap_sync_extractChannel435_U0_ap_ready;
+reg   [1:0] extractChannel435_U0_ap_ready_count;
 wire    extractChannel433_U0_start_full_n;
 wire    extractChannel433_U0_start_write;
 wire    extractChannel434_U0_start_full_n;
 wire    extractChannel434_U0_start_write;
+wire    extractChannel435_U0_start_full_n;
+wire    extractChannel435_U0_start_write;
 
 // power-on initialization
 initial begin
-#0 ap_sync_reg_extractChannel432_U0_ap_ready = 1'b0;
-#0 extractChannel432_U0_ap_ready_count = 2'd0;
 #0 ap_sync_reg_extractChannel433_U0_ap_ready = 1'b0;
 #0 extractChannel433_U0_ap_ready_count = 2'd0;
 #0 ap_sync_reg_extractChannel434_U0_ap_ready = 1'b0;
 #0 extractChannel434_U0_ap_ready_count = 2'd0;
+#0 ap_sync_reg_extractChannel435_U0_ap_ready = 1'b0;
+#0 extractChannel435_U0_ap_ready_count = 2'd0;
 end
-
-extractChannel432 extractChannel432_U0(
-    .ap_clk(ap_clk),
-    .ap_rst(ap_rst),
-    .ap_start(extractChannel432_U0_ap_start),
-    .ap_done(extractChannel432_U0_ap_done),
-    .ap_continue(extractChannel432_U0_ap_continue),
-    .ap_idle(extractChannel432_U0_ap_idle),
-    .ap_ready(extractChannel432_U0_ap_ready),
-    .p_src_mat_data_V_dout(img_in_0_data_V_dout),
-    .p_src_mat_data_V_empty_n(img_in_0_data_V_empty_n),
-    .p_src_mat_data_V_read(extractChannel432_U0_p_src_mat_data_V_read),
-    .p_dst_mat_data_V_din(extractChannel432_U0_p_dst_mat_data_V_din),
-    .p_dst_mat_data_V_full_n(b_channel_data_V_full_n),
-    .p_dst_mat_data_V_write(extractChannel432_U0_p_dst_mat_data_V_write)
-);
 
 extractChannel433 extractChannel433_U0(
     .ap_clk(ap_clk),
@@ -139,11 +123,11 @@ extractChannel433 extractChannel433_U0(
     .ap_continue(extractChannel433_U0_ap_continue),
     .ap_idle(extractChannel433_U0_ap_idle),
     .ap_ready(extractChannel433_U0_ap_ready),
-    .p_src_mat_data_V_dout(img_in_1_data_V_dout),
-    .p_src_mat_data_V_empty_n(img_in_1_data_V_empty_n),
+    .p_src_mat_data_V_dout(img_in_0_data_V_dout),
+    .p_src_mat_data_V_empty_n(img_in_0_data_V_empty_n),
     .p_src_mat_data_V_read(extractChannel433_U0_p_src_mat_data_V_read),
     .p_dst_mat_data_V_din(extractChannel433_U0_p_dst_mat_data_V_din),
-    .p_dst_mat_data_V_full_n(g_channel_data_V_full_n),
+    .p_dst_mat_data_V_full_n(b_channel_data_V_full_n),
     .p_dst_mat_data_V_write(extractChannel433_U0_p_dst_mat_data_V_write)
 );
 
@@ -155,25 +139,29 @@ extractChannel434 extractChannel434_U0(
     .ap_continue(extractChannel434_U0_ap_continue),
     .ap_idle(extractChannel434_U0_ap_idle),
     .ap_ready(extractChannel434_U0_ap_ready),
-    .p_src_mat_data_V_dout(img_in_2_data_V_dout),
-    .p_src_mat_data_V_empty_n(img_in_2_data_V_empty_n),
+    .p_src_mat_data_V_dout(img_in_1_data_V_dout),
+    .p_src_mat_data_V_empty_n(img_in_1_data_V_empty_n),
     .p_src_mat_data_V_read(extractChannel434_U0_p_src_mat_data_V_read),
     .p_dst_mat_data_V_din(extractChannel434_U0_p_dst_mat_data_V_din),
-    .p_dst_mat_data_V_full_n(r_channel_data_V_full_n),
+    .p_dst_mat_data_V_full_n(g_channel_data_V_full_n),
     .p_dst_mat_data_V_write(extractChannel434_U0_p_dst_mat_data_V_write)
 );
 
-always @ (posedge ap_clk) begin
-    if (ap_rst == 1'b1) begin
-        ap_sync_reg_extractChannel432_U0_ap_ready <= 1'b0;
-    end else begin
-        if (((ap_sync_ready & ap_start) == 1'b1)) begin
-            ap_sync_reg_extractChannel432_U0_ap_ready <= 1'b0;
-        end else begin
-            ap_sync_reg_extractChannel432_U0_ap_ready <= ap_sync_extractChannel432_U0_ap_ready;
-        end
-    end
-end
+extractChannel435 extractChannel435_U0(
+    .ap_clk(ap_clk),
+    .ap_rst(ap_rst),
+    .ap_start(extractChannel435_U0_ap_start),
+    .ap_done(extractChannel435_U0_ap_done),
+    .ap_continue(extractChannel435_U0_ap_continue),
+    .ap_idle(extractChannel435_U0_ap_idle),
+    .ap_ready(extractChannel435_U0_ap_ready),
+    .p_src_mat_data_V_dout(img_in_2_data_V_dout),
+    .p_src_mat_data_V_empty_n(img_in_2_data_V_empty_n),
+    .p_src_mat_data_V_read(extractChannel435_U0_p_src_mat_data_V_read),
+    .p_dst_mat_data_V_din(extractChannel435_U0_p_dst_mat_data_V_din),
+    .p_dst_mat_data_V_full_n(r_channel_data_V_full_n),
+    .p_dst_mat_data_V_write(extractChannel435_U0_p_dst_mat_data_V_write)
+);
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
@@ -200,10 +188,14 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((extractChannel432_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
-        extractChannel432_U0_ap_ready_count <= (extractChannel432_U0_ap_ready_count - 2'd1);
-    end else if (((ap_sync_ready == 1'b0) & (extractChannel432_U0_ap_ready == 1'b1))) begin
-        extractChannel432_U0_ap_ready_count <= (extractChannel432_U0_ap_ready_count + 2'd1);
+    if (ap_rst == 1'b1) begin
+        ap_sync_reg_extractChannel435_U0_ap_ready <= 1'b0;
+    end else begin
+        if (((ap_sync_ready & ap_start) == 1'b1)) begin
+            ap_sync_reg_extractChannel435_U0_ap_ready <= 1'b0;
+        end else begin
+            ap_sync_reg_extractChannel435_U0_ap_ready <= ap_sync_extractChannel435_U0_ap_ready;
+        end
     end
 end
 
@@ -223,35 +215,35 @@ always @ (posedge ap_clk) begin
     end
 end
 
+always @ (posedge ap_clk) begin
+    if (((extractChannel435_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
+        extractChannel435_U0_ap_ready_count <= (extractChannel435_U0_ap_ready_count - 2'd1);
+    end else if (((ap_sync_ready == 1'b0) & (extractChannel435_U0_ap_ready == 1'b1))) begin
+        extractChannel435_U0_ap_ready_count <= (extractChannel435_U0_ap_ready_count + 2'd1);
+    end
+end
+
 assign ap_done = ap_sync_done;
 
-assign ap_idle = (extractChannel434_U0_ap_idle & extractChannel433_U0_ap_idle & extractChannel432_U0_ap_idle);
+assign ap_idle = (extractChannel435_U0_ap_idle & extractChannel434_U0_ap_idle & extractChannel433_U0_ap_idle);
 
 assign ap_ready = ap_sync_ready;
 
 assign ap_sync_continue = (ap_sync_done & ap_continue);
 
-assign ap_sync_done = (extractChannel434_U0_ap_done & extractChannel433_U0_ap_done & extractChannel432_U0_ap_done);
-
-assign ap_sync_extractChannel432_U0_ap_ready = (extractChannel432_U0_ap_ready | ap_sync_reg_extractChannel432_U0_ap_ready);
+assign ap_sync_done = (extractChannel435_U0_ap_done & extractChannel434_U0_ap_done & extractChannel433_U0_ap_done);
 
 assign ap_sync_extractChannel433_U0_ap_ready = (extractChannel433_U0_ap_ready | ap_sync_reg_extractChannel433_U0_ap_ready);
 
 assign ap_sync_extractChannel434_U0_ap_ready = (extractChannel434_U0_ap_ready | ap_sync_reg_extractChannel434_U0_ap_ready);
 
-assign ap_sync_ready = (ap_sync_extractChannel434_U0_ap_ready & ap_sync_extractChannel433_U0_ap_ready & ap_sync_extractChannel432_U0_ap_ready);
+assign ap_sync_extractChannel435_U0_ap_ready = (extractChannel435_U0_ap_ready | ap_sync_reg_extractChannel435_U0_ap_ready);
 
-assign b_channel_data_V_din = extractChannel432_U0_p_dst_mat_data_V_din;
+assign ap_sync_ready = (ap_sync_extractChannel435_U0_ap_ready & ap_sync_extractChannel434_U0_ap_ready & ap_sync_extractChannel433_U0_ap_ready);
 
-assign b_channel_data_V_write = extractChannel432_U0_p_dst_mat_data_V_write;
+assign b_channel_data_V_din = extractChannel433_U0_p_dst_mat_data_V_din;
 
-assign extractChannel432_U0_ap_continue = ap_sync_continue;
-
-assign extractChannel432_U0_ap_start = ((ap_sync_reg_extractChannel432_U0_ap_ready ^ 1'b1) & ap_start);
-
-assign extractChannel432_U0_start_full_n = 1'b1;
-
-assign extractChannel432_U0_start_write = 1'b0;
+assign b_channel_data_V_write = extractChannel433_U0_p_dst_mat_data_V_write;
 
 assign extractChannel433_U0_ap_continue = ap_sync_continue;
 
@@ -269,18 +261,26 @@ assign extractChannel434_U0_start_full_n = 1'b1;
 
 assign extractChannel434_U0_start_write = 1'b0;
 
-assign g_channel_data_V_din = extractChannel433_U0_p_dst_mat_data_V_din;
+assign extractChannel435_U0_ap_continue = ap_sync_continue;
 
-assign g_channel_data_V_write = extractChannel433_U0_p_dst_mat_data_V_write;
+assign extractChannel435_U0_ap_start = ((ap_sync_reg_extractChannel435_U0_ap_ready ^ 1'b1) & ap_start);
 
-assign img_in_0_data_V_read = extractChannel432_U0_p_src_mat_data_V_read;
+assign extractChannel435_U0_start_full_n = 1'b1;
 
-assign img_in_1_data_V_read = extractChannel433_U0_p_src_mat_data_V_read;
+assign extractChannel435_U0_start_write = 1'b0;
 
-assign img_in_2_data_V_read = extractChannel434_U0_p_src_mat_data_V_read;
+assign g_channel_data_V_din = extractChannel434_U0_p_dst_mat_data_V_din;
 
-assign r_channel_data_V_din = extractChannel434_U0_p_dst_mat_data_V_din;
+assign g_channel_data_V_write = extractChannel434_U0_p_dst_mat_data_V_write;
 
-assign r_channel_data_V_write = extractChannel434_U0_p_dst_mat_data_V_write;
+assign img_in_0_data_V_read = extractChannel433_U0_p_src_mat_data_V_read;
+
+assign img_in_1_data_V_read = extractChannel434_U0_p_src_mat_data_V_read;
+
+assign img_in_2_data_V_read = extractChannel435_U0_p_src_mat_data_V_read;
+
+assign r_channel_data_V_din = extractChannel435_U0_p_dst_mat_data_V_din;
+
+assign r_channel_data_V_write = extractChannel435_U0_p_dst_mat_data_V_write;
 
 endmodule //extract_channels

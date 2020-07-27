@@ -91,23 +91,23 @@ architecture behav of get_centroid_fh_Bloc is
     signal ap_block_state1 : BOOLEAN;
     signal v_offset_read_reg_186 : STD_LOGIC_VECTOR (7 downto 0);
     signal h_offset_read_reg_191 : STD_LOGIC_VECTOR (15 downto 0);
-    signal icmp_ln156_fu_109_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln156_reg_196 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln155_fu_109_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln155_reg_196 : STD_LOGIC_VECTOR (0 downto 0);
     signal grp_fu_121_p2 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_phi_mux_empty_phi_fu_94_p4 : STD_LOGIC_VECTOR (31 downto 0);
     signal empty_reg_91 : STD_LOGIC_VECTOR (31 downto 0);
     signal ap_CS_fsm_state36 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state36 : signal is "none";
-    signal trunc_ln157_fu_128_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal ap_phi_mux_empty_169_phi_fu_103_p4 : STD_LOGIC_VECTOR (15 downto 0);
-    signal empty_169_reg_100 : STD_LOGIC_VECTOR (15 downto 0);
+    signal trunc_ln156_fu_128_p1 : STD_LOGIC_VECTOR (15 downto 0);
+    signal ap_phi_mux_empty_165_phi_fu_103_p4 : STD_LOGIC_VECTOR (15 downto 0);
+    signal empty_165_reg_100 : STD_LOGIC_VECTOR (15 downto 0);
     signal tmp_i_i_fu_151_p3 : STD_LOGIC_VECTOR (47 downto 0);
     signal c_preg : STD_LOGIC_VECTOR (47 downto 0) := "000000000000000000000000000000000000000000000000";
     signal grp_fu_115_p2 : STD_LOGIC_VECTOR (15 downto 0);
-    signal zext_ln160_fu_133_p1 : STD_LOGIC_VECTOR (15 downto 0);
-    signal zext_ln161_fu_142_p1 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln161_fu_145_p2 : STD_LOGIC_VECTOR (31 downto 0);
-    signal add_ln160_fu_136_p2 : STD_LOGIC_VECTOR (15 downto 0);
+    signal zext_ln159_fu_133_p1 : STD_LOGIC_VECTOR (15 downto 0);
+    signal zext_ln160_fu_142_p1 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln160_fu_145_p2 : STD_LOGIC_VECTOR (31 downto 0);
+    signal add_ln159_fu_136_p2 : STD_LOGIC_VECTOR (15 downto 0);
     signal grp_fu_115_ap_start : STD_LOGIC;
     signal grp_fu_115_ap_done : STD_LOGIC;
     signal grp_fu_115_ce : STD_LOGIC;
@@ -236,13 +236,13 @@ begin
     end process;
 
 
-    empty_169_reg_100_assign_proc : process (ap_clk)
+    empty_165_reg_100_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln156_fu_109_p2 = ap_const_lv1_1))) then 
-                empty_169_reg_100 <= p_read2;
-            elsif (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln156_reg_196 = ap_const_lv1_0))) then 
-                empty_169_reg_100 <= trunc_ln157_fu_128_p1;
+            if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln155_fu_109_p2 = ap_const_lv1_1))) then 
+                empty_165_reg_100 <= p_read2;
+            elsif (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln155_reg_196 = ap_const_lv1_0))) then 
+                empty_165_reg_100 <= trunc_ln156_fu_128_p1;
             end if; 
         end if;
     end process;
@@ -250,9 +250,9 @@ begin
     empty_reg_91_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln156_fu_109_p2 = ap_const_lv1_1))) then 
+            if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln155_fu_109_p2 = ap_const_lv1_1))) then 
                 empty_reg_91 <= p_read1;
-            elsif (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln156_reg_196 = ap_const_lv1_0))) then 
+            elsif (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln155_reg_196 = ap_const_lv1_0))) then 
                 empty_reg_91 <= grp_fu_121_p2;
             end if; 
         end if;
@@ -262,19 +262,19 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1))) then
                 h_offset_read_reg_191 <= h_offset_dout;
-                icmp_ln156_reg_196 <= icmp_ln156_fu_109_p2;
+                icmp_ln155_reg_196 <= icmp_ln155_fu_109_p2;
                 v_offset_read_reg_186 <= v_offset_dout;
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, v_offset_empty_n, h_offset_empty_n, icmp_ln156_fu_109_p2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_done_reg, ap_CS_fsm, ap_CS_fsm_state1, v_offset_empty_n, h_offset_empty_n, icmp_ln155_fu_109_p2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
-                if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln156_fu_109_p2 = ap_const_lv1_1))) then
+                if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln155_fu_109_p2 = ap_const_lv1_1))) then
                     ap_NS_fsm <= ap_ST_fsm_state36;
-                elsif ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln156_fu_109_p2 = ap_const_lv1_0))) then
+                elsif ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln155_fu_109_p2 = ap_const_lv1_0))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state1;
@@ -353,8 +353,8 @@ begin
                 ap_NS_fsm <= "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
         end case;
     end process;
-    add_ln160_fu_136_p2 <= std_logic_vector(unsigned(ap_phi_mux_empty_169_phi_fu_103_p4) + unsigned(zext_ln160_fu_133_p1));
-    add_ln161_fu_145_p2 <= std_logic_vector(unsigned(ap_phi_mux_empty_phi_fu_94_p4) + unsigned(zext_ln161_fu_142_p1));
+    add_ln159_fu_136_p2 <= std_logic_vector(unsigned(ap_phi_mux_empty_165_phi_fu_103_p4) + unsigned(zext_ln159_fu_133_p1));
+    add_ln160_fu_145_p2 <= std_logic_vector(unsigned(ap_phi_mux_empty_phi_fu_94_p4) + unsigned(zext_ln160_fu_142_p1));
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state36 <= ap_CS_fsm(35);
 
@@ -384,19 +384,19 @@ begin
     end process;
 
 
-    ap_phi_mux_empty_169_phi_fu_103_p4_assign_proc : process(icmp_ln156_reg_196, ap_CS_fsm_state36, trunc_ln157_fu_128_p1, empty_169_reg_100)
+    ap_phi_mux_empty_165_phi_fu_103_p4_assign_proc : process(icmp_ln155_reg_196, ap_CS_fsm_state36, trunc_ln156_fu_128_p1, empty_165_reg_100)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln156_reg_196 = ap_const_lv1_0))) then 
-            ap_phi_mux_empty_169_phi_fu_103_p4 <= trunc_ln157_fu_128_p1;
+        if (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln155_reg_196 = ap_const_lv1_0))) then 
+            ap_phi_mux_empty_165_phi_fu_103_p4 <= trunc_ln156_fu_128_p1;
         else 
-            ap_phi_mux_empty_169_phi_fu_103_p4 <= empty_169_reg_100;
+            ap_phi_mux_empty_165_phi_fu_103_p4 <= empty_165_reg_100;
         end if; 
     end process;
 
 
-    ap_phi_mux_empty_phi_fu_94_p4_assign_proc : process(icmp_ln156_reg_196, grp_fu_121_p2, empty_reg_91, ap_CS_fsm_state36)
+    ap_phi_mux_empty_phi_fu_94_p4_assign_proc : process(icmp_ln155_reg_196, grp_fu_121_p2, empty_reg_91, ap_CS_fsm_state36)
     begin
-        if (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln156_reg_196 = ap_const_lv1_0))) then 
+        if (((ap_const_logic_1 = ap_CS_fsm_state36) and (icmp_ln155_reg_196 = ap_const_lv1_0))) then 
             ap_phi_mux_empty_phi_fu_94_p4 <= grp_fu_121_p2;
         else 
             ap_phi_mux_empty_phi_fu_94_p4 <= empty_reg_91;
@@ -434,9 +434,9 @@ begin
     end process;
 
 
-    grp_fu_115_ap_start_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_offset_empty_n, h_offset_empty_n, icmp_ln156_fu_109_p2)
+    grp_fu_115_ap_start_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_offset_empty_n, h_offset_empty_n, icmp_ln155_fu_109_p2)
     begin
-        if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln156_fu_109_p2 = ap_const_lv1_0))) then 
+        if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln155_fu_109_p2 = ap_const_lv1_0))) then 
             grp_fu_115_ap_start <= ap_const_logic_1;
         else 
             grp_fu_115_ap_start <= ap_const_logic_0;
@@ -445,9 +445,9 @@ begin
 
     grp_fu_115_ce <= ap_const_logic_1;
 
-    grp_fu_121_ap_start_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_offset_empty_n, h_offset_empty_n, icmp_ln156_fu_109_p2)
+    grp_fu_121_ap_start_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_offset_empty_n, h_offset_empty_n, icmp_ln155_fu_109_p2)
     begin
-        if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln156_fu_109_p2 = ap_const_lv1_0))) then 
+        if ((not(((ap_done_reg = ap_const_logic_1) or (h_offset_empty_n = ap_const_logic_0) or (v_offset_empty_n = ap_const_logic_0) or (ap_start = ap_const_logic_0))) and (ap_const_logic_1 = ap_CS_fsm_state1) and (icmp_ln155_fu_109_p2 = ap_const_lv1_0))) then 
             grp_fu_121_ap_start <= ap_const_logic_1;
         else 
             grp_fu_121_ap_start <= ap_const_logic_0;
@@ -475,9 +475,9 @@ begin
         end if; 
     end process;
 
-    icmp_ln156_fu_109_p2 <= "1" when (p_read = ap_const_lv32_0) else "0";
-    tmp_i_i_fu_151_p3 <= (add_ln161_fu_145_p2 & add_ln160_fu_136_p2);
-    trunc_ln157_fu_128_p1 <= grp_fu_115_p2(16 - 1 downto 0);
+    icmp_ln155_fu_109_p2 <= "1" when (p_read = ap_const_lv32_0) else "0";
+    tmp_i_i_fu_151_p3 <= (add_ln160_fu_145_p2 & add_ln159_fu_136_p2);
+    trunc_ln156_fu_128_p1 <= grp_fu_115_p2(16 - 1 downto 0);
 
     v_offset_blk_n_assign_proc : process(ap_start, ap_done_reg, ap_CS_fsm_state1, v_offset_empty_n)
     begin
@@ -498,6 +498,6 @@ begin
         end if; 
     end process;
 
-    zext_ln160_fu_133_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(v_offset_read_reg_186),16));
-    zext_ln161_fu_142_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(h_offset_read_reg_191),32));
+    zext_ln159_fu_133_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(v_offset_read_reg_186),16));
+    zext_ln160_fu_142_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(h_offset_read_reg_191),32));
 end behav;

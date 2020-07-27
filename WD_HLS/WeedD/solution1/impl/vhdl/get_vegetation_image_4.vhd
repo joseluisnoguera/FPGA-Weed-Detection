@@ -65,20 +65,20 @@ architecture behav of get_vegetation_image_4 is
     signal img_in_0_rows_channe_full_n : STD_LOGIC;
     signal ap_sync_reg_channel_write_img_in_0_rows_channe : STD_LOGIC := '0';
     signal ap_sync_channel_write_img_in_0_rows_channe : STD_LOGIC;
-    signal duplicateMat635769_U0_ap_start : STD_LOGIC;
-    signal duplicateMat635769_U0_start_full_n : STD_LOGIC;
-    signal duplicateMat635769_U0_start_out : STD_LOGIC;
-    signal duplicateMat635769_U0_start_write : STD_LOGIC;
-    signal duplicateMat635769_U0_p_src_cols_read : STD_LOGIC;
-    signal duplicateMat635769_U0_p_src_data_V_read : STD_LOGIC;
-    signal duplicateMat635769_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
-    signal duplicateMat635769_U0_p_dst1_data_V_write : STD_LOGIC;
-    signal duplicateMat635769_U0_p_dst2_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
-    signal duplicateMat635769_U0_p_dst2_data_V_write : STD_LOGIC;
-    signal duplicateMat635769_U0_ap_done : STD_LOGIC;
-    signal duplicateMat635769_U0_ap_ready : STD_LOGIC;
-    signal duplicateMat635769_U0_ap_idle : STD_LOGIC;
-    signal duplicateMat635769_U0_ap_continue : STD_LOGIC;
+    signal duplicateMat636770_U0_ap_start : STD_LOGIC;
+    signal duplicateMat636770_U0_start_full_n : STD_LOGIC;
+    signal duplicateMat636770_U0_start_out : STD_LOGIC;
+    signal duplicateMat636770_U0_start_write : STD_LOGIC;
+    signal duplicateMat636770_U0_p_src_cols_read : STD_LOGIC;
+    signal duplicateMat636770_U0_p_src_data_V_read : STD_LOGIC;
+    signal duplicateMat636770_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
+    signal duplicateMat636770_U0_p_dst1_data_V_write : STD_LOGIC;
+    signal duplicateMat636770_U0_p_dst2_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
+    signal duplicateMat636770_U0_p_dst2_data_V_write : STD_LOGIC;
+    signal duplicateMat636770_U0_ap_done : STD_LOGIC;
+    signal duplicateMat636770_U0_ap_ready : STD_LOGIC;
+    signal duplicateMat636770_U0_ap_idle : STD_LOGIC;
+    signal duplicateMat636770_U0_ap_continue : STD_LOGIC;
     signal duplicateMat_U0_p_src_data_V_read : STD_LOGIC;
     signal duplicateMat_U0_p_dst1_data_V_din : STD_LOGIC_VECTOR (23 downto 0);
     signal duplicateMat_U0_p_dst1_data_V_write : STD_LOGIC;
@@ -172,15 +172,15 @@ architecture behav of get_vegetation_image_4 is
     signal get_vegetation_image_2_U0_ap_return : STD_LOGIC_VECTOR (23 downto 0);
     signal ap_channel_done_sub_ln703_cast_loc_c : STD_LOGIC;
     signal sub_ln703_cast_loc_c_full_n : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_ap_start : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_ap_done : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_ap_continue : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_ap_idle : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_ap_ready : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_min_value_V_c17_read : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_veg_temp_data_V_read : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_img_out_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal convert_fp_to_8b770_U0_img_out_data_V_write : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_ap_start : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_ap_done : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_ap_continue : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_ap_idle : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_ap_ready : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_min_value_V_c17_read : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_veg_temp_data_V_read : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_img_out_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal convert_fp_to_8b771_U0_img_out_data_V_write : STD_LOGIC;
     signal ap_sync_continue : STD_LOGIC;
     signal img_in_0_rows_channe_dout : STD_LOGIC_VECTOR (8 downto 0);
     signal img_in_0_rows_channe_empty_n : STD_LOGIC;
@@ -258,9 +258,9 @@ architecture behav of get_vegetation_image_4 is
     signal ap_sync_reg_get_vegetation_image_113_U0_ap_ready : STD_LOGIC := '0';
     signal ap_sync_get_vegetation_image_113_U0_ap_ready : STD_LOGIC;
     signal get_vegetation_image_113_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
-    signal ap_sync_reg_duplicateMat635769_U0_ap_ready : STD_LOGIC := '0';
-    signal ap_sync_duplicateMat635769_U0_ap_ready : STD_LOGIC;
-    signal duplicateMat635769_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
+    signal ap_sync_reg_duplicateMat636770_U0_ap_ready : STD_LOGIC := '0';
+    signal ap_sync_duplicateMat636770_U0_ap_ready : STD_LOGIC;
+    signal duplicateMat636770_U0_ap_ready_count : STD_LOGIC_VECTOR (1 downto 0) := "00";
     signal get_vegetation_image_113_U0_start_full_n : STD_LOGIC;
     signal get_vegetation_image_113_U0_start_write : STD_LOGIC;
     signal start_for_duplicateMat_U0_din : STD_LOGIC_VECTOR (0 downto 0);
@@ -285,8 +285,8 @@ architecture behav of get_vegetation_image_4 is
     signal get_vegetation_image_3_U0_start_write : STD_LOGIC;
     signal get_vegetation_image_2_U0_start_full_n : STD_LOGIC;
     signal get_vegetation_image_2_U0_start_write : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_start_full_n : STD_LOGIC;
-    signal convert_fp_to_8b770_U0_start_write : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_start_full_n : STD_LOGIC;
+    signal convert_fp_to_8b771_U0_start_write : STD_LOGIC;
 
     component get_vegetation_image_113 IS
     port (
@@ -310,7 +310,7 @@ architecture behav of get_vegetation_image_4 is
     end component;
 
 
-    component duplicateMat635769 IS
+    component duplicateMat636770 IS
     port (
         ap_start : IN STD_LOGIC;
         start_full_n : IN STD_LOGIC;
@@ -527,7 +527,7 @@ architecture behav of get_vegetation_image_4 is
     end component;
 
 
-    component convert_fp_to_8b770 IS
+    component convert_fp_to_8b771 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -751,34 +751,34 @@ begin
         img_in_cols_out_full_n => img_in_cols_c_i_full_n,
         img_in_cols_out_write => get_vegetation_image_113_U0_img_in_cols_out_write);
 
-    duplicateMat635769_U0 : component duplicateMat635769
+    duplicateMat636770_U0 : component duplicateMat636770
     port map (
-        ap_start => duplicateMat635769_U0_ap_start,
-        start_full_n => duplicateMat635769_U0_start_full_n,
-        start_out => duplicateMat635769_U0_start_out,
-        start_write => duplicateMat635769_U0_start_write,
+        ap_start => duplicateMat636770_U0_ap_start,
+        start_full_n => duplicateMat636770_U0_start_full_n,
+        start_out => duplicateMat636770_U0_start_out,
+        start_write => duplicateMat636770_U0_start_write,
         p_src_cols_dout => img_in_cols_c_i_dout,
         p_src_cols_empty_n => img_in_cols_c_i_empty_n,
-        p_src_cols_read => duplicateMat635769_U0_p_src_cols_read,
+        p_src_cols_read => duplicateMat636770_U0_p_src_cols_read,
         p_src_data_V_dout => img_in_data_V_dout,
         p_src_data_V_empty_n => img_in_data_V_empty_n,
-        p_src_data_V_read => duplicateMat635769_U0_p_src_data_V_read,
+        p_src_data_V_read => duplicateMat636770_U0_p_src_data_V_read,
         p_dst1_rows => img_in_0_rows_channe_dout,
         p_dst1_cols => img_in_0_cols_channe_dout,
-        p_dst1_data_V_din => duplicateMat635769_U0_p_dst1_data_V_din,
+        p_dst1_data_V_din => duplicateMat636770_U0_p_dst1_data_V_din,
         p_dst1_data_V_full_n => img_in_0_data_V_full_n,
-        p_dst1_data_V_write => duplicateMat635769_U0_p_dst1_data_V_write,
-        p_dst2_data_V_din => duplicateMat635769_U0_p_dst2_data_V_din,
+        p_dst1_data_V_write => duplicateMat636770_U0_p_dst1_data_V_write,
+        p_dst2_data_V_din => duplicateMat636770_U0_p_dst2_data_V_din,
         p_dst2_data_V_full_n => img_in_1_data_V_full_n,
-        p_dst2_data_V_write => duplicateMat635769_U0_p_dst2_data_V_write,
+        p_dst2_data_V_write => duplicateMat636770_U0_p_dst2_data_V_write,
         ap_clk => ap_clk,
         ap_rst => ap_rst,
         p_dst1_rows_ap_vld => ap_const_logic_0,
         p_dst1_cols_ap_vld => ap_const_logic_0,
-        ap_done => duplicateMat635769_U0_ap_done,
-        ap_ready => duplicateMat635769_U0_ap_ready,
-        ap_idle => duplicateMat635769_U0_ap_idle,
-        ap_continue => duplicateMat635769_U0_ap_continue);
+        ap_done => duplicateMat636770_U0_ap_done,
+        ap_ready => duplicateMat636770_U0_ap_ready,
+        ap_idle => duplicateMat636770_U0_ap_idle,
+        ap_continue => duplicateMat636770_U0_ap_continue);
 
     duplicateMat_U0 : component duplicateMat
     port map (
@@ -952,25 +952,25 @@ begin
         min_value_V_out_write => get_vegetation_image_2_U0_min_value_V_out_write,
         ap_return => get_vegetation_image_2_U0_ap_return);
 
-    convert_fp_to_8b770_U0 : component convert_fp_to_8b770
+    convert_fp_to_8b771_U0 : component convert_fp_to_8b771
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => convert_fp_to_8b770_U0_ap_start,
-        ap_done => convert_fp_to_8b770_U0_ap_done,
-        ap_continue => convert_fp_to_8b770_U0_ap_continue,
-        ap_idle => convert_fp_to_8b770_U0_ap_idle,
-        ap_ready => convert_fp_to_8b770_U0_ap_ready,
+        ap_start => convert_fp_to_8b771_U0_ap_start,
+        ap_done => convert_fp_to_8b771_U0_ap_done,
+        ap_continue => convert_fp_to_8b771_U0_ap_continue,
+        ap_idle => convert_fp_to_8b771_U0_ap_idle,
+        ap_ready => convert_fp_to_8b771_U0_ap_ready,
         min_value_V_c17_dout => min_value_V_c17_i_dout,
         min_value_V_c17_empty_n => min_value_V_c17_i_empty_n,
-        min_value_V_c17_read => convert_fp_to_8b770_U0_min_value_V_c17_read,
+        min_value_V_c17_read => convert_fp_to_8b771_U0_min_value_V_c17_read,
         sub_ln703_cast_loc_c => sub_ln703_cast_loc_c_dout,
         veg_temp_data_V_dout => veg_temp_data_V_dout,
         veg_temp_data_V_empty_n => veg_temp_data_V_empty_n,
-        veg_temp_data_V_read => convert_fp_to_8b770_U0_veg_temp_data_V_read,
-        img_out_data_V_din => convert_fp_to_8b770_U0_img_out_data_V_din,
+        veg_temp_data_V_read => convert_fp_to_8b771_U0_veg_temp_data_V_read,
+        img_out_data_V_din => convert_fp_to_8b771_U0_img_out_data_V_din,
         img_out_data_V_full_n => img_out_data_V_full_n,
-        img_out_data_V_write => convert_fp_to_8b770_U0_img_out_data_V_write);
+        img_out_data_V_write => convert_fp_to_8b771_U0_img_out_data_V_write);
 
     img_in_0_rows_channe_U : component fifo_w9_d2_A
     port map (
@@ -983,7 +983,7 @@ begin
         if_write => ap_channel_done_img_in_0_rows_channe,
         if_dout => img_in_0_rows_channe_dout,
         if_empty_n => img_in_0_rows_channe_empty_n,
-        if_read => duplicateMat635769_U0_ap_ready);
+        if_read => duplicateMat636770_U0_ap_ready);
 
     img_in_0_cols_channe_U : component fifo_w10_d2_A_x0
     port map (
@@ -996,7 +996,7 @@ begin
         if_write => ap_channel_done_img_in_0_cols_channe,
         if_dout => img_in_0_cols_channe_dout,
         if_empty_n => img_in_0_cols_channe_empty_n,
-        if_read => duplicateMat635769_U0_ap_ready);
+        if_read => duplicateMat636770_U0_ap_ready);
 
     img_in_cols_c_i_U : component fifo_w10_d2_A_x0
     port map (
@@ -1009,7 +1009,7 @@ begin
         if_write => get_vegetation_image_113_U0_img_in_cols_out_write,
         if_dout => img_in_cols_c_i_dout,
         if_empty_n => img_in_cols_c_i_empty_n,
-        if_read => duplicateMat635769_U0_p_src_cols_read);
+        if_read => duplicateMat636770_U0_p_src_cols_read);
 
     img_in_0_data_V_U : component fifo_w24_d1_A
     port map (
@@ -1017,9 +1017,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat635769_U0_p_dst1_data_V_din,
+        if_din => duplicateMat636770_U0_p_dst1_data_V_din,
         if_full_n => img_in_0_data_V_full_n,
-        if_write => duplicateMat635769_U0_p_dst1_data_V_write,
+        if_write => duplicateMat636770_U0_p_dst1_data_V_write,
         if_dout => img_in_0_data_V_dout,
         if_empty_n => img_in_0_data_V_empty_n,
         if_read => duplicateMat_U0_p_src_data_V_read);
@@ -1030,9 +1030,9 @@ begin
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
-        if_din => duplicateMat635769_U0_p_dst2_data_V_din,
+        if_din => duplicateMat636770_U0_p_dst2_data_V_din,
         if_full_n => img_in_1_data_V_full_n,
-        if_write => duplicateMat635769_U0_p_dst2_data_V_write,
+        if_write => duplicateMat636770_U0_p_dst2_data_V_write,
         if_dout => img_in_1_data_V_dout,
         if_empty_n => img_in_1_data_V_empty_n,
         if_read => extract_channels_U0_img_in_0_data_V_read);
@@ -1191,7 +1191,7 @@ begin
         if_write => get_exg_image_U0_veg_img_data_V_write,
         if_dout => veg_temp_data_V_dout,
         if_empty_n => veg_temp_data_V_empty_n,
-        if_read => convert_fp_to_8b770_U0_veg_temp_data_V_read);
+        if_read => convert_fp_to_8b771_U0_veg_temp_data_V_read);
 
     min_value_V_c_i_U : component fifo_w28_d3_A
     port map (
@@ -1243,7 +1243,7 @@ begin
         if_write => get_vegetation_image_2_U0_min_value_V_out_write,
         if_dout => min_value_V_c17_i_dout,
         if_empty_n => min_value_V_c17_i_empty_n,
-        if_read => convert_fp_to_8b770_U0_min_value_V_c17_read);
+        if_read => convert_fp_to_8b771_U0_min_value_V_c17_read);
 
     sub_ln703_cast_loc_c_U : component fifo_w24_d2_A_x1
     port map (
@@ -1256,7 +1256,7 @@ begin
         if_write => get_vegetation_image_2_U0_ap_done,
         if_dout => sub_ln703_cast_loc_c_dout,
         if_empty_n => sub_ln703_cast_loc_c_empty_n,
-        if_read => convert_fp_to_8b770_U0_ap_ready);
+        if_read => convert_fp_to_8b771_U0_ap_ready);
 
     start_for_duplicasc4_U : component start_for_duplicasc4
     port map (
@@ -1266,7 +1266,7 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_duplicateMat_U0_din,
         if_full_n => start_for_duplicateMat_U0_full_n,
-        if_write => duplicateMat635769_U0_start_write,
+        if_write => duplicateMat636770_U0_start_write,
         if_dout => start_for_duplicateMat_U0_dout,
         if_empty_n => start_for_duplicateMat_U0_empty_n,
         if_read => duplicateMat_U0_ap_ready);
@@ -1279,7 +1279,7 @@ begin
         if_write_ce => ap_const_logic_1,
         if_din => start_for_extract_channels_U0_din,
         if_full_n => start_for_extract_channels_U0_full_n,
-        if_write => duplicateMat635769_U0_start_write,
+        if_write => duplicateMat636770_U0_start_write,
         if_dout => start_for_extract_channels_U0_dout,
         if_empty_n => start_for_extract_channels_U0_empty_n,
         if_read => extract_channels_U0_ap_ready);
@@ -1320,16 +1320,16 @@ begin
     end process;
 
 
-    ap_sync_reg_duplicateMat635769_U0_ap_ready_assign_proc : process(ap_clk)
+    ap_sync_reg_duplicateMat636770_U0_ap_ready_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                ap_sync_reg_duplicateMat635769_U0_ap_ready <= ap_const_logic_0;
+                ap_sync_reg_duplicateMat636770_U0_ap_ready <= ap_const_logic_0;
             else
                 if (((real_start and ap_sync_ready) = ap_const_logic_1)) then 
-                    ap_sync_reg_duplicateMat635769_U0_ap_ready <= ap_const_logic_0;
+                    ap_sync_reg_duplicateMat636770_U0_ap_ready <= ap_const_logic_0;
                 else 
-                    ap_sync_reg_duplicateMat635769_U0_ap_ready <= ap_sync_duplicateMat635769_U0_ap_ready;
+                    ap_sync_reg_duplicateMat636770_U0_ap_ready <= ap_sync_duplicateMat636770_U0_ap_ready;
                 end if; 
             end if;
         end if;
@@ -1424,13 +1424,13 @@ begin
     end process;
 
 
-    duplicateMat635769_U0_ap_ready_count_assign_proc : process (ap_clk)
+    duplicateMat636770_U0_ap_ready_count_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((duplicateMat635769_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
-                duplicateMat635769_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat635769_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
-            elsif (((ap_sync_ready = ap_const_logic_0) and (duplicateMat635769_U0_ap_ready = ap_const_logic_1))) then 
-                duplicateMat635769_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat635769_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
+            if (((duplicateMat636770_U0_ap_ready = ap_const_logic_0) and (ap_sync_ready = ap_const_logic_1))) then 
+                duplicateMat636770_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat636770_U0_ap_ready_count) - unsigned(ap_const_lv2_1));
+            elsif (((ap_sync_ready = ap_const_logic_0) and (duplicateMat636770_U0_ap_ready = ap_const_logic_1))) then 
+                duplicateMat636770_U0_ap_ready_count <= std_logic_vector(unsigned(duplicateMat636770_U0_ap_ready_count) + unsigned(ap_const_lv2_1));
             end if; 
         end if;
     end process;
@@ -1449,23 +1449,23 @@ begin
     ap_channel_done_img_in_0_cols_channe <= (get_vegetation_image_113_U0_ap_done and (ap_sync_reg_channel_write_img_in_0_cols_channe xor ap_const_logic_1));
     ap_channel_done_img_in_0_rows_channe <= (get_vegetation_image_113_U0_ap_done and (ap_sync_reg_channel_write_img_in_0_rows_channe xor ap_const_logic_1));
     ap_channel_done_sub_ln703_cast_loc_c <= get_vegetation_image_2_U0_ap_done;
-    ap_done <= convert_fp_to_8b770_U0_ap_done;
-    ap_idle <= (get_vegetation_image_U0_ap_idle and get_vegetation_image_3_U0_ap_idle and get_vegetation_image_2_U0_ap_idle and get_vegetation_image_113_U0_ap_idle and get_max_from_channel_U0_ap_idle and get_exg_image_U0_ap_idle and extract_channels_U0_ap_idle and (sub_ln703_cast_loc_c_empty_n xor ap_const_logic_1) and (extLd_cast_loc_chann_empty_n xor ap_const_logic_1) and (img_in_0_cols_channe_empty_n xor ap_const_logic_1) and (img_in_0_rows_channe_empty_n xor ap_const_logic_1) and duplicateMat_U0_ap_idle and duplicateMat635769_U0_ap_idle and convert_fp_to_8b770_U0_ap_idle);
+    ap_done <= convert_fp_to_8b771_U0_ap_done;
+    ap_idle <= (get_vegetation_image_U0_ap_idle and get_vegetation_image_3_U0_ap_idle and get_vegetation_image_2_U0_ap_idle and get_vegetation_image_113_U0_ap_idle and get_max_from_channel_U0_ap_idle and get_exg_image_U0_ap_idle and extract_channels_U0_ap_idle and (sub_ln703_cast_loc_c_empty_n xor ap_const_logic_1) and (extLd_cast_loc_chann_empty_n xor ap_const_logic_1) and (img_in_0_cols_channe_empty_n xor ap_const_logic_1) and (img_in_0_rows_channe_empty_n xor ap_const_logic_1) and duplicateMat_U0_ap_idle and duplicateMat636770_U0_ap_idle and convert_fp_to_8b771_U0_ap_idle);
     ap_ready <= internal_ap_ready;
     ap_sync_channel_write_img_in_0_cols_channe <= ((img_in_0_cols_channe_full_n and ap_channel_done_img_in_0_cols_channe) or ap_sync_reg_channel_write_img_in_0_cols_channe);
     ap_sync_channel_write_img_in_0_rows_channe <= ((img_in_0_rows_channe_full_n and ap_channel_done_img_in_0_rows_channe) or ap_sync_reg_channel_write_img_in_0_rows_channe);
     ap_sync_continue <= ap_continue;
-    ap_sync_done <= convert_fp_to_8b770_U0_ap_done;
-    ap_sync_duplicateMat635769_U0_ap_ready <= (duplicateMat635769_U0_ap_ready or ap_sync_reg_duplicateMat635769_U0_ap_ready);
+    ap_sync_done <= convert_fp_to_8b771_U0_ap_done;
+    ap_sync_duplicateMat636770_U0_ap_ready <= (duplicateMat636770_U0_ap_ready or ap_sync_reg_duplicateMat636770_U0_ap_ready);
     ap_sync_get_vegetation_image_113_U0_ap_ready <= (get_vegetation_image_113_U0_ap_ready or ap_sync_reg_get_vegetation_image_113_U0_ap_ready);
-    ap_sync_ready <= (ap_sync_get_vegetation_image_113_U0_ap_ready and ap_sync_duplicateMat635769_U0_ap_ready);
-    convert_fp_to_8b770_U0_ap_continue <= ap_continue;
-    convert_fp_to_8b770_U0_ap_start <= sub_ln703_cast_loc_c_empty_n;
-    convert_fp_to_8b770_U0_start_full_n <= ap_const_logic_1;
-    convert_fp_to_8b770_U0_start_write <= ap_const_logic_0;
-    duplicateMat635769_U0_ap_continue <= ap_const_logic_1;
-    duplicateMat635769_U0_ap_start <= (real_start and img_in_0_rows_channe_empty_n and img_in_0_cols_channe_empty_n and (ap_sync_reg_duplicateMat635769_U0_ap_ready xor ap_const_logic_1));
-    duplicateMat635769_U0_start_full_n <= (start_for_extract_channels_U0_full_n and start_for_duplicateMat_U0_full_n);
+    ap_sync_ready <= (ap_sync_get_vegetation_image_113_U0_ap_ready and ap_sync_duplicateMat636770_U0_ap_ready);
+    convert_fp_to_8b771_U0_ap_continue <= ap_continue;
+    convert_fp_to_8b771_U0_ap_start <= sub_ln703_cast_loc_c_empty_n;
+    convert_fp_to_8b771_U0_start_full_n <= ap_const_logic_1;
+    convert_fp_to_8b771_U0_start_write <= ap_const_logic_0;
+    duplicateMat636770_U0_ap_continue <= ap_const_logic_1;
+    duplicateMat636770_U0_ap_start <= (real_start and img_in_0_rows_channe_empty_n and img_in_0_cols_channe_empty_n and (ap_sync_reg_duplicateMat636770_U0_ap_ready xor ap_const_logic_1));
+    duplicateMat636770_U0_start_full_n <= (start_for_extract_channels_U0_full_n and start_for_duplicateMat_U0_full_n);
     duplicateMat_U0_ap_continue <= ap_const_logic_1;
     duplicateMat_U0_ap_start <= start_for_duplicateMat_U0_empty_n;
     duplicateMat_U0_start_full_n <= ap_const_logic_1;
@@ -1508,9 +1508,9 @@ begin
     get_vegetation_image_U0_start_full_n <= ap_const_logic_1;
     get_vegetation_image_U0_start_write <= ap_const_logic_0;
     img_in_cols_read <= get_vegetation_image_113_U0_img_in_cols_read;
-    img_in_data_V_read <= duplicateMat635769_U0_p_src_data_V_read;
-    img_out_data_V_din <= convert_fp_to_8b770_U0_img_out_data_V_din;
-    img_out_data_V_write <= convert_fp_to_8b770_U0_img_out_data_V_write;
+    img_in_data_V_read <= duplicateMat636770_U0_p_src_data_V_read;
+    img_out_data_V_din <= convert_fp_to_8b771_U0_img_out_data_V_din;
+    img_out_data_V_write <= convert_fp_to_8b771_U0_img_out_data_V_write;
     internal_ap_ready <= ap_sync_ready;
 
     real_start_assign_proc : process(ap_start, start_full_n, start_once_reg)

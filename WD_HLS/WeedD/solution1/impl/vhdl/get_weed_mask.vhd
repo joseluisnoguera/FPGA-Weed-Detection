@@ -23,7 +23,7 @@ port (
     lines_founded_read : IN STD_LOGIC;
     lines_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
     lines_ce0 : OUT STD_LOGIC;
-    lines_q0 : IN STD_LOGIC_VECTOR (56 downto 0) );
+    lines_q0 : IN STD_LOGIC_VECTOR (64 downto 0) );
 end;
 
 
@@ -63,17 +63,17 @@ architecture behav of get_weed_mask is
     signal ap_CS_fsm_state4 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state4 : signal is "none";
     signal lines_founded_read_1_read_fu_66_p2 : STD_LOGIC_VECTOR (0 downto 0);
-    signal icmp_ln415_fu_170_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln414_fu_170_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal tmp_6_reg_183 : STD_LOGIC_VECTOR (4 downto 0);
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
-    signal tmp_34_fu_128_p3 : STD_LOGIC_VECTOR (0 downto 0);
+    signal tmp_52_fu_128_p3 : STD_LOGIC_VECTOR (0 downto 0);
     signal h_2_fu_152_p2 : STD_LOGIC_VECTOR (8 downto 0);
     signal h_2_reg_191 : STD_LOGIC_VECTOR (8 downto 0);
     signal ap_CS_fsm_state3 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state3 : signal is "none";
     signal add_ln703_fu_158_p2 : STD_LOGIC_VECTOR (13 downto 0);
-    signal icmp_ln413_fu_146_p2 : STD_LOGIC_VECTOR (0 downto 0);
+    signal icmp_ln412_fu_146_p2 : STD_LOGIC_VECTOR (0 downto 0);
     signal v_2_fu_164_p2 : STD_LOGIC_VECTOR (8 downto 0);
     signal grp_is_crop_or_furrow_fu_117_ap_start : STD_LOGIC;
     signal grp_is_crop_or_furrow_fu_117_ap_done : STD_LOGIC;
@@ -103,7 +103,7 @@ architecture behav of get_weed_mask is
         ap_ready : OUT STD_LOGIC;
         lines_address0 : OUT STD_LOGIC_VECTOR (2 downto 0);
         lines_ce0 : OUT STD_LOGIC;
-        lines_q0 : IN STD_LOGIC_VECTOR (56 downto 0);
+        lines_q0 : IN STD_LOGIC_VECTOR (64 downto 0);
         px_read : IN STD_LOGIC_VECTOR (8 downto 0);
         py_read : IN STD_LOGIC_VECTOR (8 downto 0);
         crop_width_read : IN STD_LOGIC_VECTOR (4 downto 0);
@@ -151,7 +151,7 @@ begin
             if (ap_rst = '1') then
                 grp_is_crop_or_furrow_fu_117_ap_start_reg <= ap_const_logic_0;
             else
-                if (((icmp_ln413_fu_146_p2 = ap_const_lv1_0) and (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+                if (((icmp_ln412_fu_146_p2 = ap_const_lv1_0) and (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
                     grp_is_crop_or_furrow_fu_117_ap_start_reg <= ap_const_logic_1;
                 elsif ((grp_is_crop_or_furrow_fu_117_ap_ready = ap_const_logic_1)) then 
                     grp_is_crop_or_furrow_fu_117_ap_start_reg <= ap_const_logic_0;
@@ -166,7 +166,7 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((not(((ap_const_boolean_1 = ap_block_state4_on_subcall_done) or ((weed_mask_tmp_data_V_full_n = ap_const_logic_0) and (ap_predicate_op34_write_state4 = ap_const_boolean_1)) or ((weed_mask_tmp_data_V_full_n = ap_const_logic_0) and (ap_predicate_op32_write_state4 = ap_const_boolean_1)))) and (ap_const_logic_1 = ap_CS_fsm_state4))) then 
                 h_reg_105 <= h_2_reg_191;
-            elsif (((tmp_34_fu_128_p3 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+            elsif (((tmp_52_fu_128_p3 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
                 h_reg_105 <= ap_const_lv9_0;
             end if; 
         end if;
@@ -175,7 +175,7 @@ begin
     p_Val2_s_reg_81_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln413_fu_146_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+            if (((icmp_ln412_fu_146_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
                 p_Val2_s_reg_81 <= add_ln703_fu_158_p2;
             elsif (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 p_Val2_s_reg_81 <= ap_const_lv14_3300;
@@ -186,7 +186,7 @@ begin
     v_reg_93_assign_proc : process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((icmp_ln413_fu_146_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
+            if (((icmp_ln412_fu_146_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then 
                 v_reg_93 <= v_2_fu_164_p2;
             elsif (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
                 v_reg_93 <= ap_const_lv9_B3;
@@ -204,13 +204,13 @@ begin
     process (ap_clk)
     begin
         if (ap_clk'event and ap_clk = '1') then
-            if (((tmp_34_fu_128_p3 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+            if (((tmp_52_fu_128_p3 = ap_const_lv1_0) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                 tmp_6_reg_183 <= p_Val2_s_reg_81(13 downto 9);
             end if;
         end if;
     end process;
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, weed_mask_tmp_data_V_full_n, ap_CS_fsm_state4, ap_CS_fsm_state2, tmp_34_fu_128_p3, ap_CS_fsm_state3, icmp_ln413_fu_146_p2, ap_predicate_op32_write_state4, ap_predicate_op34_write_state4, ap_block_state4_on_subcall_done)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, weed_mask_tmp_data_V_full_n, ap_CS_fsm_state4, ap_CS_fsm_state2, tmp_52_fu_128_p3, ap_CS_fsm_state3, icmp_ln412_fu_146_p2, ap_predicate_op32_write_state4, ap_predicate_op34_write_state4, ap_block_state4_on_subcall_done)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -220,13 +220,13 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((tmp_34_fu_128_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                if (((tmp_52_fu_128_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state3;
                 end if;
             when ap_ST_fsm_state3 => 
-                if (((icmp_ln413_fu_146_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
+                if (((icmp_ln412_fu_146_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state3))) then
                     ap_NS_fsm <= ap_ST_fsm_state2;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state4;
@@ -265,9 +265,9 @@ begin
     end process;
 
 
-    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, ap_CS_fsm_state2, tmp_34_fu_128_p3)
+    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, ap_CS_fsm_state2, tmp_52_fu_128_p3)
     begin
-        if ((((tmp_34_fu_128_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)))) then 
+        if ((((tmp_52_fu_128_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2)) or ((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -285,21 +285,21 @@ begin
     end process;
 
 
-    ap_predicate_op32_write_state4_assign_proc : process(lines_founded_read_1_read_fu_66_p2, icmp_ln415_fu_170_p2)
+    ap_predicate_op32_write_state4_assign_proc : process(lines_founded_read_1_read_fu_66_p2, icmp_ln414_fu_170_p2)
     begin
-                ap_predicate_op32_write_state4 <= ((icmp_ln415_fu_170_p2 = ap_const_lv1_0) or (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_0));
+                ap_predicate_op32_write_state4 <= ((icmp_ln414_fu_170_p2 = ap_const_lv1_0) or (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_0));
     end process;
 
 
-    ap_predicate_op34_write_state4_assign_proc : process(lines_founded_read_1_read_fu_66_p2, icmp_ln415_fu_170_p2)
+    ap_predicate_op34_write_state4_assign_proc : process(lines_founded_read_1_read_fu_66_p2, icmp_ln414_fu_170_p2)
     begin
-                ap_predicate_op34_write_state4 <= ((icmp_ln415_fu_170_p2 = ap_const_lv1_1) and (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_1));
+                ap_predicate_op34_write_state4 <= ((icmp_ln414_fu_170_p2 = ap_const_lv1_1) and (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_1));
     end process;
 
 
-    ap_ready_assign_proc : process(ap_CS_fsm_state2, tmp_34_fu_128_p3)
+    ap_ready_assign_proc : process(ap_CS_fsm_state2, tmp_52_fu_128_p3)
     begin
-        if (((tmp_34_fu_128_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if (((tmp_52_fu_128_p3 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
@@ -308,17 +308,17 @@ begin
 
     grp_is_crop_or_furrow_fu_117_ap_start <= grp_is_crop_or_furrow_fu_117_ap_start_reg;
     h_2_fu_152_p2 <= std_logic_vector(unsigned(h_reg_105) + unsigned(ap_const_lv9_1));
-    icmp_ln413_fu_146_p2 <= "1" when (h_reg_105 = ap_const_lv9_140) else "0";
-    icmp_ln415_fu_170_p2 <= "1" when (grp_is_crop_or_furrow_fu_117_ap_return = ap_const_lv2_3) else "0";
+    icmp_ln412_fu_146_p2 <= "1" when (h_reg_105 = ap_const_lv9_140) else "0";
+    icmp_ln414_fu_170_p2 <= "1" when (grp_is_crop_or_furrow_fu_117_ap_return = ap_const_lv2_3) else "0";
     lines_address0 <= grp_is_crop_or_furrow_fu_117_lines_address0;
     lines_ce0 <= grp_is_crop_or_furrow_fu_117_lines_ce0;
     lines_founded_read_1_read_fu_66_p2 <= (0=>lines_founded_read, others=>'-');
-    tmp_34_fu_128_p3 <= v_reg_93(8 downto 8);
+    tmp_52_fu_128_p3 <= v_reg_93(8 downto 8);
     v_2_fu_164_p2 <= std_logic_vector(unsigned(v_reg_93) + unsigned(ap_const_lv9_1FF));
 
-    weed_mask_tmp_data_V_blk_n_assign_proc : process(weed_mask_tmp_data_V_full_n, ap_CS_fsm_state4, lines_founded_read_1_read_fu_66_p2, icmp_ln415_fu_170_p2)
+    weed_mask_tmp_data_V_blk_n_assign_proc : process(weed_mask_tmp_data_V_full_n, ap_CS_fsm_state4, lines_founded_read_1_read_fu_66_p2, icmp_ln414_fu_170_p2)
     begin
-        if ((((ap_const_logic_1 = ap_CS_fsm_state4) and ((icmp_ln415_fu_170_p2 = ap_const_lv1_0) or (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_0))) or ((icmp_ln415_fu_170_p2 = ap_const_lv1_1) and (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
+        if ((((ap_const_logic_1 = ap_CS_fsm_state4) and ((icmp_ln414_fu_170_p2 = ap_const_lv1_0) or (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_0))) or ((icmp_ln414_fu_170_p2 = ap_const_lv1_1) and (lines_founded_read_1_read_fu_66_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_state4)))) then 
             weed_mask_tmp_data_V_blk_n <= weed_mask_tmp_data_V_full_n;
         else 
             weed_mask_tmp_data_V_blk_n <= ap_const_logic_1;

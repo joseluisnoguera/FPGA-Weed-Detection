@@ -97,7 +97,7 @@ architecture behav of xFUDivAreaUp_2 is
     signal ap_NS_fsm : STD_LOGIC_VECTOR (48 downto 0);
     signal grp_fu_28_p10 : STD_LOGIC_VECTOR (44 downto 0);
 
-    component ip_accel_app_udivbak IS
+    component ip_accel_app_udivbck IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -118,7 +118,7 @@ architecture behav of xFUDivAreaUp_2 is
 
 
 begin
-    ip_accel_app_udivbak_U533 : component ip_accel_app_udivbak
+    ip_accel_app_udivbck_U555 : component ip_accel_app_udivbck
     generic map (
         ID => 1,
         NUM_STAGE => 49,

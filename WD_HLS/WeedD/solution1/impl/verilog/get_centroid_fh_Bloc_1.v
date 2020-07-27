@@ -59,8 +59,8 @@ reg    h_limit_blk_n;
 reg    ap_block_state1;
 wire   [6:0] lshr_ln_fu_46_p4;
 wire   [14:0] lshr_ln1_fu_60_p4;
-wire   [15:0] zext_ln146_fu_56_p1;
-wire   [31:0] zext_ln147_fu_70_p1;
+wire   [15:0] zext_ln145_fu_56_p1;
+wire   [31:0] zext_ln146_fu_70_p1;
 reg   [15:0] ap_return_0_preg;
 reg   [31:0] ap_return_1_preg;
 reg   [0:0] ap_NS_fsm;
@@ -104,7 +104,7 @@ always @ (posedge ap_clk) begin
         ap_return_0_preg[6] <= 1'b0;
     end else begin
         if ((~((ap_start == 1'b0) | (h_limit_empty_n == 1'b0) | (v_limit_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-                        ap_return_0_preg[6 : 0] <= zext_ln146_fu_56_p1[6 : 0];
+                        ap_return_0_preg[6 : 0] <= zext_ln145_fu_56_p1[6 : 0];
         end
     end
 end
@@ -128,7 +128,7 @@ always @ (posedge ap_clk) begin
         ap_return_1_preg[14] <= 1'b0;
     end else begin
         if ((~((ap_start == 1'b0) | (h_limit_empty_n == 1'b0) | (v_limit_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-                        ap_return_1_preg[14 : 0] <= zext_ln147_fu_70_p1[14 : 0];
+                        ap_return_1_preg[14 : 0] <= zext_ln146_fu_70_p1[14 : 0];
         end
     end
 end
@@ -159,7 +159,7 @@ end
 
 always @ (*) begin
     if ((~((ap_start == 1'b0) | (h_limit_empty_n == 1'b0) | (v_limit_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_return_0 = zext_ln146_fu_56_p1;
+        ap_return_0 = zext_ln145_fu_56_p1;
     end else begin
         ap_return_0 = ap_return_0_preg;
     end
@@ -167,7 +167,7 @@ end
 
 always @ (*) begin
     if ((~((ap_start == 1'b0) | (h_limit_empty_n == 1'b0) | (v_limit_empty_n == 1'b0) | (ap_done_reg == 1'b1)) & (1'b1 == ap_CS_fsm_state1))) begin
-        ap_return_1 = zext_ln147_fu_70_p1;
+        ap_return_1 = zext_ln146_fu_70_p1;
     end else begin
         ap_return_1 = ap_return_1_preg;
     end
@@ -226,9 +226,9 @@ assign lshr_ln1_fu_60_p4 = {{h_limit_dout[15:1]}};
 
 assign lshr_ln_fu_46_p4 = {{v_limit_dout[7:1]}};
 
-assign zext_ln146_fu_56_p1 = lshr_ln_fu_46_p4;
+assign zext_ln145_fu_56_p1 = lshr_ln_fu_46_p4;
 
-assign zext_ln147_fu_70_p1 = lshr_ln1_fu_60_p4;
+assign zext_ln146_fu_70_p1 = lshr_ln1_fu_60_p4;
 
 always @ (posedge ap_clk) begin
     ap_return_0_preg[15:7] <= 9'b000000000;

@@ -417,7 +417,7 @@ architecture behav of sectors_weed_classif is
     end component;
 
 
-    component ip_accel_app_udiv6jw IS
+    component ip_accel_app_udiv8jQ IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -434,7 +434,7 @@ architecture behav of sectors_weed_classif is
     end component;
 
 
-    component sectors_weed_clas3i2 IS
+    component sectors_weed_clas5jm IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -451,7 +451,7 @@ architecture behav of sectors_weed_classif is
     end component;
 
 
-    component sectors_weed_clas4jc IS
+    component sectors_weed_clas6jw IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -467,7 +467,7 @@ architecture behav of sectors_weed_classif is
     end component;
 
 
-    component sectors_weed_clas5jm IS
+    component sectors_weed_clas7jG IS
     generic (
         DataWidth : INTEGER;
         AddressRange : INTEGER;
@@ -489,7 +489,7 @@ architecture behav of sectors_weed_classif is
 
 
 begin
-    segments_U : component sectors_weed_clas3i2
+    segments_U : component sectors_weed_clas5jm
     generic map (
         DataWidth => 8,
         AddressRange => 13,
@@ -504,7 +504,7 @@ begin
         ce1 => segments_ce1,
         q1 => segments_q1);
 
-    quadrant_space_U : component sectors_weed_clas4jc
+    quadrant_space_U : component sectors_weed_clas6jw
     generic map (
         DataWidth => 16,
         AddressRange => 5,
@@ -518,7 +518,7 @@ begin
         d0 => quadrant_space_d0,
         q0 => quadrant_space_q0);
 
-    quadrant_weed_V_U : component sectors_weed_clas5jm
+    quadrant_weed_V_U : component sectors_weed_clas7jG
     generic map (
         DataWidth => 24,
         AddressRange => 5,
@@ -554,7 +554,7 @@ begin
         p_dst_data_V_full_n => weed_mask_out_data_V_full_n,
         p_dst_data_V_write => grp_bitwise_and_fu_403_p_dst_data_V_write);
 
-    ip_accel_app_udiv6jw_U496 : component ip_accel_app_udiv6jw
+    ip_accel_app_udiv8jQ_U518 : component ip_accel_app_udiv8jQ
     generic map (
         ID => 1,
         NUM_STAGE => 36,

@@ -10,7 +10,7 @@ use ieee.std_logic_unsigned.all;
 entity xFResizeAreaUpScabhl_ram is 
     generic(
             MEM_TYPE    : string := "block"; 
-            DWIDTH     : integer := 32; 
+            DWIDTH     : integer := 13; 
             AWIDTH     : integer := 11; 
             MEM_SIZE    : integer := 1280
     ); 
@@ -71,7 +71,7 @@ use IEEE.std_logic_1164.all;
 
 entity xFResizeAreaUpScabhl is
     generic (
-        DataWidth : INTEGER := 32;
+        DataWidth : INTEGER := 13;
         AddressRange : INTEGER := 1280;
         AddressWidth : INTEGER := 11);
     port (

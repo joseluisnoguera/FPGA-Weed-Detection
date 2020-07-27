@@ -75,20 +75,20 @@ wire    ap_channel_done_img_in_0_rows_channe;
 wire    img_in_0_rows_channe_full_n;
 reg    ap_sync_reg_channel_write_img_in_0_rows_channe;
 wire    ap_sync_channel_write_img_in_0_rows_channe;
-wire    duplicateMat635769_U0_ap_start;
-wire    duplicateMat635769_U0_start_full_n;
-wire    duplicateMat635769_U0_start_out;
-wire    duplicateMat635769_U0_start_write;
-wire    duplicateMat635769_U0_p_src_cols_read;
-wire    duplicateMat635769_U0_p_src_data_V_read;
-wire   [23:0] duplicateMat635769_U0_p_dst1_data_V_din;
-wire    duplicateMat635769_U0_p_dst1_data_V_write;
-wire   [23:0] duplicateMat635769_U0_p_dst2_data_V_din;
-wire    duplicateMat635769_U0_p_dst2_data_V_write;
-wire    duplicateMat635769_U0_ap_done;
-wire    duplicateMat635769_U0_ap_ready;
-wire    duplicateMat635769_U0_ap_idle;
-wire    duplicateMat635769_U0_ap_continue;
+wire    duplicateMat636770_U0_ap_start;
+wire    duplicateMat636770_U0_start_full_n;
+wire    duplicateMat636770_U0_start_out;
+wire    duplicateMat636770_U0_start_write;
+wire    duplicateMat636770_U0_p_src_cols_read;
+wire    duplicateMat636770_U0_p_src_data_V_read;
+wire   [23:0] duplicateMat636770_U0_p_dst1_data_V_din;
+wire    duplicateMat636770_U0_p_dst1_data_V_write;
+wire   [23:0] duplicateMat636770_U0_p_dst2_data_V_din;
+wire    duplicateMat636770_U0_p_dst2_data_V_write;
+wire    duplicateMat636770_U0_ap_done;
+wire    duplicateMat636770_U0_ap_ready;
+wire    duplicateMat636770_U0_ap_idle;
+wire    duplicateMat636770_U0_ap_continue;
 wire    duplicateMat_U0_p_src_data_V_read;
 wire   [23:0] duplicateMat_U0_p_dst1_data_V_din;
 wire    duplicateMat_U0_p_dst1_data_V_write;
@@ -182,15 +182,15 @@ wire    get_vegetation_image_2_U0_min_value_V_out_write;
 wire   [23:0] get_vegetation_image_2_U0_ap_return;
 wire    ap_channel_done_sub_ln703_cast_loc_c;
 wire    sub_ln703_cast_loc_c_full_n;
-wire    convert_fp_to_8b770_U0_ap_start;
-wire    convert_fp_to_8b770_U0_ap_done;
-wire    convert_fp_to_8b770_U0_ap_continue;
-wire    convert_fp_to_8b770_U0_ap_idle;
-wire    convert_fp_to_8b770_U0_ap_ready;
-wire    convert_fp_to_8b770_U0_min_value_V_c17_read;
-wire    convert_fp_to_8b770_U0_veg_temp_data_V_read;
-wire   [7:0] convert_fp_to_8b770_U0_img_out_data_V_din;
-wire    convert_fp_to_8b770_U0_img_out_data_V_write;
+wire    convert_fp_to_8b771_U0_ap_start;
+wire    convert_fp_to_8b771_U0_ap_done;
+wire    convert_fp_to_8b771_U0_ap_continue;
+wire    convert_fp_to_8b771_U0_ap_idle;
+wire    convert_fp_to_8b771_U0_ap_ready;
+wire    convert_fp_to_8b771_U0_min_value_V_c17_read;
+wire    convert_fp_to_8b771_U0_veg_temp_data_V_read;
+wire   [7:0] convert_fp_to_8b771_U0_img_out_data_V_din;
+wire    convert_fp_to_8b771_U0_img_out_data_V_write;
 wire    ap_sync_continue;
 wire   [8:0] img_in_0_rows_channe_dout;
 wire    img_in_0_rows_channe_empty_n;
@@ -268,9 +268,9 @@ wire    ap_sync_ready;
 reg    ap_sync_reg_get_vegetation_image_113_U0_ap_ready;
 wire    ap_sync_get_vegetation_image_113_U0_ap_ready;
 reg   [1:0] get_vegetation_image_113_U0_ap_ready_count;
-reg    ap_sync_reg_duplicateMat635769_U0_ap_ready;
-wire    ap_sync_duplicateMat635769_U0_ap_ready;
-reg   [1:0] duplicateMat635769_U0_ap_ready_count;
+reg    ap_sync_reg_duplicateMat636770_U0_ap_ready;
+wire    ap_sync_duplicateMat636770_U0_ap_ready;
+reg   [1:0] duplicateMat636770_U0_ap_ready_count;
 wire    get_vegetation_image_113_U0_start_full_n;
 wire    get_vegetation_image_113_U0_start_write;
 wire   [0:0] start_for_duplicateMat_U0_din;
@@ -295,8 +295,8 @@ wire    get_vegetation_image_3_U0_start_full_n;
 wire    get_vegetation_image_3_U0_start_write;
 wire    get_vegetation_image_2_U0_start_full_n;
 wire    get_vegetation_image_2_U0_start_write;
-wire    convert_fp_to_8b770_U0_start_full_n;
-wire    convert_fp_to_8b770_U0_start_write;
+wire    convert_fp_to_8b771_U0_start_full_n;
+wire    convert_fp_to_8b771_U0_start_write;
 
 // power-on initialization
 initial begin
@@ -309,8 +309,8 @@ initial begin
 #0 ap_sync_reg_get_vegetation_image_3_U0_ap_start = 1'b0;
 #0 ap_sync_reg_get_vegetation_image_113_U0_ap_ready = 1'b0;
 #0 get_vegetation_image_113_U0_ap_ready_count = 2'd0;
-#0 ap_sync_reg_duplicateMat635769_U0_ap_ready = 1'b0;
-#0 duplicateMat635769_U0_ap_ready_count = 2'd0;
+#0 ap_sync_reg_duplicateMat636770_U0_ap_ready = 1'b0;
+#0 duplicateMat636770_U0_ap_ready_count = 2'd0;
 end
 
 get_vegetation_image_113 get_vegetation_image_113_U0(
@@ -333,33 +333,33 @@ get_vegetation_image_113 get_vegetation_image_113_U0(
     .img_in_cols_out_write(get_vegetation_image_113_U0_img_in_cols_out_write)
 );
 
-duplicateMat635769 duplicateMat635769_U0(
-    .ap_start(duplicateMat635769_U0_ap_start),
-    .start_full_n(duplicateMat635769_U0_start_full_n),
-    .start_out(duplicateMat635769_U0_start_out),
-    .start_write(duplicateMat635769_U0_start_write),
+duplicateMat636770 duplicateMat636770_U0(
+    .ap_start(duplicateMat636770_U0_ap_start),
+    .start_full_n(duplicateMat636770_U0_start_full_n),
+    .start_out(duplicateMat636770_U0_start_out),
+    .start_write(duplicateMat636770_U0_start_write),
     .p_src_cols_dout(img_in_cols_c_i_dout),
     .p_src_cols_empty_n(img_in_cols_c_i_empty_n),
-    .p_src_cols_read(duplicateMat635769_U0_p_src_cols_read),
+    .p_src_cols_read(duplicateMat636770_U0_p_src_cols_read),
     .p_src_data_V_dout(img_in_data_V_dout),
     .p_src_data_V_empty_n(img_in_data_V_empty_n),
-    .p_src_data_V_read(duplicateMat635769_U0_p_src_data_V_read),
+    .p_src_data_V_read(duplicateMat636770_U0_p_src_data_V_read),
     .p_dst1_rows(img_in_0_rows_channe_dout),
     .p_dst1_cols(img_in_0_cols_channe_dout),
-    .p_dst1_data_V_din(duplicateMat635769_U0_p_dst1_data_V_din),
+    .p_dst1_data_V_din(duplicateMat636770_U0_p_dst1_data_V_din),
     .p_dst1_data_V_full_n(img_in_0_data_V_full_n),
-    .p_dst1_data_V_write(duplicateMat635769_U0_p_dst1_data_V_write),
-    .p_dst2_data_V_din(duplicateMat635769_U0_p_dst2_data_V_din),
+    .p_dst1_data_V_write(duplicateMat636770_U0_p_dst1_data_V_write),
+    .p_dst2_data_V_din(duplicateMat636770_U0_p_dst2_data_V_din),
     .p_dst2_data_V_full_n(img_in_1_data_V_full_n),
-    .p_dst2_data_V_write(duplicateMat635769_U0_p_dst2_data_V_write),
+    .p_dst2_data_V_write(duplicateMat636770_U0_p_dst2_data_V_write),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
     .p_dst1_rows_ap_vld(1'b0),
     .p_dst1_cols_ap_vld(1'b0),
-    .ap_done(duplicateMat635769_U0_ap_done),
-    .ap_ready(duplicateMat635769_U0_ap_ready),
-    .ap_idle(duplicateMat635769_U0_ap_idle),
-    .ap_continue(duplicateMat635769_U0_ap_continue)
+    .ap_done(duplicateMat636770_U0_ap_done),
+    .ap_ready(duplicateMat636770_U0_ap_ready),
+    .ap_idle(duplicateMat636770_U0_ap_idle),
+    .ap_continue(duplicateMat636770_U0_ap_continue)
 );
 
 duplicateMat duplicateMat_U0(
@@ -534,24 +534,24 @@ get_vegetation_image_2 get_vegetation_image_2_U0(
     .ap_return(get_vegetation_image_2_U0_ap_return)
 );
 
-convert_fp_to_8b770 convert_fp_to_8b770_U0(
+convert_fp_to_8b771 convert_fp_to_8b771_U0(
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
-    .ap_start(convert_fp_to_8b770_U0_ap_start),
-    .ap_done(convert_fp_to_8b770_U0_ap_done),
-    .ap_continue(convert_fp_to_8b770_U0_ap_continue),
-    .ap_idle(convert_fp_to_8b770_U0_ap_idle),
-    .ap_ready(convert_fp_to_8b770_U0_ap_ready),
+    .ap_start(convert_fp_to_8b771_U0_ap_start),
+    .ap_done(convert_fp_to_8b771_U0_ap_done),
+    .ap_continue(convert_fp_to_8b771_U0_ap_continue),
+    .ap_idle(convert_fp_to_8b771_U0_ap_idle),
+    .ap_ready(convert_fp_to_8b771_U0_ap_ready),
     .min_value_V_c17_dout(min_value_V_c17_i_dout),
     .min_value_V_c17_empty_n(min_value_V_c17_i_empty_n),
-    .min_value_V_c17_read(convert_fp_to_8b770_U0_min_value_V_c17_read),
+    .min_value_V_c17_read(convert_fp_to_8b771_U0_min_value_V_c17_read),
     .sub_ln703_cast_loc_c(sub_ln703_cast_loc_c_dout),
     .veg_temp_data_V_dout(veg_temp_data_V_dout),
     .veg_temp_data_V_empty_n(veg_temp_data_V_empty_n),
-    .veg_temp_data_V_read(convert_fp_to_8b770_U0_veg_temp_data_V_read),
-    .img_out_data_V_din(convert_fp_to_8b770_U0_img_out_data_V_din),
+    .veg_temp_data_V_read(convert_fp_to_8b771_U0_veg_temp_data_V_read),
+    .img_out_data_V_din(convert_fp_to_8b771_U0_img_out_data_V_din),
     .img_out_data_V_full_n(img_out_data_V_full_n),
-    .img_out_data_V_write(convert_fp_to_8b770_U0_img_out_data_V_write)
+    .img_out_data_V_write(convert_fp_to_8b771_U0_img_out_data_V_write)
 );
 
 fifo_w9_d2_A img_in_0_rows_channe_U(
@@ -564,7 +564,7 @@ fifo_w9_d2_A img_in_0_rows_channe_U(
     .if_write(ap_channel_done_img_in_0_rows_channe),
     .if_dout(img_in_0_rows_channe_dout),
     .if_empty_n(img_in_0_rows_channe_empty_n),
-    .if_read(duplicateMat635769_U0_ap_ready)
+    .if_read(duplicateMat636770_U0_ap_ready)
 );
 
 fifo_w10_d2_A_x0 img_in_0_cols_channe_U(
@@ -577,7 +577,7 @@ fifo_w10_d2_A_x0 img_in_0_cols_channe_U(
     .if_write(ap_channel_done_img_in_0_cols_channe),
     .if_dout(img_in_0_cols_channe_dout),
     .if_empty_n(img_in_0_cols_channe_empty_n),
-    .if_read(duplicateMat635769_U0_ap_ready)
+    .if_read(duplicateMat636770_U0_ap_ready)
 );
 
 fifo_w10_d2_A_x0 img_in_cols_c_i_U(
@@ -590,7 +590,7 @@ fifo_w10_d2_A_x0 img_in_cols_c_i_U(
     .if_write(get_vegetation_image_113_U0_img_in_cols_out_write),
     .if_dout(img_in_cols_c_i_dout),
     .if_empty_n(img_in_cols_c_i_empty_n),
-    .if_read(duplicateMat635769_U0_p_src_cols_read)
+    .if_read(duplicateMat636770_U0_p_src_cols_read)
 );
 
 fifo_w24_d1_A img_in_0_data_V_U(
@@ -598,9 +598,9 @@ fifo_w24_d1_A img_in_0_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat635769_U0_p_dst1_data_V_din),
+    .if_din(duplicateMat636770_U0_p_dst1_data_V_din),
     .if_full_n(img_in_0_data_V_full_n),
-    .if_write(duplicateMat635769_U0_p_dst1_data_V_write),
+    .if_write(duplicateMat636770_U0_p_dst1_data_V_write),
     .if_dout(img_in_0_data_V_dout),
     .if_empty_n(img_in_0_data_V_empty_n),
     .if_read(duplicateMat_U0_p_src_data_V_read)
@@ -611,9 +611,9 @@ fifo_w24_d1_A img_in_1_data_V_U(
     .reset(ap_rst),
     .if_read_ce(1'b1),
     .if_write_ce(1'b1),
-    .if_din(duplicateMat635769_U0_p_dst2_data_V_din),
+    .if_din(duplicateMat636770_U0_p_dst2_data_V_din),
     .if_full_n(img_in_1_data_V_full_n),
-    .if_write(duplicateMat635769_U0_p_dst2_data_V_write),
+    .if_write(duplicateMat636770_U0_p_dst2_data_V_write),
     .if_dout(img_in_1_data_V_dout),
     .if_empty_n(img_in_1_data_V_empty_n),
     .if_read(extract_channels_U0_img_in_0_data_V_read)
@@ -772,7 +772,7 @@ fifo_w32_d1_A veg_temp_data_V_U(
     .if_write(get_exg_image_U0_veg_img_data_V_write),
     .if_dout(veg_temp_data_V_dout),
     .if_empty_n(veg_temp_data_V_empty_n),
-    .if_read(convert_fp_to_8b770_U0_veg_temp_data_V_read)
+    .if_read(convert_fp_to_8b771_U0_veg_temp_data_V_read)
 );
 
 fifo_w28_d3_A min_value_V_c_i_U(
@@ -824,7 +824,7 @@ fifo_w28_d2_A min_value_V_c17_i_U(
     .if_write(get_vegetation_image_2_U0_min_value_V_out_write),
     .if_dout(min_value_V_c17_i_dout),
     .if_empty_n(min_value_V_c17_i_empty_n),
-    .if_read(convert_fp_to_8b770_U0_min_value_V_c17_read)
+    .if_read(convert_fp_to_8b771_U0_min_value_V_c17_read)
 );
 
 fifo_w24_d2_A_x1 sub_ln703_cast_loc_c_U(
@@ -837,7 +837,7 @@ fifo_w24_d2_A_x1 sub_ln703_cast_loc_c_U(
     .if_write(get_vegetation_image_2_U0_ap_done),
     .if_dout(sub_ln703_cast_loc_c_dout),
     .if_empty_n(sub_ln703_cast_loc_c_empty_n),
-    .if_read(convert_fp_to_8b770_U0_ap_ready)
+    .if_read(convert_fp_to_8b771_U0_ap_ready)
 );
 
 start_for_duplicasc4 start_for_duplicasc4_U(
@@ -847,7 +847,7 @@ start_for_duplicasc4 start_for_duplicasc4_U(
     .if_write_ce(1'b1),
     .if_din(start_for_duplicateMat_U0_din),
     .if_full_n(start_for_duplicateMat_U0_full_n),
-    .if_write(duplicateMat635769_U0_start_write),
+    .if_write(duplicateMat636770_U0_start_write),
     .if_dout(start_for_duplicateMat_U0_dout),
     .if_empty_n(start_for_duplicateMat_U0_empty_n),
     .if_read(duplicateMat_U0_ap_ready)
@@ -860,7 +860,7 @@ start_for_extracttde start_for_extracttde_U(
     .if_write_ce(1'b1),
     .if_din(start_for_extract_channels_U0_din),
     .if_full_n(start_for_extract_channels_U0_full_n),
-    .if_write(duplicateMat635769_U0_start_write),
+    .if_write(duplicateMat636770_U0_start_write),
     .if_dout(start_for_extract_channels_U0_dout),
     .if_empty_n(start_for_extract_channels_U0_empty_n),
     .if_read(extract_channels_U0_ap_ready)
@@ -892,12 +892,12 @@ end
 
 always @ (posedge ap_clk) begin
     if (ap_rst == 1'b1) begin
-        ap_sync_reg_duplicateMat635769_U0_ap_ready <= 1'b0;
+        ap_sync_reg_duplicateMat636770_U0_ap_ready <= 1'b0;
     end else begin
         if (((real_start & ap_sync_ready) == 1'b1)) begin
-            ap_sync_reg_duplicateMat635769_U0_ap_ready <= 1'b0;
+            ap_sync_reg_duplicateMat636770_U0_ap_ready <= 1'b0;
         end else begin
-            ap_sync_reg_duplicateMat635769_U0_ap_ready <= ap_sync_duplicateMat635769_U0_ap_ready;
+            ap_sync_reg_duplicateMat636770_U0_ap_ready <= ap_sync_duplicateMat636770_U0_ap_ready;
         end
     end
 end
@@ -967,10 +967,10 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((duplicateMat635769_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
-        duplicateMat635769_U0_ap_ready_count <= (duplicateMat635769_U0_ap_ready_count - 2'd1);
-    end else if (((ap_sync_ready == 1'b0) & (duplicateMat635769_U0_ap_ready == 1'b1))) begin
-        duplicateMat635769_U0_ap_ready_count <= (duplicateMat635769_U0_ap_ready_count + 2'd1);
+    if (((duplicateMat636770_U0_ap_ready == 1'b0) & (ap_sync_ready == 1'b1))) begin
+        duplicateMat636770_U0_ap_ready_count <= (duplicateMat636770_U0_ap_ready_count - 2'd1);
+    end else if (((ap_sync_ready == 1'b0) & (duplicateMat636770_U0_ap_ready == 1'b1))) begin
+        duplicateMat636770_U0_ap_ready_count <= (duplicateMat636770_U0_ap_ready_count + 2'd1);
     end
 end
 
@@ -1006,9 +1006,9 @@ assign ap_channel_done_img_in_0_rows_channe = (get_vegetation_image_113_U0_ap_do
 
 assign ap_channel_done_sub_ln703_cast_loc_c = get_vegetation_image_2_U0_ap_done;
 
-assign ap_done = convert_fp_to_8b770_U0_ap_done;
+assign ap_done = convert_fp_to_8b771_U0_ap_done;
 
-assign ap_idle = (get_vegetation_image_U0_ap_idle & get_vegetation_image_3_U0_ap_idle & get_vegetation_image_2_U0_ap_idle & get_vegetation_image_113_U0_ap_idle & get_max_from_channel_U0_ap_idle & get_exg_image_U0_ap_idle & extract_channels_U0_ap_idle & (sub_ln703_cast_loc_c_empty_n ^ 1'b1) & (extLd_cast_loc_chann_empty_n ^ 1'b1) & (img_in_0_cols_channe_empty_n ^ 1'b1) & (img_in_0_rows_channe_empty_n ^ 1'b1) & duplicateMat_U0_ap_idle & duplicateMat635769_U0_ap_idle & convert_fp_to_8b770_U0_ap_idle);
+assign ap_idle = (get_vegetation_image_U0_ap_idle & get_vegetation_image_3_U0_ap_idle & get_vegetation_image_2_U0_ap_idle & get_vegetation_image_113_U0_ap_idle & get_max_from_channel_U0_ap_idle & get_exg_image_U0_ap_idle & extract_channels_U0_ap_idle & (sub_ln703_cast_loc_c_empty_n ^ 1'b1) & (extLd_cast_loc_chann_empty_n ^ 1'b1) & (img_in_0_cols_channe_empty_n ^ 1'b1) & (img_in_0_rows_channe_empty_n ^ 1'b1) & duplicateMat_U0_ap_idle & duplicateMat636770_U0_ap_idle & convert_fp_to_8b771_U0_ap_idle);
 
 assign ap_ready = internal_ap_ready;
 
@@ -1018,27 +1018,27 @@ assign ap_sync_channel_write_img_in_0_rows_channe = ((img_in_0_rows_channe_full_
 
 assign ap_sync_continue = ap_continue;
 
-assign ap_sync_done = convert_fp_to_8b770_U0_ap_done;
+assign ap_sync_done = convert_fp_to_8b771_U0_ap_done;
 
-assign ap_sync_duplicateMat635769_U0_ap_ready = (duplicateMat635769_U0_ap_ready | ap_sync_reg_duplicateMat635769_U0_ap_ready);
+assign ap_sync_duplicateMat636770_U0_ap_ready = (duplicateMat636770_U0_ap_ready | ap_sync_reg_duplicateMat636770_U0_ap_ready);
 
 assign ap_sync_get_vegetation_image_113_U0_ap_ready = (get_vegetation_image_113_U0_ap_ready | ap_sync_reg_get_vegetation_image_113_U0_ap_ready);
 
-assign ap_sync_ready = (ap_sync_get_vegetation_image_113_U0_ap_ready & ap_sync_duplicateMat635769_U0_ap_ready);
+assign ap_sync_ready = (ap_sync_get_vegetation_image_113_U0_ap_ready & ap_sync_duplicateMat636770_U0_ap_ready);
 
-assign convert_fp_to_8b770_U0_ap_continue = ap_continue;
+assign convert_fp_to_8b771_U0_ap_continue = ap_continue;
 
-assign convert_fp_to_8b770_U0_ap_start = sub_ln703_cast_loc_c_empty_n;
+assign convert_fp_to_8b771_U0_ap_start = sub_ln703_cast_loc_c_empty_n;
 
-assign convert_fp_to_8b770_U0_start_full_n = 1'b1;
+assign convert_fp_to_8b771_U0_start_full_n = 1'b1;
 
-assign convert_fp_to_8b770_U0_start_write = 1'b0;
+assign convert_fp_to_8b771_U0_start_write = 1'b0;
 
-assign duplicateMat635769_U0_ap_continue = 1'b1;
+assign duplicateMat636770_U0_ap_continue = 1'b1;
 
-assign duplicateMat635769_U0_ap_start = (real_start & img_in_0_rows_channe_empty_n & img_in_0_cols_channe_empty_n & (ap_sync_reg_duplicateMat635769_U0_ap_ready ^ 1'b1));
+assign duplicateMat636770_U0_ap_start = (real_start & img_in_0_rows_channe_empty_n & img_in_0_cols_channe_empty_n & (ap_sync_reg_duplicateMat636770_U0_ap_ready ^ 1'b1));
 
-assign duplicateMat635769_U0_start_full_n = (start_for_extract_channels_U0_full_n & start_for_duplicateMat_U0_full_n);
+assign duplicateMat636770_U0_start_full_n = (start_for_extract_channels_U0_full_n & start_for_duplicateMat_U0_full_n);
 
 assign duplicateMat_U0_ap_continue = 1'b1;
 
@@ -1124,11 +1124,11 @@ assign get_vegetation_image_U0_start_write = 1'b0;
 
 assign img_in_cols_read = get_vegetation_image_113_U0_img_in_cols_read;
 
-assign img_in_data_V_read = duplicateMat635769_U0_p_src_data_V_read;
+assign img_in_data_V_read = duplicateMat636770_U0_p_src_data_V_read;
 
-assign img_out_data_V_din = convert_fp_to_8b770_U0_img_out_data_V_din;
+assign img_out_data_V_din = convert_fp_to_8b771_U0_img_out_data_V_din;
 
-assign img_out_data_V_write = convert_fp_to_8b770_U0_img_out_data_V_write;
+assign img_out_data_V_write = convert_fp_to_8b771_U0_img_out_data_V_write;
 
 assign internal_ap_ready = ap_sync_ready;
 

@@ -5,7 +5,7 @@
 `timescale 1 ns / 1 ps
 module xFResizeAreaUpScabhl_ram (addr0, ce0, d0, we0, q0,  clk);
 
-parameter DWIDTH = 32;
+parameter DWIDTH = 13;
 parameter AWIDTH = 11;
 parameter MEM_SIZE = 1280;
 
@@ -43,7 +43,7 @@ module xFResizeAreaUpScabhl(
     d0,
     q0);
 
-parameter DataWidth = 32'd32;
+parameter DataWidth = 32'd13;
 parameter AddressRange = 32'd1280;
 parameter AddressWidth = 32'd11;
 input reset;

@@ -60,18 +60,18 @@ reg micro_roi_data_V_we0;
 wire    ap_CS_fsm_state1;
 reg    img_in_mr_data_V_blk_n;
 wire    ap_CS_fsm_state3;
-wire   [0:0] icmp_ln111_fu_170_p2;
-wire   [0:0] and_ln114_fu_196_p2;
-wire   [7:0] trunc_ln112_fu_128_p1;
-reg   [7:0] trunc_ln112_reg_225;
-wire   [7:0] trunc_ln110_fu_132_p1;
-reg   [7:0] trunc_ln110_reg_230;
+wire   [0:0] icmp_ln110_fu_170_p2;
+wire   [0:0] and_ln113_fu_196_p2;
+wire   [7:0] trunc_ln111_fu_128_p1;
+reg   [7:0] trunc_ln111_reg_225;
+wire   [7:0] trunc_ln109_fu_132_p1;
+reg   [7:0] trunc_ln109_reg_230;
 wire   [4:0] v_fu_146_p2;
 reg   [4:0] v_reg_238;
 wire    ap_CS_fsm_state2;
-wire   [0:0] icmp_ln114_fu_157_p2;
-reg   [0:0] icmp_ln114_reg_243;
-wire   [0:0] icmp_ln110_fu_140_p2;
+wire   [0:0] icmp_ln113_fu_157_p2;
+reg   [0:0] icmp_ln113_reg_243;
+wire   [0:0] icmp_ln109_fu_140_p2;
 wire   [9:0] shl_ln_fu_162_p3;
 reg   [9:0] shl_ln_reg_248;
 wire   [5:0] h_fu_176_p2;
@@ -79,14 +79,14 @@ reg    ap_predicate_op38_read_state3;
 reg    ap_block_state3;
 reg   [4:0] v_0_reg_106;
 reg   [5:0] h_0_reg_117;
-wire   [63:0] zext_ln115_1_fu_210_p1;
-wire   [7:0] zext_ln110_fu_136_p1;
+wire   [63:0] zext_ln114_1_fu_210_p1;
+wire   [7:0] zext_ln109_fu_136_p1;
 wire   [7:0] p_v_fu_152_p2;
-wire   [15:0] zext_ln113_fu_182_p1;
+wire   [15:0] zext_ln112_fu_182_p1;
 wire   [15:0] p_h_fu_186_p2;
-wire   [0:0] icmp_ln114_1_fu_191_p2;
-wire   [9:0] zext_ln115_fu_201_p1;
-wire   [9:0] add_ln115_fu_205_p2;
+wire   [0:0] icmp_ln113_1_fu_191_p2;
+wire   [9:0] zext_ln114_fu_201_p1;
+wire   [9:0] add_ln114_fu_205_p2;
 reg   [2:0] ap_NS_fsm;
 
 // power-on initialization
@@ -103,15 +103,15 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln110_fu_140_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((icmp_ln109_fu_140_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
         h_0_reg_117 <= 6'd0;
-    end else if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln111_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    end else if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln110_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         h_0_reg_117 <= h_fu_176_p2;
     end
 end
 
 always @ (posedge ap_clk) begin
-    if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln111_fu_170_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln110_fu_170_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
         v_0_reg_106 <= v_reg_238;
     end else if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
         v_0_reg_106 <= 5'd0;
@@ -119,16 +119,16 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (posedge ap_clk) begin
-    if (((icmp_ln110_fu_140_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
-        icmp_ln114_reg_243 <= icmp_ln114_fu_157_p2;
+    if (((icmp_ln109_fu_140_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state2))) begin
+        icmp_ln113_reg_243 <= icmp_ln113_fu_157_p2;
         shl_ln_reg_248[9 : 5] <= shl_ln_fu_162_p3[9 : 5];
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        trunc_ln110_reg_230 <= trunc_ln110_fu_132_p1;
-        trunc_ln112_reg_225 <= trunc_ln112_fu_128_p1;
+        trunc_ln109_reg_230 <= trunc_ln109_fu_132_p1;
+        trunc_ln111_reg_225 <= trunc_ln111_fu_128_p1;
     end
 end
 
@@ -139,7 +139,7 @@ always @ (posedge ap_clk) begin
 end
 
 always @ (*) begin
-    if ((((icmp_ln110_fu_140_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
+    if ((((icmp_ln109_fu_140_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2)) | ((ap_start == 1'b0) & (1'b1 == ap_CS_fsm_state1)))) begin
         ap_done = 1'b1;
     end else begin
         ap_done = 1'b0;
@@ -155,7 +155,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((icmp_ln110_fu_140_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+    if (((icmp_ln109_fu_140_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
         ap_ready = 1'b1;
     end else begin
         ap_ready = 1'b0;
@@ -163,7 +163,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if (((1'd1 == and_ln114_fu_196_p2) & (icmp_ln111_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if (((1'd1 == and_ln113_fu_196_p2) & (icmp_ln110_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         img_in_mr_data_V_blk_n = img_in_mr_data_V_empty_n;
     end else begin
         img_in_mr_data_V_blk_n = 1'b1;
@@ -187,7 +187,7 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (1'd1 == and_ln114_fu_196_p2) & (icmp_ln111_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+    if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (1'd1 == and_ln113_fu_196_p2) & (icmp_ln110_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
         micro_roi_data_V_we0 = 1'b1;
     end else begin
         micro_roi_data_V_we0 = 1'b0;
@@ -204,16 +204,16 @@ always @ (*) begin
             end
         end
         ap_ST_fsm_state2 : begin
-            if (((icmp_ln110_fu_140_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
+            if (((icmp_ln109_fu_140_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state2))) begin
                 ap_NS_fsm = ap_ST_fsm_state1;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end
         end
         ap_ST_fsm_state3 : begin
-            if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln111_fu_170_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
+            if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln110_fu_170_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state2;
-            end else if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln111_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
+            end else if ((~((img_in_mr_data_V_empty_n == 1'b0) & (ap_predicate_op38_read_state3 == 1'b1)) & (icmp_ln110_fu_170_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state3))) begin
                 ap_NS_fsm = ap_ST_fsm_state3;
             end else begin
                 ap_NS_fsm = ap_ST_fsm_state3;
@@ -225,9 +225,9 @@ always @ (*) begin
     endcase
 end
 
-assign add_ln115_fu_205_p2 = (shl_ln_reg_248 + zext_ln115_fu_201_p1);
+assign add_ln114_fu_205_p2 = (shl_ln_reg_248 + zext_ln114_fu_201_p1);
 
-assign and_ln114_fu_196_p2 = (icmp_ln114_reg_243 & icmp_ln114_1_fu_191_p2);
+assign and_ln113_fu_196_p2 = (icmp_ln113_reg_243 & icmp_ln113_1_fu_191_p2);
 
 assign ap_CS_fsm_state1 = ap_CS_fsm[32'd0];
 
@@ -240,42 +240,42 @@ always @ (*) begin
 end
 
 always @ (*) begin
-    ap_predicate_op38_read_state3 = ((1'd1 == and_ln114_fu_196_p2) & (icmp_ln111_fu_170_p2 == 1'd0));
+    ap_predicate_op38_read_state3 = ((1'd1 == and_ln113_fu_196_p2) & (icmp_ln110_fu_170_p2 == 1'd0));
 end
 
 assign h_fu_176_p2 = (h_0_reg_117 + 6'd1);
 
-assign icmp_ln110_fu_140_p2 = ((v_0_reg_106 == 5'd23) ? 1'b1 : 1'b0);
+assign icmp_ln109_fu_140_p2 = ((v_0_reg_106 == 5'd23) ? 1'b1 : 1'b0);
 
-assign icmp_ln111_fu_170_p2 = ((h_0_reg_117 == 6'd32) ? 1'b1 : 1'b0);
+assign icmp_ln110_fu_170_p2 = ((h_0_reg_117 == 6'd32) ? 1'b1 : 1'b0);
 
-assign icmp_ln114_1_fu_191_p2 = ((p_h_fu_186_p2 < y_right) ? 1'b1 : 1'b0);
+assign icmp_ln113_1_fu_191_p2 = ((p_h_fu_186_p2 < y_right) ? 1'b1 : 1'b0);
 
-assign icmp_ln114_fu_157_p2 = ((p_v_fu_152_p2 < trunc_ln110_reg_230) ? 1'b1 : 1'b0);
+assign icmp_ln113_fu_157_p2 = ((p_v_fu_152_p2 < trunc_ln109_reg_230) ? 1'b1 : 1'b0);
 
-assign micro_roi_data_V_address0 = zext_ln115_1_fu_210_p1;
+assign micro_roi_data_V_address0 = zext_ln114_1_fu_210_p1;
 
 assign micro_roi_data_V_d0 = img_in_mr_data_V_dout;
 
-assign p_h_fu_186_p2 = (zext_ln113_fu_182_p1 + y_left);
+assign p_h_fu_186_p2 = (zext_ln112_fu_182_p1 + y_left);
 
-assign p_v_fu_152_p2 = (zext_ln110_fu_136_p1 + trunc_ln112_reg_225);
+assign p_v_fu_152_p2 = (zext_ln109_fu_136_p1 + trunc_ln111_reg_225);
 
 assign shl_ln_fu_162_p3 = {{v_0_reg_106}, {5'd0}};
 
-assign trunc_ln110_fu_132_p1 = x_bottom[7:0];
+assign trunc_ln109_fu_132_p1 = x_bottom[7:0];
 
-assign trunc_ln112_fu_128_p1 = x_top[7:0];
+assign trunc_ln111_fu_128_p1 = x_top[7:0];
 
 assign v_fu_146_p2 = (v_0_reg_106 + 5'd1);
 
-assign zext_ln110_fu_136_p1 = v_0_reg_106;
+assign zext_ln109_fu_136_p1 = v_0_reg_106;
 
-assign zext_ln113_fu_182_p1 = h_0_reg_117;
+assign zext_ln112_fu_182_p1 = h_0_reg_117;
 
-assign zext_ln115_1_fu_210_p1 = add_ln115_fu_205_p2;
+assign zext_ln114_1_fu_210_p1 = add_ln114_fu_205_p2;
 
-assign zext_ln115_fu_201_p1 = h_0_reg_117;
+assign zext_ln114_fu_201_p1 = h_0_reg_117;
 
 always @ (posedge ap_clk) begin
     shl_ln_reg_248[4:0] <= 5'b00000;

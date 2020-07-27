@@ -44,7 +44,7 @@ wire   [23:0] select_ln78_1_fu_128_p3;
 wire   [23:0] select_ln78_2_fu_136_p3;
 wire   [23:0] select_ln78_3_fu_144_p3;
 
-ip_accel_app_mux_bbk #(
+ip_accel_app_mux_bdk #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 1 ),
@@ -53,7 +53,7 @@ ip_accel_app_mux_bbk #(
     .din3_WIDTH( 1 ),
     .din4_WIDTH( 2 ),
     .dout_WIDTH( 1 ))
-ip_accel_app_mux_bbk_U537(
+ip_accel_app_mux_bdk_U559(
     .din0(1'd1),
     .din1(1'd0),
     .din2(1'd0),
@@ -62,7 +62,7 @@ ip_accel_app_mux_bbk_U537(
     .dout(write_flag_fu_64_p6)
 );
 
-ip_accel_app_mux_bbk #(
+ip_accel_app_mux_bdk #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 1 ),
@@ -71,7 +71,7 @@ ip_accel_app_mux_bbk #(
     .din3_WIDTH( 1 ),
     .din4_WIDTH( 2 ),
     .dout_WIDTH( 1 ))
-ip_accel_app_mux_bbk_U538(
+ip_accel_app_mux_bdk_U560(
     .din0(1'd0),
     .din1(1'd1),
     .din2(1'd0),
@@ -80,7 +80,7 @@ ip_accel_app_mux_bbk_U538(
     .dout(write_flag4_fu_78_p6)
 );
 
-ip_accel_app_mux_bbk #(
+ip_accel_app_mux_bdk #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 1 ),
@@ -89,7 +89,7 @@ ip_accel_app_mux_bbk #(
     .din3_WIDTH( 1 ),
     .din4_WIDTH( 2 ),
     .dout_WIDTH( 1 ))
-ip_accel_app_mux_bbk_U539(
+ip_accel_app_mux_bdk_U561(
     .din0(1'd0),
     .din1(1'd0),
     .din2(1'd0),
@@ -98,7 +98,7 @@ ip_accel_app_mux_bbk_U539(
     .dout(write_flag1_fu_92_p6)
 );
 
-ip_accel_app_mux_bbk #(
+ip_accel_app_mux_bdk #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 1 ),
@@ -107,7 +107,7 @@ ip_accel_app_mux_bbk #(
     .din3_WIDTH( 1 ),
     .din4_WIDTH( 2 ),
     .dout_WIDTH( 1 ))
-ip_accel_app_mux_bbk_U540(
+ip_accel_app_mux_bdk_U562(
     .din0(1'd0),
     .din1(1'd0),
     .din2(1'd1),

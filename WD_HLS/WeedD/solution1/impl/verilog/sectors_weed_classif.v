@@ -406,7 +406,7 @@ initial begin
 #0 grp_bitwise_and_fu_403_ap_start_reg = 1'b0;
 end
 
-sectors_weed_clas3i2 #(
+sectors_weed_clas5jm #(
     .DataWidth( 8 ),
     .AddressRange( 13 ),
     .AddressWidth( 4 ))
@@ -421,7 +421,7 @@ segments_U(
     .q1(segments_q1)
 );
 
-sectors_weed_clas4jc #(
+sectors_weed_clas6jw #(
     .DataWidth( 16 ),
     .AddressRange( 5 ),
     .AddressWidth( 3 ))
@@ -435,7 +435,7 @@ quadrant_space_U(
     .q0(quadrant_space_q0)
 );
 
-sectors_weed_clas5jm #(
+sectors_weed_clas7jG #(
     .DataWidth( 24 ),
     .AddressRange( 5 ),
     .AddressWidth( 3 ))
@@ -471,13 +471,13 @@ bitwise_and grp_bitwise_and_fu_403(
     .p_dst_data_V_write(grp_bitwise_and_fu_403_p_dst_data_V_write)
 );
 
-ip_accel_app_udiv6jw #(
+ip_accel_app_udiv8jQ #(
     .ID( 1 ),
     .NUM_STAGE( 36 ),
     .din0_WIDTH( 32 ),
     .din1_WIDTH( 24 ),
     .dout_WIDTH( 24 ))
-ip_accel_app_udiv6jw_U496(
+ip_accel_app_udiv8jQ_U518(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_591_p0),

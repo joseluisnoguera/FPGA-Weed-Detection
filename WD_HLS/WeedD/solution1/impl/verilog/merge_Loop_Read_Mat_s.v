@@ -213,13 +213,13 @@ read_r tmp_V_4_read_r_fu_118(
     .ap_ce(tmp_V_4_read_r_fu_118_ap_ce)
 );
 
-ip_accel_app_mul_7jG #(
+ip_accel_app_mul_9j0 #(
     .ID( 1 ),
     .NUM_STAGE( 4 ),
     .din0_WIDTH( 10 ),
     .din1_WIDTH( 9 ),
     .dout_WIDTH( 18 ))
-ip_accel_app_mul_7jG_U506(
+ip_accel_app_mul_9j0_U528(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_141_p0),

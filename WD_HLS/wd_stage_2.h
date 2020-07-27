@@ -4,7 +4,6 @@
 #include "weed_detection.h"
 
 void get_12th_segment(rs_gray_img_t& eroded, rs_gray_img12th_t& bottom){
-
 	//Conseguir 12va parte inferior de la imagen
 	#pragma HLS dataflow
 	static const uint32_t h_offset = ((RS_HEIGHT - RS_HEIGHT_12th)*RS_WIDTH)+1;

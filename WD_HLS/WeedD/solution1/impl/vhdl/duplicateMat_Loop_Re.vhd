@@ -67,7 +67,7 @@ architecture behav of duplicateMat_Loop_Re is
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
     signal internal_ap_ready : STD_LOGIC;
     signal p_src_cols_load10_loc_blk_n : STD_LOGIC;
-    signal tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n : STD_LOGIC;
+    signal tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n : STD_LOGIC;
     signal p_src_data_V_blk_n : STD_LOGIC;
     signal ap_CS_fsm_pp0_stage0 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_pp0_stage0 : signal is "none";
@@ -92,27 +92,27 @@ architecture behav of duplicateMat_Loop_Re is
     signal ap_enable_reg_pp0_iter0 : STD_LOGIC := '0';
     signal ap_block_pp0_stage0_subdone : BOOLEAN;
     signal ap_condition_pp0_exit_iter0_state3 : STD_LOGIC;
-    signal tmp_V_read779_fu_105_ap_start : STD_LOGIC;
-    signal tmp_V_read779_fu_105_ap_done : STD_LOGIC;
-    signal tmp_V_read779_fu_105_ap_idle : STD_LOGIC;
-    signal tmp_V_read779_fu_105_ap_ready : STD_LOGIC;
-    signal tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_read : STD_LOGIC;
-    signal tmp_V_read779_fu_105_ap_return : STD_LOGIC_VECTOR (23 downto 0);
-    signal tmp_V_read779_fu_105_ap_ce : STD_LOGIC;
+    signal tmp_V_read780_fu_105_ap_start : STD_LOGIC;
+    signal tmp_V_read780_fu_105_ap_done : STD_LOGIC;
+    signal tmp_V_read780_fu_105_ap_idle : STD_LOGIC;
+    signal tmp_V_read780_fu_105_ap_ready : STD_LOGIC;
+    signal tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_read : STD_LOGIC;
+    signal tmp_V_read780_fu_105_ap_return : STD_LOGIC_VECTOR (23 downto 0);
+    signal tmp_V_read780_fu_105_ap_ce : STD_LOGIC;
     signal ap_block_state3_pp0_stage0_iter0_ignore_call3 : BOOLEAN;
     signal ap_block_state4_pp0_stage0_iter1_ignore_call3 : BOOLEAN;
     signal ap_block_pp0_stage0_11001_ignoreCallOp29 : BOOLEAN;
     signal i_0_i_i_reg_83 : STD_LOGIC_VECTOR (7 downto 0);
     signal ap_CS_fsm_state5 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state5 : signal is "none";
-    signal tmp_V_read779_fu_105_ap_start_reg : STD_LOGIC := '0';
+    signal tmp_V_read780_fu_105_ap_start_reg : STD_LOGIC := '0';
     signal ap_block_pp0_stage0_01001 : BOOLEAN;
     signal zext_ln95_fu_124_p1 : STD_LOGIC_VECTOR (9 downto 0);
     signal ap_NS_fsm : STD_LOGIC_VECTOR (3 downto 0);
     signal ap_idle_pp0 : STD_LOGIC;
     signal ap_enable_pp0 : STD_LOGIC;
 
-    component read779 IS
+    component read780 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -131,20 +131,20 @@ architecture behav of duplicateMat_Loop_Re is
 
 
 begin
-    tmp_V_read779_fu_105 : component read779
+    tmp_V_read780_fu_105 : component read780
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => tmp_V_read779_fu_105_ap_start,
-        ap_done => tmp_V_read779_fu_105_ap_done,
-        ap_idle => tmp_V_read779_fu_105_ap_idle,
-        ap_ready => tmp_V_read779_fu_105_ap_ready,
+        ap_start => tmp_V_read780_fu_105_ap_start,
+        ap_done => tmp_V_read780_fu_105_ap_done,
+        ap_idle => tmp_V_read780_fu_105_ap_idle,
+        ap_ready => tmp_V_read780_fu_105_ap_ready,
         Mat_9_180_320_1_data_V_addr_dout => p_src_data_V_dout,
         Mat_9_180_320_1_data_V_addr_empty_n => p_src_data_V_empty_n,
-        Mat_9_180_320_1_data_V_addr_read => tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_read,
-        ap_return => tmp_V_read779_fu_105_ap_return,
-        Mat_9_180_320_1_data_V_addr_blk_n => tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n,
-        ap_ce => tmp_V_read779_fu_105_ap_ce);
+        Mat_9_180_320_1_data_V_addr_read => tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_read,
+        ap_return => tmp_V_read780_fu_105_ap_return,
+        Mat_9_180_320_1_data_V_addr_blk_n => tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n,
+        ap_ce => tmp_V_read780_fu_105_ap_ce);
 
 
 
@@ -228,16 +228,16 @@ begin
     end process;
 
 
-    tmp_V_read779_fu_105_ap_start_reg_assign_proc : process(ap_clk)
+    tmp_V_read780_fu_105_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                tmp_V_read779_fu_105_ap_start_reg <= ap_const_logic_0;
+                tmp_V_read780_fu_105_ap_start_reg <= ap_const_logic_0;
             else
                 if (((icmp_ln95_fu_128_p2 = ap_const_lv1_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_enable_reg_pp0_iter0 = ap_const_logic_1) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001))) then 
-                    tmp_V_read779_fu_105_ap_start_reg <= ap_const_logic_1;
-                elsif ((tmp_V_read779_fu_105_ap_ready = ap_const_logic_1)) then 
-                    tmp_V_read779_fu_105_ap_start_reg <= ap_const_logic_0;
+                    tmp_V_read780_fu_105_ap_start_reg <= ap_const_logic_1;
+                elsif ((tmp_V_read780_fu_105_ap_ready = ap_const_logic_1)) then 
+                    tmp_V_read780_fu_105_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
@@ -325,15 +325,15 @@ begin
     ap_CS_fsm_state5 <= ap_CS_fsm(3);
         ap_block_pp0_stage0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_pp0_stage0_01001_assign_proc : process(src_V_V_full_n, tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153)
+    ap_block_pp0_stage0_01001_assign_proc : process(src_V_V_full_n, tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153)
     begin
-                ap_block_pp0_stage0_01001 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0))));
+                ap_block_pp0_stage0_01001 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0))));
     end process;
 
 
-    ap_block_pp0_stage0_11001_assign_proc : process(src_V_V_full_n, tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153)
+    ap_block_pp0_stage0_11001_assign_proc : process(src_V_V_full_n, tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153)
     begin
-                ap_block_pp0_stage0_11001 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0))));
+                ap_block_pp0_stage0_11001 <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0))));
     end process;
 
 
@@ -343,9 +343,9 @@ begin
     end process;
 
 
-    ap_block_pp0_stage0_subdone_assign_proc : process(src_V_V_full_n, tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153)
+    ap_block_pp0_stage0_subdone_assign_proc : process(src_V_V_full_n, tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153)
     begin
-                ap_block_pp0_stage0_subdone <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0))));
+                ap_block_pp0_stage0_subdone <= ((ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0))));
     end process;
 
 
@@ -357,9 +357,9 @@ begin
         ap_block_state3_pp0_stage0_iter0 <= not((ap_const_boolean_1 = ap_const_boolean_1));
         ap_block_state3_pp0_stage0_iter0_ignore_call3 <= not((ap_const_boolean_1 = ap_const_boolean_1));
 
-    ap_block_state4_pp0_stage0_iter1_assign_proc : process(src_V_V_full_n, tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, icmp_ln95_reg_153)
+    ap_block_state4_pp0_stage0_iter1_assign_proc : process(src_V_V_full_n, tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, icmp_ln95_reg_153)
     begin
-                ap_block_state4_pp0_stage0_iter1 <= (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0)));
+                ap_block_state4_pp0_stage0_iter1 <= (((icmp_ln95_reg_153 = ap_const_lv1_1) and (src_V_V_full_n = ap_const_logic_0)) or ((icmp_ln95_reg_153 = ap_const_lv1_1) and (tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n = ap_const_logic_0)));
     end process;
 
 
@@ -466,20 +466,20 @@ begin
     end process;
 
 
-    p_src_data_V_blk_n_assign_proc : process(tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln95_reg_153)
+    p_src_data_V_blk_n_assign_proc : process(tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n, ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln95_reg_153)
     begin
         if (((icmp_ln95_reg_153 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            p_src_data_V_blk_n <= tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_blk_n;
+            p_src_data_V_blk_n <= tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_blk_n;
         else 
             p_src_data_V_blk_n <= ap_const_logic_1;
         end if; 
     end process;
 
 
-    p_src_data_V_read_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln95_reg_153, tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_read)
+    p_src_data_V_read_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, ap_block_pp0_stage0, icmp_ln95_reg_153, tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_read)
     begin
         if (((icmp_ln95_reg_153 = ap_const_lv1_1) and (ap_const_boolean_0 = ap_block_pp0_stage0) and (ap_enable_reg_pp0_iter1 = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_pp0_stage0))) then 
-            p_src_data_V_read <= tmp_V_read779_fu_105_Mat_9_180_320_1_data_V_addr_read;
+            p_src_data_V_read <= tmp_V_read780_fu_105_Mat_9_180_320_1_data_V_addr_read;
         else 
             p_src_data_V_read <= ap_const_logic_0;
         end if; 
@@ -505,7 +505,7 @@ begin
         end if; 
     end process;
 
-    src_V_V_din <= tmp_V_read779_fu_105_ap_return;
+    src_V_V_din <= tmp_V_read780_fu_105_ap_return;
 
     src_V_V_write_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_enable_reg_pp0_iter1, icmp_ln95_reg_153, ap_block_pp0_stage0_11001)
     begin
@@ -528,15 +528,15 @@ begin
     end process;
 
 
-    tmp_V_read779_fu_105_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001_ignoreCallOp29)
+    tmp_V_read780_fu_105_ap_ce_assign_proc : process(ap_CS_fsm_pp0_stage0, ap_block_pp0_stage0_11001_ignoreCallOp29)
     begin
         if (((ap_const_logic_1 = ap_CS_fsm_pp0_stage0) and (ap_const_boolean_0 = ap_block_pp0_stage0_11001_ignoreCallOp29))) then 
-            tmp_V_read779_fu_105_ap_ce <= ap_const_logic_1;
+            tmp_V_read780_fu_105_ap_ce <= ap_const_logic_1;
         else 
-            tmp_V_read779_fu_105_ap_ce <= ap_const_logic_0;
+            tmp_V_read780_fu_105_ap_ce <= ap_const_logic_0;
         end if; 
     end process;
 
-    tmp_V_read779_fu_105_ap_start <= tmp_V_read779_fu_105_ap_start_reg;
+    tmp_V_read780_fu_105_ap_start <= tmp_V_read780_fu_105_ap_start_reg;
     zext_ln95_fu_124_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(j_0_i_i_reg_94),10));
 end behav;

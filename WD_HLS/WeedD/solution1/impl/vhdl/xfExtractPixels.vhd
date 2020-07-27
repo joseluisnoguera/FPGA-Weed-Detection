@@ -42,7 +42,7 @@ architecture behav of xfExtractPixels is
     signal select_ln78_2_fu_136_p3 : STD_LOGIC_VECTOR (23 downto 0);
     signal select_ln78_3_fu_144_p3 : STD_LOGIC_VECTOR (23 downto 0);
 
-    component ip_accel_app_mux_bbk IS
+    component ip_accel_app_mux_bdk IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -64,7 +64,7 @@ architecture behav of xfExtractPixels is
 
 
 begin
-    ip_accel_app_mux_bbk_U537 : component ip_accel_app_mux_bbk
+    ip_accel_app_mux_bdk_U559 : component ip_accel_app_mux_bdk
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -82,7 +82,7 @@ begin
         din4 => zext_ln321_fu_60_p1,
         dout => write_flag_fu_64_p6);
 
-    ip_accel_app_mux_bbk_U538 : component ip_accel_app_mux_bbk
+    ip_accel_app_mux_bdk_U560 : component ip_accel_app_mux_bdk
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -100,7 +100,7 @@ begin
         din4 => zext_ln321_fu_60_p1,
         dout => write_flag4_fu_78_p6);
 
-    ip_accel_app_mux_bbk_U539 : component ip_accel_app_mux_bbk
+    ip_accel_app_mux_bdk_U561 : component ip_accel_app_mux_bdk
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -118,7 +118,7 @@ begin
         din4 => zext_ln321_fu_60_p1,
         dout => write_flag1_fu_92_p6);
 
-    ip_accel_app_mux_bbk_U540 : component ip_accel_app_mux_bbk
+    ip_accel_app_mux_bdk_U562 : component ip_accel_app_mux_bdk
     generic map (
         ID => 1,
         NUM_STAGE => 1,

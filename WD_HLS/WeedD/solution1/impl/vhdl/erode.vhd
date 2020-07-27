@@ -40,20 +40,20 @@ architecture behav of erode is
     attribute fsm_encoding of ap_CS_fsm : signal is "none";
     signal ap_CS_fsm_state1 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state1 : signal is "none";
-    signal grp_xferode793_fu_18_ap_start : STD_LOGIC;
-    signal grp_xferode793_fu_18_ap_done : STD_LOGIC;
-    signal grp_xferode793_fu_18_ap_idle : STD_LOGIC;
-    signal grp_xferode793_fu_18_ap_ready : STD_LOGIC;
-    signal grp_xferode793_fu_18_p_src_data_V_address0 : STD_LOGIC_VECTOR (15 downto 0);
-    signal grp_xferode793_fu_18_p_src_data_V_ce0 : STD_LOGIC;
-    signal grp_xferode793_fu_18_p_dst_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
-    signal grp_xferode793_fu_18_p_dst_data_V_write : STD_LOGIC;
-    signal grp_xferode793_fu_18_ap_start_reg : STD_LOGIC := '0';
+    signal grp_xferode794_fu_18_ap_start : STD_LOGIC;
+    signal grp_xferode794_fu_18_ap_done : STD_LOGIC;
+    signal grp_xferode794_fu_18_ap_idle : STD_LOGIC;
+    signal grp_xferode794_fu_18_ap_ready : STD_LOGIC;
+    signal grp_xferode794_fu_18_p_src_data_V_address0 : STD_LOGIC_VECTOR (15 downto 0);
+    signal grp_xferode794_fu_18_p_src_data_V_ce0 : STD_LOGIC;
+    signal grp_xferode794_fu_18_p_dst_data_V_din : STD_LOGIC_VECTOR (7 downto 0);
+    signal grp_xferode794_fu_18_p_dst_data_V_write : STD_LOGIC;
+    signal grp_xferode794_fu_18_ap_start_reg : STD_LOGIC := '0';
     signal ap_CS_fsm_state2 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state2 : signal is "none";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (1 downto 0);
 
-    component xferode793 IS
+    component xferode794 IS
     port (
         ap_clk : IN STD_LOGIC;
         ap_rst : IN STD_LOGIC;
@@ -72,20 +72,20 @@ architecture behav of erode is
 
 
 begin
-    grp_xferode793_fu_18 : component xferode793
+    grp_xferode794_fu_18 : component xferode794
     port map (
         ap_clk => ap_clk,
         ap_rst => ap_rst,
-        ap_start => grp_xferode793_fu_18_ap_start,
-        ap_done => grp_xferode793_fu_18_ap_done,
-        ap_idle => grp_xferode793_fu_18_ap_idle,
-        ap_ready => grp_xferode793_fu_18_ap_ready,
-        p_src_data_V_address0 => grp_xferode793_fu_18_p_src_data_V_address0,
-        p_src_data_V_ce0 => grp_xferode793_fu_18_p_src_data_V_ce0,
+        ap_start => grp_xferode794_fu_18_ap_start,
+        ap_done => grp_xferode794_fu_18_ap_done,
+        ap_idle => grp_xferode794_fu_18_ap_idle,
+        ap_ready => grp_xferode794_fu_18_ap_ready,
+        p_src_data_V_address0 => grp_xferode794_fu_18_p_src_data_V_address0,
+        p_src_data_V_ce0 => grp_xferode794_fu_18_p_src_data_V_ce0,
         p_src_data_V_q0 => p_src_data_V_q0,
-        p_dst_data_V_din => grp_xferode793_fu_18_p_dst_data_V_din,
+        p_dst_data_V_din => grp_xferode794_fu_18_p_dst_data_V_din,
         p_dst_data_V_full_n => p_dst_data_V_full_n,
-        p_dst_data_V_write => grp_xferode793_fu_18_p_dst_data_V_write);
+        p_dst_data_V_write => grp_xferode794_fu_18_p_dst_data_V_write);
 
 
 
@@ -103,23 +103,23 @@ begin
     end process;
 
 
-    grp_xferode793_fu_18_ap_start_reg_assign_proc : process(ap_clk)
+    grp_xferode794_fu_18_ap_start_reg_assign_proc : process(ap_clk)
     begin
         if (ap_clk'event and ap_clk =  '1') then
             if (ap_rst = '1') then
-                grp_xferode793_fu_18_ap_start_reg <= ap_const_logic_0;
+                grp_xferode794_fu_18_ap_start_reg <= ap_const_logic_0;
             else
                 if (((ap_start = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state1))) then 
-                    grp_xferode793_fu_18_ap_start_reg <= ap_const_logic_1;
-                elsif ((grp_xferode793_fu_18_ap_ready = ap_const_logic_1)) then 
-                    grp_xferode793_fu_18_ap_start_reg <= ap_const_logic_0;
+                    grp_xferode794_fu_18_ap_start_reg <= ap_const_logic_1;
+                elsif ((grp_xferode794_fu_18_ap_ready = ap_const_logic_1)) then 
+                    grp_xferode794_fu_18_ap_start_reg <= ap_const_logic_0;
                 end if; 
             end if;
         end if;
     end process;
 
 
-    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, grp_xferode793_fu_18_ap_done, ap_CS_fsm_state2)
+    ap_NS_fsm_assign_proc : process (ap_start, ap_CS_fsm, ap_CS_fsm_state1, grp_xferode794_fu_18_ap_done, ap_CS_fsm_state2)
     begin
         case ap_CS_fsm is
             when ap_ST_fsm_state1 => 
@@ -129,7 +129,7 @@ begin
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 end if;
             when ap_ST_fsm_state2 => 
-                if (((grp_xferode793_fu_18_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
+                if (((grp_xferode794_fu_18_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then
                     ap_NS_fsm <= ap_ST_fsm_state1;
                 else
                     ap_NS_fsm <= ap_ST_fsm_state2;
@@ -141,9 +141,9 @@ begin
     ap_CS_fsm_state1 <= ap_CS_fsm(0);
     ap_CS_fsm_state2 <= ap_CS_fsm(1);
 
-    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, grp_xferode793_fu_18_ap_done, ap_CS_fsm_state2)
+    ap_done_assign_proc : process(ap_start, ap_CS_fsm_state1, grp_xferode794_fu_18_ap_done, ap_CS_fsm_state2)
     begin
-        if ((((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)) or ((grp_xferode793_fu_18_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
+        if ((((ap_start = ap_const_logic_0) and (ap_const_logic_1 = ap_CS_fsm_state1)) or ((grp_xferode794_fu_18_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2)))) then 
             ap_done <= ap_const_logic_1;
         else 
             ap_done <= ap_const_logic_0;
@@ -161,27 +161,27 @@ begin
     end process;
 
 
-    ap_ready_assign_proc : process(grp_xferode793_fu_18_ap_done, ap_CS_fsm_state2)
+    ap_ready_assign_proc : process(grp_xferode794_fu_18_ap_done, ap_CS_fsm_state2)
     begin
-        if (((grp_xferode793_fu_18_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
+        if (((grp_xferode794_fu_18_ap_done = ap_const_logic_1) and (ap_const_logic_1 = ap_CS_fsm_state2))) then 
             ap_ready <= ap_const_logic_1;
         else 
             ap_ready <= ap_const_logic_0;
         end if; 
     end process;
 
-    grp_xferode793_fu_18_ap_start <= grp_xferode793_fu_18_ap_start_reg;
-    p_dst_data_V_din <= grp_xferode793_fu_18_p_dst_data_V_din;
+    grp_xferode794_fu_18_ap_start <= grp_xferode794_fu_18_ap_start_reg;
+    p_dst_data_V_din <= grp_xferode794_fu_18_p_dst_data_V_din;
 
-    p_dst_data_V_write_assign_proc : process(grp_xferode793_fu_18_p_dst_data_V_write, ap_CS_fsm_state2)
+    p_dst_data_V_write_assign_proc : process(grp_xferode794_fu_18_p_dst_data_V_write, ap_CS_fsm_state2)
     begin
         if ((ap_const_logic_1 = ap_CS_fsm_state2)) then 
-            p_dst_data_V_write <= grp_xferode793_fu_18_p_dst_data_V_write;
+            p_dst_data_V_write <= grp_xferode794_fu_18_p_dst_data_V_write;
         else 
             p_dst_data_V_write <= ap_const_logic_0;
         end if; 
     end process;
 
-    p_src_data_V_address0 <= grp_xferode793_fu_18_p_src_data_V_address0;
-    p_src_data_V_ce0 <= grp_xferode793_fu_18_p_src_data_V_ce0;
+    p_src_data_V_address0 <= grp_xferode794_fu_18_p_src_data_V_address0;
+    p_src_data_V_ce0 <= grp_xferode794_fu_18_p_src_data_V_ce0;
 end behav;

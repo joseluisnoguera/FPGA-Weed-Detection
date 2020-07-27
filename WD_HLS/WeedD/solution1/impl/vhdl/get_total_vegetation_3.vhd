@@ -72,8 +72,8 @@ architecture behav of get_total_vegetation_3 is
     signal get_total_vegetation_1_U0_img_in_data_V_address0 : STD_LOGIC_VECTOR (15 downto 0);
     signal get_total_vegetation_1_U0_img_in_data_V_ce0 : STD_LOGIC;
     signal get_total_vegetation_1_U0_ap_return : STD_LOGIC_VECTOR (23 downto 0);
-    signal ap_channel_done_p_Val2_19_loc_chan : STD_LOGIC;
-    signal p_Val2_19_loc_chan_full_n : STD_LOGIC;
+    signal ap_channel_done_p_Val2_20_loc_chan : STD_LOGIC;
+    signal p_Val2_20_loc_chan_full_n : STD_LOGIC;
     signal get_total_vegetation_2_U0_ap_start : STD_LOGIC;
     signal get_total_vegetation_2_U0_ap_done : STD_LOGIC;
     signal get_total_vegetation_2_U0_ap_continue : STD_LOGIC;
@@ -96,8 +96,8 @@ architecture behav of get_total_vegetation_3 is
     signal img_in_data_V_t_we0 : STD_LOGIC;
     signal p_Val2_loc_channel_dout : STD_LOGIC_VECTOR (23 downto 0);
     signal p_Val2_loc_channel_empty_n : STD_LOGIC;
-    signal p_Val2_19_loc_chan_dout : STD_LOGIC_VECTOR (23 downto 0);
-    signal p_Val2_19_loc_chan_empty_n : STD_LOGIC;
+    signal p_Val2_20_loc_chan_dout : STD_LOGIC_VECTOR (23 downto 0);
+    signal p_Val2_20_loc_chan_empty_n : STD_LOGIC;
     signal ap_sync_done : STD_LOGIC;
     signal ap_sync_ready : STD_LOGIC;
     signal get_total_vegetation_U0_start_full_n : STD_LOGIC;
@@ -233,7 +233,7 @@ begin
         ap_idle => get_total_vegetation_2_U0_ap_idle,
         ap_ready => get_total_vegetation_2_U0_ap_ready,
         p_read => p_Val2_loc_channel_dout,
-        p_read1 => p_Val2_19_loc_chan_dout,
+        p_read1 => p_Val2_20_loc_chan_dout,
         agg_result_V => get_total_vegetation_2_U0_agg_result_V,
         agg_result_V_ap_vld => get_total_vegetation_2_U0_agg_result_V_ap_vld);
 
@@ -271,17 +271,17 @@ begin
         if_empty_n => p_Val2_loc_channel_empty_n,
         if_read => get_total_vegetation_2_U0_ap_ready);
 
-    p_Val2_19_loc_chan_U : component fifo_w24_d2_A_x2
+    p_Val2_20_loc_chan_U : component fifo_w24_d2_A_x2
     port map (
         clk => ap_clk,
         reset => ap_rst,
         if_read_ce => ap_const_logic_1,
         if_write_ce => ap_const_logic_1,
         if_din => get_total_vegetation_1_U0_ap_return,
-        if_full_n => p_Val2_19_loc_chan_full_n,
+        if_full_n => p_Val2_20_loc_chan_full_n,
         if_write => get_total_vegetation_1_U0_ap_done,
-        if_dout => p_Val2_19_loc_chan_dout,
-        if_empty_n => p_Val2_19_loc_chan_empty_n,
+        if_dout => p_Val2_20_loc_chan_dout,
+        if_empty_n => p_Val2_20_loc_chan_empty_n,
         if_read => get_total_vegetation_2_U0_ap_ready);
 
 
@@ -322,22 +322,22 @@ begin
     agg_result_V <= get_total_vegetation_2_U0_agg_result_V;
     agg_result_V_ap_vld <= get_total_vegetation_2_U0_agg_result_V_ap_vld;
     ap_channel_done_img_in_data_V <= (get_total_vegetation_U0_ap_done and (ap_sync_reg_channel_write_img_in_data_V xor ap_const_logic_1));
-    ap_channel_done_p_Val2_19_loc_chan <= get_total_vegetation_1_U0_ap_done;
+    ap_channel_done_p_Val2_20_loc_chan <= get_total_vegetation_1_U0_ap_done;
     ap_channel_done_p_Val2_loc_channel <= (get_total_vegetation_U0_ap_done and (ap_sync_reg_channel_write_p_Val2_loc_channel xor ap_const_logic_1));
     ap_done <= get_total_vegetation_2_U0_ap_done;
-    ap_idle <= (get_total_vegetation_U0_ap_idle and get_total_vegetation_2_U0_ap_idle and get_total_vegetation_1_U0_ap_idle and (img_in_data_V_t_empty_n xor ap_const_logic_1) and (p_Val2_19_loc_chan_empty_n xor ap_const_logic_1) and (p_Val2_loc_channel_empty_n xor ap_const_logic_1));
+    ap_idle <= (get_total_vegetation_U0_ap_idle and get_total_vegetation_2_U0_ap_idle and get_total_vegetation_1_U0_ap_idle and (img_in_data_V_t_empty_n xor ap_const_logic_1) and (p_Val2_20_loc_chan_empty_n xor ap_const_logic_1) and (p_Val2_loc_channel_empty_n xor ap_const_logic_1));
     ap_ready <= get_total_vegetation_2_U0_ap_done;
     ap_sync_channel_write_img_in_data_V <= ((get_total_vegetation_U0_img_in_data_V_full_n and ap_channel_done_img_in_data_V) or ap_sync_reg_channel_write_img_in_data_V);
     ap_sync_channel_write_p_Val2_loc_channel <= ((p_Val2_loc_channel_full_n and ap_channel_done_p_Val2_loc_channel) or ap_sync_reg_channel_write_p_Val2_loc_channel);
     ap_sync_continue <= ap_continue;
     ap_sync_done <= get_total_vegetation_2_U0_ap_done;
     ap_sync_ready <= ap_sync_done;
-    get_total_vegetation_1_U0_ap_continue <= p_Val2_19_loc_chan_full_n;
+    get_total_vegetation_1_U0_ap_continue <= p_Val2_20_loc_chan_full_n;
     get_total_vegetation_1_U0_ap_start <= img_in_data_V_t_empty_n;
     get_total_vegetation_1_U0_start_full_n <= ap_const_logic_1;
     get_total_vegetation_1_U0_start_write <= ap_const_logic_0;
     get_total_vegetation_2_U0_ap_continue <= ap_continue;
-    get_total_vegetation_2_U0_ap_start <= (p_Val2_loc_channel_empty_n and p_Val2_19_loc_chan_empty_n);
+    get_total_vegetation_2_U0_ap_start <= (p_Val2_loc_channel_empty_n and p_Val2_20_loc_chan_empty_n);
     get_total_vegetation_2_U0_start_full_n <= ap_const_logic_1;
     get_total_vegetation_2_U0_start_write <= ap_const_logic_0;
     get_total_vegetation_U0_ap_continue <= (ap_sync_channel_write_p_Val2_loc_channel and ap_sync_channel_write_img_in_data_V);

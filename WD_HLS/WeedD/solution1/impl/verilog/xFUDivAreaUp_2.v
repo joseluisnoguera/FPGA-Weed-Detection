@@ -103,13 +103,13 @@ initial begin
 #0 ap_return_preg = 38'd0;
 end
 
-ip_accel_app_udivbak #(
+ip_accel_app_udivbck #(
     .ID( 1 ),
     .NUM_STAGE( 49 ),
     .din0_WIDTH( 45 ),
     .din1_WIDTH( 16 ),
     .dout_WIDTH( 38 ))
-ip_accel_app_udivbak_U533(
+ip_accel_app_udivbck_U555(
     .clk(ap_clk),
     .reset(ap_rst),
     .start(grp_fu_28_ap_start),
